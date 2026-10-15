@@ -123,7 +123,13 @@ function renderAllExtensions(){renderAggregate();renderLayout();renderEvents();r
 function normalizeEvent(x){const e={date:String(x.date||''),type:String(x.type||'おすすめ'),machine:String(x.machine||'').trim(),number:String(x.number||'').trim(),note:String(x.note||'').trim()};if(!/^\d{4}-\d{2}-\d{2}$/.test(e.date)||(!e.machine&&!e.number))throw Error('日付と機種または台番を指定してください');return e}
 async function initExtensions(){
  const files=await Promise.all(['machine_daily.json','tail_daily.json','layout.json','events.json'].map(async f=>{try{const resp=await fetch('data/'+f+'?t='+Date.now());return resp.ok?await resp.json():[]}catch{return []}}));
- machineDaily=Array.isArray(files[0])?files[0]:[];tailDaily=Array.isArray(files[1])?files[1]:[];
+ const history=await window.sssHistoryPromise;
+ const mergedMachines=new Map((history?.machineDaily||[]).map(r=>[r.date+'|'+r.machine,r]));
+ for(const row of Array.isArray(files[0])?files[0]:[])mergedMachines.set(row.date+'|'+row.machine,row);
+ machineDaily=[...mergedMachines.values()];
+ const mergedTails=new Map((history?.tailDaily||[]).map(r=>[r.date+'|'+r.tail,r]));
+ for(const row of Array.isArray(files[1])?files[1]:[])mergedTails.set(row.date+'|'+row.tail,row);
+ tailDaily=[...mergedTails.values()];
  layoutRows=retrieve('layout')||files[2]||[];eventRows=retrieve('events')||files[3]||[];
  $x('excludeKeywords').value=(retrieve('excluded')||[]).join('、');
  $x('layoutDate').value=gdate();$x('eventDate').value=gdate();
