@@ -16,6 +16,9 @@ concurrency:
 jobs:
   sync-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,6 +26,7 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - name: Sync without VPN
+        continue-on-error: true # keep deployment available while source blocks fetching
         if: ${{ vars.USE_WIREGUARD != 'true' }}
         env:
           SYNC_DAYS: '7'
@@ -61,4 +65,5 @@ jobs:
         with:
           path: site
       - uses: actions/deploy-pages@v4
+        id: deployment
         if: always() && github.ref == 'refs/heads/main'
