@@ -22,6 +22,7 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - name: Obtain SloRepo data
+        continue-on-error: true
         run: python scripts/sync.py
       - name: Commit data and update status
         if: always()
