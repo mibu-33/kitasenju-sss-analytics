@@ -26,7 +26,7 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - name: Sync without VPN
-        continue-on-error: true # keep deployment available while source blocks fetching
+        continue-on-error: true # Source may return HTTP 403; still publish status and UI
         if: ${{ vars.USE_WIREGUARD != 'true' }}
         env:
           SYNC_DAYS: '7'
@@ -42,6 +42,9 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y wireguard-tools iptables
           bash scripts/vpn_fetch.sh
+      - name: Import authorized exports (even when direct fetch returned 403)
+        if: always()
+        run: python scripts/import_batch.py
       - name: Commit collected data and failure state
         if: always()
         run: |
