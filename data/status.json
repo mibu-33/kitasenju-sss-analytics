@@ -1,6 +1,6 @@
 {
   "status": "error",
-  "last_attempt": "2026-10-16T02:55:01+09:00",
+  "last_attempt": "2026-10-16T03:05:03+09:00",
   "last_success": null,
   "newest_date": null,
   "error": "店舗ページ: HTTPError: 403 Client Error: Forbidden for url: https://www.slorepo.com/hole/e38394e383bce382a2e383bce382afe58c97e58d83e4bd8f535353code/",
