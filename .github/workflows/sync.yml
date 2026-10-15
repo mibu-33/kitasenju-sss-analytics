@@ -21,6 +21,11 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - name: Validate Python and UI JavaScript
+        run: |
+          python -m py_compile scripts/sync.py
+          python -c "from pathlib import Path; import re; h=Path('public/index.html').read_text(); Path('/tmp/sss-ui.js').write_text(re.search(r'<script>(.*?)</script>', h, re.S).group(1))"
+          node --check /tmp/sss-ui.js
       - name: Obtain SloRepo data
         continue-on-error: true
         run: python scripts/sync.py
