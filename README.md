@@ -117,3 +117,13 @@ python -m pytest -q tests
 ブラウザテストはテスト用の架空データのみを使います。公開データへ混入しません。PlaywrightにはローカルChromium等が必要です。
 
 取得元：[スロレポ・ピーアーク北千住SSS](https://www.slorepo.com/hole/e38394e383bce382a2e383bce382afe58c97e58d83e4bd8f535353code/)
+
+
+## 2026-10-16: ユーザー提供のRAW Excelから初回の実データ取り込み
+
+- 提供された `table_data.xlsx` から **2025-09-11〜2026-07-07（300営業日、128,917台日）** を確認。
+- 元のExcelファイルは**リポジトリには置かず**、圧縮した変換済み集計 `data/history.json.gz.b64` のみ公開。
+- ブラウザで展開して台番号・機種・日付・差枚・G数の分析に使用する。最新日付は **2026-07-07**。2026年10月の最新データではない。
+- スロレポからのライブ自動取得は今もHTTP 403で停止する場合がある。VPNの利用可否は別途検証が必要。
+- 同じ形式のExcelから変換するコマンドは `python scripts/pack_excel.py table_data.xlsx --output data/history.json.gz`。GitHubの配信方式に合わせて gzip をbase64に変換して `data/history.json.gz.b64` に保存する。
+- 手元のExcelを再配布する権利がない場合には、提供された原本を公開しないでください。出典を明記しています。
