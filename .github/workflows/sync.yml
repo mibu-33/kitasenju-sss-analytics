@@ -1,0 +1,49 @@
+name: SSS Data Sync and Deploy
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0,1,2 * * *'
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: sss-pages
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Obtain SloRepo data
+        run: python scripts/sync.py
+      - name: Commit data and update status
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: update observed records'
+            git push
+          fi
+      - name: Assemble static site
+        if: always()
+        run: |
+          mkdir -p site
+          cp -r public/. site/
+          cp -r data site/data
+      - uses: actions/configure-pages@v5
+        if: always()
+      - uses: actions/upload-pages-artifact@v3
+        if: always()
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        if: always() && github.ref == 'refs/heads/main'
