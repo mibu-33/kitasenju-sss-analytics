@@ -2,6 +2,7 @@ name: SSS Data Sync and Deploy
 on:
   workflow_dispatch:
   schedule:
+    # JST 09:00, 10:00, 11:00; may be delayed by GitHub
     - cron: '0 0,1,2 * * *'
   push:
     branches: [main]
@@ -10,10 +11,10 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: sss-pages
+  group: sss-sync-pages
   cancel-in-progress: false
 jobs:
-  sync:
+  sync-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,22 +22,30 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - name: Validate Python and UI JavaScript
-        run: |
-          python -m py_compile scripts/sync.py
-          python -c "from pathlib import Path; import re; h=Path('public/index.html').read_text(); Path('/tmp/sss-ui.js').write_text(re.search(r'<script>(.*?)</script>', h, re.S).group(1))"
-          node --check /tmp/sss-ui.js
-      - name: Obtain SloRepo data
-        continue-on-error: true
+      - name: Sync without VPN
+        if: ${{ vars.USE_WIREGUARD != 'true' }}
+        env:
+          SYNC_DAYS: '7'
+          REQUEST_INTERVAL: '2.5'
         run: python scripts/sync.py
-      - name: Commit data and update status
+      - name: Sync via WireGuard (fail closed)
+        if: ${{ vars.USE_WIREGUARD == 'true' }}
+        env:
+          WG_CONFIG_B64: ${{ secrets.WG_CONFIG_B64 }}
+          SYNC_DAYS: '7'
+          REQUEST_INTERVAL: '2.5'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y wireguard-tools iptables
+          bash scripts/vpn_fetch.sh
+      - name: Commit collected data and failure state
         if: always()
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/
           if ! git diff --cached --quiet; then
-            git commit -m 'data: update observed records'
+            git commit -m 'data: refresh published observations'
             git push
           fi
       - name: Assemble static site
