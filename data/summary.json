@@ -1,5 +1,32 @@
 [
   {
+    "date": "2026-10-10",
+    "avg_diff": 113.9,
+    "avg_games": 5237.1,
+    "win_rate": 40.58,
+    "wins": 183,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-11",
+    "avg_diff": -138.1,
+    "avg_games": 4347.6,
+    "win_rate": 35.03,
+    "wins": 158,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-12",
+    "avg_diff": 55.8,
+    "avg_games": 4176.8,
+    "win_rate": 36.14,
+    "wins": 163,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
     "date": "2026-10-13",
     "avg_diff": -28.4,
     "avg_games": 3301.7,
