@@ -25,6 +25,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - name: Validate fallback parser
+        run: |
+          python -m pip install -q pytest
+          python -m pytest -q tests/test_sync_fallback.py
       - name: Sync without VPN
         continue-on-error: true # Source may return HTTP 403; still publish status and UI
         if: ${{ vars.USE_WIREGUARD != 'true' }}
@@ -42,6 +46,13 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y wireguard-tools iptables
           bash scripts/vpn_fetch.sh
+      - name: Try SloNavi public seat data if robots allow
+        if: always()
+        continue-on-error: true
+        env:
+          FALLBACK_DAYS_PER_RUN: '6'
+          FALLBACK_REQUEST_INTERVAL: '3'
+        run: python scripts/sync_fallback.py
       - name: Import authorized exports (even when direct fetch returned 403)
         if: always()
         run: python scripts/import_batch.py
