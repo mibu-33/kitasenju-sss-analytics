@@ -1,8 +1,8 @@
 /* Colour zones of P-ARK Kitasenju SSS. These are geographic labels, not proof of settings. */
 (function(){
 "use strict";
-const zones={red:["赤","1F","#e65757"],blue:["青","1F","#4b98ed"],green:["緑","1F","#52b887"],silver:["銀","1F","#b2bdce"],gold:["金","2F","#d3b355"]};
-const ja={赤:"red",青:"blue",緑:"green",銀:"silver",金:"gold"};
+const zones={red:["赤","1F","#e65757"],blue:["青","1F","#4b98ed"],green:["緑","1F","#52b887"],silver:["銀","1F","#b2bdce"],gold:["金","2F","#d3b355"],purple:["紫","2F","#b08ae4"]};
+const ja={赤:"red",青:"blue",緑:"green",銀:"silver",金:"gold",紫:"purple"};
 const key="sss-verified-color-zones-v1";
 const el=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -13,7 +13,7 @@ const shrink=(v,n,k)=>v*n/(n+k);
 let areas=[];
 function normalized(x){
  const z=ja[String(x.zone||x.color||"").trim()]||String(x.zone||x.color||"").trim().toLowerCase();
- if(!zones[z])throw Error("色は赤・青・緑・銀・金から選んでください");
+ if(!zones[z])throw Error("色は赤・青・緑・銀・金・紫から選んでください");
  const a={number:Number(x.number),zone:z,floor:String(x.floor||zones[z][1]).toUpperCase(),corridor:String(x.corridor||""),side:String(x.side||""),order:x.order==null||x.order===""?null:Number(x.order),from:String(x.from||""),to:String(x.to||"")};
  if(!Number.isInteger(a.number)||a.number<1||a.number>99999)throw Error("台番号が不正です");
  if(a.floor!==zones[z][1])throw Error("色と階が一致しません");
@@ -110,7 +110,7 @@ function setup(){
  const style=document.createElement("style");style.textContent="#colorZones .panel{margin:12px 0}#colorZones .color-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}#colorZones textarea{width:100%;min-height:115px}#colorZones input[type=checkbox]{width:18px;height:18px}#colorZones .color-overflow{overflow-x:auto}#colorZones table{border-collapse:collapse;width:100%;font-size:13px}#colorZones td,#colorZones th{padding:9px;border-bottom:1px solid #31415b;white-space:nowrap}#colorZones .color-chip{display:inline-block;border-left:5px solid;padding:5px 8px;margin:3px;background:#192c45;border-radius:4px}";document.head.appendChild(style);
  const button=document.createElement("button");button.className="tab";button.dataset.tab="colorZones";button.textContent="色別エリア・狙い目";nav.appendChild(button);
  const panel=document.createElement("section");panel.id="colorZones";panel.className="hide";
- panel.innerHTML='<h2>トリエス 色別エリア分析</h2><p class="muted">1Fは赤・青・緑・銀、2Fは金。色は島の区分であり、台の設定を意味しません。確認できない台の配置は推測しません。</p><div id="colorCount"></div><div class="color-row"><label>狙う日 <input id="colorDay" type="date"></label><label><input id="colorRisk" type="checkbox" checked>荒い機種・SANKYO系を一部除外</label><button id="colorRecalc">分析</button></div><p id="colorInfo" class="muted"></p><div class="panel"><h3>色エリア別実績</h3><div id="colorAreas"></div><p class="muted">指数は過去差枚を同日の店内平均で補正して縮小した相対指標。設定6の確率や勝率の予想ではありません。</p></div><div class="panel"><h3>暫定狙い目（台番号）</h3><div id="colorSeats"></div></div><div class="panel"><h3>隣接3台並び</h3><div id="colorNeighbors"></div><p class="muted">同じ通路・左右・色・位置順で連続する3台を集計。3台中2台が+1000枚超の観測です。</p></div><div class="panel"><h3>色別島図を登録</h3><p class="muted">最新のフロアマップで確認したものだけ登録。ヘッダー：台番,階,色,通路,左右,位置,開始日,終了日。色は赤・青・緑・銀・金。古い島図は有効期間を限定してください。</p><textarea id="colorCsv" placeholder="台番,階,色,通路,左右,位置,開始日,終了日"></textarea><div class="color-row"><button id="colorImport">CSV取込</button><button id="colorExport">CSV出力</button><button id="colorDelete">端末の色別配置を消去</button></div><p id="colorMessage" class="muted"></p><p class="muted">参考：<a href="https://note.com/cozy_fowl8277/n/na874d5c4a382" target="_blank" rel="noopener">色別仕掛けの過去解説</a>。掲載当時から位置が変わっている可能性があります。</p></div>';
+ panel.innerHTML='<h2>トリエス 色別エリア分析</h2><p class="muted">1Fは赤・青・緑・銀、2Fは金・紫。色は島の区分であり、台の設定を意味しません。確認できない台の配置は推測しません。</p><div id="colorCount"></div><div class="color-row"><label>狙う日 <input id="colorDay" type="date"></label><label><input id="colorRisk" type="checkbox" checked>荒い機種・SANKYO系を一部除外</label><button id="colorRecalc">分析</button></div><p id="colorInfo" class="muted"></p><div class="panel"><h3>色エリア別実績</h3><div id="colorAreas"></div><p class="muted">指数は過去差枚を同日の店内平均で補正して縮小した相対指標。設定6の確率や勝率の予想ではありません。</p></div><div class="panel"><h3>暫定狙い目（台番号）</h3><div id="colorSeats"></div></div><div class="panel"><h3>隣接3台並び</h3><div id="colorNeighbors"></div><p class="muted">同じ通路・左右・色・位置順で連続する3台を集計。3台中2台が+1000枚超の観測です。</p></div><div class="panel"><h3>色別島図を登録</h3><p class="muted">最新のフロアマップで確認したものだけ登録。ヘッダー：台番,階,色,通路,左右,位置,開始日,終了日。色は赤・青・緑・銀・金・紫。古い島図は有効期間を限定してください。</p><textarea id="colorCsv" placeholder="台番,階,色,通路,左右,位置,開始日,終了日"></textarea><div class="color-row"><button id="colorImport">CSV取込</button><button id="colorExport">CSV出力</button><button id="colorDelete">端末の色別配置を消去</button></div><p id="colorMessage" class="muted"></p><p class="muted">参考：<a href="https://note.com/cozy_fowl8277/n/na874d5c4a382" target="_blank" rel="noopener">色別仕掛けの過去解説</a>。掲載当時から位置が変わっている可能性があります。</p></div>';
  main.appendChild(panel);
  button.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));document.querySelectorAll("main>section:not(.stats)").forEach(s=>s.classList.add("hide"));button.classList.add("active");panel.classList.remove("hide");render()});
  el("colorDay").value=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(Date.now()+86400000));
