@@ -1,5 +1,113 @@
 [
   {
+    "date": "2026-09-16",
+    "avg_diff": 99.4,
+    "avg_games": 4123.1,
+    "win_rate": 38.14,
+    "wins": 172,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-17",
+    "avg_diff": -62.3,
+    "avg_games": 1260.6,
+    "win_rate": 31.04,
+    "wins": 140,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-18",
+    "avg_diff": -125.8,
+    "avg_games": 3481.3,
+    "win_rate": 34.59,
+    "wins": 156,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-19",
+    "avg_diff": 240.7,
+    "avg_games": 5290.7,
+    "win_rate": 42.57,
+    "wins": 192,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-20",
+    "avg_diff": 153.4,
+    "avg_games": 4954.6,
+    "win_rate": 38.36,
+    "wins": 173,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-21",
+    "avg_diff": 31.4,
+    "avg_games": 3808.5,
+    "win_rate": 36.36,
+    "wins": 164,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-22",
+    "avg_diff": 153.4,
+    "avg_games": 4686.0,
+    "win_rate": 40.8,
+    "wins": 184,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-23",
+    "avg_diff": -50.4,
+    "avg_games": 4462.8,
+    "win_rate": 36.36,
+    "wins": 164,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-24",
+    "avg_diff": 24.8,
+    "avg_games": 3549.8,
+    "win_rate": 36.81,
+    "wins": 166,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-25",
+    "avg_diff": -98.2,
+    "avg_games": 3665.0,
+    "win_rate": 35.03,
+    "wins": 158,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-26",
+    "avg_diff": 115.3,
+    "avg_games": 5441.0,
+    "win_rate": 41.46,
+    "wins": 187,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-09-27",
+    "avg_diff": 151.3,
+    "avg_games": 4525.7,
+    "win_rate": 41.24,
+    "wins": 186,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
     "date": "2026-09-28",
     "avg_diff": -11.4,
     "avg_games": 3241.9,
