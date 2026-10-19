@@ -149,7 +149,7 @@ def main():
                     if response.status_code in (401,403,429):
                         raise PermissionError(f'HTTP {response.status_code} from alternate source; stopping')
                     raise ValueError(f'HTTP {response.status_code}')
-                if len(response.content)>3_000_000:raise ValueError('unexpectedly large report')
+                if len(response.content)>24_000_000:raise ValueError(f'unexpectedly large report ({len(response.content)} bytes)')
                 rows=parse_day(response.text,date)
                 for item in rows:
                     key=(date,item['number'])
