@@ -54,7 +54,7 @@ function compute(date){
   if(!days.has(d))days.set(d,[]);days.get(d).push(v);
   const a=lookup(d).get(+r.number);if(!a)continue;
   const k=d+"|"+a.zone;if(!dayZone.has(k))dayZone.set(k,[]);dayZone.get(k).push(v);
-  if(target.has(+r.number)){const n=+r.number;if(!seats.has(n))seats.set(n,[]);seats.get(n).push(r)}
+  if(target.has(+r.number)&&target.get(+r.number).zone===a.zone){const n=+r.number;if(!seats.has(n))seats.set(n,[]);seats.get(n).push(r)}
  }
  const perZone=new Map();
  for(const [k,values] of dayZone){if(values.length<5)continue;const idx=k.indexOf("|"),day=k.slice(0,idx),zone=k.slice(idx+1);
@@ -124,6 +124,6 @@ function setup(){
  if(original)renderAllExtensions=function(){original();render()};
  render();
 }
-setup();
-window.SSSColorCore={normalized,csv,targetType,at,compute};
+if(typeof document!=="undefined")setup();
+if(typeof globalThis!=="undefined")globalThis.SSSColorCore={normalized,csv,targetType,at,compute};
 })();
