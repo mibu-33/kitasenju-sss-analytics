@@ -125,5 +125,5 @@ function setup(){
  render();
 }
 if(typeof document!=="undefined")setup();
-if(typeof globalThis!=="undefined")globalThis.SSSColorCore={normalized,csv,targetType,at,compute};
+if(typeof globalThis!=="undefined")globalThis.SSSColorCore={normalized,csv,targetType,at,compute,setAreas:(a)=>{areas=a.map(normalized)}};
 })();
