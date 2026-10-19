@@ -18,8 +18,8 @@ for(let day=1;day<=12;day++){
  for(let seat=1;seat<=10;seat++)sandbox.records.push({date,number:seat,machine:'モンキーターン',diff:seat<=5?1400:-900,games:4400});
 }
 assert.equal(m.at('2026-10-19').size,0,'no unverified default mapping');
-sandbox.__testAreas=area;
-vm.runInNewContext('areas=globalThis.__testAreas',sandbox,{filename:'seed area fixtures'});
+
+m.setAreas(area);
 const result=m.compute('2026-10-20');
 assert.equal(result.scores.length,2);
 assert.equal(result.scores[0].zone,'red');
