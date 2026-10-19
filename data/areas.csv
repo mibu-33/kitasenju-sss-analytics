@@ -1,83 +1,104 @@
-﻿台番,階,色,通路,左右,位置,開始日,終了日,備考
-66,1F,青,青A,左,,,,提供された島図から判読
-67,1F,青,青A,左,,,,提供された島図から判読
-68,1F,青,青A,左,,,,提供された島図から判読
-69,1F,青,青A,左,,,,提供された島図から判読
-70,1F,青,青A,左,,,,提供された島図から判読
-71,1F,青,青A,左,,,,提供された島図から判読
-72,1F,青,青A,左,,,,提供された島図から判読
-73,1F,青,青A,左,,,,提供された島図から判読
-74,1F,青,青A,左,,,,提供された島図から判読
-75,1F,青,青A,左,,,,提供された島図から判読
-76,1F,青,青A,左,,,,提供された島図から判読
-77,1F,青,青A,左,,,,提供された島図から判読
-78,1F,青,青A,左,,,,提供された島図から判読
-79,1F,青,青A,左,,,,提供された島図から判読
-80,1F,青,青A,左,,,,提供された島図から判読
-81,1F,青,青A,左,,,,提供された島図から判読
-82,1F,青,青A,左,,,,提供された島図から判読
-83,1F,青,青A,左,,,,提供された島図から判読
-84,1F,青,青A,左,,,,提供された島図から判読
-85,1F,青,青A,左,,,,提供された島図から判読
-86,1F,青,青A,左,,,,提供された島図から判読
-87,1F,青,青A,左,,,,提供された島図から判読
-88,1F,青,青B,右,,,,提供された島図から判読
-89,1F,青,青B,右,,,,提供された島図から判読
-90,1F,青,青B,右,,,,提供された島図から判読
-91,1F,青,青B,右,,,,提供された島図から判読
-92,1F,青,青B,右,,,,提供された島図から判読
-93,1F,青,青B,右,,,,提供された島図から判読
-94,1F,青,青B,右,,,,提供された島図から判読
-95,1F,青,青B,右,,,,提供された島図から判読
-96,1F,青,青B,右,,,,提供された島図から判読
-97,1F,青,青B,右,,,,提供された島図から判読
-98,1F,青,青B,右,,,,提供された島図から判読
-99,1F,青,青B,右,,,,提供された島図から判読
-100,1F,青,青B,右,,,,提供された島図から判読
-101,1F,青,青B,右,,,,提供された島図から判読
-102,1F,青,青B,右,,,,提供された島図から判読
-103,1F,青,青B,右,,,,提供された島図から判読
-104,1F,青,青B,右,,,,提供された島図から判読
-105,1F,青,青B,右,,,,提供された島図から判読
-106,1F,青,青B,右,,,,提供された島図から判読
-107,1F,青,青B,右,,,,提供された島図から判読
-108,1F,青,青B,右,,,,提供された島図から判読
-109,1F,青,青B,右,,,,提供された島図から判読
-110,1F,青,青B,右,,,,提供された島図から判読
-234,1F,緑,緑C,左,,,,提供された島図から判読
-235,1F,緑,緑C,左,,,,提供された島図から判読
-236,1F,緑,緑C,左,,,,提供された島図から判読
-237,1F,緑,緑C,左,,,,提供された島図から判読
-238,1F,緑,緑C,左,,,,提供された島図から判読
-239,1F,緑,緑C,左,,,,提供された島図から判読
-240,1F,緑,緑C,左,,,,提供された島図から判読
-255,1F,緑,緑D,右,,,,提供された島図から判読
-256,1F,緑,緑D,右,,,,提供された島図から判読
-257,1F,緑,緑D,右,,,,提供された島図から判読
-258,1F,緑,緑D,右,,,,提供された島図から判読
-259,1F,緑,緑D,右,,,,提供された島図から判読
-260,1F,緑,緑D,右,,,,提供された島図から判読
-261,1F,緑,緑D,右,,,,提供された島図から判読
-241,1F,緑,緑E,左,,,,提供された島図から判読
-242,1F,緑,緑E,左,,,,提供された島図から判読
-243,1F,緑,緑E,左,,,,提供された島図から判読
-244,1F,緑,緑E,左,,,,提供された島図から判読
-245,1F,緑,緑E,左,,,,提供された島図から判読
-246,1F,緑,緑E,左,,,,提供された島図から判読
-247,1F,緑,緑E,左,,,,提供された島図から判読
-248,1F,緑,緑F,右,,,,提供された島図から判読
-249,1F,緑,緑F,右,,,,提供された島図から判読
-250,1F,緑,緑F,右,,,,提供された島図から判読
-251,1F,緑,緑F,右,,,,提供された島図から判読
-252,1F,緑,緑F,右,,,,提供された島図から判読
-253,1F,緑,緑F,右,,,,提供された島図から判読
-254,1F,緑,緑F,右,,,,提供された島図から判読
-1001,1F,赤,赤S,,,,,提供された島図から判読
-1002,1F,赤,赤S,,,,,提供された島図から判読
-1003,1F,赤,赤S,,,,,提供された島図から判読
-1004,1F,赤,赤S,,,,,提供された島図から判読
-1013,2F,紫,紫5台円卓,,,,,提供された島図から判読
-1014,2F,紫,紫5台円卓,,,,,提供された島図から判読
-1015,2F,紫,紫5台円卓,,,,,提供された島図から判読
-1016,2F,紫,紫5台円卓,,,,,提供された島図から判読
-1017,2F,紫,紫5台円卓,,,,,提供された島図から判読
+﻿台番,階,色,通路,左右,位置,開始日,終了日,備考,検証状況
+"66","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"67","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"68","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"69","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"70","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"71","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"72","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"73","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"74","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"75","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"76","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"77","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"78","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"79","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"80","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"81","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"82","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"83","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"84","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"85","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"86","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"87","1F","青","青A","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"88","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"89","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"90","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"91","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"92","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"93","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"94","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"95","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"96","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"97","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"98","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"99","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"100","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"101","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"102","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"103","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"104","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"105","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"106","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"107","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"108","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"109","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"110","1F","青","青B","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"234","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"235","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"236","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"237","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"238","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"239","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"240","1F","緑","緑C","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"241","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"242","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"243","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"244","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"245","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"246","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"247","1F","緑","緑E","左","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"248","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"249","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"250","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"251","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"252","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"253","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"254","1F","緑","緑F","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"255","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"256","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"257","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"258","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"259","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"260","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"261","1F","緑","緑D","右","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"742","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"743","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"744","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"745","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"746","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"747","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"748","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"749","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"750","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"751","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"752","2F","紫","紫A","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"753","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"754","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"755","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"756","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"757","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"758","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"759","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"760","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"761","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"762","2F","紫","紫B","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"1001","1F","赤","赤S","","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"1002","1F","赤","赤S","","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"1003","1F","赤","赤S","","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"1004","1F","赤","赤S","","","","","user-provided floor-map (2026-10-19, map capture date unknown)","提供画像のみ"
+"1013","2F","紫","紫5台円卓","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"1014","2F","紫","紫5台円卓","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"1015","2F","紫","紫5台円卓","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"1016","2F","紫","紫5台円卓","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
+"1017","2F","紫","紫5台円卓","","","","","Official X floor-map 2026-05-10 (https://x.com/Kitasenjusss/status/2053440543062147221); also supplied 2F map","X公式画像+提供画像"
