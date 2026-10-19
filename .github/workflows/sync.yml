@@ -34,7 +34,7 @@ jobs:
       - name: Validate fallback parser
         run: |
           python -m pip install -q pytest
-          python -m pytest -q tests/test_sync_fallback.py
+          python -m pytest -q tests/test_sync_fallback.py tests/test_area_evidence.py
           node tests/test_color_areas.cjs
       - name: Sync without VPN
         continue-on-error: true # Source may return HTTP 403; still publish status and UI
