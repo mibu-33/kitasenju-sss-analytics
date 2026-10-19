@@ -98,7 +98,9 @@ function render(){
  const last=(typeof records!=="undefined"?records:[]).reduce((a,x)=>x.date<date&&x.date>a?x.date:a,"");
  const latest=(typeof records!=="undefined"?records:[]).filter(x=>x.date===last);
  const covered=latest.filter(x=>r.target.has(+x.number)).length;
- const occasion={0:"0のつく日：過去には列単位などの仕掛け報告あり。",3:"3のつく日：各色エリアで3台並びの報告あり。",4:"4のつく日：各色エリアに異なる仕掛けを分ける「あみだ」の報告あり。",6:"6のつく日：過去の重点営業日。列・末尾・機種の実績を確認。",7:"7のつく日：過去には3台/5台並びや末尾など複数要素の報告あり。"};\n el("colorGuidance").textContent="過去の取材傾向（当日の告知ではありません）："+(occasion[targetType(date)]||"特定日の仕掛けは未確認。通常日の実績を優先。");\n el("colorInfo").textContent="確認済みの位置 "+mapped+"台／直近の実績台 "+covered+"/"+latest.length+"台。予想日の前75日・G数300以上のデータ "+r.data.length+"台日。未来のデータは使用していません。";
+ const occasion={0:"0のつく日：過去には列単位などの仕掛け報告あり。",3:"3のつく日：各色エリアで3台並びの報告あり。",4:"4のつく日：各色エリアに異なる仕掛けを分ける「あみだ」の報告あり。",6:"6のつく日：過去の重点営業日。列・末尾・機種の実績を確認。",7:"7のつく日：過去には3台/5台並びや末尾など複数要素の報告あり。"};
+ el("colorGuidance").textContent="過去の取材傾向（当日の告知ではありません）："+(occasion[targetType(date)]||"特定日の仕掛けは未確認。通常日の実績を優先。");
+ el("colorInfo").textContent="確認済みの位置 "+mapped+"台／直近の実績台 "+covered+"/"+latest.length+"台。予想日の前75日・G数300以上のデータ "+r.data.length+"台日。未来のデータは使用していません。";
  el("colorCount").innerHTML=Object.entries(zones).map(([z,m])=>'<span class="color-chip" style="border-color:'+m[2]+'">'+m[1]+" "+m[0]+" "+[...r.target.values()].filter(x=>x.zone===z).length+"台</span>").join("");
  function areaLabel(code){const z=zones[code];return '<span class="color-chip" style="border-color:'+z[2]+'">'+z[1]+" "+z[0]+"</span>"}
  el("colorAreas").innerHTML=r.scores.length?'<div class="color-overflow"><table><tr><th>区分</th><th>指数</th><th>日数</th><th>同末尾日</th><th>平均差枚</th><th>同日平均との差</th><th>勝率</th><th>標本</th></tr>'+r.scores.map(g=>"<tr><td>"+areaLabel(g.zone)+"</td><td>"+g.score+"/100</td><td>"+g.days+"</td><td>"+g.same+"</td><td>"+number(g.avg)+"</td><td>"+number(g.lift)+"</td><td>"+g.win.toFixed(1)+"%</td><td>"+g.quality+"</td></tr>").join("")+"</table></div>":'<p class="muted">最新の色別台番マップが未登録か、色ごとの実績が不足しています（1日5台×5日以上が必要）。</p>';
