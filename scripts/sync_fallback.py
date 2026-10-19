@@ -65,8 +65,8 @@ def parse_day(html: str, day: str):
     title=soup.get_text(' ',strip=True)[:300]
     if 'ピーアーク北千住' not in title or 'SSS' not in title.upper():
         raise ValueError('hall title is not P-ARK Kitasenju SSS')
-    date_label=f'{int(day[5:7])}月{int(day[8:10])}日'
-    if day[:4] not in title or date_label not in title:
+    date_pattern=rf'{day[:4]}年0?{int(day[5:7])}月0?{int(day[8:10])}日'
+    if not re.search(date_pattern, title):
         raise ValueError('requested date is not visible in response title')
     records={}
     wanted=('機種名','台番号','G数','差枚')
