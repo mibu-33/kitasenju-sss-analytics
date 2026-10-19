@@ -4,7 +4,7 @@
 const zones={red:["赤","1F","#e65757"],blue:["青","1F","#4b98ed"],green:["緑","1F","#52b887"],silver:["銀","1F","#b2bdce"],gold:["金","2F","#d3b355"],purple:["紫","2F","#b08ae4"]};
 const ja={赤:"red",青:"blue",緑:"green",銀:"silver",金:"gold",紫:"purple"};
 const key="sss-verified-color-zones-v1";
-const el=id=>document.getElementById(id);
+const el=id=>typeof document==="undefined"?null:document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const number=x=>Math.round(x).toLocaleString("ja-JP");
 const mean=a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:0;
