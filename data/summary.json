@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "date": "2026-10-13",
+    "avg_diff": -28.4,
+    "avg_games": 3301.7,
+    "win_rate": 34.59,
+    "wins": 156,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-14",
+    "avg_diff": 64.7,
+    "avg_games": 3058.7,
+    "win_rate": 35.7,
+    "wins": 161,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-15",
+    "avg_diff": 36.9,
+    "avg_games": 3053.5,
+    "win_rate": 37.25,
+    "wins": 168,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-16",
+    "avg_diff": 118.1,
+    "avg_games": 4083.4,
+    "win_rate": 36.59,
+    "wins": 165,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-17",
+    "avg_diff": 442.6,
+    "avg_games": 5312.7,
+    "win_rate": 45.23,
+    "wins": 204,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-18",
+    "avg_diff": -11.3,
+    "avg_games": 4026.2,
+    "win_rate": 40.35,
+    "wins": 182,
+    "count": 451,
+    "source": "slo-navi-derived"
+  }
+]
