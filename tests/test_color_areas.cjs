@@ -4,6 +4,7 @@ vm.runInNewContext(fs.readFileSync('public/color-areas.js','utf8'),sandbox);
 const m=sandbox.SSSColorCore;
 assert.equal(m.normalized({number:35,zone:'赤'}).floor,'1F');
 assert.equal(m.normalized({number:810,zone:'金'}).floor,'2F');
+assert.equal(m.normalized({number:840,zone:'紫'}).zone,'purple');
 assert.throws(()=>m.normalized({number:35,zone:'金',floor:'1F'}));
 assert.throws(()=>m.normalized({number:35,zone:'青',from:'2026-10-20',to:'2026-10-01'}));
 const rows=m.csv('台番,階,色,通路,左右,位置,開始日,終了日\n11,1F,青,A,左,1,2026-10-01,\n12,1F,赤,B,右,2,2026-10-01,');
