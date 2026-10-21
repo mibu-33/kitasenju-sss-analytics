@@ -1,5 +1,241 @@
 [
   {
+    "number": 8,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 9,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 10,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05",
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 20,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 30,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 37,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 38,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 40,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09",
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 50,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 53,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 54,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 55,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 60,
+    "zone": "silver",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
     "number": 66,
     "zone": "blue",
     "floor": "1F",
@@ -540,6 +776,258 @@
     "confidence": "readable-label"
   },
   {
+    "number": 114,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 115,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 116,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 149,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 151,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 178,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 179,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 180,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 181,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 200,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 203,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 220,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 221,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 222,
+    "zone": "red",
+    "floor": "1F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
     "number": 234,
     "zone": "green",
     "floor": "1F",
@@ -876,6 +1364,640 @@
     "confidence": "readable-label"
   },
   {
+    "number": 614,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 615,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 616,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 617,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 618,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 619,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 620,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01"
+    ],
+    "latest_color_observation": "2026-10-01",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 621,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01",
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 622,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-01",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-01",
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 623,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 652,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 653,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 654,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 655,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 656,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 657,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 658,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-05",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-05"
+    ],
+    "latest_color_observation": "2026-10-05",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 681,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 682,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 683,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 703,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 704,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 705,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 706,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 707,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 708,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 709,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 710,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 711,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 712,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 713,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 714,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 715,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09",
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 716,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09"
+    ],
+    "latest_color_observation": "2026-10-09",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 717,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-09",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-09",
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
     "number": 742,
     "zone": "purple",
     "floor": "2F",
@@ -1195,6 +2317,24 @@
     "to": "",
     "source": "user-provided floor-map (2026-10-19, map capture date unknown)",
     "confidence": "readable-label"
+  },
+  {
+    "number": 1008,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-10-15",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "confidence": "secondary-color-only",
+    "observed_on": [
+      "2026-10-15"
+    ],
+    "latest_color_observation": "2026-10-15",
+    "historical_layout_verified": false,
+    "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
   },
   {
     "number": 1013,
