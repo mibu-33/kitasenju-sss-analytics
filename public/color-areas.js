@@ -77,7 +77,7 @@ function compute(date){
   const sorted=rs.slice().sort((x,y)=>y.date.localeCompare(x.date)),machine=sorted[0]?.machine||"不明";
   if(exclude&&skip.some(w=>machine.toLowerCase().includes(w.toLowerCase())))continue;
   const avg=mean(rs.map(x=>+x.diff)),win=rs.filter(x=>x.diff>0).length*100/rs.length;
-  candidates.push({seat,machine,zone:a.zone,days:observed,avg,win,score:Math.round(clamp(g.score*.7+15+clamp(shrink(avg,observed,10)/300,-12,12)+clamp((win-50)*.1,-5,5),0,100))});
+  candidates.push({seat,machine,zone:a.zone,confidence:a.confidence||"manual",days:observed,avg,win,score:Math.round(clamp(g.score*.7+15+clamp(shrink(avg,observed,10)/300,-12,12)+clamp((win-50)*.1,-5,5),0,100))});
  }
  candidates.sort((a,b)=>b.score-a.score||b.days-a.days);
  // Only truly consecutive order positions on the same floor, colour, aisle and side.
@@ -102,11 +102,12 @@ function render(){
  el("colorGuidance").textContent="過去の取材傾向（当日の告知ではありません）："+(occasion[targetType(date)]||"特定日の仕掛けは未確認。通常日の実績を優先。");
  el("colorInfo").textContent="確認済みの位置 "+mapped+"台／直近の実績台 "+covered+"/"+latest.length+"台。予想日の前75日・G数300以上のデータ "+r.data.length+"台日。未来のデータは使用していません。";
  const corroborated=[...r.target.values()].filter(a=>a.confidence==="cross-checked").length;
- el("colorInfo").textContent+=" 公式Xと画像の照合 "+corroborated+"台、提供画像のみ "+(mapped-corroborated)+"台。歴史上の島配置・正確な隣接順は未確認（暫定評価）。";
+ const colorOnly=[...r.target.values()].filter(a=>a.confidence==="secondary-color-only").length;
+ el("colorInfo").textContent+=" 画像照合 "+corroborated+"台、画像判読 "+(mapped-corroborated-colorOnly)+"台、二次資料の色のみ "+colorOnly+"台。後者の島・並び位置は未確認。";
  el("colorCount").innerHTML=Object.entries(zones).map(([z,m])=>'<span class="color-chip" style="border-color:'+m[2]+'">'+m[1]+" "+m[0]+" "+[...r.target.values()].filter(x=>x.zone===z).length+"台</span>").join("");
  function areaLabel(code){const z=zones[code];return '<span class="color-chip" style="border-color:'+z[2]+'">'+z[1]+" "+z[0]+"</span>"}
  el("colorAreas").innerHTML=r.scores.length?'<div class="color-overflow"><table><tr><th>区分</th><th>指数</th><th>日数</th><th>同末尾日</th><th>平均差枚</th><th>同日平均との差</th><th>勝率</th><th>標本</th></tr>'+r.scores.map(g=>"<tr><td>"+areaLabel(g.zone)+"</td><td>"+g.score+"/100</td><td>"+g.days+"</td><td>"+g.same+"</td><td>"+number(g.avg)+"</td><td>"+number(g.lift)+"</td><td>"+g.win.toFixed(1)+"%</td><td>"+g.quality+"</td></tr>").join("")+"</table></div>":'<p class="muted">最新の色別台番マップが未登録か、色ごとの実績が不足しています（1日5台×5日以上が必要）。</p>';
- el("colorSeats").innerHTML=r.candidates.length?'<div class="color-overflow"><table><tr><th>順位</th><th>台番</th><th>機種</th><th>区分</th><th>指数</th><th>日数</th><th>平均差枚</th><th>勝率</th></tr>'+r.candidates.slice(0,30).map((x,i)=>"<tr><td>"+(i+1)+"</td><td><b>"+x.seat+"</b></td><td>"+esc(x.machine)+"</td><td>"+areaLabel(x.zone)+"</td><td>"+x.score+"</td><td>"+x.days+"</td><td>"+number(x.avg)+"</td><td>"+x.win.toFixed(1)+"%</td></tr>").join("")+"</table></div>":'<p class="muted">現行の色別台番と各台5日以上のデータが必要です。未確認台の順位は捏造しません。</p>';
+ el("colorSeats").innerHTML=r.candidates.length?'<div class="color-overflow"><table><tr><th>順位</th><th>台番</th><th>機種</th><th>区分</th><th>配置根拠</th><th>指数</th><th>日数</th><th>平均差枚</th><th>勝率</th></tr>'+r.candidates.slice(0,30).map((x,i)=>"<tr><td>"+(i+1)+"</td><td><b>"+x.seat+"</b></td><td>"+esc(x.machine)+"</td><td>"+areaLabel(x.zone)+"</td><td>"+esc(x.confidence==="secondary-color-only"?"二次資料・色のみ":x.confidence==="cross-checked"?"複数画像":x.confidence==="readable-label"?"提供画像":"手動")+"</td><td>"+x.score+"</td><td>"+x.days+"</td><td>"+number(x.avg)+"</td><td>"+x.win.toFixed(1)+"%</td></tr>").join("")+"</table></div>":'<p class="muted">現行の色別台番と各台5日以上のデータが必要です。未確認台の順位は捏造しません。</p>';
  el("colorNeighbors").innerHTML=r.scores.map(g=>{const x=r.streaks.get(g.zone);return areaLabel(g.zone)+(x?x.positive+"/"+x.total+"組窓":'並び順未登録')}).join("　")||"通路・左右・並び順を登録すると、3台並びの過去実績を検証します。";
 }
 function setup(){
