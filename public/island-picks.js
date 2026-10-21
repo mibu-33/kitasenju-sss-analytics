@@ -79,7 +79,7 @@ function scoreIslands(target,all,mapForDate,opts={}){
 function render(){if(!D('islandBlocks')||typeof records==='undefined')return;
  const value=D('colorDay')?.value;if(!value)return;
  const r=scoreIslands(value,records,day=>areaCore().at(day),{excludeRisk:D('colorRisk')?.checked});
- D('islandStatus').textContent=`画像で確認した${r.known}台中、履歴あり${r.coverage}台。実績${r.usableDays}営業日（同一取得元・対象日より前・1日400台以上）／最終${r.latest||'未取得'}。${r.mappingWarning}`;
+ D('islandStatus').textContent=`色を確認した${r.known}台（島区分あり${[...areaCore().at(value).values()].filter(x=>x.corridor).length}台）のうち履歴あり${r.coverage}台。実績${r.usableDays}営業日（同一取得元・対象日より前・1日400台以上）／最終${r.latest||'未取得'}。${r.mappingWarning}`;
  const row=(cells)=>'<tr>'+cells.map(x=>'<td>'+x+'</td>').join('')+'</tr>';
  const table=(heads,body)=>'<div class="island-scroll"><table><thead>'+row(heads.map(esc))+'</thead><tbody>'+body.join('')+'</tbody></table></div>';
  D('islandBlocks').innerHTML=r.blocks.length?table(['順位','階・色','ブロック','登録台数','実績日','参考点','平均差枚','同日平均との差','勝率'],r.blocks.map((b,i)=>row([i+1,esc(b.floor+' '+colorJ[b.zone]),esc(b.block),b.count,b.days,`<b>${b.score}</b> / 100`,fmt(b.mean),fmt(b.total),b.win.toFixed(1)+'%']))):'<p class="muted">同じ取得元の十分な実績（1ブロック3台・5営業日以上）がまだありません。</p>';
@@ -89,7 +89,7 @@ function render(){if(!D('islandBlocks')||typeof records==='undefined')return;
 function install(){if(!D('colorZones')||D('islandBlocks'))return;
  const target=D('colorAreas')?.parentElement;
  if(!target)return;
- const section=document.createElement('div');section.className='panel';section.innerHTML='<h3>確認済みの島ブロック別実績</h3><p class="muted">1F 青A・B、緑C〜F、赤S、2F 紫5台円卓。台番の判読可能な82台のみ登録。推定島は加えません。</p><p class="muted" id="islandStatus"></p><div id="islandBlocks"></div><h3>島の傾向を加味した台番号候補</h3><div id="islandCandidates"></div><p class="muted" id="islandSource"></p>';
+ const section=document.createElement('div');section.className='panel';section.innerHTML='<h3>確認済みの島ブロック別実績</h3><p class="muted">画像で照合した青A・B、緑C〜F、赤S、紫A・B・5台円卓だけを島別集計。銀・赤・金の二次資料は色のみ登録し、実島ランキングには含めません。</p><p class="muted" id="islandStatus"></p><div id="islandBlocks"></div><h3>島の傾向を加味した台番号候補</h3><div id="islandCandidates"></div><p class="muted" id="islandSource"></p>';
  target.insertAdjacentElement('afterend',section);
  const s=document.createElement('style');s.textContent='#colorZones .island-scroll{overflow-x:auto}#colorZones .island-scroll table{width:100%;border-collapse:collapse;font-size:13px}#colorZones .island-scroll th,#colorZones .island-scroll td{white-space:nowrap;padding:9px;border-bottom:1px solid #31415b}';document.head.appendChild(s);
  D('colorDay')?.addEventListener('change',render);D('colorRisk')?.addEventListener('change',render);D('colorRecalc')?.addEventListener('click',render);
