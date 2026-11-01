@@ -1024,5 +1024,23 @@
     "wins": 166,
     "count": 451,
     "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-30",
+    "avg_diff": -61.4,
+    "avg_games": 4151.0,
+    "win_rate": 38.36,
+    "wins": 173,
+    "count": 451,
+    "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-10-31",
+    "avg_diff": -147.1,
+    "avg_games": 4552.0,
+    "win_rate": 36.81,
+    "wins": 166,
+    "count": 451,
+    "source": "slo-navi-derived"
   }
 ]
