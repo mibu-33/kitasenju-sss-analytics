@@ -622,5 +622,28 @@
       ],
       "caveat": "map publication date unknown"
     }
+  ],
+  "photo_geometry_observations": [
+    {
+      "floor": "1F",
+      "zone": "red",
+      "observed_on": "2026-11-04",
+      "source": "user-provided on-site 1F guide photograph",
+      "confidence": "direct-photo-zone-geometry",
+      "confirmed": "central rectangular red block with multiple horizontal rows, separated gaps, small S-shaped block to left; independent 1001-1004 block at bottom left",
+      "cross_reference": "2026-09-06 report: red main-aisle ninth column 117,134,147,156,169,186,197,212,225; 2026-10-15 report: third column 123,128,175,180,201,206,231",
+      "seat_coordinates_verified": false
+    },
+    {
+      "floor": "2F",
+      "zone": "gold",
+      "observed_on": "2026-11-04",
+      "source": "user-provided on-site 2F guide photograph",
+      "confidence": "direct-photo-zone-geometry",
+      "confirmed": "central 12-seat roundtable, two separate 4-seat roundtables labeled 1 and 2, multiple horizontal rows around circles, gold area wrapping right side",
+      "cross_reference": "2026 reports: 659-672, 695-702 and 716-720 are reported horizontal groups; 1005-1008 and 1009-1012 are reported four-seat groups",
+      "seat_coordinates_verified": false,
+      "unresolved": "which 4-seat number group belongs to circle 1 or 2; physical positions of reported horizontal groups"
+    }
   ]
 }
