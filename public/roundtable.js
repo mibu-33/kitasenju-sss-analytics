@@ -50,6 +50,7 @@ function init(){
  const b=document.createElement("button");b.className="tab";b.dataset.tab="rt17";b.textContent="毎日円卓17台";tabs.appendChild(b);
  const s=document.createElement("section");s.id="rt17";s.className="hide";s.innerHTML='<h2>毎日円卓17台・ローテーション検証</h2><p class="note">スイカのスロット屋などの答え合わせを記録したもので、実際の設定値の確認ではありません。</p><div class="filters"><label>予想日 <input id="rtDate" type="date" value="2026-11-04"></label><button id="rtRefresh">再集計</button></div><p id="rtIntro" class="note">読込中…</p><div id="rtCards" class="rt-grid"></div><div class="panel"><h3>過去日付だけで予測したモデル比較</h3><p class="note">前日までの履歴だけを用いた上位1台的中率・損失。均等モデルは理論期待率25%／20%。データがある日だけで評価するため、無作為モデルを安定して超える保証はありません。</p><div id="rtModels" class="rt-scroll"></div></div><div class="panel"><h3>日別答え合わせ（最大35日）</h3><div id="rtHistory" class="rt-scroll"></div></div><p id="rtSource" class="note"></p>';main.appendChild(s);
  b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll("main>section:not(.stats)").forEach(x=>x.classList.add("hide"));b.classList.add("active");s.classList.remove("hide");render()};
+ q("rtDate").value=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
  q("rtRefresh").onclick=render;q("rtDate").onchange=render;
  fetch("data/roundtable_targets.json?v="+Date.now()).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(j=>{data=j;render()}).catch(e=>q("rtIntro").textContent="履歴が読めません: "+e.message);
 }
