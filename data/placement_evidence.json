@@ -525,6 +525,14 @@
         "observed_machine_number": 1005,
         "source_url": "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=172202",
         "meaning": "当日の円卓チャレンジ対象台の報告。グループ全席の配置や設定を証明するものではない。"
+      },
+      "photo_machine_crosscheck": {
+        "observed_on": "2026-11-04",
+        "source": "user-provided on-site 2F floor-map photo",
+        "circle_1_machine": "からくりサーカス2",
+        "circle_2_machine": "東京喰種",
+        "number_group_to_circle_verified": false,
+        "reason": "historical group machine names per machine number not yet verified"
       }
     },
     {
@@ -546,6 +554,14 @@
         "observed_machine_number": 1012,
         "source_url": "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=172202",
         "meaning": "当日の円卓チャレンジ対象台の報告。グループ全席の配置や設定を証明するものではない。"
+      },
+      "photo_machine_crosscheck": {
+        "observed_on": "2026-11-04",
+        "source": "user-provided on-site 2F floor-map photo",
+        "circle_1_machine": "からくりサーカス2",
+        "circle_2_machine": "東京喰種",
+        "number_group_to_circle_verified": false,
+        "reason": "historical group machine names per machine number not yet verified"
       }
     },
     {
@@ -640,7 +656,7 @@
       "observed_on": "2026-11-04",
       "source": "user-provided on-site 2F guide photograph",
       "confidence": "direct-photo-zone-geometry",
-      "confirmed": "central 12-seat roundtable, two separate 4-seat roundtables labeled 1 and 2, multiple horizontal rows around circles, gold area wrapping right side",
+      "confirmed": "central 12-seat roundtable, two separate 4-seat roundtables labeled 1 and 2, multiple horizontal rows around circles, gold area wrapping right side; circle 1 machine からくりサーカス2 and circle 2 machine 東京喰種 are readable on the photograph",
       "cross_reference": "2026 reports: 659-672, 695-702 and 716-720 are reported horizontal groups; 1005-1008 and 1009-1012 are reported four-seat groups",
       "seat_coordinates_verified": false,
       "unresolved": "which 4-seat number group belongs to circle 1 or 2; physical positions of reported horizontal groups"
