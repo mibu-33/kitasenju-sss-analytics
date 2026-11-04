@@ -1,61 +1,113 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>北千住SSS｜島配置再現図</title><style>
-:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#091422;color:#eaf1fa}*{box-sizing:border-box}body{margin:0}header{padding:16px 20px;background:#12253a;border-bottom:1px solid #425c78}h1{margin:0;font-size:1.4rem}small,.muted{color:#b4c4d8}main{max-width:1370px;margin:auto;padding:16px}a{color:#9dd0ff}.controls{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0}button,input{font:inherit;background:#1c334e;color:inherit;border:1px solid #6583a1;border-radius:8px;padding:8px 12px}button{cursor:pointer}.active{background:#3c719e}.pane{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px}.mapwrap{background:#14263a;border:1px solid #4b6481;border-radius:14px;padding:10px;overflow:auto}.map{width:100%;min-width:820px;height:auto;display:block;background:#cbd6df;border-radius:8px}.side{background:#122840;border:1px solid #4b6481;border-radius:12px;padding:14px;line-height:1.65}.side h2{font-size:17px;margin:0 0 9px}.note{font-size:13px;background:#142b43;border:1px solid #48647e;padding:12px;border-radius:9px;margin-bottom:14px;line-height:1.65}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}.tag{border:1px solid #6e8ba6;padding:4px 6px;border-radius:6px;font-size:12px}.meta{color:#b4c9db;font-size:12px}.source{margin-top:16px;display:flex;gap:15px;flex-wrap:wrap;font-size:13px}.maptext{fill:#20344d;font-size:12px;font-weight:700}.aisletext{fill:#8299ae;font-size:13px;font-weight:600;letter-spacing:4px}.seat{stroke:#52677a;stroke-width:1;fill:#fafbff}.seat.highlight{fill:#ffe18c;stroke:#bd8833;stroke-width:2}.island{cursor:pointer}.island:hover .seat{stroke:#ff9e35;stroke-width:2}.islandlabel{fill:#fff;font-size:13px;font-weight:800;paint-order:stroke;stroke:#283744;stroke-width:3}.roundshape{cursor:pointer}.roundshape:hover circle{stroke:#ff8639;stroke-width:4}.legend{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;font-size:12px}.legend span{display:inline-flex;align-items:center;gap:4px}.legend i{width:13px;height:13px;display:inline-block;border:1px solid #71849a}.foot{font-size:12px;color:#b4c4d8;margin:14px 0}@media(max-width:900px){.pane{grid-template-columns:1fr}.side{order:-1}}
-</style></head><body><header><h1>北千住SSS｜台列・通路の再現マップ</h1><small>ガイドと公式フロア図の島形状を再描画。台番の完全一致よりも物理配置を優先。</small></header>
-<main><a href="index.html">← 分析アプリへ戻る</a><div class="controls"><button id="one" class="active">1F</button><button id="two">2F</button><input type="search" id="search" inputmode="numeric" placeholder="台番号検索（登録済み）"><button id="reset">解除</button></div>
-<div class="note"><b>今回の修正：</b> 大きな色付き四角は廃止し、実際のマップに描かれた<b>細長い台列・円卓・島間の通路</b>を個別に再現。図中の一つひとつの小さな長方形は座席の模式表示で、台番号を推測して書き込んでいません。<b>1Fの一部と2F画像右端は、資料が不十分なため配置の精度が低い</b>箇所があります。</div>
-<div class="legend"><span><i style="background:#749cd2"></i>青</span><span><i style="background:#70ad86"></i>緑</span><span><i style="background:#d58a8a"></i>赤</span><span><i style="background:#a8b4c2"></i>銀</span><span><i style="background:#dfc36e"></i>金</span><span><i style="background:#af97d6"></i>紫</span><span>点線：配置の確度が低い部分</span></div>
-<div class="pane"><div class="mapwrap"><svg id="map" class="map" viewBox="0 0 1000 680" role="img" aria-label="島と通路を描画したフロアマップ"></svg></div><aside class="side" id="detail"><h2>島をタップ</h2>島の色・形・登録されている台番を確認できます。</aside></div>
-<div class="source"><a href="https://x.com/Kitasenjusss/status/2066121201462968359" target="_blank" rel="noopener">1F公式資料</a><a href="https://x.com/Kitasenjusss/status/2053440543062147221" target="_blank" rel="noopener">2F公式資料</a><a href="https://github.com/mibu-33/kitasenju-sss-analytics/blob/main/data/areas.csv" target="_blank" rel="noopener">確認済み台番と根拠</a></div>
-<p class="foot">座席の表示は形状を示すものであり、全451台の確定座席表ではありません。新台入替で配置が変化している可能性もあります。</p></main>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ピーアーク北千住SSS｜ガイド再現フロアマップ</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#0b1626;color:#e9f1fb}
+*{box-sizing:border-box}body{margin:0}header{padding:18px 22px;background:#13243a;border-bottom:1px solid #40536c}h1{font-size:1.43rem;margin:0 0 5px}small,.muted{color:#b0c1d5}
+main{max-width:1400px;margin:auto;padding:18px}a{color:#a7d9ff}
+.bar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:14px 0}
+button,input{font:inherit;border:1px solid #587591;color:#eaf2ff;background:#203750;padding:9px 13px;border-radius:9px}button{cursor:pointer}button.current{background:#3e7caa}
+.note{font-size:13px;line-height:1.6;padding:12px 14px;background:#152a42;border:1px solid #4a6481;border-radius:10px;margin-bottom:13px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:14px}
+.scroller{overflow:auto;border:1px solid #4d6682;background:#162a41;padding:12px;border-radius:12px}
+#map{display:block;width:100%;min-width:980px;background:#dce4eb;border-radius:8px;box-shadow:0 2px 8px #091221aa}
+.info{border:1px solid #4d6682;border-radius:12px;background:#152a42;padding:15px;line-height:1.6}
+.info h2{font-size:17px;margin:0 0 10px}
+.chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.chips span{border:1px solid #7287a3;background:#1d3650;border-radius:6px;padding:4px 7px;font-size:12px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0;font-size:12px}
+.legend span{display:flex;align-items:center;gap:4px}.legend i{width:13px;height:13px;display:inline-block;border:1px solid #6c8096}
+.links{margin-top:15px;display:flex;gap:16px;flex-wrap:wrap;font-size:13px}.foot{font-size:12px;color:#b4c3d6;margin-top:16px}
+.map-title{font-size:9px;font-weight:800;fill:#37485e}.map-label{font-size:5.7px;font-weight:700;fill:#35475b}.map-tiny{font-size:4.5px;fill:#43546a}
+.aisle-label{font-size:6.5px;letter-spacing:1.5px;fill:#8798a8}.figure-item{cursor:pointer}
+.figure-item:hover .outline{stroke:#da7223;stroke-width:2}.figure-item:focus{outline:none}
+.figure-item:focus .outline{stroke:#ce6b1e;stroke-width:2}
+.active-outline{stroke:#e77a23!important;stroke-width:2.3!important}
+@media(max-width:850px){.cols{grid-template-columns:1fr}.info{order:-1}}
+</style>
+</head>
+<body>
+<header><h1>ピーアーク北千住SSS｜ガイド再現フロアマップ</h1>
+<small>ガイドブック3ページ目の配置を、画像ではなくSVGの台列・円卓・通路で描き直したもの</small></header>
+<main>
+<a href="index.html">← 分析アプリに戻る</a>
+<div class="bar"><button id="btn1" class="current">1F</button><button id="btn2">2F</button><input id="search" type="search" inputmode="numeric" placeholder="台番号を調べる"><button id="clear">解除</button></div>
+<div class="note"><b>図の再現を優先：</b>島や通路の位置は提供された2025年11月のガイド図をトレースしています。色付きの小さな区切りは台列を表す模式図であり、<b>個々の台の厳密な座席数・席順・2026年11月現在の設置位置を確定したものではありません。</b> 検索時は登録済みの島・色に関する情報を右に表示します。</div>
+<div class="legend">
+<span><i style="background:#b1d3f2"></i>ブルー</span><span><i style="background:#b4dfa7"></i>グリーン</span><span><i style="background:#f1aaa7"></i>レッド</span><span><i style="background:#ced6de"></i>シルバー</span><span><i style="background:#ffe2a0"></i>ゴールド</span><span><i style="background:#d9c2ef"></i>紫（参考区画）</span>
+</div>
+<div class="cols"><div class="scroller"><svg id="map" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" aria-label="ガイド図の台列・通路・円卓を再現したマップ" role="img"></svg></div><aside class="info" id="detail"><h2>島・エリアを選択</h2>図内の台列や円卓をクリックすると、元図との対応と登録されている台の情報が表示されます。</aside></div>
+<div class="links"><a target="_blank" rel="noopener" href="https://github.com/mibu-33/kitasenju-sss-analytics/blob/main/data/areas.csv">台番号の根拠一覧</a><a target="_blank" rel="noopener" href="https://x.com/Kitasenjusss/status/2066121201462968359">公式1F図（別時点）</a><a target="_blank" rel="noopener" href="https://x.com/Kitasenjusss/status/2053440543062147221">公式2F図（別時点）</a></div>
+<p class="foot">出典：提供された「ピーアーク北千住sss ガイドブック🐤🐤🐤」、p.3。ガイド掲載時点の位置を基準としており、現地最新図との一致は別途検証が必要です。</p>
+</main>
 <script>
 const NS="http://www.w3.org/2000/svg";
-const palettes={blue:"#749cd2",green:"#70ad86",red:"#d58a8a",silver:"#a8b4c2",gold:"#dfc36e",purple:"#af97d6"};
-// x,y,w,h は実店舗図との相対的な位置と向きを優先。未確認部分は dashed:true。
-const layouts={
-"1F":{entrance:[48,628],elements:[
-{type:"line",id:"青A",zone:"blue",x:85,y:80,w:46,h:300,orientation:"v",count:11,side:2},
-{type:"line",id:"青B",zone:"blue",x:165,y:80,w:46,h:300,orientation:"v",count:12,side:2},
-{type:"line",id:"銀中央1",zone:"silver",x:285,y:90,w:48,h:280,orientation:"v",count:10,side:2,dashed:true},
-{type:"line",id:"銀中央2",zone:"silver",x:362,y:90,w:48,h:280,orientation:"v",count:10,side:2,dashed:true},
-{type:"line",id:"緑C",zone:"green",x:716,y:75,w:38,h:180,orientation:"v",count:7,side:1},
-{type:"line",id:"緑D",zone:"green",x:776,y:75,w:38,h:180,orientation:"v",count:7,side:1},
-{type:"line",id:"緑E",zone:"green",x:840,y:75,w:38,h:180,orientation:"v",count:7,side:1},
-{type:"line",id:"緑F",zone:"green",x:900,y:75,w:38,h:180,orientation:"v",count:7,side:1},
-{type:"line",id:"赤1",zone:"red",x:470,y:410,w:190,h:30,orientation:"h",count:8,side:1,dashed:true},
-{type:"line",id:"赤2",zone:"red",x:470,y:458,w:310,h:30,orientation:"h",count:12,side:1,dashed:true},
-{type:"line",id:"赤3",zone:"red",x:470,y:506,w:330,h:30,orientation:"h",count:13,side:1,dashed:true},
-{type:"line",id:"赤4",zone:"red",x:470,y:554,w:310,h:30,orientation:"h",count:12,side:1,dashed:true},
-{type:"line",id:"赤S",zone:"red",x:100,y:552,w:130,h:26,orientation:"h",count:4,side:1}
-]},
-"2F":{entrance:[438,597],elements:[
-{type:"line",id:"紫B",zone:"purple",x:55,y:130,w:310,h:32,orientation:"h",count:10,side:1},
-{type:"line",id:"紫A",zone:"purple",x:55,y:412,w:310,h:32,orientation:"h",count:11,side:1},
-{type:"line",id:"紫短列1",zone:"purple",x:56,y:208,w:75,h:30,orientation:"h",count:3,side:1,dashed:true},
-{type:"line",id:"紫短列2",zone:"purple",x:56,y:284,w:75,h:30,orientation:"h",count:3,side:1,dashed:true},
-{type:"round",id:"紫5台円卓",zone:"purple",cx:213,cy:284,r:76,count:5},
-{type:"line",id:"金上横",zone:"gold",x:475,y:100,w:300,h:30,orientation:"h",count:12,side:1,dashed:true},
-{type:"line",id:"金横1",zone:"gold",x:470,y:157,w:215,h:26,orientation:"h",count:9,side:1,dashed:true},
-{type:"line",id:"金横2",zone:"gold",x:470,y:203,w:230,h:26,orientation:"h",count:9,side:1,dashed:true},
-{type:"line",id:"金横3",zone:"gold",x:470,y:249,w:190,h:26,orientation:"h",count:8,side:1,dashed:true},
-{type:"line",id:"金下横",zone:"gold",x:490,y:545,w:275,h:28,orientation:"h",count:11,side:1,dashed:true},
-{type:"round",id:"金12台円卓",zone:"gold",cx:790,cy:327,r:85,count:12},
-{type:"round",id:"金4台円卓1",zone:"gold",cx:920,cy:195,r:48,count:4},
-{type:"round",id:"金4台円卓2",zone:"gold",cx:605,cy:460,r:47,count:4},
-{type:"round",id:"金4台円卓3",zone:"gold",cx:915,cy:520,r:47,count:4,dashed:true}
-]}};
-let floor="1F",data=[],selected=null;const svg=document.querySelector("#map");
-function svgEl(tag,attrs={},text){let e=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text!==undefined)e.textContent=text;return e}
-function groupFor(x){const g=svgEl("g",{class:"island",role:"button",tabindex:"0","aria-label":x.id});g.onclick=()=>select(x);g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(x)}};return g}
-function select(x){selected=x;let matches=data.filter(a=>a.floor===floor&&(a.corridor===x.id||(a.zone===x.zone&&!a.corridor)));let aside=document.querySelector("#detail");aside.replaceChildren();let h=document.createElement("h2");h.textContent=x.id;aside.append(h);let p=document.createElement("p");p.textContent="形状："+(x.type==="round"?"円卓":"直線島")+"／図示座席数：約"+x.count+"／色："+x.zone+"／台番割当・座席順は未確認";aside.append(p);let info=document.createElement("div");info.className="meta";info.textContent="関連して登録された番号（島名が一致、または色のみ判明）：";aside.append(info);let div=document.createElement("div");div.className="tags";for(let a of matches.slice(0,50)){let t=document.createElement("span");t.className="tag";t.textContent=a.number;div.append(t)}if(!matches.length)div.textContent="島への台番号割当なし";aside.append(div);if(x.dashed){let u=document.createElement("p");u.className="meta";u.textContent="この島の詳細配置は資料不足による仮置き。";aside.append(u)}}
-function drawLine(x){let g=groupFor(x),color=palettes[x.zone];g.append(svgEl("rect",{x:x.x,y:x.y,width:x.w,height:x.h,rx:3,fill:color,stroke:x.dashed?"#8a6b34":"#51657e","stroke-width":x.dashed?2:1,"stroke-dasharray":x.dashed?"6 5":"none"}));
-let n=x.count,vertical=x.orientation==="v",side=x.side||1;for(let i=0;i<n;i++){for(let j=0;j<side;j++){let xx=vertical?x.x+j*(x.w/side)+2:x.x+i*(x.w/n)+2, yy=vertical?x.y+i*(x.h/n)+2:x.y+j*(x.h/side)+2;let w=vertical?x.w/side-4:x.w/n-4,h=vertical?x.h/n-4:x.h/side-4;g.append(svgEl("rect",{class:"seat",x:xx,y:yy,width:Math.max(w,2),height:Math.max(h,2),rx:1}))}}
-let tx=vertical?x.x+x.w/2:x.x+x.w/2,ty=vertical?x.y-9:x.y-8;g.append(svgEl("text",{class:"maptext",x:tx,y:ty,"text-anchor":"middle"},x.id));return g}
-function drawRound(x){let g=groupFor(x);g.classList.add("roundshape");g.append(svgEl("circle",{cx:x.cx,cy:x.cy,r:x.r,fill:palettes[x.zone],stroke:x.dashed?"#8a6b34":"#6c678c","stroke-width":2,"stroke-dasharray":x.dashed?"6 5":"none"}));for(let i=0;i<x.count;i++){let a=(i/x.count)*Math.PI*2-Math.PI/2,rr=x.r*.76,cx=x.cx+rr*Math.cos(a),cy=x.cy+rr*Math.sin(a);g.append(svgEl("rect",{class:"seat",x:cx-7,y:cy-7,width:14,height:14,rx:2}))}g.append(svgEl("text",{x:x.cx,y:x.cy+4,class:"maptext","text-anchor":"middle"},x.id.replace("円卓","")));return g}
-function render(){document.querySelector("#one").classList.toggle("active",floor==="1F");document.querySelector("#two").classList.toggle("active",floor==="2F");svg.replaceChildren();svg.append(svgEl("rect",{x:15,y:15,width:970,height:650,rx:14,fill:"#e3e8ed",stroke:"#93a4b6","stroke-width":3}));svg.append(svgEl("text",{x:35,y:45,class:"maptext","font-size":22},floor+" フロア"));let defs=layouts[floor].elements;
-for(let i=0;i<defs.length;i++)svg.append(defs[i].type==="round"?drawRound(defs[i]):drawLine(defs[i]));
-let entry=layouts[floor].entrance;svg.append(svgEl("text",{x:entry[0],y:entry[1],class:"maptext"},"出入口"));svg.append(svgEl("text",{x:470,y:640,class:"aisletext","text-anchor":"middle"},"通 路"));
-const q=document.querySelector("#search").value.trim();if(q){let target=data.find(a=>String(a.number)===q);if(target&&target.floor!==floor){floor=target.floor;render();return}if(target){let d=defs.find(e=>e.id===target.corridor);if(d)select(d);else{let aside=document.querySelector("#detail");aside.textContent="台番"+target.number+" は "+target.floor+"・"+target.zone+"エリアに登録されていますが、個別の島・座席は未確定です。"}}}
+let floor="1F",entries=[],selection=null;
+const fill={blue:"#b5d5f4",green:"#b6dfa6",red:"#f1aaa6",silver:"#ced6de",gold:"#ffe0a0",purple:"#d7c3ed"};
+const strong={blue:"#3079ac",green:"#4eaa48",red:"#c54c48",silver:"#6c839a",gold:"#cc9c29",purple:"#8257b8"};
+const svg=document.querySelector("#map"),detail=document.querySelector("#detail");
+function node(tag,attrs={},label){const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(label!==undefined)n.textContent=label;return n}
+function shape(g,type,attrs){const e=node(type,attrs);g.append(e);return e}
+function txt(g,x,y,label,css="map-label",attrs={}){return shapeText(g,{x,y,class:css,...attrs},label)}
+function shapeText(g,attrs,value){let n=node("text",attrs,value);g.append(n);return n}
+function add(t,attrs={}){let x=node(t,attrs);svg.append(x);return x}
+function rect(g,x,y,w,h,c,stroke="#8797a8",sw=.7,rx=0){return shape(g,"rect",{x,y,width:w,height:h,rx,fill:c,stroke,"stroke-width":sw})}
+function path(g,d,color="#778ca0",sw=1.8,fillValue="none"){return shape(g,"path",{d,fill:fillValue,stroke:color,"stroke-width":sw,"stroke-linejoin":"round"})}
+function region(label,zone,alias,x,y,w,h,desc){const g=add("g",{class:"figure-item",role:"button",tabindex:"0","aria-label":label});g.dataset.zone=zone;g.dataset.label=label;g.dataset.alias=alias||"";g.dataset.description=desc||"";g.addEventListener("click",()=>select(label,zone,alias,desc,g));g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(label,zone,alias,desc,g)}});rect(g,x,y,w,h,fill[zone],strong[zone],1.4,1).setAttribute("class","outline");return g}
+function row(g,x,y,w,h,n,zone,orientation="h",label){const n0=Math.max(1,n),inner=rect(g,x,y,w,h,strong[zone],"#ffffff",.3,.3);if(orientation==="h"){for(let i=1;i<n0;i++)path(g,"M"+(x+i*w/n0)+","+y+"v"+h,"#ffffff",.33)}else{for(let i=1;i<n0;i++)path(g,"M"+x+","+(y+i*h/n0)+"h"+w,"#ffffff",.33)}if(label)txt(g,x+w/2,y+h/2+1.6,label,"map-tiny",{"text-anchor":"middle",fill:"#ffffff"});return inner}
+function stripeBlock(label,zone,alias,box,rows,desc){const [x,y,w,h]=box;const g=region(label,zone,alias,x,y,w,h,desc);rows.forEach(r=>row(g,...r,zone));txt(g,x+2,y-2,label,"map-label");return g}
+function room(x,y,w,h,name){const g=add("g");rect(g,x,y,w,h,"#d7dbe0","#83909f",.9,1.2);txt(g,x+w/2,y+h/2+2,name,"map-label",{"text-anchor":"middle"});return g}
+function circle(label,zone,alias,x,y,r,count,desc){const g=add("g",{class:"figure-item",role:"button",tabindex:"0","aria-label":label});g.dataset.label=label;g.addEventListener("click",()=>select(label,zone,alias,desc,g));g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(label,zone,alias,desc,g)}});shape(g,"circle",{cx:x,cy:y,r,fill:fill[zone],stroke:strong[zone],"stroke-width":1.7,class:"outline"});for(let i=0;i<count;i++){const a=2*Math.PI*i/count-Math.PI/2;const sx=x+(r-4.5)*Math.cos(a),sy=y+(r-4.5)*Math.sin(a);rect(g,sx-2.1,sy-2.2,4.2,4.4,"#fffaf1",strong[zone],.35,0.6)}txt(g,x,y-1,count+"台","map-label",{"text-anchor":"middle"});txt(g,x,y+6,"円卓","map-label",{"text-anchor":"middle"});return g}
+function base(f){svg.replaceChildren();rect(svg,0,0,480,340,"#d1d7dd","none",0);rect(svg,10,9,462,321,"#eff2f4","#bbc5ce",2,3);txt(svg,15,329,f,"map-title");txt(svg,258,330,"※位置関係をガイド図から再描画（席順未確認）","map-tiny");}
+function draw1(){base("1F");const walls=add("g");
+path(walls,"M14 151 H181 M181 151 H343 M345 151 H462","#6c8194",2.6);
+path(walls,"M16 236 H145 V303 H14","#bf5652",3);path(walls,"M184 153 V298 H346 V153 Z","#cc5e55",2.5);
+path(walls,"M352 153 V299 H404 V152","#57a157",2.3);path(walls,"M20 151 V236 M140 236 H184","#a0adba",2);
+path(walls,"M410 153 V199 H455 M414 232 H459","#8599ab",2.0);
+const blues=[
+["青 N","青A",[18,11,91,132],21,"ガイドの左上・縦長の青N列"],
+["青 B","青B",[113,11,90,132],22,"ガイドの上中央左・縦長の青B列"]];
+for(const [label,alias,box,n,desc] of blues){let [x,y,w,h]=box,g=region(label,"blue",alias,x,y,w,h,desc);txt(g,x+4,y+9,label,"map-label");row(g,x+5,y+15,w-10,h-20,n,"blue","v");path(g,"M"+(x+w-12)+","+(y+15)+"v"+(h-21),"#fdfefe",1);}
+const greens=[["緑 C","緑C",277,11],["緑 D","緑D",374,11],["緑 E","緑E",277,81],["緑 F","緑F",374,81]];
+for(const [label,alias,x,y] of greens){const g=region(label,"green",alias,x,y,91,63,"ガイド上部右側の緑2×2区画");txt(g,x+4,y+9,label,"map-label");row(g,x+6,y+14,79,44,7,"green","v")}
+room(223,73,45,80,"エスカレーター");rect(svg,231,87,11,62,"#3775a5","#f8fbfd",1);rect(svg,247,87,11,62,"#3775a5","#f8fbfd",1);txt(svg,246,82,"上り","map-tiny",{"text-anchor":"middle"});
+const silver=region("シルバーエリア","silver","",31,155,151,77,"左下寄りの横列が並ぶ銀エリア");txt(silver,33,162,"シルバー","map-label");
+row(silver,39,166,139,12,18,"silver","h");row(silver,39,181,139,12,18,"silver","h");row(silver,39,197,139,10,18,"silver","h");row(silver,50,215,118,9,15,"silver","h");
+const s=region("赤 S・4台島","red","赤S",17,242,124,64,"ガイド左下の独立4台島");txt(s,19,250,"S　赤4台島","map-label");for(let i=0;i<4;i++)row(s,22,252+i*12,11,10,1,"red");row(s,38,256,94,30,10,"red","h");txt(s,86,292,"1001–1004","map-tiny",{"text-anchor":"middle"});
+const red=region("レッドエリア","red","",185,155,160,142,"中央下側の赤い長い横列と区切りの配置");txt(red,189,161,"レッドエリア","map-label");
+row(red,190,163,151,11,7,"red","h");row(red,190,177,151,11,11,"red","h");row(red,190,191,151,18,15,"red","h");row(red,190,214,151,23,12,"red","h");row(red,190,244,43,11,5,"red","h");row(red,248,244,93,11,9,"red","h");row(red,190,261,151,13,17,"red","h");row(red,190,280,151,11,17,"red","h");
+const gg=region("グリーンエリア・右端縦列","green","",357,155,44,138,"右端の縦長2列。途中の横通路で上下に分かれる");txt(gg,356,151,"縦2列","map-label");row(gg,361,158,16,60,11,"green","v");row(gg,382,158,16,60,11,"green","v");row(gg,361,228,16,59,11,"green","v");row(gg,382,228,16,59,11,"green","v");
+room(435,156,22,24,"WC");room(427,201,28,25,"EV");room(410,234,30,25,"階段");
+txt(svg,20,191,"入口","map-label");path(svg,"M16 195 H29 l-4 -4 m4 4 l-4 4","#ce5452",1.3);
+txt(svg,441,271,"出口","map-label");path(svg,"M451 272 V248 l-4 5 m4-5 l4 5","#cf5552",1.4);
+txt(svg,239,148,"中央通路","aisle-label",{"text-anchor":"middle"});
+txt(svg,427,297,"右通路","map-tiny");
 }
-document.querySelector("#one").onclick=()=>{floor="1F";render()};document.querySelector("#two").onclick=()=>{floor="2F";render()};document.querySelector("#reset").onclick=()=>{document.querySelector("#search").value="";render()};document.querySelector("#search").oninput=render;
-fetch("./data/areas.json").then(r=>r.json()).then(a=>{data=a;render()}).catch(e=>{document.querySelector("#detail").textContent="台番登録データを読み込めません："+e.message;render()});
+function draw2(){base("2F");const walls=add("g");path(walls,"M34 103 H224 V31 H270 V104 H449 V250 H387 V308 H205 V313 H92 V259 H32 Z","#e4b83f",3.4);
+path(walls,"M34 198 V102 H224 M224 31 V101 M272 102 H450 M386 249 V310 H205 M90 310 V260","#d7aa34",1.3);
+const top=region("上左・3列","gold","",39,105,149,19,"左上の3分割された横長の機種列");row(top,42,109,47,11,5,"gold");row(top,90,109,46,11,5,"gold");row(top,137,109,47,11,5,"gold");
+const vert=region("最上部・縦長列","gold","",227,31,43,74,"上辺から中央に伸びる縦長の台列");row(vert,230,37,15,61,12,"gold","v");row(vert,252,37,14,61,12,"gold","v");
+const righttop=region("右上・横列","gold","",274,104,174,19,"右上側の長い1本の横列");row(righttop,280,109,163,11,19,"gold","h");
+const upperleft=region("左中段・上下列","gold","",39,137,105,32,"左中段の2段の機種列");row(upperleft,42,140,99,11,12,"gold","h");row(upperleft,42,155,99,10,12,"gold","h");
+const midleft=region("左側短列","gold","",39,182,49,17,"左側の短い横列");row(midleft,42,186,44,10,5,"gold");
+const leftvertical=region("左中下・縦の対面列","purple","",102,202,40,45,"12台円卓の左にある対面した縦2列");row(leftvertical,106,205,13,39,7,"purple","v");row(leftvertical,124,205,13,39,7,"purple","v");
+const rightmiddle=region("右中段・2つの長列","gold","",283,135,165,36,"右側中央の長い上下2列");row(rightmiddle,286,139,159,13,17,"gold");row(rightmiddle,286,155,159,12,17,"gold");
+const center=region("円卓右・短い2列","gold","",255,185,89,33,"12台円卓から右側へ続く上下2列");row(center,258,188,83,12,10,"gold");row(center,258,203,83,12,10,"gold");
+const bottomright=region("右下・横長列","gold","",230,231,153,18,"右下方向に伸びる長い横列");row(bottomright,234,235,145,11,16,"gold");
+const bottomleft=region("下辺・横列","gold","",132,301,68,13,"フロア最下部の横列");row(bottomleft,135,303,63,9,8,"gold");
+const bottomblock=region("右下奥・矩形島","gold","",278,258,88,45,"下部右側にある別枠の長方形島");row(bottomblock,282,262,79,14,10,"gold");row(bottomblock,282,280,79,13,10,"gold");
+circle("12台円卓","gold","",177,192,35,12,"中央左の大円卓");circle("4台円卓1","gold","",236,150,19,4,"中央上寄りの小円卓");circle("4台円卓2","gold","",144,274,18,4,"左下の小円卓");
+room(395,187,58,51,"WC・設備");room(35,213,57,54,"階段");room(233,260,38,35,"喫煙所");
+txt(svg,100,285,"入口","map-label");path(svg,"M99 278 H113 l-5 -4 m5 4 l-5 4","#d35e53",1.4);
+txt(svg,244,122,"通　路","aisle-label",{"text-anchor":"middle"});txt(svg,384,180,"通路","aisle-label",{"text-anchor":"middle"});
+}
+function select(label,zone,alias,desc,g){document.querySelectorAll(".active-outline").forEach(n=>n.classList.remove("active-outline"));g.querySelector(".outline")?.classList.add("active-outline");selection={label,zone,alias,g};const exact=entries.filter(x=>x.floor===floor&&alias&&x.corridor===alias),related=entries.filter(x=>x.floor===floor&&x.zone===zone&&!x.corridor);detail.replaceChildren();const h=document.createElement("h2");h.textContent=label;detail.append(h);const p=document.createElement("p");p.textContent=desc||"ガイド図に掲載された区画を再描画";detail.append(p);const info=document.createElement("div");info.className="muted";info.textContent="島名の一致する登録台："+exact.length+"台／同色・島未特定："+related.length+"台。ここでの小さな区画は座席番号を確定したものではありません。";detail.append(info);const box=document.createElement("div");box.className="chips";const all=exact.length?exact:related;all.slice(0,36).forEach(x=>{let s=document.createElement("span");s.textContent=x.number;box.append(s)});if(!all.length)box.textContent="照合可能な台番号は未登録";detail.append(box)}
+function render(){document.querySelector("#btn1").classList.toggle("current",floor==="1F");document.querySelector("#btn2").classList.toggle("current",floor==="2F");if(floor==="1F")draw1();else draw2();selection=null;detail.replaceChildren();const h=document.createElement("h2");h.textContent=floor+" の台列";detail.append(h);const p=document.createElement("p");p.textContent="元図の島形状を図形で再現。色の違う台列や円卓をクリックすると詳細が表示されます。";detail.append(p);const query=document.querySelector("#search").value.trim();if(query){const m=entries.find(x=>String(x.number)===query);if(m){if(m.floor!==floor){floor=m.floor;render();return}const box=document.createElement("p");box.textContent="台番号"+m.number+"：登録色 "+m.zone+"、登録島 "+(m.corridor||"不明")+"（この図上の座席位置は未確定）";detail.append(box)}}}
+document.querySelector("#btn1").onclick=()=>{floor="1F";render()};
+document.querySelector("#btn2").onclick=()=>{floor="2F";render()};
+document.querySelector("#clear").onclick=()=>{document.querySelector("#search").value="";render()};
+document.querySelector("#search").oninput=render;
+fetch("./data/areas.json").then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json()}).then(a=>{entries=a;render()}).catch(e=>{render();const p=document.createElement("p");p.textContent="台番号登録データの取得失敗: "+e.message;detail.append(p)});
 </script></body></html>
