@@ -4,7 +4,7 @@
   "store": "ピーアーク北千住SSS",
   "total_seats": 451,
   "current_inventory_source": "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
-  "map_date_basis": "user-provided 2025-11-11 guidebook p.3 (schematic) and separately dated 2026 field observations",
+  "map_date_basis": "user-provided 2025-11-11 guidebook p.3 (schematic) and separately dated 2026 field observations; user-supplied on-site photographs of 1F and 2F on 2026-11-04 (map publication date unknown)",
   "rules": [
     "配置データの報告日は機種変更前の位置を保証しない",
     "縦列・横列・連番の取材報告は、同じ列や連番という観測であり、セル単位の座席座標を確定しない",
@@ -560,13 +560,19 @@
       ],
       "zone": "purple",
       "source_url": "https://x.com/Kitasenjusss/status/2053440543062147221",
-      "confidence": "official-floor-plan-plus-after-report",
+      "confidence": "direct-user-photo-numbered-panel",
       "seat_order_verified": false,
       "latest_answer_check": {
         "date": "2026-11-03",
         "observed_machine_number": 1013,
         "source_url": "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=172202",
         "meaning": "当日の円卓チャレンジ対象台の報告。グループ全席の配置や設定を証明するものではない。"
+      },
+      "photo_observation": {
+        "date": "2026-11-04",
+        "source": "user-provided on-site 2F floor-map photograph",
+        "observed": "purple 5-seat roundtable and adjacent numbered panel 1013-1017",
+        "seat_order_verified": false
       }
     }
   ],
@@ -588,5 +594,33 @@
       "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=172202"
     ],
     "results": "24件の同一列・連番報告、4つの円卓グループ、色・階登録173台。個別座席番号の確定は未達。"
-  }
+  },
+  "floor_map_photo_observations": [
+    {
+      "floor": "1F",
+      "observed_on": "2026-11-04",
+      "source": "user-provided on-site photograph",
+      "confirmed": [
+        "silver, blue, red, green zone geometry",
+        "blue A/B and green C/D/E/F numbered panels"
+      ],
+      "caveat": "map publication date unknown"
+    },
+    {
+      "floor": "2F",
+      "observed_on": "2026-11-04",
+      "source": "user-provided on-site photograph",
+      "confirmed": [
+        "purple A/B/C layout with 5-seat roundtable",
+        "gold 12-seat roundtable",
+        "gold 4-seat roundtable 1 and 2",
+        "purple numbered panel 1013-1017"
+      ],
+      "unresolved": [
+        "which numbered 4-seat group maps to circle 1 vs 2",
+        "individual seat positions in roundtables"
+      ],
+      "caveat": "map publication date unknown"
+    }
+  ]
 }
