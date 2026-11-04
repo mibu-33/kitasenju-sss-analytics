@@ -124,7 +124,8 @@ def main():
             status[ym]="parsed "+str(len(batch))+" days"
         except requests.RequestException as exc: status[ym]=type(exc).__name__
         time.sleep(2.5)
-    first,last="2026-08-06","2026-11-03"
+    end=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()-dt.timedelta(days=1)
+    first,last=(end-dt.timedelta(days=89)).isoformat(),end.isoformat()
     rows=[v for d,v in sorted(dated.items()) if first<=d<=last]
     result={"window_start":first,"window_end":last,
         "label_definition":"third-party roundtable challenge answer checks; not confirmed settings",
