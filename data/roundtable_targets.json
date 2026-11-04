@@ -1,0 +1,275 @@
+{
+  "window_start": "2026-08-06",
+  "window_end": "2026-11-03",
+  "label_definition": "third-party roundtable challenge answer checks; not confirmed settings",
+  "collection_status": {
+    "manual_seed": "22 individually checked dates; other days unknown until collected"
+  },
+  "days": [
+    {
+      "date": "2026-10-01",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1007,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-02",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1007,
+        "からくり2": 1009,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-03",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-04",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-05",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-06",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-07",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1011,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-08",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1010,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-09",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-10",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1008,
+        "からくり2": 1010,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-11",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-12",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-13",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-14",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1005,
+        "からくり2": 1011,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-15",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1008,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-16",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1010,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-20",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-22",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1005,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-24",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-11-01",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
+    },
+    {
+      "date": "2026-11-02",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1006,
+        "からくり2": 1011,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=179990"
+    },
+    {
+      "date": "2026-11-03",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1005,
+        "からくり2": 1012,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=179990"
+    }
+  ],
+  "metrics": {}
+}
