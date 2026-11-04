@@ -63,8 +63,9 @@ def report(rows):
             if i<14:continue
             previous=[v for _,v in valid[:i]]
             last=previous[-1]
+            calendar_prev=(dt.date.fromisoformat(day)-dt.date.fromisoformat(valid[i-1][0])).days==1
             uniform={n:1/len(choices) for n in choices}
-            avoid={n:(1 if n==last else 1.6) for n in choices}
+            avoid={n:(1 if n==last else 1.6) for n in choices} if calendar_prev else uniform.copy()
             den=sum(avoid.values());avoid={n:v/den for n,v in avoid.items()}
             counts14=Counter(previous[-14:])
             recent={n:2+counts14[n] for n in choices}
@@ -72,7 +73,9 @@ def report(rows):
             for typ,p in [("baseline",uniform),("avoid_last",avoid),("recent14",recent)]:
                 obj=models[typ];obj["n"]+=1
                 predicted=max(choices,key=lambda v:(p[v],-v))
-                obj["hit"]+=(predicted==actual)
+                # Uniform baseline has no top seat; its hit rate is expected 1/k,
+                # not the retrospective count for an arbitrary tie-breaker.
+                obj["hit"]+=(1/len(choices) if typ=="baseline" else int(predicted==actual))
                 obj["loss"]+=-math.log(max(p[actual],1e-9))
         for obj in models.values():
             n=obj["n"]
