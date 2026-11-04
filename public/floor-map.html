@@ -71,6 +71,10 @@ const guideOrder={
 "緑D":Array.from({length:7},(_,i)=>261-i),
 "緑E":Array.from({length:7},(_,i)=>241+i),
 "緑F":Array.from({length:7},(_,i)=>254-i),
+"銀1":Array.from({length:18},(_,i)=>1+i),
+"銀2":Array.from({length:17},(_,i)=>19+i),
+"銀3":Array.from({length:17},(_,i)=>52-i),
+"銀4":Array.from({length:13},(_,i)=>53+i),
 "赤S":Array.from({length:4},(_,i)=>1001+i)
 };
 // 掲載順（ガイド p.3）のみ。物理的な座席順としては使わない。
@@ -156,7 +160,7 @@ function unplacedList(){
 function stripeBlock(label,zone,alias,box,rows,desc){const [x,y,w,h]=box;const g=region(label,zone,alias,x,y,w,h,desc);rows.forEach(r=>row(g,...r,zone));txt(g,x+2,y-2,label,"map-label");return g}
 function room(x,y,w,h,name){const g=add("g");rect(g,x,y,w,h,"#d7dbe0","#83909f",.9,1.2);txt(g,x+w/2,y+h/2+2,name,"map-label",{"text-anchor":"middle"});return g}
 function circle(label,zone,alias,x,y,r,count,desc){const g=add("g",{class:"figure-item",role:"button",tabindex:"0","aria-label":label});g.dataset.label=label;g.addEventListener("click",()=>select(label,zone,alias,desc,g));g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(label,zone,alias,desc,g)}});shape(g,"circle",{cx:x,cy:y,r,fill:fill[zone],stroke:strong[zone],"stroke-width":1.7,class:"outline"});for(let i=0;i<count;i++){const a=2*Math.PI*i/count-Math.PI/2;const sx=x+(r-4.5)*Math.cos(a),sy=y+(r-4.5)*Math.sin(a);rect(g,sx-2.1,sy-2.2,4.2,4.4,"#fffaf1",strong[zone],.35,0.6)}txt(g,x,y-1,count+"台","map-label",{"text-anchor":"middle"});txt(g,x,y+6,"円卓","map-label",{"text-anchor":"middle"});return g}
-function base(f){svg.replaceChildren();rect(svg,0,0,480,340,"#d1d7dd","none",0);rect(svg,10,9,462,321,"#eff2f4","#bbc5ce",2,3);txt(svg,15,329,f,"map-title");txt(svg,258,330,"※位置関係をガイド図から再描画（席順未確認）","map-tiny");}
+function base(f){svg.replaceChildren();rect(svg,0,0,480,340,"#d1d7dd","none",0);rect(svg,10,9,462,321,"#eff2f4","#bbc5ce",2,3);txt(svg,15,329,f,"map-title");txt(svg,258,330,"※銀4列は2026-11-04現地申告、その他は席順未確認","map-tiny");}
 function draw1(){base("1F");const walls=add("g");
 path(walls,"M14 151 H181 M181 151 H343 M345 151 H462","#6c8194",2.6);
 path(walls,"M16 236 H145 V303 H14","#bf5652",3);path(walls,"M184 153 V298 H346 V153 Z","#cc5e55",2.5);
@@ -170,7 +174,7 @@ const greens=[["緑 C","緑C",277,11],["緑 D","緑D",374,11],["緑 E","緑E",27
 for(const [label,alias,x,y] of greens){const g=region(label,"green",alias,x,y,91,63,"ガイド上部右側の緑2×2区画");txt(g,x+4,y+9,label,"map-label");panelNumbers(g,alias,"green",x+6,y+14,79,44)}
 room(223,73,45,80,"エスカレーター");rect(svg,231,87,11,62,"#3775a5","#f8fbfd",1);rect(svg,247,87,11,62,"#3775a5","#f8fbfd",1);txt(svg,246,82,"上り","map-tiny",{"text-anchor":"middle"});
 const silver=region("シルバーエリア","silver","",31,155,151,77,"左下寄りの横列が並ぶ銀エリア");txt(silver,33,162,"シルバー","map-label");
-row(silver,39,166,139,12,18,"silver","h");row(silver,39,181,139,12,18,"silver","h");row(silver,39,197,139,10,18,"silver","h");row(silver,50,215,118,9,15,"silver","h");
+[["銀1",166,18],["銀2",181,17],["銀3",197,17],["銀4",215,13]].forEach(([alias,y,n])=>{const x=alias==="銀4"?50:39,w=alias==="銀4"?118:139;row(silver,x,y,w,alias==="銀4"?9:11,n,"silver","h");txt(silver,x+2,y+7,alias+" "+guideOrder[alias][0]+"→"+guideOrder[alias].at(-1),"map-tiny",{fill:"#ffffff"});});
 const s=region("赤 S・4台島","red","赤S",17,242,124,64,"ガイド左下の独立4台島");txt(s,19,250,"S　赤4台島","map-label");panelNumbers(s,"赤S","red",22,252,35,45);row(s,64,256,68,30,9,"red","h");txt(s,86,292,"赤S / 4台","map-tiny",{"text-anchor":"middle"});
 const red=region("レッドエリア","red","",185,155,160,142,"中央下側の赤い長い横列と区切りの配置");txt(red,189,161,"レッドエリア","map-label");
 row(red,190,163,151,11,7,"red","h");row(red,190,177,151,11,11,"red","h");row(red,190,191,151,18,15,"red","h");row(red,190,214,151,23,12,"red","h");row(red,190,244,43,11,5,"red","h");row(red,248,244,93,11,9,"red","h");row(red,190,261,151,13,17,"red","h");row(red,190,280,151,11,17,"red","h");
