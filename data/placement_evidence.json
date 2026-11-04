@@ -661,5 +661,29 @@
       "seat_coordinates_verified": false,
       "unresolved": "which 4-seat number group belongs to circle 1 or 2; physical positions of reported horizontal groups"
     }
-  ]
+  ],
+  "roundtable_machine_identification": {
+    "circle_1": {
+      "machine": "からくりサーカス2",
+      "numbers": [
+        1009,
+        1010,
+        1011,
+        1012
+      ],
+      "confidence": "crosschecked-photo-and-repository-readme"
+    },
+    "circle_2": {
+      "numbers": [
+        1005,
+        1006,
+        1007,
+        1008
+      ],
+      "historical_machine": "ヴヴヴ",
+      "photo_machine_label_previously_read_as": "東京喰種",
+      "confidence": "number-group-inferred-by-exclusion-machine-conflict-unresolved"
+    },
+    "note": "README explicitly records 1005-1008 ヴヴヴ and 1009-1012 からくり2; photo circle 1 label is からくり2. Verify whether circle 2 label reading or machine inventory date differs."
+  }
 }
