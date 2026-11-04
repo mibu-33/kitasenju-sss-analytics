@@ -34,7 +34,7 @@ jobs:
       - name: Validate fallback parser
         run: |
           python -m pip install -q pytest
-          python -m pytest -q tests/test_sync_fallback.py tests/test_area_evidence.py
+          python -m pytest -q tests/test_sync_fallback.py tests/test_area_evidence.py tests/test_roundtable.py
           node tests/test_color_areas.cjs
       - name: Sync without VPN
         continue-on-error: true # Source may return HTTP 403; still publish status and UI
@@ -60,6 +60,10 @@ jobs:
           FALLBACK_DAYS_PER_RUN: '12'
           FALLBACK_REQUEST_INTERVAL: '3'
         run: python scripts/sync_fallback.py
+      - name: Collect daily roundtable answer-check labels (robots-aware)
+        if: always()
+        continue-on-error: true
+        run: python scripts/sync_roundtable.py
       - name: Import authorized exports (even when direct fetch returned 403)
         if: always()
         run: python scripts/import_batch.py
