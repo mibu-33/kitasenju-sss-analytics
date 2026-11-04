@@ -1062,15 +1062,15 @@
       "walkforward": {
         "baseline": {
           "n": 72,
-          "hit": 16,
-          "accuracy_pct": 22.22,
+          "hit": 18.0,
+          "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
           "n": 72,
           "hit": 16,
           "accuracy_pct": 22.22,
-          "log_loss": 1.3988
+          "log_loss": 1.3847
         },
         "recent14": {
           "n": 72,
@@ -1097,15 +1097,15 @@
       "walkforward": {
         "baseline": {
           "n": 69,
-          "hit": 19,
-          "accuracy_pct": 27.54,
+          "hit": 17.25,
+          "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
           "n": 69,
           "hit": 25,
           "accuracy_pct": 36.23,
-          "log_loss": 1.356
+          "log_loss": 1.3577
         },
         "recent14": {
           "n": 69,
@@ -1132,15 +1132,15 @@
       "walkforward": {
         "baseline": {
           "n": 72,
-          "hit": 20,
-          "accuracy_pct": 27.78,
+          "hit": 18.0,
+          "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
           "n": 72,
-          "hit": 26,
-          "accuracy_pct": 36.11,
-          "log_loss": 1.3923
+          "hit": 25,
+          "accuracy_pct": 34.72,
+          "log_loss": 1.3978
         },
         "recent14": {
           "n": 72,
@@ -1168,15 +1168,15 @@
       "walkforward": {
         "baseline": {
           "n": 71,
-          "hit": 7,
-          "accuracy_pct": 9.86,
+          "hit": 14.199999999999982,
+          "accuracy_pct": 20.0,
           "log_loss": 1.6094
         },
         "avoid_last": {
           "n": 71,
           "hit": 9,
           "accuracy_pct": 12.68,
-          "log_loss": 1.6043
+          "log_loss": 1.6098
         },
         "recent14": {
           "n": 71,
