@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-11-04",
+  "store": "ピーアーク北千住SSS",
+  "total_seats": 451,
+  "current_inventory_source": "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
+  "map_date_basis": "user-provided 2025-11-11 guidebook p.3 (schematic) and separately dated 2026 field observations",
+  "rules": [
+    "配置データの報告日は機種変更前の位置を保証しない",
+    "縦列・横列・連番の取材報告は、同じ列や連番という観測であり、セル単位の座席座標を確定しない",
+    "島や円卓への所属と円卓内の席順は別に扱う",
+    "未登録・未確認台は空欄を維持し、連番で補間しない"
+  ],
+  "reported_arrangements": [
+    {
+      "id": "2026-09-06-red-main-9",
+      "date": "2026-09-06",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・メイン通路側9列目",
+      "machine_numbers": [
+        117,
+        134,
+        147,
+        156,
+        169,
+        186,
+        197,
+        212,
+        225
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-06-silver-main-9",
+      "date": "2026-09-06",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・メイン通路側9列目",
+      "machine_numbers": [
+        10,
+        27,
+        44
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-06-gold-purple-9",
+      "date": "2026-09-06",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・紫エリア側9列目",
+      "machine_numbers": [
+        605,
+        619,
+        626
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-06-gold-horizontal",
+      "date": "2026-09-06",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "horizontal",
+      "label": "金・659～672番の横列",
+      "machine_numbers": [
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-12-silver-column",
+      "date": "2026-09-12",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・列番号未掲載",
+      "machine_numbers": [
+        7,
+        30,
+        41,
+        61
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-12-red-column",
+      "date": "2026-09-12",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・列番号未掲載",
+      "machine_numbers": [
+        122,
+        129,
+        174,
+        181,
+        200,
+        207,
+        230
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-12-gold-column",
+      "date": "2026-09-12",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・列番号未掲載",
+      "machine_numbers": [
+        649,
+        668,
+        677
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-22-gold-stairs-4",
+      "date": "2026-09-22",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・トイレ階段側4列目",
+      "machine_numbers": [
+        655,
+        662,
+        683
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-26-green-horizontal",
+      "date": "2026-09-26",
+      "floor": "1F",
+      "zone": "green",
+      "kind": "horizontal",
+      "label": "緑・248～254番の横列",
+      "machine_numbers": [
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-26-red-column",
+      "date": "2026-09-26",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・列番号未掲載",
+      "machine_numbers": [
+        112,
+        139,
+        142,
+        161,
+        164,
+        191,
+        217,
+        220
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-26-gold-column",
+      "date": "2026-09-26",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・列番号未掲載",
+      "machine_numbers": [
+        655,
+        662,
+        683
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-10-red-column",
+      "date": "2026-10-10",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・列番号未掲載",
+      "machine_numbers": [
+        114,
+        137,
+        144,
+        159,
+        166,
+        189,
+        194,
+        215,
+        222
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-10-gold-column",
+      "date": "2026-10-10",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・列番号未掲載",
+      "machine_numbers": [
+        655,
+        662,
+        683
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-10-floor1-horizontal",
+      "date": "2026-10-10",
+      "floor": "1F",
+      "zone": "unknown",
+      "kind": "horizontal",
+      "label": "1F・53～65番の横列",
+      "machine_numbers": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-10-gold-horizontal",
+      "date": "2026-10-10",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "horizontal",
+      "label": "金・716～720番の横列",
+      "machine_numbers": [
+        716,
+        717,
+        718,
+        719,
+        720
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-31-silver-entrance-5",
+      "date": "2026-10-31",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・入口側5列目",
+      "machine_numbers": [
+        5,
+        32,
+        39,
+        63
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-31-red-main-3",
+      "date": "2026-10-31",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・メイン通路側3列目",
+      "machine_numbers": [
+        123,
+        128,
+        175,
+        180,
+        201,
+        206,
+        231
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-31-gold-purple-7",
+      "date": "2026-10-31",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・紫エリア側7列目",
+      "machine_numbers": [
+        607,
+        617,
+        628
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-31-gold-stairs-4",
+      "date": "2026-10-31",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・トイレ階段側4列目",
+      "machine_numbers": [
+        655,
+        662,
+        683
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-31-gold-horizontal",
+      "date": "2026-10-31",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "horizontal",
+      "label": "金・695～702番の横列",
+      "machine_numbers": [
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-10-31-green-eight",
+      "date": "2026-10-31",
+      "floor": "1F",
+      "zone": "green",
+      "kind": "consecutive",
+      "label": "緑・252～259番の8連番",
+      "machine_numbers": [
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-21-silver-three",
+      "date": "2026-09-21",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "consecutive",
+      "label": "銀・8～10番の3連番",
+      "machine_numbers": [
+        8,
+        9,
+        10
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-21-purple-three",
+      "date": "2026-09-21",
+      "floor": "2F",
+      "zone": "purple",
+      "kind": "consecutive",
+      "label": "紫・758～760番の3連番",
+      "machine_numbers": [
+        758,
+        759,
+        760
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-09-22-purple-three",
+      "date": "2026-09-22",
+      "floor": "2F",
+      "zone": "purple",
+      "kind": "consecutive",
+      "label": "紫・753～755番の3連番",
+      "machine_numbers": [
+        753,
+        754,
+        755
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+      "provenance": "secondary-compiled-after-report",
+      "physical_seat_order_verified": false,
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    }
+  ],
+  "roundtable_groups": [
+    {
+      "floor": "1F",
+      "group": "1F 4台島",
+      "machine_numbers": [
+        1001,
+        1002,
+        1003,
+        1004
+      ],
+      "zone": "red",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "confidence": "repeated-group-membership",
+      "seat_order_verified": false
+    },
+    {
+      "floor": "2F",
+      "group": "2F 4台円卓グループA",
+      "machine_numbers": [
+        1005,
+        1006,
+        1007,
+        1008
+      ],
+      "zone": "gold",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "confidence": "repeated-group-membership",
+      "seat_order_verified": false,
+      "circle_position_verified": false
+    },
+    {
+      "floor": "2F",
+      "group": "2F 4台円卓グループB",
+      "machine_numbers": [
+        1009,
+        1010,
+        1011,
+        1012
+      ],
+      "zone": "gold",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+      "confidence": "repeated-group-membership",
+      "seat_order_verified": false,
+      "circle_position_verified": false
+    },
+    {
+      "floor": "2F",
+      "group": "2F 紫5台円卓",
+      "machine_numbers": [
+        1013,
+        1014,
+        1015,
+        1016,
+        1017
+      ],
+      "zone": "purple",
+      "source_url": "https://x.com/Kitasenjusss/status/2053440543062147221",
+      "confidence": "official-floor-plan-plus-after-report",
+      "seat_order_verified": false
+    }
+  ],
+  "unresolved": [
+    "2026-11最新公式フロア図の全451座席座標",
+    "2026時点の1F銀/赤の各列ごとの全台対応",
+    "2026時点の2F金の全列の対応",
+    "4台円卓A/Bの物理的位置と台番号グループの組み合わせ",
+    "紫A/Bの個別座席順と左右",
+    "青/緑の図内掲載順と実席順の区別",
+    "新台入替後の配置有効期間"
+  ]
+}
