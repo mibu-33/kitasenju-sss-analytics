@@ -3,9 +3,639 @@
   "window_end": "2026-11-03",
   "label_definition": "third-party roundtable challenge answer checks; not confirmed settings",
   "collection_status": {
-    "manual_seed": "22 individually checked dates; other days unknown until collected"
+    "2026-08": "parsed 28 days",
+    "2026-09": "parsed 29 days",
+    "2026-10": "parsed 31 days",
+    "2026-11": "parsed 2 days"
   },
+  "sources": [
+    "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4",
+    "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
+    "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
+  ],
   "days": [
+    {
+      "date": "2026-08-06",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1005,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-07",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-08",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-09",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1005,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-10",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-11",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-12",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1005,
+        "からくり2": 1009,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-13",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1010,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-14",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-15",
+      "targets": {
+        "カバネリ": 1003,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": false,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-16",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1009,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-17",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1008,
+        "からくり2": 1012,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-18",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1008,
+        "からくり2": 1011,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-19",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-20",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1009,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-21",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1012,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-22",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-23",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-24",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-25",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-27",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-28",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-30",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-09-01",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1011,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-02",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1009,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-03",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1012,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-04",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-05",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-06",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1007,
+        "からくり2": 1010,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-07",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1007,
+        "からくり2": 1009
+      },
+      "complete": false,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-08",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1008,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-09",
+      "targets": {
+        "カバネリ": 1004,
+        "からくり2": 1012,
+        "紫バラ": 1015
+      },
+      "complete": false,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-10",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-11",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1006,
+        "からくり2": 1011,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-12",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-13",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-14",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-15",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-16",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-17",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-18",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-19",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-20",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1006,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-21",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1008,
+        "からくり2": 1012,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-22",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1005,
+        "からくり2": 1009,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-23",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-24",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1009,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-25",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-26",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1012,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-27",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-29",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1007,
+        "からくり2": 1011,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
+    {
+      "date": "2026-09-30",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1005,
+        "からくり2": 1011,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda"
+    },
     {
       "date": "2026-10-01",
       "targets": {
@@ -199,12 +829,59 @@
       "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
     },
     {
+      "date": "2026-10-17",
+      "targets": {
+        "カバネリ": 1004,
+        "からくり2": 1011,
+        "紫バラ": 1015
+      },
+      "complete": false,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-18",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1008,
+        "からくり2": 1012,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-19",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
       "date": "2026-10-20",
       "targets": {
         "カバネリ": 1004,
         "ヴヴヴ": 1006,
         "からくり2": 1010,
         "紫バラ": 1013
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-21",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1016
       },
       "complete": true,
       "classification": "third-party answer check, not verified settings",
@@ -223,12 +900,108 @@
       "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
     },
     {
+      "date": "2026-10-23",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
       "date": "2026-10-24",
       "targets": {
         "カバネリ": 1002,
         "ヴヴヴ": 1007,
         "からくり2": 1011,
         "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-25",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1009,
+        "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-26",
+      "targets": {
+        "カバネリ": 1002,
+        "ヴヴヴ": 1006,
+        "からくり2": 1009,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-27",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-28",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1006,
+        "からくり2": 1011,
+        "紫バラ": 1015
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-29",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1008,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-30",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1005,
+        "からくり2": 1010,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/ne73b4776ebca"
+    },
+    {
+      "date": "2026-10-31",
+      "targets": {
+        "カバネリ": 1001,
+        "ヴヴヴ": 1007,
+        "からくり2": 1009,
+        "紫バラ": 1017
       },
       "complete": true,
       "classification": "third-party answer check, not verified settings",
@@ -271,5 +1044,147 @@
       "source_url": "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=179990"
     }
   ],
-  "metrics": {}
+  "metrics": {
+    "カバネリ": {
+      "n": 86,
+      "counts": {
+        "1001": 19,
+        "1002": 14,
+        "1003": 17,
+        "1004": 36
+      },
+      "adjacent_pairs": 81,
+      "repeat_pairs": 17,
+      "repeat_rate_pct": 20.99,
+      "random_repeat_pct": 25.0,
+      "first": "2026-08-06",
+      "last": "2026-11-03",
+      "walkforward": {
+        "baseline": {
+          "n": 72,
+          "hit": 16,
+          "accuracy_pct": 22.22,
+          "log_loss": 1.3863
+        },
+        "avoid_last": {
+          "n": 72,
+          "hit": 16,
+          "accuracy_pct": 22.22,
+          "log_loss": 1.3988
+        },
+        "recent14": {
+          "n": 72,
+          "hit": 28,
+          "accuracy_pct": 38.89,
+          "log_loss": 1.377
+        }
+      }
+    },
+    "ヴヴヴ": {
+      "n": 83,
+      "counts": {
+        "1005": 22,
+        "1006": 26,
+        "1007": 17,
+        "1008": 18
+      },
+      "adjacent_pairs": 75,
+      "repeat_pairs": 11,
+      "repeat_rate_pct": 14.67,
+      "random_repeat_pct": 25.0,
+      "first": "2026-08-06",
+      "last": "2026-11-03",
+      "walkforward": {
+        "baseline": {
+          "n": 69,
+          "hit": 19,
+          "accuracy_pct": 27.54,
+          "log_loss": 1.3863
+        },
+        "avoid_last": {
+          "n": 69,
+          "hit": 25,
+          "accuracy_pct": 36.23,
+          "log_loss": 1.356
+        },
+        "recent14": {
+          "n": 69,
+          "hit": 14,
+          "accuracy_pct": 20.29,
+          "log_loss": 1.4499
+        }
+      }
+    },
+    "からくり2": {
+      "n": 86,
+      "counts": {
+        "1009": 24,
+        "1010": 27,
+        "1011": 16,
+        "1012": 19
+      },
+      "adjacent_pairs": 81,
+      "repeat_pairs": 17,
+      "repeat_rate_pct": 20.99,
+      "random_repeat_pct": 25.0,
+      "first": "2026-08-06",
+      "last": "2026-11-03",
+      "walkforward": {
+        "baseline": {
+          "n": 72,
+          "hit": 20,
+          "accuracy_pct": 27.78,
+          "log_loss": 1.3863
+        },
+        "avoid_last": {
+          "n": 72,
+          "hit": 26,
+          "accuracy_pct": 36.11,
+          "log_loss": 1.3923
+        },
+        "recent14": {
+          "n": 72,
+          "hit": 17,
+          "accuracy_pct": 23.61,
+          "log_loss": 1.4379
+        }
+      }
+    },
+    "紫バラ": {
+      "n": 85,
+      "counts": {
+        "1013": 8,
+        "1014": 20,
+        "1015": 14,
+        "1016": 27,
+        "1017": 16
+      },
+      "adjacent_pairs": 79,
+      "repeat_pairs": 13,
+      "repeat_rate_pct": 16.46,
+      "random_repeat_pct": 20.0,
+      "first": "2026-08-06",
+      "last": "2026-11-03",
+      "walkforward": {
+        "baseline": {
+          "n": 71,
+          "hit": 7,
+          "accuracy_pct": 9.86,
+          "log_loss": 1.6094
+        },
+        "avoid_last": {
+          "n": 71,
+          "hit": 9,
+          "accuracy_pct": 12.68,
+          "log_loss": 1.6043
+        },
+        "recent14": {
+          "n": 71,
+          "hit": 16,
+          "accuracy_pct": 22.54,
+          "log_loss": 1.6316
+        }
+      }
+    }
+  }
 }
