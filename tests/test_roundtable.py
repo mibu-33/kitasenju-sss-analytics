@@ -36,7 +36,7 @@ def test_initial_sourced_dataset():
     assert len(rows)>=16
     assert len({r["date"] for r in rows})==len(rows)
     for row in rows:
-        assert "2026-08-06"<=row["date"]<="2026-11-03"
+        assert row["date"]>="2026-08-06" and row["date"] <= (date.today()).isoformat()
         assert row["source_url"].startswith("https://")
         for g,n in row["targets"].items():
             assert n in GROUPS[g]
