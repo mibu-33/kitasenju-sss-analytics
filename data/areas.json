@@ -2319,6 +2319,66 @@
     "confidence": "readable-label"
   },
   {
+    "number": 1005,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループA（1005～1008）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
+  },
+  {
+    "number": 1006,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループA（1005～1008）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
+  },
+  {
+    "number": 1007,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループA（1005～1008）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
+  },
+  {
     "number": 1008,
     "zone": "gold",
     "floor": "2F",
@@ -2335,6 +2395,86 @@
     "latest_color_observation": "2026-10-15",
     "historical_layout_verified": false,
     "note": "二次取材記事で色と台番号が同じ項目に明記。物理的位置、並び順、以後の設置状況は未検証。"
+  },
+  {
+    "number": 1009,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループB（1009～1012）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
+  },
+  {
+    "number": 1010,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループB（1009～1012）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
+  },
+  {
+    "number": 1011,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループB（1009～1012）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
+  },
+  {
+    "number": 1012,
+    "zone": "gold",
+    "floor": "2F",
+    "corridor": "",
+    "side": "",
+    "order": null,
+    "from": "2026-09-06",
+    "to": "",
+    "source": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
+    "confidence": "derived-color-and-roundtable-group",
+    "observed_on": [
+      "2026-09-06",
+      "2026-10-31"
+    ],
+    "latest_color_observation": "2026-10-31",
+    "historical_layout_verified": false,
+    "roundtable_group": "2F 4台円卓グループB（1009～1012）",
+    "note": "2026年の円卓チャレンジ答え合わせによる台番号グループ。公式2026年2F図の4台円卓は金エリアにあるが、円卓1/2のどちらに対応するか及び個別席の順番は未確認。"
   },
   {
     "number": 1013,
