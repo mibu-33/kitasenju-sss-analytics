@@ -528,11 +528,13 @@
       },
       "photo_machine_crosscheck": {
         "observed_on": "2026-11-04",
-        "source": "user-provided on-site 2F floor-map photo",
+        "source": "user-provided on-site 2F floor-map photo and existing README machine-number group",
         "circle_1_machine": "からくりサーカス2",
-        "circle_2_machine": "東京喰種",
+        "circle_2_machine": "ヴァルヴレイヴ2",
+        "circle_12_machine": "東京喰種",
         "number_group_to_circle_verified": false,
-        "reason": "historical group machine names per machine number not yet verified"
+        "confidence": "medium-by-exclusion",
+        "seat_order_verified": false
       }
     },
     {
@@ -557,11 +559,13 @@
       },
       "photo_machine_crosscheck": {
         "observed_on": "2026-11-04",
-        "source": "user-provided on-site 2F floor-map photo",
+        "source": "user-provided on-site 2F floor-map photo and existing README machine-number group",
         "circle_1_machine": "からくりサーカス2",
-        "circle_2_machine": "東京喰種",
-        "number_group_to_circle_verified": false,
-        "reason": "historical group machine names per machine number not yet verified"
+        "circle_2_machine": "ヴァルヴレイヴ2",
+        "circle_12_machine": "東京喰種",
+        "number_group_to_circle_verified": true,
+        "confidence": "high-photo-label-plus-machine-inventory",
+        "seat_order_verified": false
       }
     },
     {
@@ -596,20 +600,19 @@
     "2026-11最新公式フロア図の全451座席座標",
     "2026時点の1F銀/赤の各列ごとの全台対応",
     "2026時点の2F金の全列の対応",
-    "4台円卓A/Bの物理的位置と台番号グループの組み合わせ",
+    "4台円卓①=1009〜1012は写真と機種履歴で高確度、②=1005〜1008は消去法の中確度。各円卓内の座席順は未確認",
     "紫A/Bの個別座席順と左右",
     "青/緑の図内掲載順と実席順の区別",
     "新台入替後の配置有効期間"
   ],
   "last_research_cycle": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "new_sources": [
-      "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
-      "https://note.com/akb_sss_shisa/n/na70db37e6fda",
-      "https://note.com/akb_sss_shisa/n/ne73b4776ebca",
-      "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=172202"
+      "user-provided 2F on-site photo observed 2026-11-04",
+      "repository README previous machine-number inventory",
+      "https://www.p-world.co.jp/tokyo/kitasenjusss.htm"
     ],
-    "results": "24件の同一列・連番報告、4つの円卓グループ、色・階登録173台。個別座席番号の確定は未達。"
+    "results": "Corrected 2F machine labels: 12-seat circle 東京喰種, 4-seat circle 1 からくりサーカス2, 4-seat circle 2 ヴァルヴレイヴ2. P-WORLD last updated 2026-11-04 and confirms 451 slots, no newly verified individual seat positions."
   },
   "floor_map_photo_observations": [
     {
@@ -630,11 +633,12 @@
         "purple A/B/C layout with 5-seat roundtable",
         "gold 12-seat roundtable",
         "gold 4-seat roundtable 1 and 2",
-        "purple numbered panel 1013-1017"
+        "purple numbered panel 1013-1017",
+        "12-seat circle machine 東京喰種; four-seat circle 1 machine からくりサーカス2; four-seat circle 2 machine ヴァルヴレイヴ2"
       ],
       "unresolved": [
-        "which numbered 4-seat group maps to circle 1 vs 2",
-        "individual seat positions in roundtables"
+        "individual seat positions in roundtables",
+        "4-seat circle 2 numbered group is inferred from historical inventory, not printed on photo"
       ],
       "caveat": "map publication date unknown"
     }
@@ -656,10 +660,10 @@
       "observed_on": "2026-11-04",
       "source": "user-provided on-site 2F guide photograph",
       "confidence": "direct-photo-zone-geometry",
-      "confirmed": "central 12-seat roundtable, two separate 4-seat roundtables labeled 1 and 2, multiple horizontal rows around circles, gold area wrapping right side; circle 1 machine からくりサーカス2 and circle 2 machine 東京喰種 are readable on the photograph",
+      "confirmed": "central 12-seat roundtable labeled 東京喰種, upper-right 4-seat circle 1 labeled からくりサーカス2, lower-left 4-seat circle 2 labeled ヴァルヴレイヴ2, surrounding gold rows, as directly visible in 2026-11-04 on-site photo",
       "cross_reference": "2026 reports: 659-672, 695-702 and 716-720 are reported horizontal groups; 1005-1008 and 1009-1012 are reported four-seat groups",
       "seat_coordinates_verified": false,
-      "unresolved": "which 4-seat number group belongs to circle 1 or 2; physical positions of reported horizontal groups"
+      "unresolved": "individual seat order within circles; historical number-group-to-circle 2 mapping remains inferred, physical positions of reported horizontal groups"
     }
   ],
   "roundtable_machine_identification": {
@@ -671,19 +675,27 @@
         1011,
         1012
       ],
-      "confidence": "crosschecked-photo-and-repository-readme"
+      "confidence": "high-photo-label-plus-previous-machine-number-inventory",
+      "source": "user-provided 2F photo observed 2026-11-04; repository README existing 2026-11-04"
     },
     "circle_2": {
+      "machine": "ヴァルヴレイヴ2",
       "numbers": [
         1005,
         1006,
         1007,
         1008
       ],
-      "historical_machine": "ヴヴヴ",
-      "photo_machine_label_previously_read_as": "東京喰種",
-      "confidence": "number-group-inferred-by-exclusion-machine-conflict-unresolved"
+      "confidence": "medium-photo-label-plus-historical-valvrave-group-by-elimination",
+      "source": "user-provided 2F photo observed 2026-11-04; repository README existing 2026-11-04",
+      "caveat": "README identifies group as ヴヴヴ without specifying generation; group-number mapping is inferred by elimination, not directly printed beside circle"
     },
-    "note": "README explicitly records 1005-1008 ヴヴヴ and 1009-1012 からくり2; photo circle 1 label is からくり2. Verify whether circle 2 label reading or machine inventory date differs."
+    "circle_12": {
+      "machine": "東京喰種",
+      "numbers": null,
+      "confidence": "high-direct-photo-machine-label",
+      "source": "user-provided 2F photo observed 2026-11-04"
+    },
+    "note": "Corrected prior mistaken attribution: 東京喰種 belongs to 12-seat roundtable, NOT four-seat circle 2. Individual roundtable seat order remains unknown."
   }
 }
