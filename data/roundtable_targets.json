@@ -1,6 +1,6 @@
 {
-  "window_start": "2026-08-10",
-  "window_end": "2026-11-07",
+  "window_start": "2026-08-11",
+  "window_end": "2026-11-08",
   "label_definition": "third-party roundtable challenge answer checks; not confirmed settings",
   "collection_status": {
     "2026-08": "parsed 28 days",
@@ -15,18 +15,6 @@
     "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
   ],
   "days": [
-    {
-      "date": "2026-08-10",
-      "targets": {
-        "カバネリ": 1001,
-        "ヴヴヴ": 1006,
-        "からくり2": 1010,
-        "紫バラ": 1014
-      },
-      "complete": true,
-      "classification": "third-party answer check, not verified settings",
-      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
-    },
     {
       "date": "2026-08-11",
       "targets": {
@@ -1022,143 +1010,143 @@
   ],
   "metrics": {
     "カバネリ": {
-      "n": 84,
+      "n": 83,
       "counts": {
-        "1001": 18,
+        "1001": 17,
         "1002": 15,
         "1003": 17,
         "1004": 34
       },
-      "adjacent_pairs": 79,
+      "adjacent_pairs": 78,
       "repeat_pairs": 15,
-      "repeat_rate_pct": 18.99,
+      "repeat_rate_pct": 19.23,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-10",
+      "first": "2026-08-11",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
-          "n": 70,
-          "hit": 17.5,
+          "n": 69,
+          "hit": 17.25,
           "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
-          "n": 70,
-          "hit": 16,
-          "accuracy_pct": 22.86,
-          "log_loss": 1.3741
+          "n": 69,
+          "hit": 15,
+          "accuracy_pct": 21.74,
+          "log_loss": 1.3753
         },
         "recent14": {
-          "n": 70,
+          "n": 69,
           "hit": 25,
-          "accuracy_pct": 35.71,
-          "log_loss": 1.3927
+          "accuracy_pct": 36.23,
+          "log_loss": 1.3882
         }
       }
     },
     "ヴヴヴ": {
-      "n": 81,
+      "n": 80,
       "counts": {
         "1005": 20,
-        "1006": 26,
+        "1006": 25,
         "1007": 16,
         "1008": 19
       },
-      "adjacent_pairs": 73,
+      "adjacent_pairs": 72,
       "repeat_pairs": 11,
-      "repeat_rate_pct": 15.07,
+      "repeat_rate_pct": 15.28,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-10",
+      "first": "2026-08-11",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
-          "n": 67,
-          "hit": 16.75,
+          "n": 66,
+          "hit": 16.5,
           "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
-          "n": 67,
+          "n": 66,
           "hit": 22,
-          "accuracy_pct": 32.84,
-          "log_loss": 1.3598
+          "accuracy_pct": 33.33,
+          "log_loss": 1.3609
         },
         "recent14": {
-          "n": 67,
+          "n": 66,
           "hit": 13,
-          "accuracy_pct": 19.4,
-          "log_loss": 1.4593
+          "accuracy_pct": 19.7,
+          "log_loss": 1.459
         }
       }
     },
     "からくり2": {
-      "n": 84,
+      "n": 83,
       "counts": {
         "1009": 23,
-        "1010": 27,
+        "1010": 26,
         "1011": 15,
         "1012": 19
       },
-      "adjacent_pairs": 79,
+      "adjacent_pairs": 78,
       "repeat_pairs": 19,
-      "repeat_rate_pct": 24.05,
+      "repeat_rate_pct": 24.36,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-10",
+      "first": "2026-08-11",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
-          "n": 70,
-          "hit": 17.5,
+          "n": 69,
+          "hit": 17.25,
           "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
-          "n": 70,
+          "n": 69,
           "hit": 24,
-          "accuracy_pct": 34.29,
-          "log_loss": 1.4009
-        },
-        "recent14": {
-          "n": 70,
-          "hit": 15,
-          "accuracy_pct": 21.43,
-          "log_loss": 1.4597
-        }
-      }
-    },
-    "紫バラ": {
-      "n": 83,
-      "counts": {
-        "1013": 8,
-        "1014": 18,
-        "1015": 15,
-        "1016": 26,
-        "1017": 16
-      },
-      "adjacent_pairs": 77,
-      "repeat_pairs": 14,
-      "repeat_rate_pct": 18.18,
-      "random_repeat_pct": 20.0,
-      "first": "2026-08-10",
-      "last": "2026-11-05",
-      "walkforward": {
-        "baseline": {
-          "n": 69,
-          "hit": 13.799999999999983,
-          "accuracy_pct": 20.0,
-          "log_loss": 1.6094
-        },
-        "avoid_last": {
-          "n": 69,
-          "hit": 9,
-          "accuracy_pct": 13.04,
-          "log_loss": 1.6121
+          "accuracy_pct": 34.78,
+          "log_loss": 1.4025
         },
         "recent14": {
           "n": 69,
           "hit": 15,
           "accuracy_pct": 21.74,
-          "log_loss": 1.6434
+          "log_loss": 1.4621
+        }
+      }
+    },
+    "紫バラ": {
+      "n": 82,
+      "counts": {
+        "1013": 8,
+        "1014": 17,
+        "1015": 15,
+        "1016": 26,
+        "1017": 16
+      },
+      "adjacent_pairs": 76,
+      "repeat_pairs": 14,
+      "repeat_rate_pct": 18.42,
+      "random_repeat_pct": 20.0,
+      "first": "2026-08-11",
+      "last": "2026-11-05",
+      "walkforward": {
+        "baseline": {
+          "n": 68,
+          "hit": 13.599999999999984,
+          "accuracy_pct": 20.0,
+          "log_loss": 1.6094
+        },
+        "avoid_last": {
+          "n": 68,
+          "hit": 9,
+          "accuracy_pct": 13.24,
+          "log_loss": 1.6132
+        },
+        "recent14": {
+          "n": 68,
+          "hit": 15,
+          "accuracy_pct": 22.06,
+          "log_loss": 1.6445
         }
       }
     }

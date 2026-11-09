@@ -554118,5 +554118,4515 @@
     "bb": 0,
     "rb": 19,
     "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": -1151,
+    "games": 2941,
+    "bb": 10,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": 682,
+    "games": 4060,
+    "bb": 22,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 3,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": 573,
+    "games": 2044,
+    "bb": 10,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 4,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": 3378,
+    "games": 4520,
+    "bb": 26,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 5,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": -894,
+    "games": 1736,
+    "bb": 5,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 6,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": -1447,
+    "games": 2428,
+    "bb": 8,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 7,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": 3495,
+    "games": 1947,
+    "bb": 7,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 8,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": 3475,
+    "games": 2943,
+    "bb": 13,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 9,
+    "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "diff": -800,
+    "games": 1507,
+    "bb": 7,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 10,
+    "machine": "新鬼武者3",
+    "diff": -1147,
+    "games": 2283,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 11,
+    "machine": "新鬼武者3",
+    "diff": 552,
+    "games": 4667,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 12,
+    "machine": "新鬼武者3",
+    "diff": -26,
+    "games": 137,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 13,
+    "machine": "新鬼武者3",
+    "diff": -2884,
+    "games": 2449,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 14,
+    "machine": "新鬼武者3",
+    "diff": -977,
+    "games": 846,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 15,
+    "machine": "攻殻機動隊",
+    "diff": 13575,
+    "games": 3218,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 16,
+    "machine": "攻殻機動隊",
+    "diff": -2171,
+    "games": 2079,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 17,
+    "machine": "攻殻機動隊",
+    "diff": -552,
+    "games": 1054,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 18,
+    "machine": "攻殻機動隊",
+    "diff": 61,
+    "games": 2535,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 19,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": 2265,
+    "games": 5753,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 20,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": 113,
+    "games": 2501,
+    "bb": 0,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 21,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": -1453,
+    "games": 2178,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 22,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": -2394,
+    "games": 2531,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 23,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": -273,
+    "games": 814,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 24,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": 2161,
+    "games": 4591,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 25,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": -162,
+    "games": 5260,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 26,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": 406,
+    "games": 1996,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 27,
+    "machine": "ゴッドイーター リザレクション",
+    "diff": -1409,
+    "games": 1506,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 28,
+    "machine": "アズールレーン THE ANIMATION",
+    "diff": 2983,
+    "games": 2014,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 29,
+    "machine": "アズールレーン THE ANIMATION",
+    "diff": -240,
+    "games": 2360,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 30,
+    "machine": "アズールレーン THE ANIMATION",
+    "diff": -946,
+    "games": 3300,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 31,
+    "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+    "diff": -1815,
+    "games": 5800,
+    "bb": 54,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 32,
+    "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+    "diff": -2843,
+    "games": 4421,
+    "bb": 27,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 33,
+    "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+    "diff": -971,
+    "games": 4773,
+    "bb": 39,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 34,
+    "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+    "diff": -4482,
+    "games": 5315,
+    "bb": 29,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 35,
+    "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+    "diff": 8145,
+    "games": 5319,
+    "bb": 90,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 36,
+    "machine": "北斗の拳 転生の章2",
+    "diff": 1312,
+    "games": 3384,
+    "bb": 0,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 37,
+    "machine": "北斗の拳 転生の章2",
+    "diff": -456,
+    "games": 3512,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 38,
+    "machine": "北斗の拳 転生の章2",
+    "diff": 1148,
+    "games": 1647,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 39,
+    "machine": "北斗の拳 転生の章2",
+    "diff": -130,
+    "games": 2065,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 40,
+    "machine": "北斗の拳 転生の章2",
+    "diff": -2466,
+    "games": 2996,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 41,
+    "machine": "北斗の拳 転生の章2",
+    "diff": -7,
+    "games": 280,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 42,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -508,
+    "games": 3892,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 43,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -1359,
+    "games": 3849,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 44,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -1332,
+    "games": 3272,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 45,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": 2994,
+    "games": 3872,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 46,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -2954,
+    "games": 4678,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 47,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -2215,
+    "games": 1864,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 48,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -358,
+    "games": 5072,
+    "bb": 0,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 49,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -2745,
+    "games": 3919,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 50,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -2576,
+    "games": 5138,
+    "bb": 0,
+    "rb": 22,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 51,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": 4429,
+    "games": 4329,
+    "bb": 0,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 52,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": 895,
+    "games": 5640,
+    "bb": 0,
+    "rb": 32,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 53,
+    "machine": "北斗の拳",
+    "diff": -1131,
+    "games": 4972,
+    "bb": 51,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 54,
+    "machine": "北斗の拳",
+    "diff": -2827,
+    "games": 2911,
+    "bb": 10,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 55,
+    "machine": "北斗の拳",
+    "diff": 7446,
+    "games": 4291,
+    "bb": 108,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 56,
+    "machine": "北斗の拳",
+    "diff": -225,
+    "games": 1417,
+    "bb": 14,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 57,
+    "machine": "北斗の拳",
+    "diff": 1610,
+    "games": 6894,
+    "bb": 80,
+    "rb": 25,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 58,
+    "machine": "北斗の拳",
+    "diff": -166,
+    "games": 3634,
+    "bb": 40,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 59,
+    "machine": "獣王",
+    "diff": 2777,
+    "games": 6707,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 60,
+    "machine": "獣王",
+    "diff": -1265,
+    "games": 5277,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 61,
+    "machine": "獣王",
+    "diff": -1733,
+    "games": 5639,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 62,
+    "machine": "獣王",
+    "diff": -1574,
+    "games": 4616,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 63,
+    "machine": "獣王",
+    "diff": -199,
+    "games": 4149,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 64,
+    "machine": "獣王",
+    "diff": -1469,
+    "games": 2008,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 65,
+    "machine": "獣王",
+    "diff": -567,
+    "games": 6000,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 66,
+    "machine": "Vivy ‐Fluorite Eye's Song‐",
+    "diff": -3441,
+    "games": 5852,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 67,
+    "machine": "Vivy ‐Fluorite Eye's Song‐",
+    "diff": -3444,
+    "games": 6367,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 68,
+    "machine": "Vivy ‐Fluorite Eye's Song‐",
+    "diff": -2642,
+    "games": 5242,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 69,
+    "machine": "Vivy ‐Fluorite Eye's Song‐",
+    "diff": -1953,
+    "games": 6711,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 70,
+    "machine": "ワールドダイスター",
+    "diff": -2651,
+    "games": 2381,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 71,
+    "machine": "ワールドダイスター",
+    "diff": -3559,
+    "games": 2702,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 72,
+    "machine": "ワールドダイスター",
+    "diff": -944,
+    "games": 3793,
+    "bb": 0,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 73,
+    "machine": "ワールドダイスター",
+    "diff": -128,
+    "games": 1895,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 74,
+    "machine": "ゾンビランドサガ",
+    "diff": 1205,
+    "games": 6489,
+    "bb": 75,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 75,
+    "machine": "ゾンビランドサガ",
+    "diff": -388,
+    "games": 303,
+    "bb": 1,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 76,
+    "machine": "ゾンビランドサガ",
+    "diff": -400,
+    "games": 391,
+    "bb": 2,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 77,
+    "machine": "ゾンビランドサガ",
+    "diff": -108,
+    "games": 1012,
+    "bb": 12,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 78,
+    "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
+    "diff": -650,
+    "games": 2147,
+    "bb": 9,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 79,
+    "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
+    "diff": -1524,
+    "games": 1528,
+    "bb": 4,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 80,
+    "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
+    "diff": -1191,
+    "games": 1058,
+    "bb": 3,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 81,
+    "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
+    "diff": 1750,
+    "games": 7558,
+    "bb": 47,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 82,
+    "machine": "バイオハザードRE:3",
+    "diff": -993,
+    "games": 694,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 83,
+    "machine": "バイオハザードRE:3",
+    "diff": -1739,
+    "games": 1445,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 84,
+    "machine": "バイオハザードRE:3",
+    "diff": 840,
+    "games": 2263,
+    "bb": 0,
+    "rb": 31,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 85,
+    "machine": "デビル メイ クライ5 スタイリッシュトライブ",
+    "diff": -2295,
+    "games": 4702,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 86,
+    "machine": "デビル メイ クライ5 スタイリッシュトライブ",
+    "diff": 7404,
+    "games": 3217,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 87,
+    "machine": "デビル メイ クライ5 スタイリッシュトライブ",
+    "diff": -2724,
+    "games": 4019,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 88,
+    "machine": "シャーマンキング",
+    "diff": -3328,
+    "games": 3131,
+    "bb": 8,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 89,
+    "machine": "シャーマンキング",
+    "diff": -1406,
+    "games": 3065,
+    "bb": 8,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 90,
+    "machine": "シャーマンキング",
+    "diff": -1606,
+    "games": 1219,
+    "bb": 2,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 91,
+    "machine": "シャーマンキング",
+    "diff": -614,
+    "games": 5291,
+    "bb": 25,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 92,
+    "machine": "ストリートファイター6",
+    "diff": -265,
+    "games": 2808,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 93,
+    "machine": "ストリートファイター6",
+    "diff": -5446,
+    "games": 4767,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 94,
+    "machine": "ストリートファイター6",
+    "diff": 8185,
+    "games": 4679,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 95,
+    "machine": "いざ！番長",
+    "diff": 1571,
+    "games": 6262,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 96,
+    "machine": "いざ！番長",
+    "diff": -1398,
+    "games": 3640,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 97,
+    "machine": "いざ！番長",
+    "diff": 6969,
+    "games": 3589,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 98,
+    "machine": "東京リベンジャーズ",
+    "diff": -2837,
+    "games": 7263,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 99,
+    "machine": "東京リベンジャーズ",
+    "diff": 2212,
+    "games": 8543,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 100,
+    "machine": "東京リベンジャーズ",
+    "diff": 8761,
+    "games": 7194,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 101,
+    "machine": "痛いのは嫌なので防御力に極振りしたいと思います。",
+    "diff": -649,
+    "games": 3407,
+    "bb": 15,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 102,
+    "machine": "痛いのは嫌なので防御力に極振りしたいと思います。",
+    "diff": -739,
+    "games": 4800,
+    "bb": 22,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 103,
+    "machine": "痛いのは嫌なので防御力に極振りしたいと思います。",
+    "diff": -976,
+    "games": 1030,
+    "bb": 2,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 104,
+    "machine": "とんでもスキルで異世界放浪メシ",
+    "diff": -530,
+    "games": 5866,
+    "bb": 0,
+    "rb": 24,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 105,
+    "machine": "とんでもスキルで異世界放浪メシ",
+    "diff": 2831,
+    "games": 2537,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 106,
+    "machine": "とんでもスキルで異世界放浪メシ",
+    "diff": 4092,
+    "games": 3653,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 107,
+    "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
+    "diff": -1538,
+    "games": 4418,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 108,
+    "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
+    "diff": 4063,
+    "games": 4463,
+    "bb": 0,
+    "rb": 27,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 109,
+    "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
+    "diff": -461,
+    "games": 3769,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 110,
+    "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
+    "diff": 4242,
+    "games": 4143,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 111,
+    "machine": "やじきた道中記参る！",
+    "diff": 1142,
+    "games": 2662,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 112,
+    "machine": "やじきた道中記参る！",
+    "diff": 92,
+    "games": 640,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 113,
+    "machine": "やじきた道中記参る！",
+    "diff": 12,
+    "games": 1407,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 114,
+    "machine": "やじきた道中記参る！",
+    "diff": -1808,
+    "games": 1839,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 115,
+    "machine": "やじきた道中記参る！",
+    "diff": -884,
+    "games": 1020,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 116,
+    "machine": "真打 吉宗",
+    "diff": -391,
+    "games": 2761,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 117,
+    "machine": "真打 吉宗",
+    "diff": -398,
+    "games": 3690,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 118,
+    "machine": "真打 吉宗",
+    "diff": -3312,
+    "games": 3102,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 119,
+    "machine": "真打 吉宗",
+    "diff": -171,
+    "games": 2513,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 120,
+    "machine": "ソードアート・オンラインⅡ",
+    "diff": 1347,
+    "games": 8634,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 121,
+    "machine": "ソードアート・オンラインⅡ",
+    "diff": -4246,
+    "games": 4670,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 122,
+    "machine": "ソードアート・オンラインⅡ",
+    "diff": -4819,
+    "games": 9269,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 123,
+    "machine": "ソードアート・オンラインⅡ",
+    "diff": 1321,
+    "games": 6342,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 124,
+    "machine": "ソードアート・オンラインⅡ",
+    "diff": -1,
+    "games": 7896,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 125,
+    "machine": "ソードアート・オンラインⅡ",
+    "diff": 2143,
+    "games": 7539,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 126,
+    "machine": "モンキーターンV",
+    "diff": -1764,
+    "games": 3308,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 127,
+    "machine": "モンキーターンV",
+    "diff": -924,
+    "games": 1436,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 128,
+    "machine": "モンキーターンV",
+    "diff": -50,
+    "games": 1645,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 129,
+    "machine": "モンキーターンV",
+    "diff": -2441,
+    "games": 3153,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 130,
+    "machine": "モンキーターンV",
+    "diff": -1011,
+    "games": 3349,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 131,
+    "machine": "モンキーターンV",
+    "diff": -533,
+    "games": 1651,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 132,
+    "machine": "モンキーターンV",
+    "diff": 6346,
+    "games": 3682,
+    "bb": 0,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 133,
+    "machine": "モンキーターンV",
+    "diff": 13563,
+    "games": 3857,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 134,
+    "machine": "モンキーターンV",
+    "diff": 1662,
+    "games": 2076,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 135,
+    "machine": "モンキーターンV",
+    "diff": -404,
+    "games": 592,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 136,
+    "machine": "スーパーブラックジャック",
+    "diff": 2645,
+    "games": 2620,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 137,
+    "machine": "スーパーブラックジャック",
+    "diff": -1927,
+    "games": 2719,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 138,
+    "machine": "スーパーブラックジャック",
+    "diff": -384,
+    "games": 865,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 139,
+    "machine": "スーパーブラックジャック",
+    "diff": -1271,
+    "games": 1595,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 140,
+    "machine": "スーパーブラックジャック",
+    "diff": -907,
+    "games": 2529,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 141,
+    "machine": "スーパーリオエース2",
+    "diff": 3896,
+    "games": 5633,
+    "bb": 0,
+    "rb": 38,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 142,
+    "machine": "スーパーリオエース2",
+    "diff": -1075,
+    "games": 4000,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 143,
+    "machine": "スーパーリオエース2",
+    "diff": -690,
+    "games": 1787,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 144,
+    "machine": "スーパーリオエース2",
+    "diff": -364,
+    "games": 1175,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 145,
+    "machine": "ラグナドール",
+    "diff": 32,
+    "games": 3893,
+    "bb": 0,
+    "rb": 25,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 146,
+    "machine": "ラグナドール",
+    "diff": -1481,
+    "games": 3527,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 147,
+    "machine": "ラグナドール",
+    "diff": -726,
+    "games": 3048,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 148,
+    "machine": "ラグナドール",
+    "diff": -1475,
+    "games": 3960,
+    "bb": 0,
+    "rb": 28,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 149,
+    "machine": "喰霊‐零‐Re",
+    "diff": -1940,
+    "games": 2495,
+    "bb": 12,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 150,
+    "machine": "喰霊‐零‐Re",
+    "diff": -1497,
+    "games": 2572,
+    "bb": 10,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 151,
+    "machine": "喰霊‐零‐Re",
+    "diff": -1015,
+    "games": 1419,
+    "bb": 5,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 152,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": 9938,
+    "games": 6101,
+    "bb": 3,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 153,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -318,
+    "games": 1152,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 154,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -685,
+    "games": 3043,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 155,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -416,
+    "games": 3140,
+    "bb": 8,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 156,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -1380,
+    "games": 3291,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 157,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -3393,
+    "games": 3249,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 158,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -1271,
+    "games": 2849,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 159,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -580,
+    "games": 2452,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 160,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -204,
+    "games": 2496,
+    "bb": 13,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 161,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -445,
+    "games": 2743,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 162,
+    "machine": "ミリオンゴッド‐神々の軌跡‐",
+    "diff": -3479,
+    "games": 5132,
+    "bb": 11,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 163,
+    "machine": "ファンキージャグラー2",
+    "diff": 21,
+    "games": 5650,
+    "bb": 24,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 164,
+    "machine": "ファンキージャグラー2",
+    "diff": -34,
+    "games": 3137,
+    "bb": 14,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 165,
+    "machine": "ファンキージャグラー2",
+    "diff": -1252,
+    "games": 3443,
+    "bb": 10,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 166,
+    "machine": "ファンキージャグラー2",
+    "diff": -1115,
+    "games": 4495,
+    "bb": 11,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 167,
+    "machine": "ファンキージャグラー2",
+    "diff": 561,
+    "games": 3582,
+    "bb": 18,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 168,
+    "machine": "ファンキージャグラー2",
+    "diff": -97,
+    "games": 5379,
+    "bb": 20,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 169,
+    "machine": "ファンキージャグラー2",
+    "diff": -1412,
+    "games": 1805,
+    "bb": 2,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 170,
+    "machine": "ゴーゴージャグラー3",
+    "diff": -1198,
+    "games": 3745,
+    "bb": 10,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 171,
+    "machine": "ゴーゴージャグラー3",
+    "diff": 2131,
+    "games": 6751,
+    "bb": 37,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 172,
+    "machine": "ゴーゴージャグラー3",
+    "diff": -989,
+    "games": 1437,
+    "bb": 2,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 173,
+    "machine": "ゴーゴージャグラー3",
+    "diff": 306,
+    "games": 4950,
+    "bb": 21,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 174,
+    "machine": "ゴーゴージャグラー3",
+    "diff": -419,
+    "games": 2256,
+    "bb": 9,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 175,
+    "machine": "ゴーゴージャグラー3",
+    "diff": -1198,
+    "games": 1883,
+    "bb": 4,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 176,
+    "machine": "ゴーゴージャグラー3",
+    "diff": -386,
+    "games": 4430,
+    "bb": 14,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 177,
+    "machine": "ゴーゴージャグラー3",
+    "diff": -972,
+    "games": 5912,
+    "bb": 20,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 178,
+    "machine": "ミスタージャグラー",
+    "diff": -143,
+    "games": 6571,
+    "bb": 24,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 179,
+    "machine": "ミスタージャグラー",
+    "diff": 670,
+    "games": 7018,
+    "bb": 29,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 180,
+    "machine": "ミスタージャグラー",
+    "diff": -723,
+    "games": 2329,
+    "bb": 7,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 181,
+    "machine": "ミスタージャグラー",
+    "diff": -1177,
+    "games": 2827,
+    "bb": 7,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 182,
+    "machine": "ハッピージャグラーVⅢ",
+    "diff": -903,
+    "games": 3915,
+    "bb": 13,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 183,
+    "machine": "ハッピージャグラーVⅢ",
+    "diff": 143,
+    "games": 4382,
+    "bb": 19,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 184,
+    "machine": "ハッピージャグラーVⅢ",
+    "diff": -1032,
+    "games": 1651,
+    "bb": 3,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 185,
+    "machine": "ハッピージャグラーVⅢ",
+    "diff": 927,
+    "games": 7377,
+    "bb": 35,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 186,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -389,
+    "games": 942,
+    "bb": 3,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 187,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": 759,
+    "games": 6260,
+    "bb": 26,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 188,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -873,
+    "games": 4384,
+    "bb": 13,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 189,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -837,
+    "games": 2558,
+    "bb": 9,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 190,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -978,
+    "games": 3410,
+    "bb": 10,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 191,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": 874,
+    "games": 4177,
+    "bb": 21,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 192,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -802,
+    "games": 5300,
+    "bb": 17,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 193,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": 968,
+    "games": 6422,
+    "bb": 30,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 194,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -575,
+    "games": 4501,
+    "bb": 17,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 195,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -738,
+    "games": 4374,
+    "bb": 14,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 196,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -64,
+    "games": 6218,
+    "bb": 26,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 197,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -693,
+    "games": 3723,
+    "bb": 15,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 198,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": -1003,
+    "games": 1431,
+    "bb": 2,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 199,
+    "machine": "ネオアイムジャグラーEX",
+    "diff": 348,
+    "games": 4613,
+    "bb": 20,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 200,
+    "machine": "ジャグラーガールズSS",
+    "diff": -1343,
+    "games": 3409,
+    "bb": 9,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 201,
+    "machine": "ジャグラーガールズSS",
+    "diff": -483,
+    "games": 5170,
+    "bb": 18,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 202,
+    "machine": "ジャグラーガールズSS",
+    "diff": -53,
+    "games": 3230,
+    "bb": 12,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 203,
+    "machine": "ジャグラーガールズSS",
+    "diff": 362,
+    "games": 7383,
+    "bb": 26,
+    "rb": 28,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 204,
+    "machine": "マイジャグラーVI",
+    "diff": -662,
+    "games": 7144,
+    "bb": 24,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 205,
+    "machine": "マイジャグラーVI",
+    "diff": 797,
+    "games": 6364,
+    "bb": 26,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 206,
+    "machine": "マイジャグラーVI",
+    "diff": -953,
+    "games": 2617,
+    "bb": 7,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 207,
+    "machine": "マイジャグラーVI",
+    "diff": 145,
+    "games": 6774,
+    "bb": 25,
+    "rb": 22,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 208,
+    "machine": "マイジャグラーVI",
+    "diff": 374,
+    "games": 7088,
+    "bb": 28,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 209,
+    "machine": "マイジャグラーVI",
+    "diff": 4092,
+    "games": 8986,
+    "bb": 40,
+    "rb": 46,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 210,
+    "machine": "マイジャグラーVI",
+    "diff": 230,
+    "games": 6733,
+    "bb": 31,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 211,
+    "machine": "マイジャグラーVI",
+    "diff": 2338,
+    "games": 8758,
+    "bb": 39,
+    "rb": 30,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 212,
+    "machine": "マイジャグラーVI",
+    "diff": 211,
+    "games": 6145,
+    "bb": 25,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 213,
+    "machine": "マイジャグラーVI",
+    "diff": -948,
+    "games": 7082,
+    "bb": 23,
+    "rb": 22,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 214,
+    "machine": "マイジャグラーVI",
+    "diff": 789,
+    "games": 7195,
+    "bb": 29,
+    "rb": 24,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 215,
+    "machine": "マイジャグラーV",
+    "diff": -656,
+    "games": 7307,
+    "bb": 23,
+    "rb": 29,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 216,
+    "machine": "マイジャグラーV",
+    "diff": 2553,
+    "games": 7709,
+    "bb": 38,
+    "rb": 25,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 217,
+    "machine": "マイジャグラーV",
+    "diff": 97,
+    "games": 4524,
+    "bb": 18,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 218,
+    "machine": "マイジャグラーV",
+    "diff": -1960,
+    "games": 3602,
+    "bb": 8,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 219,
+    "machine": "マイジャグラーV",
+    "diff": 1614,
+    "games": 7101,
+    "bb": 34,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 220,
+    "machine": "マイジャグラーV",
+    "diff": 4014,
+    "games": 9173,
+    "bb": 49,
+    "rb": 31,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 221,
+    "machine": "マイジャグラーV",
+    "diff": -402,
+    "games": 5566,
+    "bb": 20,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 222,
+    "machine": "マイジャグラーV",
+    "diff": -2235,
+    "games": 4051,
+    "bb": 7,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 223,
+    "machine": "マイジャグラーV",
+    "diff": -1394,
+    "games": 4627,
+    "bb": 15,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 224,
+    "machine": "マイジャグラーV",
+    "diff": 1423,
+    "games": 5878,
+    "bb": 29,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 225,
+    "machine": "マイジャグラーV",
+    "diff": -949,
+    "games": 3780,
+    "bb": 10,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 226,
+    "machine": "マイジャグラーV",
+    "diff": 1105,
+    "games": 7989,
+    "bb": 33,
+    "rb": 27,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 227,
+    "machine": "マイジャグラーV",
+    "diff": -1094,
+    "games": 5251,
+    "bb": 16,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 228,
+    "machine": "マイジャグラーV",
+    "diff": -669,
+    "games": 4122,
+    "bb": 14,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 229,
+    "machine": "マイジャグラーV",
+    "diff": -46,
+    "games": 3119,
+    "bb": 14,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 230,
+    "machine": "マイジャグラーV",
+    "diff": 427,
+    "games": 6194,
+    "bb": 27,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 231,
+    "machine": "マイジャグラーV",
+    "diff": -1451,
+    "games": 5758,
+    "bb": 16,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 232,
+    "machine": "マイジャグラーV",
+    "diff": -1076,
+    "games": 3303,
+    "bb": 10,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 233,
+    "machine": "マイジャグラーV",
+    "diff": 382,
+    "games": 5374,
+    "bb": 23,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 234,
+    "machine": "沖ドキ！ゴージャス 25Φ",
+    "diff": 1059,
+    "games": 1940,
+    "bb": 15,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 235,
+    "machine": "沖ドキ！ゴージャス 25Φ",
+    "diff": -3295,
+    "games": 3740,
+    "bb": 9,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 236,
+    "machine": "沖ドキ！ゴージャス 25Φ",
+    "diff": -2025,
+    "games": 4264,
+    "bb": 15,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 237,
+    "machine": "沖ドキ！DUO アンコール",
+    "diff": -416,
+    "games": 834,
+    "bb": 4,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 238,
+    "machine": "沖ドキ！DUO アンコール",
+    "diff": 329,
+    "games": 181,
+    "bb": 3,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 239,
+    "machine": "沖ドキ！DUO アンコール",
+    "diff": -2224,
+    "games": 3592,
+    "bb": 19,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 240,
+    "machine": "南国育ち SPECIAL",
+    "diff": -2398,
+    "games": 2282,
+    "bb": 4,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 241,
+    "machine": "SHAKE BONUS TRIGGER",
+    "diff": 744,
+    "games": 5734,
+    "bb": 16,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 242,
+    "machine": "クレアの秘宝伝 ～はじまりの扉と太陽の石～ ボーナストリガーver.",
+    "diff": -171,
+    "games": 6745,
+    "bb": 20,
+    "rb": 25,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 243,
+    "machine": "ケロット5BT",
+    "diff": -917,
+    "games": 3927,
+    "bb": 11,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 244,
+    "machine": "不二子BT",
+    "diff": -1223,
+    "games": 5223,
+    "bb": 31,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 245,
+    "machine": "アニマルスロットドッチ",
+    "diff": -1582,
+    "games": 1181,
+    "bb": 1,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 246,
+    "machine": "A‐SLOT+ 異世界かるてっとBT",
+    "diff": 3944,
+    "games": 6852,
+    "bb": 61,
+    "rb": 30,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 247,
+    "machine": "うみねこのなく頃に2",
+    "diff": 2288,
+    "games": 6806,
+    "bb": 21,
+    "rb": 22,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 248,
+    "machine": "ディスクアップ2",
+    "diff": 134,
+    "games": 8857,
+    "bb": 26,
+    "rb": 22,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 249,
+    "machine": "押忍！番長ZERO",
+    "diff": 3404,
+    "games": 5754,
+    "bb": 0,
+    "rb": 26,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 250,
+    "machine": "ペルソナ5",
+    "diff": 3086,
+    "games": 4399,
+    "bb": 60,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 251,
+    "machine": "甲鉄城のカバネリ",
+    "diff": -229,
+    "games": 2538,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 252,
+    "machine": "グランベルム",
+    "diff": -155,
+    "games": 1350,
+    "bb": 25,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 253,
+    "machine": "この素晴らしい世界に祝福を！",
+    "diff": -1737,
+    "games": 2756,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 254,
+    "machine": "交響詩篇エウレカセブンHI‐EVOLUTION ZERO TYPE‐ART",
+    "diff": -582,
+    "games": 999,
+    "bb": 4,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 255,
+    "machine": "アバサー",
+    "diff": -1227,
+    "games": 4068,
+    "bb": 13,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 256,
+    "machine": "バーサスリヴァイズ",
+    "diff": 2434,
+    "games": 6092,
+    "bb": 29,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 257,
+    "machine": "サンダーV",
+    "diff": -93,
+    "games": 5110,
+    "bb": 20,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 258,
+    "machine": "アレックス ブライト",
+    "diff": 182,
+    "games": 5900,
+    "bb": 21,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 259,
+    "machine": "ハナビ",
+    "diff": -1408,
+    "games": 2857,
+    "bb": 6,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 260,
+    "machine": "タコスロ",
+    "diff": -803,
+    "games": 4059,
+    "bb": 11,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 261,
+    "machine": "タコスロ",
+    "diff": -701,
+    "games": 4056,
+    "bb": 11,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 601,
+    "machine": "モンスターハンターライズ",
+    "diff": 4076,
+    "games": 1136,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 602,
+    "machine": "モンスターハンターライズ",
+    "diff": 1209,
+    "games": 1308,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 603,
+    "machine": "モンスターハンターライズ",
+    "diff": -656,
+    "games": 1396,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 604,
+    "machine": "モンスターハンターライズ",
+    "diff": 1884,
+    "games": 2174,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 605,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": -1610,
+    "games": 1186,
+    "bb": 2,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 606,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": -3154,
+    "games": 3445,
+    "bb": 12,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 607,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": -2612,
+    "games": 2308,
+    "bb": 4,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 608,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": 4962,
+    "games": 3223,
+    "bb": 40,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 609,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": -1518,
+    "games": 1883,
+    "bb": 7,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 610,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": -783,
+    "games": 939,
+    "bb": 3,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 611,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": 735,
+    "games": 3443,
+    "bb": 26,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 612,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": 2167,
+    "games": 4398,
+    "bb": 32,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 613,
+    "machine": "モンスターハンターライズ:サンブレイク",
+    "diff": -753,
+    "games": 1744,
+    "bb": 9,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 614,
+    "machine": "聖闘士星矢 黄金十二宮",
+    "diff": 4029,
+    "games": 3502,
+    "bb": 0,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 615,
+    "machine": "聖闘士星矢 黄金十二宮",
+    "diff": 1546,
+    "games": 5317,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 616,
+    "machine": "聖闘士星矢 黄金十二宮",
+    "diff": -2615,
+    "games": 4222,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 617,
+    "machine": "とある魔術の禁書目録2",
+    "diff": 3079,
+    "games": 4876,
+    "bb": 0,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 618,
+    "machine": "とある魔術の禁書目録2",
+    "diff": -2984,
+    "games": 2716,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 619,
+    "machine": "とある魔術の禁書目録2",
+    "diff": -1228,
+    "games": 4303,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 620,
+    "machine": "とある魔術の禁書目録2",
+    "diff": -3360,
+    "games": 3913,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 621,
+    "machine": "とある魔術の禁書目録2",
+    "diff": -1125,
+    "games": 3010,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 622,
+    "machine": "とある魔術の禁書目録2",
+    "diff": 5499,
+    "games": 4691,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 623,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 616,
+    "games": 5433,
+    "bb": 55,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 624,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 8002,
+    "games": 6741,
+    "bb": 105,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 625,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": -137,
+    "games": 3837,
+    "bb": 41,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 626,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": -1741,
+    "games": 2235,
+    "bb": 14,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 627,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 11673,
+    "games": 5785,
+    "bb": 120,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 628,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 713,
+    "games": 3058,
+    "bb": 35,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 629,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 1312,
+    "games": 4856,
+    "bb": 55,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 630,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 762,
+    "games": 5421,
+    "bb": 49,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 631,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": -3587,
+    "games": 5161,
+    "bb": 20,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 632,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": 5492,
+    "games": 6073,
+    "bb": 92,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 633,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": -4156,
+    "games": 4575,
+    "bb": 25,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 634,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": -201,
+    "games": 4127,
+    "bb": 45,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 635,
+    "machine": "革命機ヴァルヴレイヴ2",
+    "diff": -1648,
+    "games": 1460,
+    "bb": 2,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 636,
+    "machine": "炎炎ノ消防隊2",
+    "diff": -4108,
+    "games": 4123,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 637,
+    "machine": "炎炎ノ消防隊2",
+    "diff": 2159,
+    "games": 5017,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 638,
+    "machine": "炎炎ノ消防隊2",
+    "diff": 6007,
+    "games": 6469,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 639,
+    "machine": "炎炎ノ消防隊2",
+    "diff": -1029,
+    "games": 4559,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 640,
+    "machine": "炎炎ノ消防隊2",
+    "diff": -710,
+    "games": 2679,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 641,
+    "machine": "炎炎ノ消防隊2",
+    "diff": 874,
+    "games": 5651,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 642,
+    "machine": "炎炎ノ消防隊2",
+    "diff": -1417,
+    "games": 2864,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 643,
+    "machine": "炎炎ノ消防隊2",
+    "diff": -1040,
+    "games": 3229,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 644,
+    "machine": "魔法少女にあこがれて",
+    "diff": -3696,
+    "games": 5312,
+    "bb": 0,
+    "rb": 25,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 645,
+    "machine": "魔法少女にあこがれて",
+    "diff": -3319,
+    "games": 3791,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 646,
+    "machine": "魔法少女にあこがれて",
+    "diff": -1577,
+    "games": 3915,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 647,
+    "machine": "魔法少女にあこがれて",
+    "diff": -2846,
+    "games": 4779,
+    "bb": 0,
+    "rb": 27,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 648,
+    "machine": "魔法少女にあこがれて",
+    "diff": 2304,
+    "games": 4101,
+    "bb": 0,
+    "rb": 26,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 649,
+    "machine": "魔法少女にあこがれて",
+    "diff": 931,
+    "games": 4826,
+    "bb": 0,
+    "rb": 28,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 650,
+    "machine": "戦国コレクション6",
+    "diff": 351,
+    "games": 1001,
+    "bb": 0,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 651,
+    "machine": "戦国コレクション6",
+    "diff": 2018,
+    "games": 2916,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 652,
+    "machine": "戦国コレクション6",
+    "diff": -163,
+    "games": 450,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 653,
+    "machine": "七つの魔剣が支配する",
+    "diff": 34,
+    "games": 1631,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 654,
+    "machine": "七つの魔剣が支配する",
+    "diff": -648,
+    "games": 839,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 655,
+    "machine": "七つの魔剣が支配する",
+    "diff": -1402,
+    "games": 3032,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 656,
+    "machine": "パリピ孔明",
+    "diff": -125,
+    "games": 265,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 657,
+    "machine": "パリピ孔明",
+    "diff": 117,
+    "games": 849,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 658,
+    "machine": "パリピ孔明",
+    "diff": -837,
+    "games": 1503,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 659,
+    "machine": "化物語",
+    "diff": 1994,
+    "games": 4041,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 660,
+    "machine": "化物語",
+    "diff": 2069,
+    "games": 1702,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 661,
+    "machine": "化物語",
+    "diff": -925,
+    "games": 1330,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 662,
+    "machine": "化物語",
+    "diff": -812,
+    "games": 2087,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 663,
+    "machine": "リコリス・リコイル",
+    "diff": 1006,
+    "games": 5859,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 664,
+    "machine": "リコリス・リコイル",
+    "diff": 9675,
+    "games": 9390,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 665,
+    "machine": "リコリス・リコイル",
+    "diff": -3101,
+    "games": 3596,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 666,
+    "machine": "リコリス・リコイル",
+    "diff": -956,
+    "games": 6708,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 667,
+    "machine": "リコリス・リコイル",
+    "diff": -2593,
+    "games": 5286,
+    "bb": 0,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 668,
+    "machine": "リコリス・リコイル",
+    "diff": -1174,
+    "games": 7606,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 669,
+    "machine": "リコリス・リコイル",
+    "diff": -1952,
+    "games": 7266,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 670,
+    "machine": "リコリス・リコイル",
+    "diff": -2248,
+    "games": 6325,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 671,
+    "machine": "リコリス・リコイル",
+    "diff": -1535,
+    "games": 2587,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 672,
+    "machine": "リコリス・リコイル",
+    "diff": 197,
+    "games": 6897,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 673,
+    "machine": "からくりサーカス2",
+    "diff": -4262,
+    "games": 4347,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 674,
+    "machine": "からくりサーカス2",
+    "diff": -4478,
+    "games": 5623,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 675,
+    "machine": "からくりサーカス2",
+    "diff": 1612,
+    "games": 5175,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 676,
+    "machine": "からくりサーカス2",
+    "diff": 3446,
+    "games": 5268,
+    "bb": 0,
+    "rb": 24,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 677,
+    "machine": "からくりサーカス2",
+    "diff": -1881,
+    "games": 1590,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 678,
+    "machine": "Lからくりサーカス",
+    "diff": -2400,
+    "games": 6123,
+    "bb": 0,
+    "rb": 21,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 679,
+    "machine": "Lからくりサーカス",
+    "diff": -142,
+    "games": 92,
+    "bb": 0,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 680,
+    "machine": "Lからくりサーカス",
+    "diff": -3057,
+    "games": 3429,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 681,
+    "machine": "Lからくりサーカス",
+    "diff": -341,
+    "games": 1972,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 682,
+    "machine": "Lからくりサーカス",
+    "diff": 5574,
+    "games": 1022,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 683,
+    "machine": "ゴジラ対エヴァンゲリオン",
+    "diff": -3334,
+    "games": 5752,
+    "bb": 68,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 684,
+    "machine": "ゴジラ対エヴァンゲリオン",
+    "diff": -3407,
+    "games": 6020,
+    "bb": 67,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 685,
+    "machine": "ゴジラ対エヴァンゲリオン",
+    "diff": 2300,
+    "games": 4260,
+    "bb": 91,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 686,
+    "machine": "ゴジラ対エヴァンゲリオン",
+    "diff": 294,
+    "games": 5888,
+    "bb": 105,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 687,
+    "machine": "彼女、お借りします",
+    "diff": -1523,
+    "games": 2493,
+    "bb": 14,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 688,
+    "machine": "彼女、お借りします",
+    "diff": -1240,
+    "games": 3298,
+    "bb": 24,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 689,
+    "machine": "彼女、お借りします",
+    "diff": -345,
+    "games": 2864,
+    "bb": 22,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 690,
+    "machine": "彼女、お借りします",
+    "diff": -1518,
+    "games": 1992,
+    "bb": 7,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 692,
+    "machine": "かぐや様は告らせたい",
+    "diff": -1169,
+    "games": 1114,
+    "bb": 2,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 693,
+    "machine": "かぐや様は告らせたい",
+    "diff": -2490,
+    "games": 2396,
+    "bb": 4,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 694,
+    "machine": "かぐや様は告らせたい",
+    "diff": -1332,
+    "games": 2860,
+    "bb": 11,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 695,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1968,
+    "games": 2426,
+    "bb": 5,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 696,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": 2124,
+    "games": 4979,
+    "bb": 56,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 697,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -860,
+    "games": 3805,
+    "bb": 29,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 698,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": 1904,
+    "games": 4263,
+    "bb": 47,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 699,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -3149,
+    "games": 4289,
+    "bb": 9,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 700,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": 3814,
+    "games": 6723,
+    "bb": 74,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 701,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1768,
+    "games": 2126,
+    "bb": 6,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 702,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -2424,
+    "games": 2804,
+    "bb": 10,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 703,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": 506,
+    "games": 5130,
+    "bb": 49,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 704,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -66,
+    "games": 4418,
+    "bb": 36,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 705,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1185,
+    "games": 5411,
+    "bb": 35,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 706,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1888,
+    "games": 1568,
+    "bb": 1,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 707,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1432,
+    "games": 5877,
+    "bb": 41,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 708,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -392,
+    "games": 1644,
+    "bb": 9,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 709,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -156,
+    "games": 1210,
+    "bb": 7,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 710,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -360,
+    "games": 898,
+    "bb": 3,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 711,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -2059,
+    "games": 2611,
+    "bb": 6,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 712,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": 111,
+    "games": 4798,
+    "bb": 36,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 713,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -745,
+    "games": 3464,
+    "bb": 16,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 714,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -923,
+    "games": 2104,
+    "bb": 8,
+    "rb": 2,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 715,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": 855,
+    "games": 8147,
+    "bb": 78,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 716,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1577,
+    "games": 4078,
+    "bb": 18,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 717,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -5117,
+    "games": 8161,
+    "bb": 34,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 718,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -1491,
+    "games": 5684,
+    "bb": 39,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 719,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -896,
+    "games": 1910,
+    "bb": 5,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 720,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -496,
+    "games": 4149,
+    "bb": 38,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 721,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": 250,
+    "games": 3700,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 722,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -88,
+    "games": 5896,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 723,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -5478,
+    "games": 4411,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 724,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": 2429,
+    "games": 4903,
+    "bb": 0,
+    "rb": 24,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 725,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -5628,
+    "games": 5010,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 726,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -1164,
+    "games": 4905,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 727,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -4617,
+    "games": 6459,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 728,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -853,
+    "games": 4114,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 729,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -2651,
+    "games": 5183,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 730,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": 7324,
+    "games": 4391,
+    "bb": 0,
+    "rb": 31,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 731,
+    "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
+    "diff": -1147,
+    "games": 2660,
+    "bb": 0,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 732,
+    "machine": "東京喰種",
+    "diff": -2143,
+    "games": 1926,
+    "bb": 0,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 733,
+    "machine": "東京喰種",
+    "diff": 2808,
+    "games": 3957,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 734,
+    "machine": "東京喰種",
+    "diff": 1129,
+    "games": 3010,
+    "bb": 0,
+    "rb": 13,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 735,
+    "machine": "東京喰種",
+    "diff": -2187,
+    "games": 2687,
+    "bb": 0,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 736,
+    "machine": "東京喰種",
+    "diff": 1810,
+    "games": 1585,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 737,
+    "machine": "東京喰種",
+    "diff": 2206,
+    "games": 1013,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 738,
+    "machine": "東京喰種",
+    "diff": -2549,
+    "games": 6703,
+    "bb": 0,
+    "rb": 24,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 739,
+    "machine": "東京喰種",
+    "diff": 691,
+    "games": 2069,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 740,
+    "machine": "東京喰種",
+    "diff": 319,
+    "games": 1867,
+    "bb": 0,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 741,
+    "machine": "東京喰種",
+    "diff": -984,
+    "games": 5086,
+    "bb": 0,
+    "rb": 20,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 742,
+    "machine": "バンドリ！",
+    "diff": 1394,
+    "games": 5619,
+    "bb": 0,
+    "rb": 22,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 743,
+    "machine": "タクトオーパス デスティニー",
+    "diff": -1647,
+    "games": 1486,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 744,
+    "machine": "D4DJ Pachi‐Slot Mix",
+    "diff": -933,
+    "games": 5175,
+    "bb": 39,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 745,
+    "machine": "ストライク・ザ・ブラッド",
+    "diff": -1875,
+    "games": 3609,
+    "bb": 0,
+    "rb": 33,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 746,
+    "machine": "プリズムナナ",
+    "diff": 11931,
+    "games": 4865,
+    "bb": 94,
+    "rb": 31,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 747,
+    "machine": "虚構推理",
+    "diff": 789,
+    "games": 3136,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 748,
+    "machine": "邪神ちゃんドロップキック",
+    "diff": -1235,
+    "games": 4670,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 749,
+    "machine": "見える子ちゃん",
+    "diff": -5209,
+    "games": 4825,
+    "bb": 5,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 750,
+    "machine": "戦姫絶唱シンフォギア 正義の歌",
+    "diff": -1005,
+    "games": 2552,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 751,
+    "machine": "バイオハザード ヴィレッジ",
+    "diff": 2153,
+    "games": 296,
+    "bb": 0,
+    "rb": 1,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 752,
+    "machine": "バイオハザード5",
+    "diff": 2531,
+    "games": 2798,
+    "bb": 0,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 753,
+    "machine": "バイオハザード:ヴェンデッタ",
+    "diff": -241,
+    "games": 2808,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 754,
+    "machine": "コードギアス 反逆のルルーシュ/復活のルルーシュ",
+    "diff": 216,
+    "games": 6431,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 755,
+    "machine": "バジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION",
+    "diff": -1118,
+    "games": 2234,
+    "bb": 29,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 756,
+    "machine": "HEY！エリートサラリーマン鏡",
+    "diff": -633,
+    "games": 5566,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 757,
+    "machine": "とある魔術の禁書目録",
+    "diff": -216,
+    "games": 2306,
+    "bb": 0,
+    "rb": 12,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 758,
+    "machine": "一方通行 とある魔術の禁書目録",
+    "diff": 7605,
+    "games": 3143,
+    "bb": 70,
+    "rb": 0,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 759,
+    "machine": "転生したらスライムだった件",
+    "diff": -389,
+    "games": 2324,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 760,
+    "machine": "転生王女と天才令嬢の魔法革命",
+    "diff": 4997,
+    "games": 3845,
+    "bb": 90,
+    "rb": 32,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 761,
+    "machine": "犬夜叉2",
+    "diff": 914,
+    "games": 3267,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 762,
+    "machine": "牙狼 闇を照らす者",
+    "diff": -4775,
+    "games": 6991,
+    "bb": 0,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1001,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -4221,
+    "games": 4993,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1002,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": 5023,
+    "games": 3709,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1003,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": 4296,
+    "games": 4910,
+    "bb": 0,
+    "rb": 27,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1004,
+    "machine": "甲鉄城のカバネリ 海門決戦",
+    "diff": -3664,
+    "games": 5767,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1005,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -3280,
+    "games": 6130,
+    "bb": 23,
+    "rb": 7,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1006,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -3080,
+    "games": 5613,
+    "bb": 17,
+    "rb": 3,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1007,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -2784,
+    "games": 4582,
+    "bb": 14,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1008,
+    "machine": "革命機ヴァルヴレイヴ",
+    "diff": -4895,
+    "games": 6525,
+    "bb": 19,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1009,
+    "machine": "からくりサーカス2",
+    "diff": 768,
+    "games": 4048,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1010,
+    "machine": "からくりサーカス2",
+    "diff": 1466,
+    "games": 5800,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1011,
+    "machine": "からくりサーカス2",
+    "diff": 723,
+    "games": 4986,
+    "bb": 0,
+    "rb": 18,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1012,
+    "machine": "からくりサーカス2",
+    "diff": 5108,
+    "games": 5368,
+    "bb": 0,
+    "rb": 16,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1013,
+    "machine": "ゴールデンカムイ",
+    "diff": -2899,
+    "games": 2965,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1014,
+    "machine": "ガールズ&パンツァー 最終章",
+    "diff": 994,
+    "games": 3703,
+    "bb": 52,
+    "rb": 28,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1015,
+    "machine": "聖戦士ダンバイン",
+    "diff": -146,
+    "games": 4757,
+    "bb": 0,
+    "rb": 14,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1016,
+    "machine": "頭文字D 2nd",
+    "diff": 5731,
+    "games": 8806,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 1017,
+    "machine": "Lソードアート・オンライン",
+    "diff": -748,
+    "games": 1834,
+    "bb": 0,
+    "rb": 8,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2001,
+    "machine": "東京喰種",
+    "diff": -4543,
+    "games": 7221,
+    "bb": 0,
+    "rb": 34,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2002,
+    "machine": "東京喰種",
+    "diff": -4987,
+    "games": 4713,
+    "bb": 0,
+    "rb": 15,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2003,
+    "machine": "東京喰種",
+    "diff": -1144,
+    "games": 1875,
+    "bb": 0,
+    "rb": 6,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2004,
+    "machine": "東京喰種",
+    "diff": -2285,
+    "games": 2755,
+    "bb": 0,
+    "rb": 9,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2005,
+    "machine": "東京喰種",
+    "diff": -4408,
+    "games": 4740,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2006,
+    "machine": "東京喰種",
+    "diff": -2270,
+    "games": 3642,
+    "bb": 0,
+    "rb": 19,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2007,
+    "machine": "東京喰種",
+    "diff": -846,
+    "games": 3404,
+    "bb": 0,
+    "rb": 11,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2008,
+    "machine": "東京喰種",
+    "diff": -1419,
+    "games": 6289,
+    "bb": 0,
+    "rb": 23,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2009,
+    "machine": "東京喰種",
+    "diff": -1233,
+    "games": 1766,
+    "bb": 0,
+    "rb": 5,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2010,
+    "machine": "東京喰種",
+    "diff": -461,
+    "games": 1148,
+    "bb": 0,
+    "rb": 4,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2011,
+    "machine": "東京喰種",
+    "diff": -2010,
+    "games": 2890,
+    "bb": 0,
+    "rb": 10,
+    "source": "slo-navi"
+  },
+  {
+    "date": "2026-11-08",
+    "number": 2012,
+    "machine": "東京喰種",
+    "diff": -627,
+    "games": 4089,
+    "bb": 0,
+    "rb": 17,
+    "source": "slo-navi"
   }
 ]
