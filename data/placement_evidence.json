@@ -594,6 +594,34 @@
         "observed": "purple 5-seat roundtable and adjacent numbered panel 1013-1017",
         "seat_order_verified": false
       }
+    },
+    {
+      "floor": "2F",
+      "group": "2F 金12台円卓・東京喰種",
+      "machine_numbers": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "zone": "gold",
+      "source_url": "https://slo-navi.com/data/2026-11-08-11400/",
+      "additional_source_urls": [
+        "https://slo-navi.com/data/2026-11-07-11400/"
+      ],
+      "photo_source": "user-provided on-site 2F guide photograph observed 2026-11-04",
+      "verified_on": "2026-11-09",
+      "confidence": "high-group-membership-crosschecked-photo-and-two-consecutive-daily-inventories",
+      "seat_order_verified": false,
+      "notes": "Photo identifies a 12-seat Tokyo Ghoul roundtable; 2001-2012 are exactly 12 Tokyo Ghoul machines on both 11/07 and 11/08. Other Tokyo Ghoul machines 732-741 exist, so direct photo numbers are not available. Group association strong but not direct printed-number proof."
     }
   ],
   "unresolved": [
@@ -686,15 +714,29 @@
         1007,
         1008
       ],
-      "confidence": "medium-photo-label-plus-historical-valvrave-group-by-elimination",
+      "confidence": "unresolved-machine-generation-conflict",
       "source": "user-provided 2F photo observed 2026-11-04; repository README existing 2026-11-04",
-      "caveat": "README identifies group as ヴヴヴ without specifying generation; group-number mapping is inferred by elimination, not directly printed beside circle"
+      "caveat": "2026-11-07 and 11-08 machine inventory labels 1005-1008 as original 革命機ヴァルヴレイヴ, not 革命機ヴァルヴレイヴ2; photo label 'ヴァルヴレイヴ2' may describe a different date or has been misread. Do not assert current machine-number to circle 2 mapping without reconciliation."
     },
     "circle_12": {
       "machine": "東京喰種",
-      "numbers": null,
-      "confidence": "high-direct-photo-machine-label",
-      "source": "user-provided 2F photo observed 2026-11-04"
+      "numbers": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "confidence": "high-group-membership-crosschecked-photo-and-two-daily-inventories",
+      "source": "2026-11-04 photo; https://slo-navi.com/data/2026-11-07-11400/ ; https://slo-navi.com/data/2026-11-08-11400/",
+      "seat_order_verified": false
     },
     "note": "Corrected prior mistaken attribution: 東京喰種 belongs to 12-seat roundtable, NOT four-seat circle 2. Individual roundtable seat order remains unknown."
   }
