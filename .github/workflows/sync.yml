@@ -29,6 +29,9 @@ jobs:
         run: |
           python -c "from pathlib import Path; import re; h=Path('public/index.html').read_text(); [(Path('/tmp/sss-inline-%d.js'%i).write_text(code)) for i,code in enumerate(re.findall(r'<script>(.*?)</script>',h,re.S))]"
           for f in /tmp/sss-inline-*.js public/extensions.js public/color-areas.js public/island-picks.js public/roundtable.js; do node --check "$f"; done
+          python -c "from pathlib import Path; import re; h=Path('public/morning.html').read_text(); Path('/tmp/sss-morning.js').write_text(re.search(r'<script>(.*?)</script>',h,re.S).group(1))"
+          node --check /tmp/sss-morning.js
+          python -m json.tool data/morning_2026_11.json > /dev/null
       - name: Validate island scoring (Node)
         run: node tests/test_island_picks.cjs
       - name: Validate fallback parser
