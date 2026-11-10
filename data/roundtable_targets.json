@@ -1,9 +1,9 @@
 {
-  "window_start": "2026-08-11",
-  "window_end": "2026-11-08",
+  "window_start": "2026-08-12",
+  "window_end": "2026-11-09",
   "label_definition": "third-party roundtable challenge answer checks; not confirmed settings",
   "collection_status": {
-    "2026-08": "parsed 28 days",
+    "2026-08": "parsed 29 days",
     "2026-09": "parsed 29 days",
     "2026-10": "parsed 31 days",
     "2026-11": "parsed 5 days"
@@ -15,18 +15,6 @@
     "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
   ],
   "days": [
-    {
-      "date": "2026-08-11",
-      "targets": {
-        "カバネリ": 1002,
-        "ヴヴヴ": 1008,
-        "からくり2": 1009,
-        "紫バラ": 1017
-      },
-      "complete": true,
-      "classification": "third-party answer check, not verified settings",
-      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
-    },
     {
       "date": "2026-08-12",
       "targets": {
@@ -225,6 +213,18 @@
         "ヴヴヴ": 1006,
         "からくり2": 1009,
         "紫バラ": 1014
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
+    },
+    {
+      "date": "2026-08-31",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1008,
+        "からくり2": 1009,
+        "紫バラ": 1017
       },
       "complete": true,
       "classification": "third-party answer check, not verified settings",
@@ -1013,15 +1013,15 @@
       "n": 83,
       "counts": {
         "1001": 17,
-        "1002": 15,
-        "1003": 17,
+        "1002": 14,
+        "1003": 18,
         "1004": 34
       },
-      "adjacent_pairs": 78,
+      "adjacent_pairs": 79,
       "repeat_pairs": 15,
-      "repeat_rate_pct": 19.23,
+      "repeat_rate_pct": 18.99,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-11",
+      "first": "2026-08-12",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
@@ -1034,13 +1034,13 @@
           "n": 69,
           "hit": 15,
           "accuracy_pct": 21.74,
-          "log_loss": 1.3753
+          "log_loss": 1.3739
         },
         "recent14": {
           "n": 69,
-          "hit": 25,
-          "accuracy_pct": 36.23,
-          "log_loss": 1.3882
+          "hit": 24,
+          "accuracy_pct": 34.78,
+          "log_loss": 1.4013
         }
       }
     },
@@ -1052,11 +1052,11 @@
         "1007": 16,
         "1008": 19
       },
-      "adjacent_pairs": 72,
+      "adjacent_pairs": 73,
       "repeat_pairs": 11,
-      "repeat_rate_pct": 15.28,
+      "repeat_rate_pct": 15.07,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-11",
+      "first": "2026-08-12",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
@@ -1067,15 +1067,15 @@
         },
         "avoid_last": {
           "n": 66,
-          "hit": 22,
-          "accuracy_pct": 33.33,
-          "log_loss": 1.3609
+          "hit": 21,
+          "accuracy_pct": 31.82,
+          "log_loss": 1.3579
         },
         "recent14": {
           "n": 66,
           "hit": 13,
           "accuracy_pct": 19.7,
-          "log_loss": 1.459
+          "log_loss": 1.4583
         }
       }
     },
@@ -1087,11 +1087,11 @@
         "1011": 15,
         "1012": 19
       },
-      "adjacent_pairs": 78,
+      "adjacent_pairs": 79,
       "repeat_pairs": 19,
-      "repeat_rate_pct": 24.36,
+      "repeat_rate_pct": 24.05,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-11",
+      "first": "2026-08-12",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
@@ -1102,15 +1102,15 @@
         },
         "avoid_last": {
           "n": 69,
-          "hit": 24,
-          "accuracy_pct": 34.78,
-          "log_loss": 1.4025
+          "hit": 23,
+          "accuracy_pct": 33.33,
+          "log_loss": 1.4079
         },
         "recent14": {
           "n": 69,
-          "hit": 15,
-          "accuracy_pct": 21.74,
-          "log_loss": 1.4621
+          "hit": 18,
+          "accuracy_pct": 26.09,
+          "log_loss": 1.4659
         }
       }
     },
@@ -1123,11 +1123,11 @@
         "1016": 26,
         "1017": 16
       },
-      "adjacent_pairs": 76,
-      "repeat_pairs": 14,
-      "repeat_rate_pct": 18.42,
+      "adjacent_pairs": 77,
+      "repeat_pairs": 13,
+      "repeat_rate_pct": 16.88,
       "random_repeat_pct": 20.0,
-      "first": "2026-08-11",
+      "first": "2026-08-12",
       "last": "2026-11-05",
       "walkforward": {
         "baseline": {
@@ -1140,13 +1140,13 @@
           "n": 68,
           "hit": 9,
           "accuracy_pct": 13.24,
-          "log_loss": 1.6132
+          "log_loss": 1.6121
         },
         "recent14": {
           "n": 68,
-          "hit": 15,
-          "accuracy_pct": 22.06,
-          "log_loss": 1.6445
+          "hit": 13,
+          "accuracy_pct": 19.12,
+          "log_loss": 1.6523
         }
       }
     }
