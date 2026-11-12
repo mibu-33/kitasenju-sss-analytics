@@ -7,13 +7,16 @@ ROOT = Path(__file__).resolve().parents[1] / "data"
 
 def test_island_mapping_is_unique_and_conservative():
     rows=json.loads((ROOT/"areas.json").read_text(encoding="utf-8"))
-    assert len(rows)==173
-    assert len({r["number"] for r in rows})==173
+    assert len(rows)==237
+    assert len({r["number"] for r in rows})==237
     assert len([r for r in rows if r.get("confidence")=="cross-checked"])==26
     assert len([r for r in rows if r.get("confidence")=="secondary-color-only"])==63
     assert not any(1005<=r["number"]<=1012 and r.get("corridor") for r in rows)
     assert all(not r["corridor"] and r["order"] is None and r["from"] for r in rows if r.get("confidence")=="secondary-color-only")
-    assert all(r.get("order") is None for r in rows), "Image label order is not proven adjacency"
+    silver=[r for r in rows if r.get("order") is not None]
+    assert len(silver)==65
+    assert all(r["zone"]=="silver" and r.get("confidence")=="user-on-site-row-order" for r in silver)
+    assert all(r.get("order") is None for r in rows if r["zone"]!="silver"), "Do not invent adjacency outside field-verified silver"
 
 def test_official_x_purple_blocks_match_verified_ranges():
     rows=json.loads((ROOT/"areas.json").read_text(encoding="utf-8"))
@@ -24,8 +27,8 @@ def test_official_x_purple_blocks_match_verified_ranges():
 
 def test_source_ledger_and_unknowns():
     info=json.loads((ROOT/"layout_sources.json").read_text(encoding="utf-8"))
-    assert info["area_mapped_seats"]==103
-    assert info["color_identified_seats"]==173
+    assert info["area_mapped_seats"]==180
+    assert info["color_identified_seats"]==237
     assert info["color_only_secondary_seats"]==63
     assert info["total_seats"]==451
     assert len(info["unknown"])>=3
@@ -45,4 +48,4 @@ def test_dated_placement_evidence_is_conservative():
     assert len(observations)>=24
     assert len({o["id"] for o in observations})==len(observations)
     assert all(not o["physical_seat_order_verified"] and o.get("source_url") for o in observations)
-    assert {tuple(x["machine_numbers"]) for x in ledger["roundtable_groups"]}=={tuple(range(1001,1005)),tuple(range(1005,1009)),tuple(range(1009,1013)),tuple(range(1013,1018))}
+    assert {tuple(x["machine_numbers"]) for x in ledger["roundtable_groups"]}=={tuple(range(1001,1005)),tuple(range(1005,1009)),tuple(range(1009,1013)),tuple(range(1013,1018)),tuple(range(2001,2013))}
