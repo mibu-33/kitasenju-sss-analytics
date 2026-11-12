@@ -8,10 +8,98 @@
   "registered_layout_seat_count": 237,
   "observed_row_order_count": 65,
   "unmapped_on_latest_date": 214,
+  "unmapped_ranges": [
+    {
+      "start": 111,
+      "end": 113,
+      "count": 3,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 117,
+      "end": 148,
+      "count": 32,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 150,
+      "end": 150,
+      "count": 1,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 152,
+      "end": 177,
+      "count": 26,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 182,
+      "end": 199,
+      "count": 18,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 201,
+      "end": 202,
+      "count": 2,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 204,
+      "end": 219,
+      "count": 16,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 223,
+      "end": 233,
+      "count": 11,
+      "floor_hint": "1F"
+    },
+    {
+      "start": 601,
+      "end": 613,
+      "count": 13,
+      "floor_hint": "2F"
+    },
+    {
+      "start": 624,
+      "end": 651,
+      "count": 28,
+      "floor_hint": "2F"
+    },
+    {
+      "start": 659,
+      "end": 680,
+      "count": 22,
+      "floor_hint": "2F"
+    },
+    {
+      "start": 684,
+      "end": 690,
+      "count": 7,
+      "floor_hint": "2F"
+    },
+    {
+      "start": 692,
+      "end": 702,
+      "count": 11,
+      "floor_hint": "2F"
+    },
+    {
+      "start": 718,
+      "end": 741,
+      "count": 24,
+      "floor_hint": "2F"
+    }
+  ],
   "warning": "実店舗の幾何座標は未確定。色・所属情報と現地申告による列内順を区別。集計元の日付より後の入替を保証しません。",
   "seats": [
     {
       "number": 1,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": -1647,
       "games": 4522,
@@ -27,6 +115,8 @@
     },
     {
       "number": 2,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": -855,
       "games": 693,
@@ -42,6 +132,8 @@
     },
     {
       "number": 3,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": -651,
       "games": 659,
@@ -57,6 +149,8 @@
     },
     {
       "number": 4,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": 3089,
       "games": 2081,
@@ -72,6 +166,8 @@
     },
     {
       "number": 5,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": -851,
       "games": 624,
@@ -87,6 +183,8 @@
     },
     {
       "number": 6,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": 3661,
       "games": 2175,
@@ -102,6 +200,8 @@
     },
     {
       "number": 7,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": 640,
       "games": 1218,
@@ -117,6 +217,8 @@
     },
     {
       "number": 8,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": -1427,
       "games": 1745,
@@ -132,6 +234,8 @@
     },
     {
       "number": 9,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マギアレコード 魔法少女まどか☆マギカ外伝",
       "diff": -860,
       "games": 5984,
@@ -147,6 +251,8 @@
     },
     {
       "number": 10,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "新鬼武者3",
       "diff": -639,
       "games": 1203,
@@ -162,6 +268,8 @@
     },
     {
       "number": 11,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "新鬼武者3",
       "diff": 1713,
       "games": 5833,
@@ -177,6 +285,8 @@
     },
     {
       "number": 12,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "新鬼武者3",
       "diff": -1144,
       "games": 1091,
@@ -192,6 +302,8 @@
     },
     {
       "number": 13,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "新鬼武者3",
       "diff": -3661,
       "games": 4608,
@@ -207,6 +319,8 @@
     },
     {
       "number": 14,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "新鬼武者3",
       "diff": -1046,
       "games": 779,
@@ -222,6 +336,8 @@
     },
     {
       "number": 15,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "攻殻機動隊",
       "diff": 30,
       "games": 711,
@@ -237,6 +353,8 @@
     },
     {
       "number": 16,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "攻殻機動隊",
       "diff": 664,
       "games": 3999,
@@ -252,6 +370,8 @@
     },
     {
       "number": 17,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "攻殻機動隊",
       "diff": -884,
       "games": 2739,
@@ -267,6 +387,8 @@
     },
     {
       "number": 18,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "攻殻機動隊",
       "diff": -605,
       "games": 1714,
@@ -282,6 +404,8 @@
     },
     {
       "number": 19,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": -4022,
       "games": 3650,
@@ -297,6 +421,8 @@
     },
     {
       "number": 20,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": 3874,
       "games": 3425,
@@ -312,6 +438,8 @@
     },
     {
       "number": 21,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": -154,
       "games": 3712,
@@ -327,6 +455,8 @@
     },
     {
       "number": 22,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": -530,
       "games": 3280,
@@ -342,6 +472,8 @@
     },
     {
       "number": 23,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": -1263,
       "games": 3390,
@@ -357,6 +489,8 @@
     },
     {
       "number": 24,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": 17584,
       "games": 2278,
@@ -372,6 +506,8 @@
     },
     {
       "number": 25,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": 15320,
       "games": 2933,
@@ -387,6 +523,8 @@
     },
     {
       "number": 26,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": -1294,
       "games": 3530,
@@ -402,6 +540,8 @@
     },
     {
       "number": 27,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゴッドイーター リザレクション",
       "diff": -2271,
       "games": 4241,
@@ -417,6 +557,8 @@
     },
     {
       "number": 28,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "アズールレーン THE ANIMATION",
       "diff": -1517,
       "games": 1028,
@@ -432,6 +574,8 @@
     },
     {
       "number": 29,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "アズールレーン THE ANIMATION",
       "diff": 209,
       "games": 1646,
@@ -447,6 +591,8 @@
     },
     {
       "number": 30,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "アズールレーン THE ANIMATION",
       "diff": -2038,
       "games": 1810,
@@ -462,6 +608,8 @@
     },
     {
       "number": 31,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
       "diff": -3880,
       "games": 7097,
@@ -477,6 +625,8 @@
     },
     {
       "number": 32,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
       "diff": -3409,
       "games": 7059,
@@ -492,6 +642,8 @@
     },
     {
       "number": 33,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
       "diff": -1424,
       "games": 7370,
@@ -507,6 +659,8 @@
     },
     {
       "number": 34,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
       "diff": -906,
       "games": 7051,
@@ -522,6 +676,8 @@
     },
     {
       "number": 35,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
       "diff": -4506,
       "games": 7878,
@@ -537,6 +693,8 @@
     },
     {
       "number": 36,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳 転生の章2",
       "diff": -1166,
       "games": 987,
@@ -552,6 +710,8 @@
     },
     {
       "number": 37,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳 転生の章2",
       "diff": 2334,
       "games": 3848,
@@ -567,6 +727,8 @@
     },
     {
       "number": 38,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳 転生の章2",
       "diff": -1275,
       "games": 1592,
@@ -582,6 +744,8 @@
     },
     {
       "number": 39,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳 転生の章2",
       "diff": 3248,
       "games": 2580,
@@ -597,6 +761,8 @@
     },
     {
       "number": 40,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳 転生の章2",
       "diff": -182,
       "games": 4758,
@@ -612,6 +778,8 @@
     },
     {
       "number": 41,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳 転生の章2",
       "diff": -1675,
       "games": 2064,
@@ -627,6 +795,8 @@
     },
     {
       "number": 42,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -2267,
       "games": 3792,
@@ -642,6 +812,8 @@
     },
     {
       "number": 43,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": 1991,
       "games": 3588,
@@ -657,6 +829,8 @@
     },
     {
       "number": 44,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -188,
       "games": 3986,
@@ -672,6 +846,8 @@
     },
     {
       "number": 45,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -505,
       "games": 1748,
@@ -687,6 +863,8 @@
     },
     {
       "number": 46,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": 980,
       "games": 4058,
@@ -702,6 +880,8 @@
     },
     {
       "number": 47,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -2052,
       "games": 2585,
@@ -717,6 +897,8 @@
     },
     {
       "number": 48,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": 1546,
       "games": 2365,
@@ -732,6 +914,8 @@
     },
     {
       "number": 49,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -494,
       "games": 2415,
@@ -747,6 +931,8 @@
     },
     {
       "number": 50,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -277,
       "games": 2518,
@@ -762,6 +948,8 @@
     },
     {
       "number": 51,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": 4070,
       "games": 4430,
@@ -777,6 +965,8 @@
     },
     {
       "number": 52,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -3366,
       "games": 3086,
@@ -792,6 +982,8 @@
     },
     {
       "number": 53,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳",
       "diff": 3361,
       "games": 5861,
@@ -807,6 +999,8 @@
     },
     {
       "number": 54,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳",
       "diff": -598,
       "games": 2587,
@@ -822,6 +1016,8 @@
     },
     {
       "number": 55,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳",
       "diff": -221,
       "games": 2498,
@@ -837,6 +1033,8 @@
     },
     {
       "number": 56,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳",
       "diff": -1271,
       "games": 4539,
@@ -852,6 +1050,8 @@
     },
     {
       "number": 57,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳",
       "diff": 1546,
       "games": 3639,
@@ -867,6 +1067,8 @@
     },
     {
       "number": 58,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "北斗の拳",
       "diff": -782,
       "games": 4763,
@@ -882,6 +1084,8 @@
     },
     {
       "number": 59,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": -3706,
       "games": 4065,
@@ -897,6 +1101,8 @@
     },
     {
       "number": 60,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": -1521,
       "games": 6901,
@@ -912,6 +1118,8 @@
     },
     {
       "number": 61,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": -2920,
       "games": 5226,
@@ -927,6 +1135,8 @@
     },
     {
       "number": 62,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": -2315,
       "games": 4357,
@@ -942,6 +1152,8 @@
     },
     {
       "number": 63,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": 215,
       "games": 3110,
@@ -957,6 +1169,8 @@
     },
     {
       "number": 64,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": -1932,
       "games": 5336,
@@ -972,6 +1186,8 @@
     },
     {
       "number": 65,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "獣王",
       "diff": -2967,
       "games": 5428,
@@ -987,6 +1203,8 @@
     },
     {
       "number": 66,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "Vivy ‐Fluorite Eye's Song‐",
       "diff": 8950,
       "games": 8475,
@@ -1002,6 +1220,8 @@
     },
     {
       "number": 67,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "Vivy ‐Fluorite Eye's Song‐",
       "diff": -174,
       "games": 5416,
@@ -1017,6 +1237,8 @@
     },
     {
       "number": 68,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "Vivy ‐Fluorite Eye's Song‐",
       "diff": 622,
       "games": 6450,
@@ -1032,6 +1254,8 @@
     },
     {
       "number": 69,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "Vivy ‐Fluorite Eye's Song‐",
       "diff": 3268,
       "games": 6634,
@@ -1047,6 +1271,8 @@
     },
     {
       "number": 70,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ワールドダイスター",
       "diff": -1510,
       "games": 5957,
@@ -1062,6 +1288,8 @@
     },
     {
       "number": 71,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ワールドダイスター",
       "diff": -2455,
       "games": 4088,
@@ -1077,6 +1305,8 @@
     },
     {
       "number": 72,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ワールドダイスター",
       "diff": -2807,
       "games": 6599,
@@ -1092,6 +1322,8 @@
     },
     {
       "number": 73,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ワールドダイスター",
       "diff": 5820,
       "games": 7011,
@@ -1107,6 +1339,8 @@
     },
     {
       "number": 74,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゾンビランドサガ",
       "diff": 3780,
       "games": 5082,
@@ -1122,6 +1356,8 @@
     },
     {
       "number": 75,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゾンビランドサガ",
       "diff": -458,
       "games": 489,
@@ -1137,6 +1373,8 @@
     },
     {
       "number": 76,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゾンビランドサガ",
       "diff": -735,
       "games": 1097,
@@ -1152,6 +1390,8 @@
     },
     {
       "number": 77,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ゾンビランドサガ",
       "diff": 3812,
       "games": 5019,
@@ -1167,6 +1407,8 @@
     },
     {
       "number": 78,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
       "diff": -1936,
       "games": 2633,
@@ -1182,6 +1424,8 @@
     },
     {
       "number": 79,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
       "diff": -935,
       "games": 5479,
@@ -1197,6 +1441,8 @@
     },
     {
       "number": 80,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
       "diff": 255,
       "games": 1666,
@@ -1212,6 +1458,8 @@
     },
     {
       "number": 81,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "少女☆歌劇 レヴュースタァライト ‐The SLOT‐",
       "diff": -1376,
       "games": 2527,
@@ -1227,6 +1475,8 @@
     },
     {
       "number": 82,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "バイオハザードRE:3",
       "diff": -1076,
       "games": 4758,
@@ -1242,6 +1492,8 @@
     },
     {
       "number": 83,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "バイオハザードRE:3",
       "diff": -2428,
       "games": 3137,
@@ -1257,6 +1509,8 @@
     },
     {
       "number": 84,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "バイオハザードRE:3",
       "diff": -2147,
       "games": 2172,
@@ -1272,6 +1526,8 @@
     },
     {
       "number": 85,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "デビル メイ クライ5 スタイリッシュトライブ",
       "diff": -1839,
       "games": 1682,
@@ -1287,6 +1543,8 @@
     },
     {
       "number": 86,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "デビル メイ クライ5 スタイリッシュトライブ",
       "diff": 764,
       "games": 1752,
@@ -1302,6 +1560,8 @@
     },
     {
       "number": 87,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "デビル メイ クライ5 スタイリッシュトライブ",
       "diff": -1576,
       "games": 1361,
@@ -1317,6 +1577,8 @@
     },
     {
       "number": 88,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "シャーマンキング",
       "diff": -3272,
       "games": 2355,
@@ -1332,6 +1594,8 @@
     },
     {
       "number": 89,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "シャーマンキング",
       "diff": 1902,
       "games": 5206,
@@ -1347,6 +1611,8 @@
     },
     {
       "number": 90,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "シャーマンキング",
       "diff": 3378,
       "games": 2229,
@@ -1362,6 +1628,8 @@
     },
     {
       "number": 91,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "シャーマンキング",
       "diff": 6434,
       "games": 2480,
@@ -1377,6 +1645,8 @@
     },
     {
       "number": 92,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ストリートファイター6",
       "diff": 648,
       "games": 1457,
@@ -1392,6 +1662,8 @@
     },
     {
       "number": 93,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ストリートファイター6",
       "diff": -3609,
       "games": 6347,
@@ -1407,6 +1679,8 @@
     },
     {
       "number": 94,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ストリートファイター6",
       "diff": 28,
       "games": 660,
@@ -1422,6 +1696,8 @@
     },
     {
       "number": 95,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "いざ！番長",
       "diff": -824,
       "games": 807,
@@ -1437,6 +1713,8 @@
     },
     {
       "number": 96,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "いざ！番長",
       "diff": -782,
       "games": 1643,
@@ -1452,6 +1730,8 @@
     },
     {
       "number": 97,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "いざ！番長",
       "diff": -1996,
       "games": 1880,
@@ -1467,6 +1747,8 @@
     },
     {
       "number": 98,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "東京リベンジャーズ",
       "diff": 4757,
       "games": 7386,
@@ -1482,6 +1764,8 @@
     },
     {
       "number": 99,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "東京リベンジャーズ",
       "diff": 2011,
       "games": 7782,
@@ -1497,6 +1781,8 @@
     },
     {
       "number": 100,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "東京リベンジャーズ",
       "diff": -2319,
       "games": 5348,
@@ -1512,6 +1798,8 @@
     },
     {
       "number": 101,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "痛いのは嫌なので防御力に極振りしたいと思います。",
       "diff": 5688,
       "games": 6693,
@@ -1527,6 +1815,8 @@
     },
     {
       "number": 102,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "痛いのは嫌なので防御力に極振りしたいと思います。",
       "diff": 7017,
       "games": 5653,
@@ -1542,6 +1832,8 @@
     },
     {
       "number": 103,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "痛いのは嫌なので防御力に極振りしたいと思います。",
       "diff": 56,
       "games": 6470,
@@ -1557,6 +1849,8 @@
     },
     {
       "number": 104,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "とんでもスキルで異世界放浪メシ",
       "diff": -1272,
       "games": 2389,
@@ -1572,6 +1866,8 @@
     },
     {
       "number": 105,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "とんでもスキルで異世界放浪メシ",
       "diff": -1832,
       "games": 1637,
@@ -1587,6 +1883,8 @@
     },
     {
       "number": 106,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "とんでもスキルで異世界放浪メシ",
       "diff": -604,
       "games": 2221,
@@ -1602,6 +1900,8 @@
     },
     {
       "number": 107,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
       "diff": 460,
       "games": 2551,
@@ -1617,6 +1917,8 @@
     },
     {
       "number": 108,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
       "diff": -3483,
       "games": 3309,
@@ -1632,6 +1934,8 @@
     },
     {
       "number": 109,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
       "diff": -1623,
       "games": 2300,
@@ -1647,6 +1951,8 @@
     },
     {
       "number": 110,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "青春ブタ野郎はバニーガール先輩の夢を見ない",
       "diff": 1136,
       "games": 5382,
@@ -1662,6 +1968,8 @@
     },
     {
       "number": 111,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "やじきた道中記参る！",
       "diff": 948,
       "games": 5855,
@@ -1677,6 +1985,8 @@
     },
     {
       "number": 112,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "やじきた道中記参る！",
       "diff": 6293,
       "games": 986,
@@ -1692,6 +2002,8 @@
     },
     {
       "number": 113,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "やじきた道中記参る！",
       "diff": -1119,
       "games": 2261,
@@ -1707,6 +2019,8 @@
     },
     {
       "number": 114,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "やじきた道中記参る！",
       "diff": 268,
       "games": 2169,
@@ -1722,6 +2036,8 @@
     },
     {
       "number": 115,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "やじきた道中記参る！",
       "diff": -1948,
       "games": 1382,
@@ -1737,6 +2053,8 @@
     },
     {
       "number": 116,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "真打 吉宗",
       "diff": 3324,
       "games": 4101,
@@ -1752,6 +2070,8 @@
     },
     {
       "number": 117,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "真打 吉宗",
       "diff": -1904,
       "games": 2755,
@@ -1767,6 +2087,8 @@
     },
     {
       "number": 118,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "真打 吉宗",
       "diff": 5818,
       "games": 2487,
@@ -1782,6 +2104,8 @@
     },
     {
       "number": 119,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "真打 吉宗",
       "diff": 1335,
       "games": 2909,
@@ -1797,6 +2121,8 @@
     },
     {
       "number": 120,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ソードアート・オンラインⅡ",
       "diff": -4717,
       "games": 7977,
@@ -1812,6 +2138,8 @@
     },
     {
       "number": 121,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ソードアート・オンラインⅡ",
       "diff": -4833,
       "games": 6666,
@@ -1827,6 +2155,8 @@
     },
     {
       "number": 122,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ソードアート・オンラインⅡ",
       "diff": 6059,
       "games": 8909,
@@ -1842,6 +2172,8 @@
     },
     {
       "number": 123,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ソードアート・オンラインⅡ",
       "diff": -875,
       "games": 8434,
@@ -1857,6 +2189,8 @@
     },
     {
       "number": 124,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ソードアート・オンラインⅡ",
       "diff": 5855,
       "games": 8051,
@@ -1872,6 +2206,8 @@
     },
     {
       "number": 125,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ソードアート・オンラインⅡ",
       "diff": 3794,
       "games": 7990,
@@ -1887,6 +2223,8 @@
     },
     {
       "number": 126,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": 2551,
       "games": 3131,
@@ -1902,6 +2240,8 @@
     },
     {
       "number": 127,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -1979,
       "games": 3590,
@@ -1917,6 +2257,8 @@
     },
     {
       "number": 128,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": 15,
       "games": 1861,
@@ -1932,6 +2274,8 @@
     },
     {
       "number": 129,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -1219,
       "games": 6005,
@@ -1947,6 +2291,8 @@
     },
     {
       "number": 130,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -1441,
       "games": 4296,
@@ -1962,6 +2308,8 @@
     },
     {
       "number": 131,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -168,
       "games": 2339,
@@ -1977,6 +2325,8 @@
     },
     {
       "number": 132,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -2276,
       "games": 4251,
@@ -1992,6 +2342,8 @@
     },
     {
       "number": 133,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": 8724,
       "games": 3382,
@@ -2007,6 +2359,8 @@
     },
     {
       "number": 134,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -1027,
       "games": 1321,
@@ -2022,6 +2376,8 @@
     },
     {
       "number": 135,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "モンキーターンV",
       "diff": -46,
       "games": 4416,
@@ -2037,6 +2393,8 @@
     },
     {
       "number": 136,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーブラックジャック",
       "diff": -1207,
       "games": 1001,
@@ -2052,6 +2410,8 @@
     },
     {
       "number": 137,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーブラックジャック",
       "diff": 5953,
       "games": 3836,
@@ -2067,6 +2427,8 @@
     },
     {
       "number": 138,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーブラックジャック",
       "diff": -1884,
       "games": 2064,
@@ -2082,6 +2444,8 @@
     },
     {
       "number": 139,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーブラックジャック",
       "diff": 1000,
       "games": 1457,
@@ -2097,6 +2461,8 @@
     },
     {
       "number": 140,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーブラックジャック",
       "diff": -1920,
       "games": 1425,
@@ -2112,6 +2478,8 @@
     },
     {
       "number": 141,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーリオエース2",
       "diff": -1807,
       "games": 1500,
@@ -2127,6 +2495,8 @@
     },
     {
       "number": 142,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーリオエース2",
       "diff": -1689,
       "games": 3834,
@@ -2142,6 +2512,8 @@
     },
     {
       "number": 143,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーリオエース2",
       "diff": -2309,
       "games": 2008,
@@ -2157,6 +2529,8 @@
     },
     {
       "number": 144,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "スーパーリオエース2",
       "diff": 4837,
       "games": 7759,
@@ -2172,6 +2546,8 @@
     },
     {
       "number": 145,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ラグナドール",
       "diff": -4070,
       "games": 3191,
@@ -2187,6 +2563,8 @@
     },
     {
       "number": 146,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ラグナドール",
       "diff": -4552,
       "games": 3748,
@@ -2202,6 +2580,8 @@
     },
     {
       "number": 147,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ラグナドール",
       "diff": -1873,
       "games": 1339,
@@ -2217,6 +2597,8 @@
     },
     {
       "number": 148,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ラグナドール",
       "diff": 210,
       "games": 4307,
@@ -2232,6 +2614,8 @@
     },
     {
       "number": 149,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "喰霊‐零‐Re",
       "diff": -573,
       "games": 592,
@@ -2247,6 +2631,8 @@
     },
     {
       "number": 150,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "喰霊‐零‐Re",
       "diff": -68,
       "games": 625,
@@ -2262,6 +2648,8 @@
     },
     {
       "number": 151,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "喰霊‐零‐Re",
       "diff": -492,
       "games": 2859,
@@ -2277,6 +2665,8 @@
     },
     {
       "number": 152,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -58,
       "games": 2372,
@@ -2292,6 +2682,8 @@
     },
     {
       "number": 153,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": 1150,
       "games": 1435,
@@ -2307,6 +2699,8 @@
     },
     {
       "number": 154,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -3075,
       "games": 3844,
@@ -2322,6 +2716,8 @@
     },
     {
       "number": 155,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -2612,
       "games": 3707,
@@ -2337,6 +2733,8 @@
     },
     {
       "number": 156,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -1089,
       "games": 1592,
@@ -2352,6 +2750,8 @@
     },
     {
       "number": 157,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": 4215,
       "games": 4735,
@@ -2367,6 +2767,8 @@
     },
     {
       "number": 158,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -1752,
       "games": 1530,
@@ -2382,6 +2784,8 @@
     },
     {
       "number": 159,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -1428,
       "games": 1358,
@@ -2397,6 +2801,8 @@
     },
     {
       "number": 160,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -2057,
       "games": 3714,
@@ -2412,6 +2818,8 @@
     },
     {
       "number": 161,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -2809,
       "games": 3118,
@@ -2427,6 +2835,8 @@
     },
     {
       "number": 162,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ミリオンゴッド‐神々の軌跡‐",
       "diff": -128,
       "games": 4025,
@@ -2442,6 +2852,8 @@
     },
     {
       "number": 163,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": 377,
       "games": 6770,
@@ -2457,6 +2869,8 @@
     },
     {
       "number": 164,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": -852,
       "games": 1767,
@@ -2472,6 +2886,8 @@
     },
     {
       "number": 165,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": -1006,
       "games": 2055,
@@ -2487,6 +2903,8 @@
     },
     {
       "number": 166,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": -156,
       "games": 7801,
@@ -2502,6 +2920,8 @@
     },
     {
       "number": 167,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": 1706,
       "games": 4643,
@@ -2517,6 +2937,8 @@
     },
     {
       "number": 168,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": -496,
       "games": 3740,
@@ -2532,6 +2954,8 @@
     },
     {
       "number": 169,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ファンキージャグラー2",
       "diff": -581,
       "games": 4753,
@@ -2547,6 +2971,8 @@
     },
     {
       "number": 170,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": -1001,
       "games": 2174,
@@ -2562,6 +2988,8 @@
     },
     {
       "number": 171,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": -1170,
       "games": 2017,
@@ -2577,6 +3005,8 @@
     },
     {
       "number": 172,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": 800,
       "games": 5336,
@@ -2592,6 +3022,8 @@
     },
     {
       "number": 173,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": -282,
       "games": 1751,
@@ -2607,6 +3039,8 @@
     },
     {
       "number": 174,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": 946,
       "games": 7685,
@@ -2622,6 +3056,8 @@
     },
     {
       "number": 175,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": -1494,
       "games": 4695,
@@ -2637,6 +3073,8 @@
     },
     {
       "number": 176,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": 902,
       "games": 6109,
@@ -2652,6 +3090,8 @@
     },
     {
       "number": 177,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ゴーゴージャグラー3",
       "diff": 160,
       "games": 6772,
@@ -2667,6 +3107,8 @@
     },
     {
       "number": 178,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ミスタージャグラー",
       "diff": -2071,
       "games": 4854,
@@ -2682,6 +3124,8 @@
     },
     {
       "number": 179,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ミスタージャグラー",
       "diff": -435,
       "games": 5499,
@@ -2697,6 +3141,8 @@
     },
     {
       "number": 180,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ミスタージャグラー",
       "diff": -487,
       "games": 2397,
@@ -2712,6 +3158,8 @@
     },
     {
       "number": 181,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ミスタージャグラー",
       "diff": 736,
       "games": 8477,
@@ -2727,6 +3175,8 @@
     },
     {
       "number": 182,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ハッピージャグラーVⅢ",
       "diff": 151,
       "games": 1939,
@@ -2742,6 +3192,8 @@
     },
     {
       "number": 183,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ハッピージャグラーVⅢ",
       "diff": 1652,
       "games": 3505,
@@ -2757,6 +3209,8 @@
     },
     {
       "number": 184,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ハッピージャグラーVⅢ",
       "diff": -198,
       "games": 1466,
@@ -2772,6 +3226,8 @@
     },
     {
       "number": 185,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ハッピージャグラーVⅢ",
       "diff": 370,
       "games": 6294,
@@ -2787,6 +3243,8 @@
     },
     {
       "number": 186,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": -1029,
       "games": 1751,
@@ -2802,6 +3260,8 @@
     },
     {
       "number": 187,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": -736,
       "games": 2297,
@@ -2817,6 +3277,8 @@
     },
     {
       "number": 188,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 1600,
       "games": 9343,
@@ -2832,6 +3294,8 @@
     },
     {
       "number": 189,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": -1046,
       "games": 1983,
@@ -2847,6 +3311,8 @@
     },
     {
       "number": 190,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 814,
       "games": 5654,
@@ -2862,6 +3328,8 @@
     },
     {
       "number": 191,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 1626,
       "games": 6600,
@@ -2877,6 +3345,8 @@
     },
     {
       "number": 192,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 338,
       "games": 4731,
@@ -2892,6 +3362,8 @@
     },
     {
       "number": 193,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 1822,
       "games": 7010,
@@ -2907,6 +3379,8 @@
     },
     {
       "number": 194,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": -165,
       "games": 2695,
@@ -2922,6 +3396,8 @@
     },
     {
       "number": 195,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": -2005,
       "games": 4867,
@@ -2937,6 +3413,8 @@
     },
     {
       "number": 196,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": -1200,
       "games": 3887,
@@ -2952,6 +3430,8 @@
     },
     {
       "number": 197,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 2593,
       "games": 6448,
@@ -2967,6 +3447,8 @@
     },
     {
       "number": 198,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 796,
       "games": 6676,
@@ -2982,6 +3464,8 @@
     },
     {
       "number": 199,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ネオアイムジャグラーEX",
       "diff": 1044,
       "games": 8505,
@@ -2997,6 +3481,8 @@
     },
     {
       "number": 200,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ジャグラーガールズSS",
       "diff": 2730,
       "games": 8586,
@@ -3012,6 +3498,8 @@
     },
     {
       "number": 201,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ジャグラーガールズSS",
       "diff": 1334,
       "games": 6997,
@@ -3027,6 +3515,8 @@
     },
     {
       "number": 202,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "ジャグラーガールズSS",
       "diff": -674,
       "games": 3289,
@@ -3042,6 +3532,8 @@
     },
     {
       "number": 203,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ジャグラーガールズSS",
       "diff": -269,
       "games": 5073,
@@ -3057,6 +3549,8 @@
     },
     {
       "number": 204,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -1713,
       "games": 5786,
@@ -3072,6 +3566,8 @@
     },
     {
       "number": 205,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": 2129,
       "games": 7956,
@@ -3087,6 +3583,8 @@
     },
     {
       "number": 206,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": 1792,
       "games": 4296,
@@ -3102,6 +3600,8 @@
     },
     {
       "number": 207,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -1579,
       "games": 8809,
@@ -3117,6 +3617,8 @@
     },
     {
       "number": 208,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": 2184,
       "games": 7539,
@@ -3132,6 +3634,8 @@
     },
     {
       "number": 209,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -51,
       "games": 7702,
@@ -3147,6 +3651,8 @@
     },
     {
       "number": 210,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -1372,
       "games": 4690,
@@ -3162,6 +3668,8 @@
     },
     {
       "number": 211,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": 5253,
       "games": 8445,
@@ -3177,6 +3685,8 @@
     },
     {
       "number": 212,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": 1445,
       "games": 7062,
@@ -3192,6 +3702,8 @@
     },
     {
       "number": 213,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -942,
       "games": 2656,
@@ -3207,6 +3719,8 @@
     },
     {
       "number": 214,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -1389,
       "games": 5036,
@@ -3222,6 +3736,8 @@
     },
     {
       "number": 215,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -2587,
       "games": 7200,
@@ -3237,6 +3753,8 @@
     },
     {
       "number": 216,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -489,
       "games": 6017,
@@ -3252,6 +3770,8 @@
     },
     {
       "number": 217,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーVI",
       "diff": -813,
       "games": 4534,
@@ -3267,6 +3787,8 @@
     },
     {
       "number": 218,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -1515,
       "games": 3802,
@@ -3282,6 +3804,8 @@
     },
     {
       "number": 219,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -349,
       "games": 4577,
@@ -3297,6 +3821,8 @@
     },
     {
       "number": 220,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マイジャグラーV",
       "diff": -748,
       "games": 5677,
@@ -3312,6 +3838,8 @@
     },
     {
       "number": 221,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マイジャグラーV",
       "diff": -1219,
       "games": 5528,
@@ -3327,6 +3855,8 @@
     },
     {
       "number": 222,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "マイジャグラーV",
       "diff": -22,
       "games": 5111,
@@ -3342,6 +3872,8 @@
     },
     {
       "number": 223,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": 737,
       "games": 6074,
@@ -3357,6 +3889,8 @@
     },
     {
       "number": 224,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -429,
       "games": 3924,
@@ -3372,6 +3906,8 @@
     },
     {
       "number": 225,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -463,
       "games": 8483,
@@ -3387,6 +3923,8 @@
     },
     {
       "number": 226,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": 136,
       "games": 6147,
@@ -3402,6 +3940,8 @@
     },
     {
       "number": 227,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -333,
       "games": 5450,
@@ -3417,6 +3957,8 @@
     },
     {
       "number": 228,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -1326,
       "games": 3166,
@@ -3432,6 +3974,8 @@
     },
     {
       "number": 229,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": 1110,
       "games": 6584,
@@ -3447,6 +3991,8 @@
     },
     {
       "number": 230,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": 647,
       "games": 7647,
@@ -3462,6 +4008,8 @@
     },
     {
       "number": 231,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -1257,
       "games": 3307,
@@ -3477,6 +4025,8 @@
     },
     {
       "number": 232,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": 1789,
       "games": 5169,
@@ -3492,6 +4042,8 @@
     },
     {
       "number": 233,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": true,
       "machine": "マイジャグラーV",
       "diff": -172,
       "games": 6929,
@@ -3507,6 +4059,8 @@
     },
     {
       "number": 234,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "沖ドキ！ゴージャス 25Φ",
       "diff": 684,
       "games": 2853,
@@ -3522,6 +4076,8 @@
     },
     {
       "number": 235,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "沖ドキ！ゴージャス 25Φ",
       "diff": 1923,
       "games": 1156,
@@ -3537,6 +4093,8 @@
     },
     {
       "number": 236,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "沖ドキ！ゴージャス 25Φ",
       "diff": -124,
       "games": 1078,
@@ -3552,6 +4110,8 @@
     },
     {
       "number": 237,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "沖ドキ！DUO アンコール",
       "diff": -2015,
       "games": 2515,
@@ -3567,6 +4127,8 @@
     },
     {
       "number": 238,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "沖ドキ！DUO アンコール",
       "diff": -1522,
       "games": 1207,
@@ -3582,6 +4144,8 @@
     },
     {
       "number": 239,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "沖ドキ！DUO アンコール",
       "diff": -2412,
       "games": 3558,
@@ -3597,6 +4161,8 @@
     },
     {
       "number": 240,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "南国育ち SPECIAL",
       "diff": 633,
       "games": 3237,
@@ -3612,6 +4178,8 @@
     },
     {
       "number": 241,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "SHAKE BONUS TRIGGER",
       "diff": -1081,
       "games": 5005,
@@ -3627,6 +4195,8 @@
     },
     {
       "number": 242,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "クレアの秘宝伝 ～はじまりの扉と太陽の石～ ボーナストリガーver.",
       "diff": -1553,
       "games": 2857,
@@ -3642,6 +4212,8 @@
     },
     {
       "number": 243,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ケロット5BT",
       "diff": 1223,
       "games": 3297,
@@ -3657,6 +4229,8 @@
     },
     {
       "number": 244,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "不二子BT",
       "diff": -686,
       "games": 2926,
@@ -3672,6 +4246,8 @@
     },
     {
       "number": 245,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "アニマルスロットドッチ",
       "diff": -793,
       "games": 2068,
@@ -3687,6 +4263,8 @@
     },
     {
       "number": 246,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "A‐SLOT+ 異世界かるてっとBT",
       "diff": -302,
       "games": 1403,
@@ -3702,6 +4280,8 @@
     },
     {
       "number": 247,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "うみねこのなく頃に2",
       "diff": -656,
       "games": 2259,
@@ -3717,6 +4297,8 @@
     },
     {
       "number": 248,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ディスクアップ2",
       "diff": -1588,
       "games": 4776,
@@ -3732,6 +4314,8 @@
     },
     {
       "number": 249,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "押忍！番長ZERO",
       "diff": -299,
       "games": 2613,
@@ -3747,6 +4331,8 @@
     },
     {
       "number": 250,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ペルソナ5",
       "diff": 211,
       "games": 2583,
@@ -3762,6 +4348,8 @@
     },
     {
       "number": 251,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ",
       "diff": -723,
       "games": 1381,
@@ -3777,6 +4365,8 @@
     },
     {
       "number": 252,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "グランベルム",
       "diff": 1261,
       "games": 526,
@@ -3792,6 +4382,8 @@
     },
     {
       "number": 253,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "この素晴らしい世界に祝福を！",
       "diff": 938,
       "games": 3168,
@@ -3807,6 +4399,8 @@
     },
     {
       "number": 254,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "交響詩篇エウレカセブンHI‐EVOLUTION ZERO TYPE‐ART",
       "diff": -71,
       "games": 4727,
@@ -3822,6 +4416,8 @@
     },
     {
       "number": 255,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "アバサー",
       "diff": 1080,
       "games": 7105,
@@ -3837,6 +4433,8 @@
     },
     {
       "number": 256,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "バーサスリヴァイズ",
       "diff": 1002,
       "games": 7708,
@@ -3852,6 +4450,8 @@
     },
     {
       "number": 257,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "サンダーV",
       "diff": -1045,
       "games": 3907,
@@ -3867,6 +4467,8 @@
     },
     {
       "number": 258,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "アレックス ブライト",
       "diff": 858,
       "games": 6326,
@@ -3882,6 +4484,8 @@
     },
     {
       "number": 259,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "ハナビ",
       "diff": 648,
       "games": 5719,
@@ -3897,6 +4501,8 @@
     },
     {
       "number": 260,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "タコスロ",
       "diff": 1324,
       "games": 5105,
@@ -3912,6 +4518,8 @@
     },
     {
       "number": 261,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "タコスロ",
       "diff": -926,
       "games": 2443,
@@ -3927,6 +4535,8 @@
     },
     {
       "number": 601,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ",
       "diff": -712,
       "games": 1375,
@@ -3942,6 +4552,8 @@
     },
     {
       "number": 602,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ",
       "diff": -1683,
       "games": 1138,
@@ -3957,6 +4569,8 @@
     },
     {
       "number": 603,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ",
       "diff": -549,
       "games": 2002,
@@ -3972,6 +4586,8 @@
     },
     {
       "number": 604,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ",
       "diff": -2043,
       "games": 1971,
@@ -3987,6 +4603,8 @@
     },
     {
       "number": 605,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": -3043,
       "games": 4225,
@@ -4002,6 +4620,8 @@
     },
     {
       "number": 606,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": 304,
       "games": 3771,
@@ -4017,6 +4637,8 @@
     },
     {
       "number": 607,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": 721,
       "games": 4775,
@@ -4032,6 +4654,8 @@
     },
     {
       "number": 608,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": -967,
       "games": 1511,
@@ -4047,6 +4671,8 @@
     },
     {
       "number": 609,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": -1005,
       "games": 2732,
@@ -4062,6 +4688,8 @@
     },
     {
       "number": 610,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": -2650,
       "games": 2319,
@@ -4077,6 +4705,8 @@
     },
     {
       "number": 611,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": 18792,
       "games": 848,
@@ -4092,6 +4722,8 @@
     },
     {
       "number": 612,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": -1298,
       "games": 3801,
@@ -4107,6 +4739,8 @@
     },
     {
       "number": 613,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "モンスターハンターライズ:サンブレイク",
       "diff": 237,
       "games": 3475,
@@ -4122,6 +4756,8 @@
     },
     {
       "number": 614,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "聖闘士星矢 黄金十二宮",
       "diff": -2747,
       "games": 6359,
@@ -4137,6 +4773,8 @@
     },
     {
       "number": 615,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "聖闘士星矢 黄金十二宮",
       "diff": 4522,
       "games": 5613,
@@ -4152,6 +4790,8 @@
     },
     {
       "number": 616,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "聖闘士星矢 黄金十二宮",
       "diff": -491,
       "games": 5568,
@@ -4167,6 +4807,8 @@
     },
     {
       "number": 617,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録2",
       "diff": 2596,
       "games": 3811,
@@ -4182,6 +4824,8 @@
     },
     {
       "number": 618,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録2",
       "diff": 1318,
       "games": 2570,
@@ -4197,6 +4841,8 @@
     },
     {
       "number": 619,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録2",
       "diff": -2545,
       "games": 3802,
@@ -4212,6 +4858,8 @@
     },
     {
       "number": 620,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録2",
       "diff": 1912,
       "games": 2749,
@@ -4227,6 +4875,8 @@
     },
     {
       "number": 621,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録2",
       "diff": 8752,
       "games": 3590,
@@ -4242,6 +4892,8 @@
     },
     {
       "number": 622,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録2",
       "diff": 3899,
       "games": 4575,
@@ -4257,6 +4909,8 @@
     },
     {
       "number": 623,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -6916,
       "games": 6533,
@@ -4272,6 +4926,8 @@
     },
     {
       "number": 624,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -2963,
       "games": 4880,
@@ -4287,6 +4943,8 @@
     },
     {
       "number": 625,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -4765,
       "games": 6609,
@@ -4302,6 +4960,8 @@
     },
     {
       "number": 626,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -4308,
       "games": 4585,
@@ -4317,6 +4977,8 @@
     },
     {
       "number": 627,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -2390,
       "games": 2758,
@@ -4332,6 +4994,8 @@
     },
     {
       "number": 628,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": 17350,
       "games": 6376,
@@ -4347,6 +5011,8 @@
     },
     {
       "number": 629,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -2891,
       "games": 6879,
@@ -4362,6 +5028,8 @@
     },
     {
       "number": 630,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -3518,
       "games": 2941,
@@ -4377,6 +5045,8 @@
     },
     {
       "number": 631,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": 2294,
       "games": 3737,
@@ -4392,6 +5062,8 @@
     },
     {
       "number": 632,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": 1889,
       "games": 5936,
@@ -4407,6 +5079,8 @@
     },
     {
       "number": 633,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": 5041,
       "games": 7146,
@@ -4422,6 +5096,8 @@
     },
     {
       "number": 634,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": -2664,
       "games": 2449,
@@ -4437,6 +5113,8 @@
     },
     {
       "number": 635,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ2",
       "diff": 149,
       "games": 6697,
@@ -4452,6 +5130,8 @@
     },
     {
       "number": 636,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": 1883,
       "games": 6375,
@@ -4467,6 +5147,8 @@
     },
     {
       "number": 637,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": -777,
       "games": 4378,
@@ -4482,6 +5164,8 @@
     },
     {
       "number": 638,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": -490,
       "games": 4698,
@@ -4497,6 +5181,8 @@
     },
     {
       "number": 639,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": -1732,
       "games": 2716,
@@ -4512,6 +5198,8 @@
     },
     {
       "number": 640,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": -1492,
       "games": 3337,
@@ -4527,6 +5215,8 @@
     },
     {
       "number": 641,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": 2509,
       "games": 7963,
@@ -4542,6 +5232,8 @@
     },
     {
       "number": 642,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": 651,
       "games": 4431,
@@ -4557,6 +5249,8 @@
     },
     {
       "number": 643,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "炎炎ノ消防隊2",
       "diff": -713,
       "games": 3763,
@@ -4572,6 +5266,8 @@
     },
     {
       "number": 644,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "魔法少女にあこがれて",
       "diff": -1223,
       "games": 4037,
@@ -4587,6 +5283,8 @@
     },
     {
       "number": 645,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "魔法少女にあこがれて",
       "diff": 797,
       "games": 2316,
@@ -4602,6 +5300,8 @@
     },
     {
       "number": 646,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "魔法少女にあこがれて",
       "diff": -1221,
       "games": 4199,
@@ -4617,6 +5317,8 @@
     },
     {
       "number": 647,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "魔法少女にあこがれて",
       "diff": 3517,
       "games": 1814,
@@ -4632,6 +5334,8 @@
     },
     {
       "number": 648,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "魔法少女にあこがれて",
       "diff": 5929,
       "games": 2127,
@@ -4647,6 +5351,8 @@
     },
     {
       "number": 649,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "魔法少女にあこがれて",
       "diff": 1727,
       "games": 2639,
@@ -4662,6 +5368,8 @@
     },
     {
       "number": 650,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国コレクション6",
       "diff": -758,
       "games": 2150,
@@ -4677,6 +5385,8 @@
     },
     {
       "number": 651,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国コレクション6",
       "diff": 1108,
       "games": 3259,
@@ -4692,6 +5402,8 @@
     },
     {
       "number": 652,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "戦国コレクション6",
       "diff": 634,
       "games": 2301,
@@ -4707,6 +5419,8 @@
     },
     {
       "number": 653,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "七つの魔剣が支配する",
       "diff": 413,
       "games": 1650,
@@ -4722,6 +5436,8 @@
     },
     {
       "number": 654,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "七つの魔剣が支配する",
       "diff": 359,
       "games": 1011,
@@ -4737,6 +5453,8 @@
     },
     {
       "number": 655,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "七つの魔剣が支配する",
       "diff": -1225,
       "games": 1506,
@@ -4752,6 +5470,8 @@
     },
     {
       "number": 656,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "パリピ孔明",
       "diff": 60,
       "games": 1027,
@@ -4767,6 +5487,8 @@
     },
     {
       "number": 657,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "パリピ孔明",
       "diff": -777,
       "games": 1221,
@@ -4782,6 +5504,8 @@
     },
     {
       "number": 658,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "パリピ孔明",
       "diff": -1002,
       "games": 1256,
@@ -4797,6 +5521,8 @@
     },
     {
       "number": 659,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "化物語",
       "diff": 4192,
       "games": 3236,
@@ -4812,6 +5538,8 @@
     },
     {
       "number": 660,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "化物語",
       "diff": 6392,
       "games": 3173,
@@ -4827,6 +5555,8 @@
     },
     {
       "number": 661,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "化物語",
       "diff": 538,
       "games": 4885,
@@ -4842,6 +5572,8 @@
     },
     {
       "number": 662,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "化物語",
       "diff": -1312,
       "games": 5274,
@@ -4857,6 +5589,8 @@
     },
     {
       "number": 663,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -2571,
       "games": 3248,
@@ -4872,6 +5606,8 @@
     },
     {
       "number": 664,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -782,
       "games": 5986,
@@ -4887,6 +5623,8 @@
     },
     {
       "number": 665,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -1123,
       "games": 2434,
@@ -4902,6 +5640,8 @@
     },
     {
       "number": 666,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": 185,
       "games": 6184,
@@ -4917,6 +5657,8 @@
     },
     {
       "number": 667,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": 306,
       "games": 3792,
@@ -4932,6 +5674,8 @@
     },
     {
       "number": 668,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": 661,
       "games": 2843,
@@ -4947,6 +5691,8 @@
     },
     {
       "number": 669,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -1330,
       "games": 3673,
@@ -4962,6 +5708,8 @@
     },
     {
       "number": 670,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -2404,
       "games": 3407,
@@ -4977,6 +5725,8 @@
     },
     {
       "number": 671,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -3562,
       "games": 3167,
@@ -4992,6 +5742,8 @@
     },
     {
       "number": 672,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "リコリス・リコイル",
       "diff": -2251,
       "games": 2134,
@@ -5007,6 +5759,8 @@
     },
     {
       "number": 673,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "からくりサーカス2",
       "diff": -105,
       "games": 2614,
@@ -5022,6 +5776,8 @@
     },
     {
       "number": 674,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "からくりサーカス2",
       "diff": -817,
       "games": 3511,
@@ -5037,6 +5793,8 @@
     },
     {
       "number": 675,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "からくりサーカス2",
       "diff": -979,
       "games": 2782,
@@ -5052,6 +5810,8 @@
     },
     {
       "number": 676,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "からくりサーカス2",
       "diff": -2634,
       "games": 2237,
@@ -5067,6 +5827,8 @@
     },
     {
       "number": 677,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "からくりサーカス2",
       "diff": -3628,
       "games": 7326,
@@ -5082,6 +5844,8 @@
     },
     {
       "number": 678,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "Lからくりサーカス",
       "diff": 3356,
       "games": 5408,
@@ -5097,6 +5861,8 @@
     },
     {
       "number": 679,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "Lからくりサーカス",
       "diff": -1684,
       "games": 2408,
@@ -5112,6 +5878,8 @@
     },
     {
       "number": 680,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "Lからくりサーカス",
       "diff": 1323,
       "games": 4713,
@@ -5127,6 +5895,8 @@
     },
     {
       "number": 681,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "Lからくりサーカス",
       "diff": -2499,
       "games": 2053,
@@ -5142,6 +5912,8 @@
     },
     {
       "number": 682,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "Lからくりサーカス",
       "diff": -3380,
       "games": 6001,
@@ -5157,6 +5929,8 @@
     },
     {
       "number": 683,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "ゴジラ対エヴァンゲリオン",
       "diff": -4867,
       "games": 6373,
@@ -5172,6 +5946,8 @@
     },
     {
       "number": 684,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "ゴジラ対エヴァンゲリオン",
       "diff": 8704,
       "games": 4738,
@@ -5187,6 +5963,8 @@
     },
     {
       "number": 685,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "ゴジラ対エヴァンゲリオン",
       "diff": 6470,
       "games": 4647,
@@ -5202,6 +5980,8 @@
     },
     {
       "number": 686,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "ゴジラ対エヴァンゲリオン",
       "diff": -3795,
       "games": 6204,
@@ -5217,6 +5997,8 @@
     },
     {
       "number": 687,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "彼女、お借りします",
       "diff": -1614,
       "games": 2100,
@@ -5232,6 +6014,8 @@
     },
     {
       "number": 688,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "彼女、お借りします",
       "diff": -1903,
       "games": 5484,
@@ -5247,6 +6031,8 @@
     },
     {
       "number": 689,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "彼女、お借りします",
       "diff": -1455,
       "games": 1285,
@@ -5262,6 +6048,8 @@
     },
     {
       "number": 690,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "彼女、お借りします",
       "diff": 1035,
       "games": 1856,
@@ -5277,6 +6065,8 @@
     },
     {
       "number": 692,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "かぐや様は告らせたい",
       "diff": -3073,
       "games": 3003,
@@ -5292,6 +6082,8 @@
     },
     {
       "number": 693,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "かぐや様は告らせたい",
       "diff": -1496,
       "games": 3119,
@@ -5307,6 +6099,8 @@
     },
     {
       "number": 694,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "かぐや様は告らせたい",
       "diff": -1249,
       "games": 2907,
@@ -5322,6 +6116,8 @@
     },
     {
       "number": 695,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -1878,
       "games": 4277,
@@ -5337,6 +6133,8 @@
     },
     {
       "number": 696,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 3490,
       "games": 6145,
@@ -5352,6 +6150,8 @@
     },
     {
       "number": 697,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 5002,
       "games": 6456,
@@ -5367,6 +6167,8 @@
     },
     {
       "number": 698,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 343,
       "games": 5090,
@@ -5382,6 +6184,8 @@
     },
     {
       "number": 699,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -4841,
       "games": 5184,
@@ -5397,6 +6201,8 @@
     },
     {
       "number": 700,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -3294,
       "games": 6088,
@@ -5412,6 +6218,8 @@
     },
     {
       "number": 701,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 628,
       "games": 7136,
@@ -5427,6 +6235,8 @@
     },
     {
       "number": 702,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 152,
       "games": 3441,
@@ -5442,6 +6252,8 @@
     },
     {
       "number": 703,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -1445,
       "games": 5816,
@@ -5457,6 +6269,8 @@
     },
     {
       "number": 704,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -4146,
       "games": 3890,
@@ -5472,6 +6286,8 @@
     },
     {
       "number": 705,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -1270,
       "games": 2096,
@@ -5487,6 +6303,8 @@
     },
     {
       "number": 706,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 9701,
       "games": 6967,
@@ -5502,6 +6320,8 @@
     },
     {
       "number": 707,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -834,
       "games": 6326,
@@ -5517,6 +6337,8 @@
     },
     {
       "number": 708,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -1004,
       "games": 2514,
@@ -5532,6 +6354,8 @@
     },
     {
       "number": 709,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -6578,
       "games": 7319,
@@ -5547,6 +6371,8 @@
     },
     {
       "number": 710,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -343,
       "games": 6395,
@@ -5562,6 +6388,8 @@
     },
     {
       "number": 711,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 3604,
       "games": 7588,
@@ -5577,6 +6405,8 @@
     },
     {
       "number": 712,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 5801,
       "games": 6000,
@@ -5592,6 +6422,8 @@
     },
     {
       "number": 713,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 4122,
       "games": 6533,
@@ -5607,6 +6439,8 @@
     },
     {
       "number": 714,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -4954,
       "games": 4242,
@@ -5622,6 +6456,8 @@
     },
     {
       "number": 715,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -3074,
       "games": 3519,
@@ -5637,6 +6473,8 @@
     },
     {
       "number": 716,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 4506,
       "games": 6254,
@@ -5652,6 +6490,8 @@
     },
     {
       "number": 717,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 8400,
       "games": 6489,
@@ -5667,6 +6507,8 @@
     },
     {
       "number": 718,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -3774,
       "games": 3907,
@@ -5682,6 +6524,8 @@
     },
     {
       "number": 719,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -1803,
       "games": 2737,
@@ -5697,6 +6541,8 @@
     },
     {
       "number": 720,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 1454,
       "games": 7122,
@@ -5712,6 +6558,8 @@
     },
     {
       "number": 721,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": -1950,
       "games": 6123,
@@ -5727,6 +6575,8 @@
     },
     {
       "number": 722,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": 742,
       "games": 5869,
@@ -5742,6 +6592,8 @@
     },
     {
       "number": 723,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": 3454,
       "games": 4028,
@@ -5757,6 +6609,8 @@
     },
     {
       "number": 724,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": 425,
       "games": 4052,
@@ -5772,6 +6626,8 @@
     },
     {
       "number": 725,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": -2889,
       "games": 4347,
@@ -5787,6 +6643,8 @@
     },
     {
       "number": 726,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": -1844,
       "games": 2114,
@@ -5802,6 +6660,8 @@
     },
     {
       "number": 727,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": -2999,
       "games": 4749,
@@ -5817,6 +6677,8 @@
     },
     {
       "number": 728,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": 1273,
       "games": 3826,
@@ -5832,6 +6694,8 @@
     },
     {
       "number": 729,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": -2202,
       "games": 2690,
@@ -5847,6 +6711,8 @@
     },
     {
       "number": 730,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": 3655,
       "games": 2374,
@@ -5862,6 +6728,8 @@
     },
     {
       "number": 731,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "戦国乙女5 業火を穿つ宿焔の双刃",
       "diff": -2207,
       "games": 4569,
@@ -5877,6 +6745,8 @@
     },
     {
       "number": 732,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -393,
       "games": 2972,
@@ -5892,6 +6762,8 @@
     },
     {
       "number": 733,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -2233,
       "games": 3710,
@@ -5907,6 +6779,8 @@
     },
     {
       "number": 734,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -1449,
       "games": 1379,
@@ -5922,6 +6796,8 @@
     },
     {
       "number": 735,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": 408,
       "games": 3068,
@@ -5937,6 +6813,8 @@
     },
     {
       "number": 736,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": 3728,
       "games": 2985,
@@ -5952,6 +6830,8 @@
     },
     {
       "number": 737,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -1628,
       "games": 1649,
@@ -5967,6 +6847,8 @@
     },
     {
       "number": 738,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -861,
       "games": 2337,
@@ -5982,6 +6864,8 @@
     },
     {
       "number": 739,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -1853,
       "games": 1663,
@@ -5997,6 +6881,8 @@
     },
     {
       "number": 740,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -268,
       "games": 3201,
@@ -6012,6 +6898,8 @@
     },
     {
       "number": 741,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": true,
       "machine": "東京喰種",
       "diff": -3180,
       "games": 5001,
@@ -6027,6 +6915,8 @@
     },
     {
       "number": 742,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "バンドリ！",
       "diff": 4872,
       "games": 3414,
@@ -6042,6 +6932,8 @@
     },
     {
       "number": 743,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "タクトオーパス デスティニー",
       "diff": -468,
       "games": 434,
@@ -6057,6 +6949,8 @@
     },
     {
       "number": 744,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "D4DJ Pachi‐Slot Mix",
       "diff": 2679,
       "games": 3891,
@@ -6072,6 +6966,8 @@
     },
     {
       "number": 745,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "ストライク・ザ・ブラッド",
       "diff": -1407,
       "games": 2375,
@@ -6087,6 +6983,8 @@
     },
     {
       "number": 746,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "プリズムナナ",
       "diff": 2669,
       "games": 5474,
@@ -6102,6 +7000,8 @@
     },
     {
       "number": 747,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "虚構推理",
       "diff": 2414,
       "games": 3154,
@@ -6117,6 +7017,8 @@
     },
     {
       "number": 748,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "邪神ちゃんドロップキック",
       "diff": 9810,
       "games": 6226,
@@ -6132,6 +7034,8 @@
     },
     {
       "number": 749,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "見える子ちゃん",
       "diff": -121,
       "games": 7277,
@@ -6147,6 +7051,8 @@
     },
     {
       "number": 750,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "戦姫絶唱シンフォギア 正義の歌",
       "diff": -991,
       "games": 1645,
@@ -6162,6 +7068,8 @@
     },
     {
       "number": 751,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "バイオハザード ヴィレッジ",
       "diff": -3788,
       "games": 3528,
@@ -6177,6 +7085,8 @@
     },
     {
       "number": 752,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "バイオハザード5",
       "diff": 1286,
       "games": 5260,
@@ -6192,6 +7102,8 @@
     },
     {
       "number": 753,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "バイオハザード:ヴェンデッタ",
       "diff": -861,
       "games": 5829,
@@ -6207,6 +7119,8 @@
     },
     {
       "number": 754,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "コードギアス 反逆のルルーシュ/復活のルルーシュ",
       "diff": 1585,
       "games": 4835,
@@ -6222,6 +7136,8 @@
     },
     {
       "number": 755,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "バジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION",
       "diff": -3755,
       "games": 5389,
@@ -6237,6 +7153,8 @@
     },
     {
       "number": 756,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "HEY！エリートサラリーマン鏡",
       "diff": 4318,
       "games": 8423,
@@ -6252,6 +7170,8 @@
     },
     {
       "number": 757,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "とある魔術の禁書目録",
       "diff": -381,
       "games": 2403,
@@ -6267,6 +7187,8 @@
     },
     {
       "number": 758,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "一方通行 とある魔術の禁書目録",
       "diff": -373,
       "games": 1063,
@@ -6282,6 +7204,8 @@
     },
     {
       "number": 759,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "転生したらスライムだった件",
       "diff": 2633,
       "games": 2096,
@@ -6297,6 +7221,8 @@
     },
     {
       "number": 760,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "転生王女と天才令嬢の魔法革命",
       "diff": -2387,
       "games": 1708,
@@ -6312,6 +7238,8 @@
     },
     {
       "number": 761,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "犬夜叉2",
       "diff": -2571,
       "games": 3781,
@@ -6327,6 +7255,8 @@
     },
     {
       "number": 762,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "牙狼 闇を照らす者",
       "diff": 2384,
       "games": 5654,
@@ -6342,6 +7272,8 @@
     },
     {
       "number": 1001,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": 4674,
       "games": 4164,
@@ -6357,6 +7289,8 @@
     },
     {
       "number": 1002,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -1828,
       "games": 5036,
@@ -6372,6 +7306,8 @@
     },
     {
       "number": 1003,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -2299,
       "games": 2959,
@@ -6387,6 +7323,8 @@
     },
     {
       "number": 1004,
+      "floor_hint": "1F",
+      "floor_hint_is_inference": false,
       "machine": "甲鉄城のカバネリ 海門決戦",
       "diff": -3256,
       "games": 5111,
@@ -6402,6 +7340,8 @@
     },
     {
       "number": 1005,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -2465,
       "games": 4549,
@@ -6417,6 +7357,8 @@
     },
     {
       "number": 1006,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": 4218,
       "games": 7504,
@@ -6432,6 +7374,8 @@
     },
     {
       "number": 1007,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -1644,
       "games": 6665,
@@ -6447,6 +7391,8 @@
     },
     {
       "number": 1008,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "革命機ヴァルヴレイヴ",
       "diff": -755,
       "games": 4770,
@@ -6462,6 +7408,8 @@
     },
     {
       "number": 1009,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "からくりサーカス2",
       "diff": -1363,
       "games": 4814,
@@ -6477,6 +7425,8 @@
     },
     {
       "number": 1010,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "からくりサーカス2",
       "diff": 7531,
       "games": 5338,
@@ -6492,6 +7442,8 @@
     },
     {
       "number": 1011,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "からくりサーカス2",
       "diff": -3732,
       "games": 5969,
@@ -6507,6 +7459,8 @@
     },
     {
       "number": 1012,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "からくりサーカス2",
       "diff": 4811,
       "games": 4944,
@@ -6522,6 +7476,8 @@
     },
     {
       "number": 1013,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "ゴールデンカムイ",
       "diff": -2188,
       "games": 3942,
@@ -6537,6 +7493,8 @@
     },
     {
       "number": 1014,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "ガールズ&パンツァー 最終章",
       "diff": -1487,
       "games": 1781,
@@ -6552,6 +7510,8 @@
     },
     {
       "number": 1015,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "聖戦士ダンバイン",
       "diff": -2611,
       "games": 5251,
@@ -6567,6 +7527,8 @@
     },
     {
       "number": 1016,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "頭文字D 2nd",
       "diff": -2398,
       "games": 1985,
@@ -6582,6 +7544,8 @@
     },
     {
       "number": 1017,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "Lソードアート・オンライン",
       "diff": -1576,
       "games": 2833,
@@ -6597,6 +7561,8 @@
     },
     {
       "number": 2001,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": -1989,
       "games": 4573,
@@ -6612,6 +7578,8 @@
     },
     {
       "number": 2002,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": 5212,
       "games": 4022,
@@ -6627,6 +7595,8 @@
     },
     {
       "number": 2003,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": -3609,
       "games": 5022,
@@ -6642,6 +7612,8 @@
     },
     {
       "number": 2004,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": 2384,
       "games": 4397,
@@ -6657,6 +7629,8 @@
     },
     {
       "number": 2005,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": 1127,
       "games": 4835,
@@ -6672,6 +7646,8 @@
     },
     {
       "number": 2006,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": -4443,
       "games": 6699,
@@ -6687,6 +7663,8 @@
     },
     {
       "number": 2007,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": -2607,
       "games": 3117,
@@ -6702,6 +7680,8 @@
     },
     {
       "number": 2008,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": 834,
       "games": 4622,
@@ -6717,6 +7697,8 @@
     },
     {
       "number": 2009,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": -3300,
       "games": 3386,
@@ -6732,6 +7714,8 @@
     },
     {
       "number": 2010,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": -2258,
       "games": 5561,
@@ -6747,6 +7731,8 @@
     },
     {
       "number": 2011,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": 2884,
       "games": 5859,
@@ -6762,6 +7748,8 @@
     },
     {
       "number": 2012,
+      "floor_hint": "2F",
+      "floor_hint_is_inference": false,
       "machine": "東京喰種",
       "diff": 2832,
       "games": 5567,
