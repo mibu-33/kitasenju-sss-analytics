@@ -112,7 +112,7 @@ function renderOverlay(){
   if(floor!=='ALL'&&p.floor!==floor)continue;
   const r=one.get(p.number);
   if(heat){
-    const rect=create('rect',{x:p.x-10,y:p.y-4.9,width:20,height:9.7,rx:1,fill:rowColor(r),'fill-opacity':r?.diff==null?.35:.65,stroke:'none',class:'hit'});
+    const rect=create('rect',{x:p.x-10,y:p.y-4.9,width:20,height:9.7,rx:1,fill:rowColor(r),'fill-opacity':r?.diff==null?0.35:0.65,stroke:'none',class:'hit'});
     rect.addEventListener('click',()=>choose(p.number,false));svg.appendChild(rect);
   } else if(points){
     const circle=create('circle',{cx:p.x,cy:p.y,r:3.3,fill:'#ffce60','fill-opacity':.65,stroke:'#1d3347','stroke-width':.3,class:'hit'});
@@ -157,7 +157,7 @@ stage.addEventListener('click',ev=>{
 function loadBase64(){
  return fetch('reference/tousenbo_20261113_floor.webp.base64.txt').then(r=>{if(!r.ok)throw Error('元画像 HTTP '+r.status);return r.text()}).then(t=>{
   if(!t.startsWith('UklGR'))throw Error('画像データが不正');
-  img.src='data:image/webp;base64,'+t.trim();return new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=()=>reject(Error('画像の表示に失敗'))});
+  return new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=()=>reject(Error('画像の表示に失敗'));img.src='data:image/webp;base64,'+t.trim();if(img.complete&&img.naturalWidth>0)resolve();});
  });
 }
 function initialFit(){const width=scroller.clientWidth-18;scale=zClamp(width/naturalW);applyView()}
