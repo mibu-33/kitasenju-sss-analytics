@@ -33,6 +33,10 @@ svg{display:block;min-width:860px;width:100%;height:auto;touch-action:pan-x pan-
 .group-small{font-size:12px;fill:#465d73}
 .room-label{font-size:14px;fill:#64768a;font-weight:750}
 .warning{background:#302a23;border:1px solid #98743a;border-radius:10px;padding:10px;color:#ffe3b6;margin-bottom:12px;font-size:.87rem}
+[hidden]{display:none!important}
+.modebar{display:flex;gap:7px;margin:7px 0 12px;flex-wrap:wrap}
+.guide-compare{border:1px solid #4d6581;border-radius:12px;padding:12px;background:#12243a}
+.guide-compare iframe{width:100%;height:76vh;min-height:600px;border:1px solid #6e869e;background:#dce6ee}
 #detail{min-height:190px}#detail h2{margin-top:0}
 .detail-line{margin:8px 0;border-bottom:1px solid #304860;padding-bottom:6px}
 .tablewrap{max-height:540px;overflow:auto}
@@ -65,6 +69,7 @@ legend{display:block;font-size:.8rem}
 <div class="metric"><small>色・島・円卓の所属</small><b id="mapped">—</b></div>
 <div class="metric"><small>現地申告の列順</small><b id="field">—</b></div>
 </div>
+<div class="modebar"><button id="mode-cells" class="active">台番セル図</button><button id="mode-guide">旧ガイド形状</button><button id="mode-compare">並べて比較</button></div>
 <div class="toolbar">
 <button id="floor1" class="active">1F</button><button id="floor2">2F</button>
 <label><input type="checkbox" id="heat"> 差枚ヒートマップ</label>
@@ -73,13 +78,17 @@ legend{display:block;font-size:.8rem}
 <button id="reset">初期化</button>
 </div>
 <p class="caption" id="update">台別データを読み込み中…</p>
-<div class="layout">
+<div class="layout" id="cell-layout">
 <section>
 <div class="map-wrap" id="mapwrap"><svg id="map" viewBox="0 0 1200 740" role="img" aria-label="エビデンス別に表現したトリエスの店舗構成模式図"></svg></div>
 <p class="note">緑枠＝現地申告の列内順。破線区画＝番号は分かるが隣接順未確認。円卓はグループの位置を示すだけで、円周上の台番号は確定していません。タップすると根拠と最新実績を表示します。</p>
 </section>
 <aside class="panel" id="detail"><h2>台番号・島を選択</h2><p class="note">台番をタップして台番号・機種・差枚・位置確認度・出典を確認できます。</p></aside>
 </div>
+<section class="guide-compare" id="guide-layout" hidden>
+<h2>旧ガイドの島・通路形状（別時点の模式図）</h2><p class="caption">2025年ガイドを参考にした旧図です。新図と座標が一致しているわけではなく、現行の席順を保証しません。画像の正確な対照が必要な場合は出典をご確認ください。</p>
+<iframe title="比較用・旧ガイド模式図" id="guide-frame" src="floor-map-guide.html" loading="lazy"></iframe>
+</section>
 <section class="panel" style="margin-top:14px">
 <h2>台番号セル一覧 <span id="listcount" class="pill"></span></h2>
 <div class="toolbar"><select id="filter"><option value="all">この階の登録台すべて</option><option value="field">列順を現地で確認</option><option value="group">所属のみ確認（席順不明）</option><option value="unknown">位置不明（全階）</option></select><button id="showall">未配置も表示</button></div>
@@ -99,7 +108,7 @@ legend{display:block;font-size:.8rem}
 (function(){
 'use strict';
 var NS='http://www.w3.org/2000/svg',map=document.getElementById('map'),inv=null,seats=[],byNumber=new Map(),floor='1F',heat=false,zoom=1,selected=null,query='',filter='all',reported=[],rangeOnly=null;
-var $=id=>document.getElementById(id);
+var $=id=>document.getElementById(id),viewMode='cells';
 var palette={silver:'#abb9c9',blue:'#8dc6f8',green:'#9bd695',red:'#eda4a1',purple:'#c8a9ee',gold:'#efd58d'};
 function svg(tag,props,txt){var n=document.createElementNS(NS,tag);Object.keys(props||{}).forEach(function(k){n.setAttribute(k,props[k])});if(txt!==undefined)n.textContent=String(txt);return n}
 function add(p,tag,props,txt){var n=svg(tag,props,txt);p.appendChild(n);return n}
@@ -233,7 +242,19 @@ function renderFloor(){
  $('floor1').classList.toggle('active',floor==='1F');$('floor2').classList.toggle('active',floor==='2F');
  if(floor==='1F')draw1();else draw2();renderList();renderArrangements();
 }
-function setFloor(f){floor=f;selected=null;renderFloor();$('detail').innerHTML='<h2>'+f+' の台番号を選択</h2><p class="note">位置と根拠の違いを区別して表示しています。</p>'}
+function syncGuide(){
+ var fr=$('guide-frame');
+ try{if(fr&&fr.contentDocument){var b=fr.contentDocument.getElementById(floor==='1F'?'btn1':'btn2');if(b)b.click()}}catch(e){}
+}
+function setView(mode){
+ viewMode=mode;
+ ['cells','guide','compare'].forEach(function(k){$('mode-'+k).classList.toggle('active',mode===k)});
+ $('cell-layout').hidden=mode==='guide';$('guide-layout').hidden=mode==='cells';
+ if(mode!=='cells')syncGuide();
+}
+['cells','guide','compare'].forEach(function(k){$('mode-'+k).onclick=function(){setView(k)}});
+$('guide-frame').addEventListener('load',syncGuide);
+function setFloor(f){floor=f;selected=null;renderFloor();syncGuide();$('detail').innerHTML='<h2>'+f+' の台番号を選択</h2><p class="note">位置と根拠の違いを区別して表示しています。</p>'}
 $('floor1').onclick=function(){setFloor('1F')};$('floor2').onclick=function(){setFloor('2F')};
 $('search').oninput=function(){rangeOnly=null;query=this.value.trim();if(/^\d+$/.test(query)&&byNumber.has(Number(query))){choose(Number(query))}else renderList()};
 $('filter').onchange=function(){rangeOnly=null;filter=this.value;renderList()};
