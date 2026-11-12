@@ -36,7 +36,12 @@ svg{display:block;min-width:860px;width:100%;height:auto;touch-action:pan-x pan-
 [hidden]{display:none!important}
 .modebar{display:flex;gap:7px;margin:7px 0 12px;flex-wrap:wrap}
 .guide-compare{border:1px solid #4d6581;border-radius:12px;padding:12px;background:#12243a}
-.guide-compare iframe{width:100%;height:76vh;min-height:600px;border:1px solid #6e869e;background:#dce6ee}
+.guide-compare iframe{width:100%;height:60vh;min-height:450px;border:1px solid #6e869e;background:#dce6ee}
+.official-figure{margin:0;padding:5px;background:#e4e8ee;border-radius:10px;text-align:center}
+.official-figure img{display:block;width:100%;max-width:1100px;margin:0 auto;height:auto;border-radius:6px}
+.official-figure figcaption{padding:8px;color:#43556e;font-size:12px}
+.guide-compare details{margin-top:10px}.guide-compare summary{cursor:pointer}
+
 #detail{min-height:190px}#detail h2{margin-top:0}
 .detail-line{margin:8px 0;border-bottom:1px solid #304860;padding-bottom:6px}
 .tablewrap{max-height:540px;overflow:auto}
@@ -69,7 +74,7 @@ legend{display:block;font-size:.8rem}
 <div class="metric"><small>色・島・円卓の所属</small><b id="mapped">—</b></div>
 <div class="metric"><small>現地申告の列順</small><b id="field">—</b></div>
 </div>
-<div class="modebar"><button id="mode-cells" class="active">台番セル図</button><button id="mode-guide">旧ガイド形状</button><button id="mode-compare">並べて比較</button></div>
+<div class="modebar"><button id="mode-cells" class="active">台番セル図</button><button id="mode-guide">店舗公式フロア図</button><button id="mode-compare">公式図とセル図を比較</button></div>
 <div class="toolbar">
 <button id="floor1" class="active">1F</button><button id="floor2">2F</button>
 <label><input type="checkbox" id="heat"> 差枚ヒートマップ</label>
@@ -86,8 +91,14 @@ legend{display:block;font-size:.8rem}
 <aside class="panel" id="detail"><h2>台番号・島を選択</h2><p class="note">台番をタップして台番号・機種・差枚・位置確認度・出典を確認できます。</p></aside>
 </div>
 <section class="guide-compare" id="guide-layout" hidden>
-<h2>旧ガイドの島・通路形状（別時点の模式図）</h2><p class="caption">2025年ガイドを参考にした旧図です。新図と座標が一致しているわけではなく、現行の席順を保証しません。画像の正確な対照が必要な場合は出典をご確認ください。</p>
+<h2>店舗公式Xに掲載されたフロア図（掲載時点の参考資料）</h2>
+<p class="caption">店が公開した島と通路の形をそのまま参照します。<b>2026年11月の現況を保証する図ではありません。</b> 公式図に記載された機種名・配置は掲載時点の情報であり、最新の台番号・機種は台別実績で別途確認します。</p>
+<figure class="official-figure"><a id="official-image-link" target="_blank" rel="noopener noreferrer" href="https://x.com/Kitasenjusss/status/2066121201462968359"><img id="official-image" src="https://pbs.twimg.com/media/HKxWSCUacAAU62Q.jpg" loading="lazy" alt="ピーアーク北千住SSS公式 1F フロア図。島形状・通路を参照。"></a><figcaption id="official-caption">1F 店舗公式のフロア図。現況確認は別途必要。</figcaption></figure>
+<p><a id="official-post-link" href="https://x.com/Kitasenjusss/status/2066121201462968359" target="_blank" rel="noopener noreferrer">公式の元投稿を開く</a>（画像が表示されない場合もこちらで確認）</p>
+<details><summary>旧ガイドベースの模式図も確認する</summary>
+<p class="caption">2025年のガイドを参考に再描画した旧図。物理的な台番順を証明する資料ではありません。</p>
 <iframe title="比較用・旧ガイド模式図" id="guide-frame" src="floor-map-guide.html" loading="lazy"></iframe>
+</details>
 </section>
 <section class="panel" style="margin-top:14px">
 <h2>台番号セル一覧 <span id="listcount" class="pill"></span></h2>
@@ -243,6 +254,14 @@ function renderFloor(){
  if(floor==='1F')draw1();else draw2();renderList();renderArrangements();
 }
 function syncGuide(){
+ var images={
+ '1F':{url:'https://pbs.twimg.com/media/HKxWSCUacAAU62Q.jpg',post:'https://x.com/Kitasenjusss/status/2066121201462968359'},
+ '2F':{url:'https://pbs.twimg.com/media/HH9JSkFaQAAZhHq.jpg',post:'https://x.com/Kitasenjusss/status/2053440543062147221'}
+ };
+ var source=images[floor],img=$('official-image');
+ if(img&&img.src!==source.url){img.src=source.url;img.alt='ピーアーク北千住SSS公式 '+floor+' フロア図';}
+ $('official-image-link').href=source.post;$('official-post-link').href=source.post;
+ $('official-caption').textContent=floor+'｜店舗公式X掲載のフロア図（別時点の資料。2026年11月現在の全台配置は未検証）';
  var fr=$('guide-frame');
  try{if(fr&&fr.contentDocument){var b=fr.contentDocument.getElementById(floor==='1F'?'btn1':'btn2');if(b)b.click()}}catch(e){}
 }
