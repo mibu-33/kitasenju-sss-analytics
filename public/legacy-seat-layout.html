@@ -1,0 +1,97 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>トリエス｜2025年台番号配置の検証</title>
+<style>:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#ebf4ff;background:#0b1728}*{box-sizing:border-box}body{margin:0}header{background:#152641;padding:15px max(15px,calc((100% - 1260px)/2));border-bottom:1px solid #405a75}h1{font-size:1.35rem;margin:0 0 6px}main{max-width:1260px;margin:auto;padding:15px}.small{font-size:.85rem;color:#b4c6de;line-height:1.5}a{color:#9bcfff}.warn{background:#30271d;color:#ffe6ba;border:1px solid #977c52;border-radius:11px;padding:12px;margin:12px 0}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}button,input{border-radius:8px;border:1px solid #587599;background:#1d3552;color:#f8faff;padding:8px 12px;font:inherit}button{cursor:pointer}.layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:12px}.viewer{overflow:auto;border:1px solid #597593;background:#172942;border-radius:12px;padding:10px;max-height:80vh}.stage{width:1000px;height:875px;position:relative}.sourceimg,.overlay{width:100%;height:100%;position:absolute;top:0;left:0}.sourceimg{object-fit:fill;pointer-events:none}.overlay{z-index:2}.seat{cursor:pointer}.seat rect{stroke:#1b2835;stroke-width:.5;fill:#fff;fill-opacity:.04}.seat:hover rect,.seat:focus rect{stroke:#f26722;stroke-width:2;fill:#fff;fill-opacity:.45}.seat.selected rect{stroke:#f26722;stroke-width:2.5}.seat.heat rect{fill-opacity:.75;stroke-width:.35}.panel{border:1px solid #405b76;border-radius:12px;background:#142741;padding:12px}h2{margin:0 0 10px;font-size:1.05rem}.stat{margin:8px 0;border-bottom:1px solid #314a66;padding-bottom:7px}.muted{color:#afc3db;font-size:.82rem}legend{font-size:.8rem}#found{font-variant-numeric:tabular-nums}#floor{min-width:95px}@media(max-width:950px){.layout{grid-template-columns:1fr}.viewer{max-height:74vh}}</style></head>
+<body><header><h1>トリエス｜2025年台番号図と実績の照合</h1><a href="floor-map.html">新しい島図に戻る</a> ｜ <a href="https://note.com/cozy_fowl8277/n/na874d5c4a382" target="_blank" rel="noopener noreferrer">2025年ガイド（出典）</a></header><main>
+<div class="warn"><b>2025年11月11日公開の個人ガイド図を参考にした実験的な位置照合。</b> 新台入替・移動があるため、2026年11月の座席位置を確定する資料ではありません。番号の座標は図から目視で概算したものであり、厳密なピクセル位置ではありません。<b>現在の3台並び・隣接判定には使用しないでください。</b></div>
+<div class="controls"><label>台番号 <input id="find" inputmode="numeric" type="search" placeholder="例：1005"></label><button id="search">探す</button><button id="minus">縮小 −</button><button id="plus">拡大 ＋</button><label><input id="heat" type="checkbox"> 2026年差枚ヒートを仮表示</label><button id="reset">解除</button></div>
+<p class="small" id="summary">2025年ガイドの番号配置を照合中…</p>
+<div class="layout"><div class="viewer" id="viewer"><div class="stage" id="stage">
+<img class="sourceimg" alt="2025年11月ガイド掲載の店内台番号図。最新版ではない。" src="https://assets.st-note.com/img/1762324834-AV6eRLlgbUMmOp8CYw2EsZF4.png?width=1200">
+<svg class="overlay" id="overlay" viewBox="0 0 1000 875" role="img" aria-label="2025年ガイドを目視で転記した暫定番号座標"></svg></div></div>
+<aside id="detail" class="panel"><h2>台をクリック</h2><p class="muted">画面上の番号セルをタップすると、図上の仮位置と最新実績を表示します。元画像を再配布せず公開元にリンクしています。</p></aside></div>
+<p class="small">色の凡例（ヒート表示）：紫 +3000枚以上、橙 +1000枚以上、緑 ±0枚以上、薄赤 −1000枚未満、水色 未取得。推定設定ではありません。出典図の色と別の概念です。</p>
+</main><script>
+(function(){
+'use strict';
+const NS="http://www.w3.org/2000/svg",$=id=>document.getElementById(id),coords=new Map();
+let inv=new Map(),day="",selected=null,heat=false,scale=1,errors=[];
+function assign(n,x,y,reason){n=Number(n);if(coords.has(n)){errors.push("重複:"+n);return}coords.set(n,{x,y,reason})}
+function line(nums,x,y,dx,dy,reason){nums.forEach((n,i)=>assign(n,x+i*dx,y+i*dy,reason))}
+function seq(a,b){let p=[],step=a<=b?1:-1;for(let i=a;step>0?i<=b:i>=b;i+=step)p.push(i);return p}
+function arc(nums,cx,cy,rx,ry,offset=-Math.PI/2){nums.forEach((n,i)=>{let theta=offset+2*Math.PI*i/nums.length;assign(n,cx+rx*Math.cos(theta),cy+ry*Math.sin(theta),"2025年ガイド円卓の概算位置")})}
+// 1F：2025年11月11日掲載図から、番号と概算位置を目視で転記。
+// 元図の2025年レーン位置に対応するだけで、2026年の着席位置を保証しない。
+line(seq(1,18),45,306,20.8,0,"銀・ガイド上から1列目");
+line(seq(35,19),64,338,20.9,0,"銀・ガイド上から2列目");
+line(seq(36,52),64,349,20.9,0,"銀・ガイド上から3列目");
+line(seq(65,53),87,382,26,0,"銀・ガイド上から4列目");
+line(seq(87,66),561,39,0,10.65,"青A・ガイド縦列");
+line(seq(88,110),624,29,0,10.65,"青B・ガイド縦列");
+line(seq(125,111),450,305,21,0,"赤・上段対向列");
+line(seq(126,140),450,317,21,0,"赤・下段対向列");
+line(seq(151,141),527,347,21.2,0,"赤・中央上段");
+line(seq(152,162),527,360,21.2,0,"赤・中央下段");
+line(seq(177,163),450,400,21,0,"赤・中央対向上段");
+line(seq(178,192),450,412,21,0,"赤・中央対向下段");
+line(seq(203,193),450,438,21,0,"赤・下部上段");
+line(seq(204,216),450,450,21,0,"赤・下部下段");
+assign(217,724,438,"赤・端部");assign(218,745,449,"赤・端部");
+line(seq(233,219),450,479,21,0,"赤・最下部");
+line(seq(234,240),787,307,0,9.1,"緑C・ガイド縦列");
+line(seq(261,255),807,307,0,9.1,"緑D・ガイド縦列");
+line(seq(241,247),787,415,0,9.1,"緑E・ガイド縦列");
+line(seq(254,248),807,415,0,9.1,"緑F・ガイド縦列");
+line([1001,1002],426,357,23,0,"赤S・4台島");line([1004,1003],426,370,23,0,"赤S・4台島");
+// 2F：旧ガイド配置にある台番号を対象。2026年増設の紫A/B・紫円卓は別管理。
+line(seq(601,613),161,697,21.7,0,"金・左上の横列");
+line(seq(622,614),217,730,23.5,0,"金・左上の対向列");
+line(seq(623,631),217,742,23.5,0,"金・左上の対向列");
+line(seq(635,632),198,776,21,0,"金・左中段");
+line(seq(636,640),325,791,0,9.2,"金・左縦列");
+line(seq(643,641),347,790,0,12,"金・左縦列");
+line(seq(644,658),645,689,21,0,"金・右上の横列");
+line(seq(672,659),675,720,20.7,0,"金・右中段の対向列");
+line(seq(673,686),675,732,20.7,0,"金・右中段の対向列");
+line(seq(693,687),635,767,20,0,"金・右下上段");
+line(seq(694,701),635,780,20,0,"金・右下下段");
+line(seq(714,702),716,808,18.4,0,"金・右下の横列");
+line(seq(720,715),464,852,22,0,"金・最下部の横列");
+line(seq(731,721),498,525,0,9.3,"金・中央縦列");
+line(seq(732,741),532,533,0,9,"金・中央縦列");
+assign(1005,392,807,"2025年4台円卓の概算位置");
+assign(1006,414,801,"2025年4台円卓の概算位置");
+assign(1007,436,807,"2025年4台円卓の概算位置");
+assign(1008,414,820,"2025年4台円卓の概算位置");
+assign(1009,433,755,"2025年4台円卓の概算位置");
+assign(1010,458,746,"2025年4台円卓の概算位置");
+assign(1011,479,758,"2025年4台円卓の概算位置");
+assign(1012,457,774,"2025年4台円卓の概算位置");
+arc(seq(2001,2012),502,770,39,30);
+function itemColor(e){if(!e||e.diff==null)return "#9cbdd4";const v=Number(e.diff);if(v>=3000)return "#be9aeb";if(v>=1000)return "#ffc070";if(v>=0)return "#80daaa";if(v>=-1000)return "#f5aaa6";return "#f37587"}
+function show(n){selected=n;render();
+const d=inv.get(n)||{},c=coords.get(n),box=$("detail");box.replaceChildren();
+const h=document.createElement("h2");h.textContent=n+"番｜"+(d.machine||"機種不明");box.append(h);
+[["2025年ガイド上の概算位置",c?.reason||"位置なし"],["2026年11月の島所属",d.corridor||d.zone||"未確認"],["最新実績日",d.recorded_for_date||"未取得"],["差枚",d.diff==null?"—":d.diff+"枚"],["G数",d.games==null?"—":d.games+"G"]].forEach(([k,v])=>{const p=document.createElement("div");p.className="stat";p.textContent=k+"："+v;box.append(p)});
+const warn=document.createElement("p");warn.className="muted";warn.textContent="ここで示した座席のx/yは2025年ガイド画像から目視転記した概算です。現地で現在の配置を検証したわけではありません。";box.append(warn);
+}
+function render(){const svg=$("overlay");svg.replaceChildren();
+for(const [n,c] of coords.entries()){
+ const d=inv.get(n),g=document.createElementNS(NS,"g");g.setAttribute("class","seat"+(heat?" heat":"")+(selected===n?" selected":""));g.setAttribute("tabindex","0");g.setAttribute("role","button");g.setAttribute("aria-label",n+"番");
+ const shape=document.createElementNS(NS,"rect");shape.setAttribute("x",c.x-8);shape.setAttribute("y",c.y-5);shape.setAttribute("width",16);shape.setAttribute("height",10);shape.setAttribute("rx",.7);if(heat)shape.setAttribute("fill",itemColor(d));g.append(shape);
+ const title=document.createElementNS(NS,"title");title.textContent=n+"番"+(d?.machine?" "+d.machine:"");g.append(title);
+ g.addEventListener("click",()=>show(n));g.addEventListener("keydown",ev=>{if(ev.key==="Enter"){ev.preventDefault();show(n)}});
+ svg.append(g);
+ }
+}
+$("search").onclick=()=>{const n=Number($("find").value);if(coords.has(n))show(n);else $("detail").textContent=n+"番は2025年図の転記対象外です（現在の台番号一覧は新しい島図に掲載）"};
+$("find").onkeydown=ev=>{if(ev.key==="Enter")$("search").click()};
+$("heat").onchange=ev=>{heat=ev.target.checked;render()};
+function zoom(f){scale=Math.max(.65,Math.min(3,scale*f));$("stage").style.width=Math.round(1000*scale)+"px";$("stage").style.height=Math.round(875*scale)+"px"}
+$("plus").onclick=()=>zoom(1.25);$("minus").onclick=()=>zoom(.8);
+$("reset").onclick=()=>{selected=null;heat=false;scale=1;$("stage").style.width="1000px";$("stage").style.height="875px";$("heat").checked=false;$("find").value="";render()};
+fetch("data/floor_inventory.json?t="+Date.now()).then(r=>r.json()).then(data=>{
+ day=data.data_date||"未取得";inv=new Map((data.seats||[]).map(e=>[Number(e.number),e]));
+ $("summary").textContent="2025年図の位置を転記した台："+coords.size+"台／2026年実績が存在する転記台："+[...coords.keys()].filter(n=>inv.has(n)).length+"台／最新実績 "+day+"。2025年に無い増設・移設台は新しい島図に表示。"+(errors.length?" エラー:"+errors.join(","):"");
+ render();
+}).catch(e=>{$("summary").textContent="データ取得不可："+e.message+"。元図は閲覧できます";render()});
+})();
+</script></body></html>
