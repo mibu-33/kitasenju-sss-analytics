@@ -255,7 +255,7 @@ function chooseGroup(label){
  var p=document.createElement('p');p.className='note';p.textContent='所属台番：'+(names.length?names.join('・'):'未登録')+'。この表示から個別座席の向きや隣接関係は確定できません。';$('detail').append(p);
  var chips=document.createElement('div');chips.className='chips';names.forEach(function(n){var b=document.createElement('button');b.className='seat-chip';b.textContent=n;b.onclick=function(){choose(n)};chips.appendChild(b)});$('detail').append(chips);
 }
-function choose(n){selected=Number(n);var e=entry(n);if(e.floor&&floor!==e.floor)floor=e.floor;renderFloor();
+function choose(n){selected=Number(n);var e=entry(n);if(e.floor&&floor!==e.floor)floor=e.floor;renderFloor();syncGuide();
  var box=$('detail');box.replaceChildren();var title=document.createElement('h2');title.textContent=e.number+'番'+(e.machine?'｜'+e.machine:'');box.append(title);
  var fields=[
  ['実績日',e.recorded_for_date||'記録なし'],['差枚',e.diff==null?'未取得':(e.diff>0?'+':'')+Number(e.diff).toLocaleString()+'枚'],['G数',e.games==null?'未取得':Number(e.games).toLocaleString()+'G'],['所属',e.floor?e.floor+'／'+(e.zone||'')+'／'+(e.corridor||'島未特定'):'階・島・座席未確認'],['座席確度',e.position_level==='on-site-row-order'?'現地申告の列順あり（座標未確定）':e.position_level==='group-only'?'色・島・円卓のみ。席順不明':'位置の登録なし']
