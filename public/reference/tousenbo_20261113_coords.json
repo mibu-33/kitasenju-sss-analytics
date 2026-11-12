@@ -1,0 +1,3619 @@
+{
+  "schema_version": 1,
+  "source_date": "2026-11-13",
+  "source": "user-provided screenshot of @tousenbo_slo image",
+  "image_width": 687,
+  "image_height": 678,
+  "notes": "目視で台番号の位置を近似した座標。元画像の台番号そのものを変更しない。旧営業日の位置や設定を保証しない。",
+  "count": 451,
+  "entries": [
+    {
+      "number": 1,
+      "x": 73,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2,
+      "x": 95.75,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 3,
+      "x": 118.5,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 4,
+      "x": 141.25,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 5,
+      "x": 164,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 6,
+      "x": 186.75,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 7,
+      "x": 209.5,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 8,
+      "x": 232.25,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 9,
+      "x": 255,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 10,
+      "x": 277.75,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 11,
+      "x": 300.5,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 12,
+      "x": 323.25,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 13,
+      "x": 346,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 14,
+      "x": 368.75,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 15,
+      "x": 391.5,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 16,
+      "x": 414.25,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 17,
+      "x": 437,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 18,
+      "x": 459.75,
+      "y": 254,
+      "floor": "1F",
+      "group": "銀1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 19,
+      "x": 454.4,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 20,
+      "x": 432,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 21,
+      "x": 409.6,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 22,
+      "x": 387.2,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 23,
+      "x": 364.8,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 24,
+      "x": 342.4,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 25,
+      "x": 320,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 26,
+      "x": 297.6,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 27,
+      "x": 275.2,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 28,
+      "x": 252.8,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 29,
+      "x": 230.4,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 30,
+      "x": 208,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 31,
+      "x": 185.6,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 32,
+      "x": 163.2,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 33,
+      "x": 140.8,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 34,
+      "x": 118.4,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 35,
+      "x": 96,
+      "y": 282,
+      "floor": "1F",
+      "group": "銀2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 36,
+      "x": 96,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 37,
+      "x": 118.4,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 38,
+      "x": 140.8,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 39,
+      "x": 163.2,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 40,
+      "x": 185.6,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 41,
+      "x": 208,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 42,
+      "x": 230.4,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 43,
+      "x": 252.8,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 44,
+      "x": 275.2,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 45,
+      "x": 297.6,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 46,
+      "x": 320,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 47,
+      "x": 342.4,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 48,
+      "x": 364.8,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 49,
+      "x": 387.2,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 50,
+      "x": 409.6,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 51,
+      "x": 432,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 52,
+      "x": 454.4,
+      "y": 299,
+      "floor": "1F",
+      "group": "銀3",
+      "quality": "readable-image"
+    },
+    {
+      "number": 53,
+      "x": 460.5,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 54,
+      "x": 438,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 55,
+      "x": 415.5,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 56,
+      "x": 393,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 57,
+      "x": 370.5,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 58,
+      "x": 348,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 59,
+      "x": 255,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 60,
+      "x": 232.5,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 61,
+      "x": 210,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 62,
+      "x": 187.5,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 63,
+      "x": 165,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 64,
+      "x": 142.5,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 65,
+      "x": 120,
+      "y": 319,
+      "floor": "1F",
+      "group": "銀4",
+      "quality": "readable-image"
+    },
+    {
+      "number": 66,
+      "x": 507,
+      "y": 202.37,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 67,
+      "x": 507,
+      "y": 193.4,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 68,
+      "x": 507,
+      "y": 184.43,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 69,
+      "x": 507,
+      "y": 175.46,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 70,
+      "x": 507,
+      "y": 166.49,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 71,
+      "x": 507,
+      "y": 157.52,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 72,
+      "x": 507,
+      "y": 148.55,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 73,
+      "x": 507,
+      "y": 139.58,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 74,
+      "x": 507,
+      "y": 130.61,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 75,
+      "x": 507,
+      "y": 121.64,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 76,
+      "x": 507,
+      "y": 112.67,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 77,
+      "x": 507,
+      "y": 103.7,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 78,
+      "x": 507,
+      "y": 94.73,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 79,
+      "x": 507,
+      "y": 85.76,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 80,
+      "x": 507,
+      "y": 76.79,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 81,
+      "x": 507,
+      "y": 67.82,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 82,
+      "x": 507,
+      "y": 58.85,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 83,
+      "x": 507,
+      "y": 49.88,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 84,
+      "x": 507,
+      "y": 40.91,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 85,
+      "x": 507,
+      "y": 31.94,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 86,
+      "x": 507,
+      "y": 22.97,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 87,
+      "x": 507,
+      "y": 14,
+      "floor": "1F",
+      "group": "青A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 88,
+      "x": 576,
+      "y": 14,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 89,
+      "x": 576,
+      "y": 22.91,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 90,
+      "x": 576,
+      "y": 31.82,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 91,
+      "x": 576,
+      "y": 40.73,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 92,
+      "x": 576,
+      "y": 49.64,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 93,
+      "x": 576,
+      "y": 58.55,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 94,
+      "x": 576,
+      "y": 67.46,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 95,
+      "x": 576,
+      "y": 76.37,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 96,
+      "x": 576,
+      "y": 85.28,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 97,
+      "x": 576,
+      "y": 94.19,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 98,
+      "x": 576,
+      "y": 103.1,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 99,
+      "x": 576,
+      "y": 112.01,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 100,
+      "x": 576,
+      "y": 120.92,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 101,
+      "x": 576,
+      "y": 129.83,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 102,
+      "x": 576,
+      "y": 138.74,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 103,
+      "x": 576,
+      "y": 147.65,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 104,
+      "x": 576,
+      "y": 156.56,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 105,
+      "x": 576,
+      "y": 165.47,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 106,
+      "x": 576,
+      "y": 174.38,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 107,
+      "x": 576,
+      "y": 183.29,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 108,
+      "x": 576,
+      "y": 192.2,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 109,
+      "x": 576,
+      "y": 201.11,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 110,
+      "x": 576,
+      "y": 210.02,
+      "floor": "1F",
+      "group": "青B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 111,
+      "x": 410.4,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 112,
+      "x": 387.8,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 113,
+      "x": 365.2,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 114,
+      "x": 342.6,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 115,
+      "x": 320,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 116,
+      "x": 297.4,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 117,
+      "x": 274.8,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 118,
+      "x": 252.2,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 119,
+      "x": 229.6,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 120,
+      "x": 207,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 121,
+      "x": 184.4,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 122,
+      "x": 161.8,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 123,
+      "x": 139.2,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 124,
+      "x": 116.6,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 125,
+      "x": 94,
+      "y": 74,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 126,
+      "x": 94,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 127,
+      "x": 116.6,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 128,
+      "x": 139.2,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 129,
+      "x": 161.8,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 130,
+      "x": 184.4,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 131,
+      "x": 207,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 132,
+      "x": 229.6,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 133,
+      "x": 252.2,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 134,
+      "x": 274.8,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 135,
+      "x": 297.4,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 136,
+      "x": 320,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 137,
+      "x": 342.6,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 138,
+      "x": 365.2,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 139,
+      "x": 387.8,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 140,
+      "x": 410.4,
+      "y": 88,
+      "floor": "1F",
+      "group": "赤上段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 141,
+      "x": 410,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 142,
+      "x": 387.9,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 143,
+      "x": 365.8,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 144,
+      "x": 343.7,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 145,
+      "x": 321.6,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 146,
+      "x": 299.5,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 147,
+      "x": 277.4,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 148,
+      "x": 255.3,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 149,
+      "x": 233.2,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 150,
+      "x": 211.1,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 151,
+      "x": 189,
+      "y": 111,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 152,
+      "x": 189,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 153,
+      "x": 211.1,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 154,
+      "x": 233.2,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 155,
+      "x": 255.3,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 156,
+      "x": 277.4,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 157,
+      "x": 299.5,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 158,
+      "x": 321.6,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 159,
+      "x": 343.7,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 160,
+      "x": 365.8,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 161,
+      "x": 387.9,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 162,
+      "x": 410,
+      "y": 125,
+      "floor": "1F",
+      "group": "赤二段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 163,
+      "x": 410.4,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 164,
+      "x": 387.8,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 165,
+      "x": 365.2,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 166,
+      "x": 342.6,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 167,
+      "x": 320,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 168,
+      "x": 297.4,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 169,
+      "x": 274.8,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 170,
+      "x": 252.2,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 171,
+      "x": 229.6,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 172,
+      "x": 207,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 173,
+      "x": 184.4,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 174,
+      "x": 161.8,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 175,
+      "x": 139.2,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 176,
+      "x": 116.6,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 177,
+      "x": 94,
+      "y": 153,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 178,
+      "x": 94,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 179,
+      "x": 116.6,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 180,
+      "x": 139.2,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 181,
+      "x": 161.8,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 182,
+      "x": 184.4,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 183,
+      "x": 207,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 184,
+      "x": 229.6,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 185,
+      "x": 252.2,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 186,
+      "x": 274.8,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 187,
+      "x": 297.4,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 188,
+      "x": 320,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 189,
+      "x": 342.6,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 190,
+      "x": 365.2,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 191,
+      "x": 387.8,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 192,
+      "x": 410.4,
+      "y": 167,
+      "floor": "1F",
+      "group": "赤中央",
+      "quality": "readable-image"
+    },
+    {
+      "number": 193,
+      "x": 366.6,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 194,
+      "x": 344,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 195,
+      "x": 321.4,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 196,
+      "x": 298.8,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 197,
+      "x": 276.2,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 198,
+      "x": 253.6,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 199,
+      "x": 231,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 200,
+      "x": 161.8,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 201,
+      "x": 139.2,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 202,
+      "x": 116.6,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 203,
+      "x": 94,
+      "y": 193,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 204,
+      "x": 94,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 205,
+      "x": 116.6,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 206,
+      "x": 139.2,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 207,
+      "x": 161.8,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 208,
+      "x": 184.4,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 209,
+      "x": 207,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 210,
+      "x": 229.6,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 211,
+      "x": 252.2,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 212,
+      "x": 274.8,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 213,
+      "x": 297.4,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 214,
+      "x": 320,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 215,
+      "x": 342.6,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 216,
+      "x": 365.2,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 217,
+      "x": 387.8,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 218,
+      "x": 410.4,
+      "y": 209,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 219,
+      "x": 410.4,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 220,
+      "x": 387.8,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 221,
+      "x": 365.2,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 222,
+      "x": 342.6,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 223,
+      "x": 320,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 224,
+      "x": 297.4,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 225,
+      "x": 274.8,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 226,
+      "x": 252.2,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 227,
+      "x": 229.6,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 228,
+      "x": 207,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 229,
+      "x": 184.4,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 230,
+      "x": 161.8,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 231,
+      "x": 139.2,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 232,
+      "x": 116.6,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 233,
+      "x": 94,
+      "y": 226,
+      "floor": "1F",
+      "group": "赤下段",
+      "quality": "readable-image"
+    },
+    {
+      "number": 234,
+      "x": 578,
+      "y": 240,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 235,
+      "x": 578,
+      "y": 245.9,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 236,
+      "x": 578,
+      "y": 251.8,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 237,
+      "x": 578,
+      "y": 257.7,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 238,
+      "x": 578,
+      "y": 263.6,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 239,
+      "x": 578,
+      "y": 269.5,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 240,
+      "x": 578,
+      "y": 275.4,
+      "floor": "1F",
+      "group": "緑C",
+      "quality": "readable-image"
+    },
+    {
+      "number": 241,
+      "x": 578,
+      "y": 291,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 242,
+      "x": 578,
+      "y": 296.9,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 243,
+      "x": 578,
+      "y": 302.8,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 244,
+      "x": 578,
+      "y": 308.7,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 245,
+      "x": 578,
+      "y": 314.6,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 246,
+      "x": 578,
+      "y": 320.5,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 247,
+      "x": 578,
+      "y": 326.4,
+      "floor": "1F",
+      "group": "緑E",
+      "quality": "readable-image"
+    },
+    {
+      "number": 248,
+      "x": 623,
+      "y": 326.4,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 249,
+      "x": 623,
+      "y": 320.5,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 250,
+      "x": 623,
+      "y": 314.6,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 251,
+      "x": 623,
+      "y": 308.7,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 252,
+      "x": 623,
+      "y": 302.8,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 253,
+      "x": 623,
+      "y": 296.9,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 254,
+      "x": 623,
+      "y": 291,
+      "floor": "1F",
+      "group": "緑F",
+      "quality": "readable-image"
+    },
+    {
+      "number": 255,
+      "x": 623,
+      "y": 275.4,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 256,
+      "x": 623,
+      "y": 269.5,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 257,
+      "x": 623,
+      "y": 263.6,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 258,
+      "x": 623,
+      "y": 257.7,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 259,
+      "x": 623,
+      "y": 251.8,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 260,
+      "x": 623,
+      "y": 245.9,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 261,
+      "x": 623,
+      "y": 240,
+      "floor": "1F",
+      "group": "緑D",
+      "quality": "readable-image"
+    },
+    {
+      "number": 602,
+      "x": 48,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 603,
+      "x": 70.9,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 604,
+      "x": 93.8,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 605,
+      "x": 116.7,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 606,
+      "x": 139.6,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 607,
+      "x": 162.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 608,
+      "x": 185.4,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 609,
+      "x": 208.3,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 610,
+      "x": 231.2,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 611,
+      "x": 254.1,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 612,
+      "x": 277,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 613,
+      "x": 299.9,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上左",
+      "quality": "readable-image"
+    },
+    {
+      "number": 614,
+      "x": 228.8,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 615,
+      "x": 206.2,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 616,
+      "x": 183.6,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 617,
+      "x": 161,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 618,
+      "x": 138.4,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 619,
+      "x": 115.8,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 620,
+      "x": 93.2,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 621,
+      "x": 70.6,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 622,
+      "x": 48,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 623,
+      "x": 48,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 624,
+      "x": 70.6,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 625,
+      "x": 93.2,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 626,
+      "x": 115.8,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 627,
+      "x": 138.4,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 628,
+      "x": 161,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 629,
+      "x": 183.6,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 630,
+      "x": 206.2,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 631,
+      "x": 228.8,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・左対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 632,
+      "x": 26,
+      "y": 441,
+      "floor": "2F",
+      "group": "金・左端",
+      "quality": "readable-image"
+    },
+    {
+      "number": 633,
+      "x": 48.6,
+      "y": 441,
+      "floor": "2F",
+      "group": "金・左端",
+      "quality": "readable-image"
+    },
+    {
+      "number": 634,
+      "x": 71.2,
+      "y": 441,
+      "floor": "2F",
+      "group": "金・左端",
+      "quality": "readable-image"
+    },
+    {
+      "number": 635,
+      "x": 93.8,
+      "y": 441,
+      "floor": "2F",
+      "group": "金・左端",
+      "quality": "readable-image"
+    },
+    {
+      "number": 636,
+      "x": 111,
+      "y": 468,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 637,
+      "x": 111,
+      "y": 479.2,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 638,
+      "x": 111,
+      "y": 490.4,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 639,
+      "x": 111,
+      "y": 501.6,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 640,
+      "x": 140,
+      "y": 501.6,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 641,
+      "x": 140,
+      "y": 490.4,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 642,
+      "x": 140,
+      "y": 479.2,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 643,
+      "x": 140,
+      "y": 468,
+      "floor": "2F",
+      "group": "金・小島",
+      "quality": "readable-image"
+    },
+    {
+      "number": 644,
+      "x": 350,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 645,
+      "x": 372.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 646,
+      "x": 395,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 647,
+      "x": 417.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 648,
+      "x": 440,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 649,
+      "x": 462.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 650,
+      "x": 485,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 651,
+      "x": 507.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 652,
+      "x": 530,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 653,
+      "x": 552.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 654,
+      "x": 575,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 655,
+      "x": 597.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 656,
+      "x": 620,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 657,
+      "x": 642.5,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 658,
+      "x": 665,
+      "y": 363,
+      "floor": "2F",
+      "group": "金・上右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 659,
+      "x": 659.55,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 660,
+      "x": 637.2,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 661,
+      "x": 614.85,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 662,
+      "x": 592.5,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 663,
+      "x": 570.15,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 664,
+      "x": 547.8,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 665,
+      "x": 525.45,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 666,
+      "x": 503.1,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 667,
+      "x": 480.75,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 668,
+      "x": 458.4,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 669,
+      "x": 436.05,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 670,
+      "x": 413.7,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 671,
+      "x": 391.35,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 672,
+      "x": 369,
+      "y": 393,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 673,
+      "x": 369,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 674,
+      "x": 391.35,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 675,
+      "x": 413.7,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 676,
+      "x": 436.05,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 677,
+      "x": 458.4,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 678,
+      "x": 480.75,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 679,
+      "x": 503.1,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 680,
+      "x": 525.45,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 681,
+      "x": 547.8,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 682,
+      "x": 570.15,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 683,
+      "x": 592.5,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 684,
+      "x": 614.85,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 685,
+      "x": 637.2,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 686,
+      "x": 659.55,
+      "y": 408,
+      "floor": "2F",
+      "group": "金・右対向",
+      "quality": "readable-image"
+    },
+    {
+      "number": 687,
+      "x": 507.5,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 688,
+      "x": 485,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 689,
+      "x": 462.5,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 690,
+      "x": 440,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 691,
+      "x": 417.5,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 692,
+      "x": 395,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 693,
+      "x": 372.5,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 694,
+      "x": 350,
+      "y": 444,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 695,
+      "x": 350,
+      "y": 458,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 696,
+      "x": 372.5,
+      "y": 458,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 697,
+      "x": 395,
+      "y": 458,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 698,
+      "x": 417.5,
+      "y": 458,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 699,
+      "x": 440,
+      "y": 458,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 700,
+      "x": 462.5,
+      "y": 458,
+      "floor": "2F",
+      "group": "金・中央右",
+      "quality": "readable-image"
+    },
+    {
+      "number": 701,
+      "x": 617.4,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 702,
+      "x": 594.8,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 703,
+      "x": 572.2,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 704,
+      "x": 549.6,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 705,
+      "x": 527,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 706,
+      "x": 504.4,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 707,
+      "x": 481.8,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 708,
+      "x": 459.2,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 709,
+      "x": 436.6,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 710,
+      "x": 414,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 711,
+      "x": 391.4,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 712,
+      "x": 368.8,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 713,
+      "x": 346.2,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 714,
+      "x": 323.6,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 715,
+      "x": 301,
+      "y": 487,
+      "floor": "2F",
+      "group": "金・下長列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 716,
+      "x": 394.4,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・下短列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 717,
+      "x": 371.8,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・下短列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 718,
+      "x": 349.2,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・下短列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 719,
+      "x": 326.6,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・下短列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 720,
+      "x": 304,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・下短列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 721,
+      "x": 529,
+      "y": 604,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 722,
+      "x": 529,
+      "y": 596.7,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 723,
+      "x": 529,
+      "y": 589.4,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 724,
+      "x": 529,
+      "y": 582.1,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 725,
+      "x": 529,
+      "y": 574.8,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 726,
+      "x": 529,
+      "y": 567.5,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 727,
+      "x": 529,
+      "y": 560.2,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 728,
+      "x": 529,
+      "y": 552.9,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 729,
+      "x": 529,
+      "y": 545.6,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 730,
+      "x": 529,
+      "y": 538.3,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 731,
+      "x": 529,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 732,
+      "x": 597,
+      "y": 531,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 733,
+      "x": 597,
+      "y": 539.1,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 734,
+      "x": 597,
+      "y": 547.2,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 735,
+      "x": 597,
+      "y": 555.3,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 736,
+      "x": 597,
+      "y": 563.4,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 737,
+      "x": 597,
+      "y": 571.5,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 738,
+      "x": 597,
+      "y": 579.6,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 739,
+      "x": 597,
+      "y": 587.7,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 740,
+      "x": 597,
+      "y": 595.8,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 741,
+      "x": 597,
+      "y": 603.9,
+      "floor": "2F",
+      "group": "金・右下縦列",
+      "quality": "readable-image"
+    },
+    {
+      "number": 742,
+      "x": 240,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 743,
+      "x": 218,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 744,
+      "x": 195,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 745,
+      "x": 172,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 746,
+      "x": 149,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 747,
+      "x": 126,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 748,
+      "x": 105,
+      "y": 655,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 749,
+      "x": 82,
+      "y": 647,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 750,
+      "x": 50,
+      "y": 640,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 751,
+      "x": 26,
+      "y": 617,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 752,
+      "x": 26,
+      "y": 600,
+      "floor": "2F",
+      "group": "紫A",
+      "quality": "readable-image"
+    },
+    {
+      "number": 753,
+      "x": 28,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 754,
+      "x": 50.1,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 755,
+      "x": 72.2,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 756,
+      "x": 94.3,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 757,
+      "x": 116.4,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 758,
+      "x": 138.5,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 759,
+      "x": 160.6,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 760,
+      "x": 182.7,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 761,
+      "x": 204.8,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 762,
+      "x": 226.9,
+      "y": 563,
+      "floor": "2F",
+      "group": "紫B",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1001,
+      "x": 102,
+      "y": 108,
+      "floor": "1F",
+      "group": "赤S",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1002,
+      "x": 102,
+      "y": 126,
+      "floor": "1F",
+      "group": "赤S",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1003,
+      "x": 145,
+      "y": 108,
+      "floor": "1F",
+      "group": "赤S",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1004,
+      "x": 145,
+      "y": 126,
+      "floor": "1F",
+      "group": "赤S",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1005,
+      "x": 210,
+      "y": 504,
+      "floor": "2F",
+      "group": "金4台円卓1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1006,
+      "x": 257,
+      "y": 504,
+      "floor": "2F",
+      "group": "金4台円卓1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1007,
+      "x": 257,
+      "y": 522,
+      "floor": "2F",
+      "group": "金4台円卓1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1008,
+      "x": 210,
+      "y": 522,
+      "floor": "2F",
+      "group": "金4台円卓1",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1009,
+      "x": 279,
+      "y": 382,
+      "floor": "2F",
+      "group": "金4台円卓2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1010,
+      "x": 311,
+      "y": 382,
+      "floor": "2F",
+      "group": "金4台円卓2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1011,
+      "x": 311,
+      "y": 414,
+      "floor": "2F",
+      "group": "金4台円卓2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1012,
+      "x": 279,
+      "y": 414,
+      "floor": "2F",
+      "group": "金4台円卓2",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1013,
+      "x": 113,
+      "y": 592,
+      "floor": "2F",
+      "group": "紫5台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1014,
+      "x": 136,
+      "y": 592,
+      "floor": "2F",
+      "group": "紫5台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1015,
+      "x": 159,
+      "y": 592,
+      "floor": "2F",
+      "group": "紫5台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1016,
+      "x": 136,
+      "y": 610,
+      "floor": "2F",
+      "group": "紫5台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 1017,
+      "x": 113,
+      "y": 610,
+      "floor": "2F",
+      "group": "紫5台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2001,
+      "x": 271,
+      "y": 445,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2002,
+      "x": 286,
+      "y": 453,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2003,
+      "x": 286,
+      "y": 463,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2004,
+      "x": 286,
+      "y": 473,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2005,
+      "x": 273,
+      "y": 482,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2006,
+      "x": 253,
+      "y": 490,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2007,
+      "x": 233,
+      "y": 482,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2008,
+      "x": 218,
+      "y": 477,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2009,
+      "x": 218,
+      "y": 467,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2010,
+      "x": 218,
+      "y": 457,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2011,
+      "x": 231,
+      "y": 447,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    },
+    {
+      "number": 2012,
+      "x": 245,
+      "y": 438,
+      "floor": "2F",
+      "group": "金12台円卓",
+      "quality": "readable-image"
+    }
+  ]
+}
