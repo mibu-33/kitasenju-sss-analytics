@@ -26,6 +26,12 @@ button,input{font:inherit;border:1px solid #587591;color:#eaf2ff;background:#203
 .number-seat.highlight text{fill:#17283c}
 .silver-seat{cursor:pointer}.silver-seat rect{stroke:#f8fbff;stroke-width:.27}.silver-seat text{font-size:3.1px;fill:white;font-weight:800;pointer-events:none}.silver-seat:hover rect,.silver-seat:focus rect{fill:#edbf70;stroke:#7e500d;stroke-width:.8}.silver-seat.highlight rect{fill:#ffe08c;stroke:#a45c16;stroke-width:.8}.silver-seat.highlight text{fill:#17283c}
 .confidence-guide{border-left:4px solid #f0b45a;padding-left:10px}.confidence-field{border-left:4px solid #67d1a5;padding-left:10px}
+.inventory{background:#142840;border:1px solid #4d6682;border-radius:12px;padding:14px;margin-top:14px}.inventory h2{margin:0 0 8px;font-size:17px}
+.inventory-group{margin-top:12px}.inventory-list{display:flex;gap:4px;flex-wrap:wrap;padding-top:7px}
+.inventory-seat{min-width:43px;padding:6px 4px;border-radius:6px;background:#223a56;color:#eef4fc;border:1px solid #6682a0;font-weight:700;font-size:12px}
+.inventory-seat[data-confidence="secondary"]{border-style:dashed;background:#253149;color:#bfc9da}
+.inventory-seat[data-confidence="field"]{border-color:#6be4af}
+.inventory-seat:hover{background:#4a6f94}
 .unplaced{background:#152a42;border:1px solid #4a6481;border-radius:10px;padding:12px;margin-top:14px;line-height:1.5;font-size:13px}
 .unplaced h2{font-size:15px;margin:0 0 8px}
 .unplaced details{margin:6px 0}.unplaced summary{cursor:pointer;color:#c6daf0}.unplaced .numbers{font-variant-numeric:tabular-nums;color:#d8e6f4;margin:6px 0 8px}
@@ -58,7 +64,7 @@ button,input{font:inherit;border:1px solid #587591;color:#eaf2ff;background:#203
 <span><i style="background:#b1d3f2"></i>ブルー</span><span><i style="background:#b4dfa7"></i>グリーン</span><span><i style="background:#f1aaa7"></i>レッド</span><span><i style="background:#ced6de"></i>シルバー</span><span><i style="background:#ffe2a0"></i>ゴールド</span><span><i style="background:#d9c2ef"></i>紫（参考区画）</span>
 </div>
 <div class="cols"><div class="scroller"><svg id="map" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" aria-label="ガイド図の台列・通路・円卓を再現したマップ" role="img"></svg></div><aside class="info" id="detail"><h2>島・エリアを選択</h2>図内の台列や円卓をクリックすると、元図との対応と登録されている台の情報が表示されます。</aside></div>
-<section class="unplaced" id="unplaced"></section>
+<section class="inventory" id="seat-inventory"><h2>台番号セル｜証拠別一覧</h2><p class="muted">同じ色・列に属する番号を表示します。正確な物理的な位置が分からない台は、フロア図に無理に配置しません。</p><div id="inventory-content"></div></section><section class="unplaced" id="unplaced"></section>
 <section class="evidence" id="placement-evidence"><h2>2026年の配置照合結果</h2><p class="pale">調査で確認した縦列・横列の資料を読み込んでいます。</p></section>
 <div class="links"><a target="_blank" rel="noopener" href="https://github.com/mibu-33/kitasenju-sss-analytics/blob/main/data/areas.csv">台番号の根拠一覧</a><a target="_blank" rel="noopener" href="https://x.com/Kitasenjusss/status/2066121201462968359">公式1F図（別時点）</a><a target="_blank" rel="noopener" href="https://x.com/Kitasenjusss/status/2053440543062147221">公式2F図（別時点）</a></div>
 <p class="foot">出典：提供された「ピーアーク北千住sss ガイドブック🐤🐤🐤」、p.3。ガイド掲載時点の位置を基準としており、現地最新図との一致は別途検証が必要です。</p>
@@ -127,6 +133,33 @@ function seatInfo(number,alias,position){
  const box=document.createElement("div");box.className="status";
  box.textContent=x?"登録データ：1F・"+x.zone+"・"+(x.corridor||"島不明")+"／座席順："+(x.order??"未確認"):"現在の登録データに一致する台番号がありません";
  detail.append(box);
+}
+function inventoryList(){
+ const holder=document.querySelector("#inventory-content");if(!holder)return;holder.replaceChildren();
+ const groups=new Map();
+ for(const e of entries.filter(x=>x.floor===floor)){
+  const group=e.corridor||({silver:"銀・列不明",red:"赤・列不明",green:"緑・列不明",blue:"青・列不明",gold:"金・列不明",purple:"紫・列不明"}[e.zone]||"所属未確認");
+  if(!groups.has(group))groups.set(group,[]);
+  groups.get(group).push(e);
+ }
+ const groupOrder=["銀1","銀2","銀3","銀4","青A","青B","緑C","緑D","緑E","緑F","赤S","紫A","紫B","紫5台円卓"];
+ [...groups.entries()].sort((a,b)=>{const ia=groupOrder.indexOf(a[0]),ib=groupOrder.indexOf(b[0]);return (ia<0?99:ia)-(ib<0?99:ib)||a[0].localeCompare(b[0],"ja")}).forEach(([name,list])=>{
+  const section=document.createElement("div");section.className="inventory-group";
+  const heading=document.createElement("b");
+  heading.textContent=name+" / "+list.length+"台"+(name.startsWith("銀")&&/^銀[1-4]$/.test(name)?"　現地申告の列順":"　座席順未確定");
+  section.append(heading);
+  const row=document.createElement("div");row.className="inventory-list";
+  list.sort((a,b)=>(a.order??999)-(b.order??999)||a.number-b.number).forEach(e=>{
+   const b=document.createElement("button");b.className="inventory-seat";
+   b.dataset.confidence=/user-on-site-row-order/.test(e.confidence||"")?"field":"secondary";
+   b.textContent=e.number;
+   b.title=(e.source||"出典未登録")+"／"+(e.confidence||"座席順未確定");
+   b.onclick=()=>{document.querySelector("#search").value=String(e.number);render();document.querySelector("#detail").scrollIntoView({behavior:"smooth",block:"center"})};
+   row.append(b);
+  });
+  section.append(row);holder.append(section);
+ });
+ const footer=document.createElement("p");footer.className="muted";footer.textContent="緑枠は現地申告による列順、破線枠は色・所属のみ等の情報。取材上の縦列・横列を実際の座席順には変換しません。";holder.append(footer);
 }
 function evidenceList(){
  const root=document.querySelector("#placement-evidence");
@@ -218,7 +251,7 @@ txt(svg,100,285,"入口","map-label");path(svg,"M99 278 H113 l-5 -4 m5 4 l-5 4",
 txt(svg,244,122,"通　路","aisle-label",{"text-anchor":"middle"});txt(svg,384,180,"通路","aisle-label",{"text-anchor":"middle"});
 }
 function select(label,zone,alias,desc,g){document.querySelectorAll(".active-outline").forEach(n=>n.classList.remove("active-outline"));g.querySelector(".outline")?.classList.add("active-outline");selection={label,zone,alias,g};const exact=entries.filter(x=>x.floor===floor&&alias&&x.corridor===alias),related=entries.filter(x=>x.floor===floor&&x.zone===zone&&!x.corridor);detail.replaceChildren();const h=document.createElement("h2");h.textContent=label;detail.append(h);const p=document.createElement("p");p.textContent=desc||"ガイド図に掲載された区画を再描画";detail.append(p);const info=document.createElement("div");info.className="muted";info.textContent="島名の一致する登録台："+exact.length+"台／同色・島未特定："+related.length+"台。ここでの小さな区画は座席番号を確定したものではありません。";if(alias&&guideOrder[alias])info.textContent+=(alias.startsWith("銀")?" 現地申告の列内順：":" ガイド掲載順（物理座席順は未確定）：")+guideOrder[alias].join("→");detail.append(info);const box=document.createElement("div");box.className="chips";const all=exact.length?exact:related;all.slice(0,36).forEach(x=>{let s=document.createElement("span");s.textContent=x.number;box.append(s)});if(!all.length)box.textContent="照合可能な台番号は未登録";detail.append(box)}
-function render(){document.querySelector("#btn1").classList.toggle("current",floor==="1F");document.querySelector("#btn2").classList.toggle("current",floor==="2F");if(floor==="1F")draw1();else draw2();unplacedList();evidenceList();selection=null;detail.replaceChildren();const h=document.createElement("h2");h.textContent=floor+" の台列";detail.append(h);const p=document.createElement("p");p.textContent="島と通路は旧ガイドの模式形状。銀4列のみ現地申告による番号順をセル表示し、その他は座席順未確定です。色の違う台列や円卓を選んで根拠を確認できます。";detail.append(p);const query=document.querySelector("#search").value.trim();if(query){const m=entries.find(x=>String(x.number)===query);if(m){if(m.floor!==floor){floor=m.floor;render();return}const order=guideOrder[m.corridor]||[];if(order.includes(m.number)){seatInfo(m.number,m.corridor,order.indexOf(m.number)+1)}else{const box=document.createElement("p");box.textContent="台番号"+m.number+"：登録色 "+m.zone+"、登録島 "+(m.corridor||"不明")+"（この図上の個別座席位置は未確定）";detail.append(box)}}}}
+function render(){document.querySelector("#btn1").classList.toggle("current",floor==="1F");document.querySelector("#btn2").classList.toggle("current",floor==="2F");if(floor==="1F")draw1();else draw2();unplacedList();evidenceList();inventoryList();selection=null;detail.replaceChildren();const h=document.createElement("h2");h.textContent=floor+" の台列";detail.append(h);const p=document.createElement("p");p.textContent="島と通路は旧ガイドの模式形状。銀4列のみ現地申告による番号順をセル表示し、その他は座席順未確定です。色の違う台列や円卓を選んで根拠を確認できます。";detail.append(p);const query=document.querySelector("#search").value.trim();if(query){const m=entries.find(x=>String(x.number)===query);if(m){if(m.floor!==floor){floor=m.floor;render();return}const order=guideOrder[m.corridor]||[];if(order.includes(m.number)){seatInfo(m.number,m.corridor,order.indexOf(m.number)+1)}else{const box=document.createElement("p");box.textContent="台番号"+m.number+"：登録色 "+m.zone+"、登録島 "+(m.corridor||"不明")+"（この図上の個別座席位置は未確定）";detail.append(box)}}}}
 document.querySelector("#btn1").onclick=()=>{floor="1F";render()};
 document.querySelector("#btn2").onclick=()=>{floor="2F";render()};
 document.querySelector("#clear").onclick=()=>{document.querySelector("#search").value="";render()};
