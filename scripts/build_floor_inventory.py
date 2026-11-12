@@ -78,8 +78,11 @@ def build_inventory():
             floor = zone = corridor = order = confidence = None
             position_level = "unmapped"
             floor_count["unmapped"] += 1
+        floor_hint = ("1F" if 1 <= number <= 261 else "2F" if 601 <= number <= 762 else None) if floor is None else floor
         machine_rows.append({
             "number": number,
+            "floor_hint": floor_hint,
+            "floor_hint_is_inference": floor is None and floor_hint is not None,
             "machine": observed.get("machine") if observed else None,
             "diff": observed.get("diff") if observed else None,
             "games": observed.get("games") if observed else None,
@@ -94,6 +97,17 @@ def build_inventory():
             "recorded_for_date": latest if observed else None,
         })
 
+    missing = sorted(n for n in day if n not in by_number)
+    unmapped_ranges = []
+    if missing:
+        start = prev = missing[0]
+        for n in missing[1:]:
+            if n == prev + 1:
+                prev = n
+            else:
+                unmapped_ranges.append({"start": start, "end": prev, "count": prev - start + 1, "floor_hint": "1F" if start <= 261 else "2F" if start >= 601 and prev <= 762 else None})
+                start = prev = n
+        unmapped_ranges.append({"start": start, "end": prev, "count": prev - start + 1, "floor_hint": "1F" if start <= 261 else "2F" if start >= 601 and prev <= 762 else None})
     expected_total = 451
     return {
         "schema": 2,
@@ -104,7 +118,8 @@ def build_inventory():
         "observed_seat_count": len(day),
         "registered_layout_seat_count": len(by_number),
         "observed_row_order_count": floor_count["row_order_observed"],
-        "unmapped_on_latest_date": sum(1 for number in day if number not in by_number),
+        "unmapped_on_latest_date": len(missing),
+        "unmapped_ranges": unmapped_ranges,
         "warning": "実店舗の幾何座標は未確定。色・所属情報と現地申告による列内順を区別。集計元の日付より後の入替を保証しません。",
         "seats": machine_rows,
     }
