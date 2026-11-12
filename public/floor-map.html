@@ -85,7 +85,7 @@ legend{display:block;font-size:.8rem}
 <p class="caption" id="update">台別データを読み込み中…</p>
 <div class="layout" id="cell-layout">
 <section>
-<div class="map-wrap" id="mapwrap"><svg id="map" viewBox="0 0 1200 740" role="img" aria-label="エビデンス別に表現したトリエスの店舗構成模式図"></svg></div>
+<div class="map-wrap" id="mapwrap"><svg id="map" viewBox="0 0 1200 940" role="img" aria-label="エビデンス別に表現したトリエスの店舗構成模式図"></svg></div>
 <p class="note">緑枠＝現地申告の列内順。破線区画＝番号は分かるが隣接順未確認。円卓はグループの位置を示すだけで、円周上の台番号は確定していません。タップすると根拠と最新実績を表示します。</p>
 </section>
 <aside class="panel" id="detail"><h2>台番号・島を選択</h2><p class="note">台番をタップして台番号・機種・差枚・位置確認度・出典を確認できます。</p></aside>
@@ -154,33 +154,88 @@ function circleGroup(label,x,y,r,zone,details,n){
  g.addEventListener('click',function(){chooseGroup(label)});g.addEventListener('keydown',function(ev){if(ev.key==='Enter'){chooseGroup(label)}});
 }
 function bgRoom(x,y,w,h,s){rect(map,x,y,w,h,'#d8dfe6','#a9b9c8','none',7);text(map,x+8,y+24,s,'room-label')}
-function base(){map.replaceChildren();rect(map,0,0,1200,740,'#e3eaf0','#c2ced9','none',0);text(map,35,39,floor+'｜通路と島の大枠（模式・位置座標は未検証）','group-caption');}
+function base(){map.replaceChildren();rect(map,0,0,1200,940,'#e3eaf0','#c2ced9','none',0);text(map,35,39,floor+'｜店舗公式掲載の島形状を参照（座席座標は未確定）','group-caption');}
+function verticalStrip(label,x,y,h,reverse){
+ const rows=groupData(label),g=add(map,'g',{}),zone=rows[0]?.zone||'blue',w=70;
+ if(reverse)rows.reverse();
+ rect(g,x,y,w,h,palette[zone]||'#dfebf3','#657d91','4 4',7);
+ text(g,x+3,y-8,label+'｜'+rows.length+'台','group-small');
+ if(!rows.length)return;
+ const top=5,part=(h-top*2)/rows.length;
+ rows.forEach(function(r,i){drawSeat(g,r.number,x+7,y+top+i*part,w-14,Math.max(7,part-1),false)});
+}
+function emptyBench(x,y,w,n,zone,label){
+ const g=add(map,'g',{}),color=palette[zone]||'#becddd';
+ rect(g,x,y,w,37,color,'#849cb0','5 4',5);
+ const gap=2,cw=(w-13-gap*(n-1))/n;
+ for(let i=0;i<n;i++){rect(g,x+6+i*(cw+gap),y+15,cw,15,'#ffffff','#93a4b4','2 2',2)}
+ text(g,x+6,y+12,label+'　台番号未照合','group-small');
+}
+function emptyColumn(x,y,h,n,zone,label){
+ const g=add(map,'g',{}),color=palette[zone]||'#becddd';
+ rect(g,x,y,40,h,color,'#849cb0','4 4',5);
+ text(g,x-1,y-8,label,'group-small');
+ const gap=2,ch=(h-12-gap*(n-1))/n;
+ for(let i=0;i<n;i++)rect(g,x+5,y+6+i*(ch+gap),30,ch,'#ffffff','#93a4b4','2 2',2);
+}
 function draw1(){
- base();rect(map,25,57,1150,655,'#f5f7fa','#738ba3','none',12);
- text(map,40,75,'青エリア','group-caption');drawStrip('青A',40,82,960);drawStrip('青B',40,151,960);
- text(map,40,228,'緑エリア','group-caption');drawStrip('緑C',40,236,515);drawStrip('緑D',600,236,515);drawStrip('緑E',40,302,515);drawStrip('緑F',600,302,515);
- rect(map,45,375,1120,30,'#e8eef5','#b9c6d5','none',2);text(map,490,396,'中央通路（位置・幅は模式）','room-label');
- groupFrame(40,415,555,260,'シルバー（4列・現地申告）','#e6edf3','verified');
- drawStrip('銀1',48,451,534);drawStrip('銀2',48,505,534);drawStrip('銀3',48,559,534);drawStrip('銀4',48,613,534);
- groupFrame(622,415,535,260,'赤エリア（個別台の座席座標は未確定）','#f9e6e5','unknown');
- text(map,642,463,'赤中央の番号は下の台帳に表示','group-small');
- text(map,642,488,'報告された縦列を席順に変換しません','group-small');
- circleGroup('赤S・4台グループ',907,572,76,'red','1001〜1004',4);
- bgRoom(1020,90,132,59,'設備（模式）');text(map,73,698,'入口・階段の正確な位置も未照合','group-small');
+ base();rect(map,25,60,1150,842,'#f5f7fa','#7893ad','none',14);
+ text(map,50,85,'1F　出入口・階段・台列の相対配置は公式図を参考。寸法は模式。','group-small');
+ // Official image positions: Blue A/B two parallel vertical banks at upper center.
+ groupFrame(494,93,192,365,'ブルー A・B','#d9efff','unknown');
+ verticalStrip('青A',514,145,294,true);
+ verticalStrip('青B',601,145,308,false);
+ text(map,532,472,'中央通路','room-label');
+ // Bottom-left Silver: four physical bands, the only zone with reported row order.
+ groupFrame(38,495,438,319,'シルバー｜現地申告4列','#e6edf3','verified');
+ drawStrip('銀1',50,532,410);
+ drawStrip('銀2',50,595,410);
+ drawStrip('銀3',50,658,410);
+ drawStrip('銀4',50,721,410);
+ // Center red is intentionally unnumbered pending source verification.
+ groupFrame(485,500,399,340,'レッド｜中央の台列','#f8dfdf','unknown');
+ emptyBench(498,538,371,14,'red','上側');
+ emptyBench(498,588,371,14,'red','中央①');
+ emptyBench(498,638,371,14,'red','中央②');
+ emptyBench(498,688,371,14,'red','下側①');
+ emptyBench(498,738,371,14,'red','下側②');
+ text(map,504,807,'赤の台番は下の一覧・取材根拠で参照','group-small');
+ // Source shows the Red-S 4-seat independent island on bottom left.
+ circleGroup('赤S・4台グループ',291,857,43,'red','1001〜1004（円形は記号）',4);
+ // Green C/D upper and E/F lower, by official 1F block shape on right.
+ groupFrame(910,493,250,350,'グリーン｜右端','#e2f4db','unknown');
+ verticalStrip('緑C',935,548,120,false);
+ verticalStrip('緑D',1025,548,120,true);
+ verticalStrip('緑E',935,697,120,false);
+ verticalStrip('緑F',1025,697,120,true);
+ bgRoom(1090,172,76,63,'WC');
+ text(map,75,887,'銀側の出入口（模式）','group-small');
+ text(map,934,877,'右通路・2F階段（模式）','group-small');
 }
 function draw2(){
- base();rect(map,25,57,1150,655,'#f5f7fa','#738ba3','none',12);
- groupFrame(40,90,485,575,'紫エリア（A/B・5台円卓）','#efe4fb','unknown');
- drawStrip('紫A',51,145,466);drawStrip('紫B',51,219,466);
- circleGroup('紫5台円卓',280,447,110,'purple','1013〜1017',5);
- text(map,62,602,'紫A/Bの番号順は実座席順ではありません','group-small');
- groupFrame(560,90,590,575,'金エリア（現行席順は未確定）','#fcf2d8','unknown');
- circleGroup('4台円卓の一群',730,219,76,'gold','1005〜1008：位置未確定',4);
- circleGroup('4台円卓の別群',959,219,76,'gold','1009〜1012：位置未確定',4);
- circleGroup('金12台円卓',862,449,112,'gold','2001〜2012：グループ確認',12);
- text(map,586,606,'金の通常島・未確定台は下のセル一覧に収録','group-small');
- text(map,586,634,'円卓の場所と台番の対応・内部の席順は別途確認が必要','group-small');
- text(map,76,694,'このページは「番号と根拠」を優先し、実席の座標を捏造しません','group-small');
+ base();rect(map,25,60,1150,842,'#f5f7fa','#7893ad','none',14);
+ text(map,50,85,'2F　パープル左側・ゴールド中央〜右側。円卓の内部座席順は未確定。','group-small');
+ // Purple A/B is the distinctive L-shaped island at left on the official floor image.
+ groupFrame(37,210,285,465,'パープル｜左端L字','#ebdef8','unknown');
+ drawStrip('紫B',52,254,250);
+ drawStrip('紫A',52,321,250);
+ circleGroup('紫5台円卓',183,529,77,'purple','1013〜1017：席順未確定',5);
+ // Gold follows the main upper horizontal and right L-shaped service corridor.
+ groupFrame(342,137,815,736,'ゴールド｜中央・右側','#fff0c6','unknown');
+ emptyBench(369,214,315,12,'gold','左上横列');
+ emptyBench(715,214,418,17,'gold','右上横列');
+ emptyBench(710,264,422,17,'gold','右中段');
+ emptyColumn(381,287,210,10,'gold','左縦');
+ emptyBench(720,389,405,17,'gold','右側長列');
+ emptyBench(720,440,405,17,'gold','右側対向列');
+ circleGroup('4台円卓の一群',628,352,69,'gold','1005〜1008：位置対応未確定',4);
+ circleGroup('4台円卓の別群',498,678,69,'gold','1009〜1012：位置対応未確定',4);
+ circleGroup('金12台円卓',763,659,91,'gold','2001〜2012：席順未確定',12);
+ emptyBench(920,772,210,11,'gold','右下独立列');
+ emptyBench(600,819,260,13,'gold','最下部列');
+ bgRoom(1081,332,69,59,'WC');
+ bgRoom(389,755,78,62,'階段');
+ text(map,50,884,'入口・階段の位置は公式画像を参照。こちらは縮尺を保証しません。','group-small');
 }
 function chooseGroup(label){
  var val=groupData(label),other=[];
