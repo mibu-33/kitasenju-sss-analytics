@@ -38,6 +38,8 @@ jobs:
         run: node tests/test_island_picks.cjs
       - name: Validate historical seat map against guide
         run: node tests/test_legacy_seat_map.cjs
+      - name: Validate SSS floor map interface
+        run: node tests/test_floor_map_app.cjs
       - name: Validate fallback parser
         run: |
           python -m pip install -q pytest
