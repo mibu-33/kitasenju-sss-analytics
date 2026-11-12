@@ -31,6 +31,8 @@ jobs:
           for f in /tmp/sss-inline-*.js public/extensions.js public/color-areas.js public/island-picks.js public/roundtable.js; do node --check "$f"; done
           python -c "from pathlib import Path; import re; h=Path('public/morning.html').read_text(); Path('/tmp/sss-morning.js').write_text(re.search(r'<script>(.*?)</script>',h,re.S).group(1))"
           node --check /tmp/sss-morning.js
+          python -c "from pathlib import Path; import re; h=Path('public/floor-map.html').read_text(); Path('/tmp/sss-floor-v2.js').write_text(re.search(r'<script>(.*?)</script>',h,re.S).group(1))"
+          node --check /tmp/sss-floor-v2.js
           python -m json.tool data/morning_2026_11.json > /dev/null
       - name: Validate island scoring (Node)
         run: node tests/test_island_picks.cjs
@@ -70,6 +72,9 @@ jobs:
       - name: Import authorized exports (even when direct fetch returned 403)
         if: always()
         run: python scripts/import_batch.py
+      - name: Build floor inventory with verified geometry labels
+        if: always()
+        run: python scripts/build_floor_inventory.py
       - name: Commit collected data and failure state
         if: always()
         run: |
