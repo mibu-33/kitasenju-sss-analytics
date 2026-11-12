@@ -1,5 +1,5 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const html=fs.readFileSync('public/floor-map.html','utf8'),match=html.match(/<script>([\s\S]*?)<\/script>/);
+const html=fs.readFileSync('public/floor-map-derived.html','utf8'),match=html.match(/<script>([\s\S]*?)<\/script>/);
 assert.ok(match,'map JS present');new Function(match[1]);
 const registry=JSON.parse(fs.readFileSync('data/floor_inventory.json','utf8'));
 const summary=JSON.parse(fs.readFileSync('data/summary.json','utf8'));
