@@ -4,9 +4,10 @@ vm.runInNewContext(fs.readFileSync('public/island-picks.js','utf8'),sandbox);
 const predict=sandbox.SSSIslandCore.scoreIslands;
 const blocks=[['青A','blue','1F','左',66,87],['青B','blue','1F','右',88,110],['緑C','green','1F','左',234,240],['緑D','green','1F','右',255,261],['緑E','green','1F','左',241,247],['緑F','green','1F','右',248,254],['赤S','red','1F','',1001,1004],['紫5台円卓','purple','2F','',1013,1017]];
 const mapped=JSON.parse(fs.readFileSync('data/areas.json','utf8'));
-assert.equal(mapped.length,82,'82 positions should be mapped');
-assert.equal(new Set(mapped.map(x=>x.number)).size,82);
-assert.ok(mapped.every(x=>x.order==null),'do not fabricate adjacency');
+assert.equal(mapped.length,237,'237 source-backed zone/group entries should be mapped');
+assert.equal(new Set(mapped.map(x=>x.number)).size,237);
+assert.equal(mapped.filter(x=>x.order!=null).length,65,'only 65 silver row positions have on-site reported order');
+assert.ok(mapped.filter(x=>x.order!=null).every(x=>x.zone==='silver' && x.confidence==='user-on-site-row-order'),'do not fabricate seat order outside silver rows');
 const map=new Map(mapped.map(x=>[x.number,x])),at=()=>map;
 const seats=[...new Set([...Array(451)].map((_,i)=>i+1).concat([1001,1002,1003,1004,1013,1014,1015,1016,1017]))];
 let data=[];
@@ -18,7 +19,7 @@ for(let day=1;day<=25;day++){
  }
 }
 const a=predict('2026-10-01',data,at);
-assert.equal(a.known,82);
+assert.equal(a.known,237);
 assert.equal(a.usableDays,25);
 assert.equal(a.blocks[0]?.block,'青A');
 assert.equal(a.picks[0]?.block,'青A');
