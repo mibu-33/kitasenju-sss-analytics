@@ -84,7 +84,7 @@ legend{display:block;font-size:.8rem}
 <h2>台番号セル一覧 <span id="listcount" class="pill"></span></h2>
 <div class="toolbar"><select id="filter"><option value="all">この階の登録台すべて</option><option value="field">列順を現地で確認</option><option value="group">所属のみ確認（席順不明）</option><option value="unknown">位置不明（全階）</option></select><button id="showall">未配置も表示</button></div>
 <p class="caption">ここは番号順の台帳で、実店舗の隣接配置ではありません。未登録台も検索可能です。</p>
-<div class="seat-groups" id="groups"></div>
+<div class="seat-groups" id="groups"></div><div id="unmapped-ranges" style="margin-top:16px"></div>
 </section>
 <section class="panel" style="margin-top:14px" id="arrange-section">
 <h2>取材で確認された縦列・横列の組み合わせ</h2><p class="caption">報告日・出典付き。同じ列と報告された関係だけを保持し、左右・番号順・現況まで自動確定しません。</p><div id="arrangements" class="arrange-cards"></div>
@@ -98,7 +98,7 @@ legend{display:block;font-size:.8rem}
 <script>
 (function(){
 'use strict';
-var NS='http://www.w3.org/2000/svg',map=document.getElementById('map'),inv=null,seats=[],byNumber=new Map(),floor='1F',heat=false,zoom=1,selected=null,query='',filter='all',reported=[];
+var NS='http://www.w3.org/2000/svg',map=document.getElementById('map'),inv=null,seats=[],byNumber=new Map(),floor='1F',heat=false,zoom=1,selected=null,query='',filter='all',reported=[],rangeOnly=null;
 var $=id=>document.getElementById(id);
 var palette={silver:'#abb9c9',blue:'#8dc6f8',green:'#9bd695',red:'#eda4a1',purple:'#c8a9ee',gold:'#efd58d'};
 function svg(tag,props,txt){var n=document.createElementNS(NS,tag);Object.keys(props||{}).forEach(function(k){n.setAttribute(k,props[k])});if(txt!==undefined)n.textContent=String(txt);return n}
@@ -191,7 +191,7 @@ function isVisible(e){
  return e.position_level!=='unmapped';
 }
 function renderList(){
- var matched=seats.filter(isVisible).filter(function(e){return !query||String(e.number).includes(query)||String(e.machine||'').toLowerCase().includes(query.toLowerCase())});
+ var matched=seats.filter(isVisible).filter(function(e){return (!rangeOnly||(e.number>=rangeOnly[0]&&e.number<=rangeOnly[1]))&&(!query||String(e.number).includes(query)||String(e.machine||'').toLowerCase().includes(query.toLowerCase()))});
  var groups=new Map();
  matched.forEach(function(e){var key=e.position_level==='unmapped'?'位置未確認':(e.corridor||e.zone||'所属未確認');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)});
  $('listcount').textContent=matched.length+'台';var root=$('groups');root.replaceChildren();
@@ -203,6 +203,18 @@ function renderList(){
   rows.forEach(function(e){var b=document.createElement('button');b.className='seat-chip '+(e.position_level==='on-site-row-order'?'field':e.position_level==='unmapped'?'none':'guide')+(selected===e.number?' chip-selected':'');b.textContent=e.number;b.title=tooltip(e.number);b.onclick=function(){choose(e.number)};chips.append(b)});section.append(chips);root.append(section);
  });
  if(!groups.size){var p=document.createElement('p');p.className='note';p.textContent='条件に合う台がありません';root.append(p)}
+}
+function renderRanges(){
+ var root=$('unmapped-ranges');if(!root||!inv)return;root.replaceChildren();
+ var title=document.createElement('h3');title.textContent='位置未確定の台番号帯（要照合）';root.append(title);
+ var p=document.createElement('p');p.className='caption';p.textContent='連番でも実店舗の隣接を保証しません。1F/2Fの表示は台番帯による仮の階候補です。';root.append(p);
+ var chips=document.createElement('div');chips.className='chips';
+ (inv.unmapped_ranges||[]).forEach(function(x){
+  var btn=document.createElement('button');btn.className='seat-chip';btn.style.minWidth='100px';
+  btn.textContent=(x.start===x.end?String(x.start):x.start+'–'+x.end)+' ('+x.count+') '+(x.floor_hint||'階不明')+'候補';
+  btn.onclick=function(){rangeOnly=[x.start,x.end];filter='unknown';$('filter').value='unknown';query='';$('search').value='';renderList();$('groups').scrollIntoView({behavior:'smooth',block:'start'})};
+  chips.append(btn);
+ });root.append(chips);
 }
 function renderArrangements(){
  var root=$('arrangements');if(!root)return;root.replaceChildren();
@@ -223,18 +235,18 @@ function renderFloor(){
 }
 function setFloor(f){floor=f;selected=null;renderFloor();$('detail').innerHTML='<h2>'+f+' の台番号を選択</h2><p class="note">位置と根拠の違いを区別して表示しています。</p>'}
 $('floor1').onclick=function(){setFloor('1F')};$('floor2').onclick=function(){setFloor('2F')};
-$('search').oninput=function(){query=this.value.trim();if(/^\d+$/.test(query)&&byNumber.has(Number(query))){choose(Number(query))}else renderList()};
-$('filter').onchange=function(){filter=this.value;renderList()};
-$('showall').onclick=function(){filter='unknown';$('filter').value='unknown';renderList();$('groups').scrollIntoView({behavior:'smooth',block:'start'})};
+$('search').oninput=function(){rangeOnly=null;query=this.value.trim();if(/^\d+$/.test(query)&&byNumber.has(Number(query))){choose(Number(query))}else renderList()};
+$('filter').onchange=function(){rangeOnly=null;filter=this.value;renderList()};
+$('showall').onclick=function(){rangeOnly=null;filter='unknown';$('filter').value='unknown';renderList();$('groups').scrollIntoView({behavior:'smooth',block:'start'})};
 $('heat').onchange=function(){heat=this.checked;renderFloor()};
 $('zoomin').onclick=function(){zoom=Math.min(2.4,zoom+.2);map.style.width=Math.round(100*zoom)+'%';map.style.minWidth=Math.round(860*zoom)+'px'};
 $('zoomout').onclick=function(){zoom=Math.max(.7,zoom-.2);map.style.width=Math.round(100*zoom)+'%';map.style.minWidth=Math.round(860*zoom)+'px'};
-$('reset').onclick=function(){zoom=1;map.style.width='100%';map.style.minWidth='860px';$('search').value='';query='';selected=null;filter='all';$('filter').value='all';heat=false;$('heat').checked=false;renderFloor()};
+$('reset').onclick=function(){zoom=1;map.style.width='100%';map.style.minWidth='860px';$('search').value='';query='';selected=null;rangeOnly=null;filter='all';$('filter').value='all';heat=false;$('heat').checked=false;renderFloor()};
 fetch('data/floor_inventory.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error('inventory HTTP '+r.status);return r.json()}).then(function(data){
  inv=data;seats=Array.isArray(data.seats)?data.seats:[];byNumber=new Map(seats.map(function(e){return [Number(e.number),e]}));
  $('total').textContent=data.store_advertised_seat_count||451;$('observed').textContent=data.observed_seat_count??'—';$('mapped').textContent=data.registered_layout_seat_count??'—';$('field').textContent=data.observed_row_order_count??'—';
  $('update').textContent='実績基準日：'+(data.data_date||'未取得')+'｜位置確認237台のうち座席順まで確認したのは銀65台。'+(data.unmapped_on_latest_date??'—')+'台は最新の台別実績にあるが島の位置未登録。';
- renderFloor();
+ renderFloor();renderRanges();
  }).catch(function(err){$('update').textContent='台帳の読込に失敗：'+err.message+'。新しいデプロイが終わっていない可能性があります。';renderFloor()});
 fetch('data/placement_evidence.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(data){reported=data.reported_arrangements||[];renderArrangements()}).catch(function(){reported=[];renderArrangements()});
 })();
