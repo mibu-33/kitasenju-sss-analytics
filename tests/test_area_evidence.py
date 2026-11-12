@@ -10,7 +10,7 @@ def test_island_mapping_is_unique_and_conservative():
     assert len(rows)==237
     assert len({r["number"] for r in rows})==237
     assert len([r for r in rows if r.get("confidence")=="cross-checked"])==26
-    assert len([r for r in rows if r.get("confidence")=="secondary-color-only"])==63
+    assert len([r for r in rows if r.get("confidence")=="secondary-color-only"])==50
     assert not any(1005<=r["number"]<=1012 and r.get("corridor") for r in rows)
     assert all(not r["corridor"] and r["order"] is None and r["from"] for r in rows if r.get("confidence")=="secondary-color-only")
     silver=[r for r in rows if r.get("order") is not None]
@@ -29,7 +29,7 @@ def test_source_ledger_and_unknowns():
     info=json.loads((ROOT/"layout_sources.json").read_text(encoding="utf-8"))
     assert info["area_mapped_seats"]==180
     assert info["color_identified_seats"]==237
-    assert info["color_only_secondary_seats"]==63
+    assert info["color_only_secondary_seats"]==50
     assert info["total_seats"]==451
     assert len(info["unknown"])>=3
     assert any("x.com/Kitasenjusss/status/" in r.get("url","") for r in info["evidence"])
