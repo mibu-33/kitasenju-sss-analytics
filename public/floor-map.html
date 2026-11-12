@@ -36,6 +36,10 @@ svg{display:block;min-width:860px;width:100%;height:auto;touch-action:pan-x pan-
 #detail{min-height:190px}#detail h2{margin-top:0}
 .detail-line{margin:8px 0;border-bottom:1px solid #304860;padding-bottom:6px}
 .tablewrap{max-height:540px;overflow:auto}
+.arrange-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:9px;margin:12px 0}
+.arrange-card{border:1px dashed #526b88;background:#12253c;border-radius:10px;padding:11px}
+.arrange-card strong{font-size:.9rem}
+.arrange-card .numbers{margin:7px 0;font-variant-numeric:tabular-nums;font-weight:700;word-break:break-word}
 .seat-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:12px}
 .seat-card{background:#13253c;border:1px solid #3e5775;border-radius:12px;padding:12px}
 .seat-card h3{font-size:.95rem;margin:0 0 5px}
@@ -81,6 +85,9 @@ legend{display:block;font-size:.8rem}
 <div class="toolbar"><select id="filter"><option value="all">この階の登録台すべて</option><option value="field">列順を現地で確認</option><option value="group">所属のみ確認（席順不明）</option><option value="unknown">位置不明（全階）</option></select><button id="showall">未配置も表示</button></div>
 <p class="caption">ここは番号順の台帳で、実店舗の隣接配置ではありません。未登録台も検索可能です。</p>
 <div class="seat-groups" id="groups"></div>
+</section>
+<section class="panel" style="margin-top:14px" id="arrange-section">
+<h2>取材で確認された縦列・横列の組み合わせ</h2><p class="caption">報告日・出典付き。同じ列と報告された関係だけを保持し、左右・番号順・現況まで自動確定しません。</p><div id="arrangements" class="arrange-cards"></div>
 </section>
 <section class="panel" style="margin-top:14px">
 <h2>配置の根拠と未確定部分</h2>
@@ -197,9 +204,22 @@ function renderList(){
  });
  if(!groups.size){var p=document.createElement('p');p.className='note';p.textContent='条件に合う台がありません';root.append(p)}
 }
+function renderArrangements(){
+ var root=$('arrangements');if(!root)return;root.replaceChildren();
+ var list=reported.filter(function(x){return x.floor===floor}).sort(function(a,b){return b.date.localeCompare(a.date)});
+ if(!list.length){var p=document.createElement('p');p.className='note';p.textContent='この階の照合記録を取得できていません';root.append(p);return}
+ list.forEach(function(x){
+  var section=document.createElement('div');section.className='arrange-card';
+  var head=document.createElement('strong');head.textContent=x.date+'｜'+x.label;section.append(head);
+  var p=document.createElement('p');p.className='numbers';p.textContent=(x.machine_numbers||[]).join('・');section.append(p);
+  var note=document.createElement('p');note.className='caption';note.textContent=x.kind==='vertical'?'取材上の縦列報告／席順未確定':x.kind==='horizontal'?'取材上の横列報告／席順未確定':'取材上のまとまり／席順未確定';section.append(note);
+  if(x.source_url){var a=document.createElement('a');a.href=x.source_url;a.textContent='報告元';a.target='_blank';a.rel='noopener noreferrer';section.append(a)}
+  root.append(section);
+ });
+}
 function renderFloor(){
  $('floor1').classList.toggle('active',floor==='1F');$('floor2').classList.toggle('active',floor==='2F');
- if(floor==='1F')draw1();else draw2();renderList();
+ if(floor==='1F')draw1();else draw2();renderList();renderArrangements();
 }
 function setFloor(f){floor=f;selected=null;renderFloor();$('detail').innerHTML='<h2>'+f+' の台番号を選択</h2><p class="note">位置と根拠の違いを区別して表示しています。</p>'}
 $('floor1').onclick=function(){setFloor('1F')};$('floor2').onclick=function(){setFloor('2F')};
@@ -216,6 +236,7 @@ fetch('data/floor_inventory.json?t='+Date.now()).then(function(r){if(!r.ok)throw
  $('update').textContent='実績基準日：'+(data.data_date||'未取得')+'｜位置確認237台のうち座席順まで確認したのは銀65台。'+(data.unmapped_on_latest_date??'—')+'台は最新の台別実績にあるが島の位置未登録。';
  renderFloor();
  }).catch(function(err){$('update').textContent='台帳の読込に失敗：'+err.message+'。新しいデプロイが終わっていない可能性があります。';renderFloor()});
+fetch('data/placement_evidence.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(data){reported=data.reported_arrangements||[];renderArrangements()}).catch(function(){reported=[];renderArrangements()});
 })();
 </script>
 </body></html>
