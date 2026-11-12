@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1425">
+<title>北千住SSS｜実店舗照合・台番号島図</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#081424;color:#edf4ff;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0}a{color:#a9d5ff}
+header{background:#12243a;border-bottom:1px solid #40536d;padding:16px max(15px,calc((100% - 1480px)/2))}
+h1{font-size:1.35rem;margin:0 0 5px}h2{font-size:1.1rem;margin:0 0 10px}
+nav{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem}
+main{max-width:1480px;margin:auto;padding:16px 14px 70px}
+.caption,.note{color:#bfd0e4;font-size:.85rem;line-height:1.55}
+.pill{display:inline-block;border:1px solid #435e7e;border-radius:99px;padding:3px 10px;margin:3px 3px 3px 0;font-size:.82rem}
+.panel{border:1px solid #36506d;background:#12243a;border-radius:13px;padding:13px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:12px 0}
+.metric{border-radius:10px;padding:10px;background:#192e49}.metric b{font-size:1.4rem;display:block;font-variant-numeric:tabular-nums}.metric small{font-size:.75rem;color:#b6cae1}
+.toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:12px}
+button,input,select{font:inherit;background:#1b314d;color:#f4f7ff;border:1px solid #557396;border-radius:9px;padding:9px 11px}
+button{cursor:pointer}button.active{background:#3c7399;border-color:#8eb9de}button:disabled{opacity:.5}
+input[type=search]{min-width:180px;flex:1}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,350px);gap:12px}
+.map-wrap{background:#dce6ee;color:#293e54;overflow:auto;border:1px solid #7890a8;border-radius:12px;padding:7px}
+svg{display:block;min-width:860px;width:100%;height:auto;touch-action:pan-x pan-y}
+.group-line{stroke:#7e92a7;stroke-width:1.2;stroke-dasharray:5 4}
+.cell{cursor:pointer;outline:none}.cell rect{stroke:#f4f8ff;stroke-width:.9}
+.cell:hover rect,.cell:focus rect{stroke:#142333;stroke-width:2.4}
+.cell text{font-size:11px;font-weight:750;pointer-events:none;fill:#11263b}
+.cell.field rect{stroke:#168c63;stroke-width:1.5}
+.cell.selected rect{stroke:#e68514;stroke-width:3}
+.group-caption{font-size:16px;fill:#23394e;font-weight:800}
+.group-small{font-size:12px;fill:#465d73}
+.room-label{font-size:14px;fill:#64768a;font-weight:750}
+.warning{background:#302a23;border:1px solid #98743a;border-radius:10px;padding:10px;color:#ffe3b6;margin-bottom:12px;font-size:.87rem}
+[hidden]{display:none!important}
+.modebar{display:flex;gap:7px;margin:7px 0 12px;flex-wrap:wrap}
+.guide-compare{border:1px solid #4d6581;border-radius:12px;padding:12px;background:#12243a}
+.guide-compare iframe{width:100%;height:60vh;min-height:450px;border:1px solid #6e869e;background:#dce6ee}
+.official-figure{margin:0;padding:5px;background:#e4e8ee;border-radius:10px;text-align:center}
+.official-figure img{display:block;width:100%;max-width:1100px;margin:0 auto;height:auto;border-radius:6px}
+.official-figure figcaption{padding:8px;color:#43556e;font-size:12px}
+.guide-compare details{margin-top:10px}.guide-compare summary{cursor:pointer}
+
+#detail{min-height:190px}#detail h2{margin-top:0}
+.detail-line{margin:8px 0;border-bottom:1px solid #304860;padding-bottom:6px}
+.tablewrap{max-height:540px;overflow:auto}
+.arrange-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:9px;margin:12px 0}
+.arrange-card{border:1px dashed #526b88;background:#12253c;border-radius:10px;padding:11px}
+.arrange-card strong{font-size:.9rem}
+.arrange-card .numbers{margin:7px 0;font-variant-numeric:tabular-nums;font-weight:700;word-break:break-word}
+.seat-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:12px}
+.seat-card{background:#13253c;border:1px solid #3e5775;border-radius:12px;padding:12px}
+.seat-card h3{font-size:.95rem;margin:0 0 5px}
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.seat-chip{min-width:42px;padding:5px 7px;font-size:.82rem;font-weight:700}
+.seat-chip.field{border-color:#4ecaa1}.seat-chip.guide{border-style:dashed}
+.seat-chip.none{opacity:.65}
+.chip-selected{outline:2px solid #ffbe55}
+#unmapped{margin-top:12px}
+.small{font-size:.78rem}.good{color:#79dfb6}.warn{color:#ffda8f}
+legend{display:block;font-size:.8rem}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header><h1>ピーアーク北千住SSS｜台番号・実店舗照合マップ</h1>
+<nav><a href="index.html">分析トップ</a><a href="morning.html">今日の仕掛け</a><a href="legacy-seat-layout.html">2025年台番配置を照合</a> <a href="floor-map-guide.html">旧模式図</a><a href="https://github.com/mibu-33/kitasenju-sss-analytics/blob/main/data/placement_evidence.json" target="_blank" rel="noopener">配置根拠</a></nav></header>
+<main>
+<div class="warning"><b>位置の正確性について：</b> 色分け・所属・現地申告の列順は確認度別に反映しています。ただし背景の通路や島の「座標・寸法」は過去のガイドを基にした模式配置で、店舗現況の実測図ではありません。<b>番号順だけが分かる島を、隣接する実席として扱わないでください。</b></div>
+<div class="metrics">
+<div class="metric"><small>店舗公表の設置台数</small><b id="total">451</b></div>
+<div class="metric"><small>直近の台別実績</small><b id="observed">—</b></div>
+<div class="metric"><small>色・島・円卓の所属</small><b id="mapped">—</b></div>
+<div class="metric"><small>現地申告の列順</small><b id="field">—</b></div>
+</div>
+<div class="modebar"><button id="mode-cells" class="active">台番セル図</button><button id="mode-guide">店舗公式フロア図</button><button id="mode-compare">公式図とセル図を比較</button></div>
+<div class="toolbar">
+<button id="floor1" class="active">1F</button><button id="floor2">2F</button><label>営業日 <select id="historyDate"><option value="">最新日を読み込み中</option></select></label>
+<label><input type="checkbox" id="heat"> 差枚ヒートマップ</label>
+<input id="search" type="search" inputmode="numeric" placeholder="台番号・機種を検索">
+<button id="zoomout" title="縮小">−</button><button id="zoomin" title="拡大">＋</button>
+<button id="reset">初期化</button>
+</div>
+<p class="caption" id="update">台別データを読み込み中…</p>
+<div class="layout" id="cell-layout">
+<section>
+<div class="map-wrap" id="mapwrap"><svg id="map" viewBox="0 0 1200 940" role="img" aria-label="エビデンス別に表現したトリエスの店舗構成模式図"></svg></div>
+<p class="note">緑枠＝現地申告の列内順。破線区画＝番号は分かるが隣接順未確認。円卓はグループの位置を示すだけで、円周上の台番号は確定していません。タップすると根拠と最新実績を表示します。</p>
+</section>
+<aside class="panel" id="detail"><h2>台番号・島を選択</h2><p class="note">台番をタップして台番号・機種・差枚・位置確認度・出典を確認できます。</p></aside>
+</div>
+<section class="guide-compare" id="guide-layout" hidden>
+<h2>店舗公式Xに掲載されたフロア図（掲載時点の参考資料）</h2>
+<p class="caption">店が公開した島と通路の形をそのまま参照します。<b>2026年11月の現況を保証する図ではありません。</b> 公式図に記載された機種名・配置は掲載時点の情報であり、最新の台番号・機種は台別実績で別途確認します。</p>
+<figure class="official-figure"><a id="official-image-link" target="_blank" rel="noopener noreferrer" href="https://x.com/Kitasenjusss/status/2066121201462968359"><img id="official-image" src="https://pbs.twimg.com/media/HKxWSCUacAAU62Q.jpg" loading="lazy" alt="ピーアーク北千住SSS公式 1F フロア図。島形状・通路を参照。"></a><figcaption id="official-caption">1F 店舗公式のフロア図。現況確認は別途必要。</figcaption></figure>
+<p><a id="official-post-link" href="https://x.com/Kitasenjusss/status/2066121201462968359" target="_blank" rel="noopener noreferrer">公式の元投稿を開く</a>（画像が表示されない場合もこちらで確認）</p>
+<p><a href="legacy-seat-layout.html" target="_blank" rel="noopener">2025年ガイドを台番号セル化して差枚と比較する（旧配置・参考）</a></p>
+<details><summary>旧ガイドベースの模式図も確認する</summary>
+<p class="caption">2025年のガイドを参考に再描画した旧図。物理的な台番順を証明する資料ではありません。</p>
+<iframe title="比較用・旧ガイド模式図" id="guide-frame" src="floor-map-guide.html" loading="lazy"></iframe>
+</details>
+</section>
+<section class="panel" style="margin-top:14px">
+<h2>台番号セル一覧 <span id="listcount" class="pill"></span></h2>
+<div class="toolbar"><select id="filter"><option value="all">この階の登録台すべて</option><option value="field">列順を現地で確認</option><option value="group">所属のみ確認（席順不明）</option><option value="unknown">位置不明（全階）</option></select><button id="showall">未配置も表示</button></div>
+<p class="caption">ここは番号順の台帳で、実店舗の隣接配置ではありません。未登録台も検索可能です。</p>
+<div class="seat-groups" id="groups"></div><div id="unmapped-ranges" style="margin-top:16px"></div>
+</section>
+<section class="panel" style="margin-top:14px" id="arrange-section">
+<h2>取材で確認された縦列・横列の組み合わせ</h2><p class="caption">報告日・出典付き。同じ列と報告された関係だけを保持し、左右・番号順・現況まで自動確定しません。</p><div id="arrangements" class="arrange-cards"></div>
+</section>
+<section class="panel" style="margin-top:14px">
+<h2>配置の根拠と未確定部分</h2>
+<p class="caption">1F銀：1–18、19–35、52→36、53–65の4列は2026/11/4現地申告による順番。青A/B・緑C～F・赤Sは所属まで、2F紫A/B・紫5台円卓と金12台円卓も所属を確認。2Fの4台円卓の内部席順と、金・赤中央の多数の座標はまだ確定していません。</p>
+<p><a href="https://github.com/mibu-33/kitasenju-sss-analytics/blob/main/data/layout_sources.json" target="_blank" rel="noopener">配置検証台帳</a> ／ <a href="https://x.com/Kitasenjusss/status/2053440543062147221" target="_blank" rel="noopener">公式2F図（2026年5月の別時点）</a> ／ <a href="https://note.com/cozy_fowl8277/n/na874d5c4a382" target="_blank" rel="noopener">2025年ガイド</a></p>
+</section>
+</main>
+<script>
+(function(){
+'use strict';
+var NS='http://www.w3.org/2000/svg',map=document.getElementById('map'),inv=null,seats=[],byNumber=new Map(),floor='1F',heat=false,zoom=1,selected=null,query='',filter='all',reported=[],rangeOnly=null,dayDate='',latestDate='',byHistoricalDate=null,historyLoading=null;
+var $=id=>document.getElementById(id),viewMode='cells';
+var palette={silver:'#abb9c9',blue:'#8dc6f8',green:'#9bd695',red:'#eda4a1',purple:'#c8a9ee',gold:'#efd58d'};
+function svg(tag,props,txt){var n=document.createElementNS(NS,tag);Object.keys(props||{}).forEach(function(k){n.setAttribute(k,props[k])});if(txt!==undefined)n.textContent=String(txt);return n}
+function add(p,tag,props,txt){var n=svg(tag,props,txt);p.appendChild(n);return n}
+function rect(p,x,y,w,h,fill,stroke,dash,r){return add(p,'rect',{x:x,y:y,width:w,height:h,rx:r||5,fill:fill,stroke:stroke||'#526980','stroke-width':1.5,'stroke-dasharray':dash||'none'})}
+function text(p,x,y,v,cls,color){return add(p,'text',{x:x,y:y,class:cls||'group-small',fill:color||'#23394e'},v)}
+function groupFrame(x,y,w,h,name,fill,tag){var g=add(map,'g',{});rect(g,x,y,w,h,fill,'#7890a8',tag==='verified'?'none':'5 5',10);text(g,x+12,y+24,name,'group-caption');return g}
+function entry(number){
+ var n=Number(number),base=byNumber.get(n)||{number:n,position_level:'unmapped'};
+ if(!dayDate||dayDate===latestDate)return base;
+ var dayRows=byHistoricalDate?.get(dayDate),observed=dayRows?.get(n);
+ return {...base,machine:observed?.machine||null,diff:observed?.diff??null,games:observed?.games??null,recorded_for_date:observed?dayDate:null};
+}
+function tooltip(n){var e=entry(n);return n+'番｜'+(e.machine||'機種不明')+'｜'+(e.corridor||e.zone||'位置未確認')+'｜'+(e.position_level||'未登録')}
+function color(e){if(!heat)return palette[e.zone]||'#bdc8d6';var d=Number(e.diff);if(e.diff==null||!Number.isFinite(d))return '#a9b8c9';if(d>=3000)return '#c3a8fb';if(d>=1000)return '#ffc270';if(d>=0)return '#92e0b3';if(d>=-1000)return '#f6b3ac';return '#f27784'}
+function drawSeat(p,n,x,y,w,h,forced){var e=entry(n),g=add(p,'g',{class:'cell '+(e.position_level==='on-site-row-order'?'field':'')+(selected===n?' selected':''),tabindex:'0',role:'button','aria-label':tooltip(n)});
+rect(g,x,y,w,h,color(e),forced?'#159869':'#e5edf2','none',3);
+add(g,'text',{x:x+w/2,y:y+h/2+4.2,'text-anchor':'middle'},n);
+add(g,'title',{},tooltip(n));g.addEventListener('click',function(){choose(n)});
+g.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();choose(n)}});
+return g}
+function groupData(label){return seats.filter(function(x){return x.floor===floor&&x.corridor===label}).sort(function(a,b){return (a.order==null?999:a.order)-(b.order==null?999:b.order)||a.number-b.number})}
+function drawStrip(label,x,y,w,opts){
+ opts=opts||{};var rows=groupData(label),g=add(map,'g',{}),isField=rows.length&&rows.every(function(r){return r.position_level==='on-site-row-order'});
+ rect(g,x,y,w,53,palette[rows[0]?.zone]||'#dae4ec',isField?'#2d9b73':'#758ca5',isField?'none':'4 4',7);
+ text(g,x+7,y+15,label+'　'+rows.length+'台'+(isField?'　現地列順':'　番号順（実席順不明）'),'group-small');
+ if(!rows.length){text(g,x+9,y+37,'台番の登録なし','group-small');return}
+ var gap=2,cw=(w-14-gap*(rows.length-1))/rows.length;
+ rows.forEach(function(r,i){drawSeat(g,r.number,x+7+i*(cw+gap),y+21,cw,26,isField)});
+ g.addEventListener('dblclick',function(){chooseGroup(label)});
+}
+function circleGroup(label,x,y,r,zone,details,n){
+ var g=add(map,'g',{role:'button',tabindex:'0'});add(g,'circle',{cx:x,cy:y,r:r,fill:palette[zone],stroke:'#697f93','stroke-width':3,'stroke-dasharray':'5 4'});
+ text(g,x-r+12,y-16,label,'group-caption');
+ text(g,x-r+15,y+4,n+'台｜内部席順未確定','group-small');
+ text(g,x-r+15,y+24,details,'group-small');
+ g.addEventListener('click',function(){chooseGroup(label)});g.addEventListener('keydown',function(ev){if(ev.key==='Enter'){chooseGroup(label)}});
+}
+function bgRoom(x,y,w,h,s){rect(map,x,y,w,h,'#d8dfe6','#a9b9c8','none',7);text(map,x+8,y+24,s,'room-label')}
+function base(){map.replaceChildren();rect(map,0,0,1200,940,'#e3eaf0','#c2ced9','none',0);text(map,35,39,floor+'｜店舗公式掲載の島形状を参照（座席座標は未確定）','group-caption');}
+function verticalStrip(label,x,y,h,reverse){
+ const rows=groupData(label),g=add(map,'g',{}),zone=rows[0]?.zone||'blue',w=70;
+ if(reverse)rows.reverse();
+ rect(g,x,y,w,h,palette[zone]||'#dfebf3','#657d91','4 4',7);
+ text(g,x+3,y-8,label+'｜'+rows.length+'台','group-small');
+ if(!rows.length)return;
+ const top=5,part=(h-top*2)/rows.length;
+ rows.forEach(function(r,i){drawSeat(g,r.number,x+7,y+top+i*part,w-14,Math.max(7,part-1),false)});
+}
+function emptyBench(x,y,w,n,zone,label){
+ const g=add(map,'g',{}),color=palette[zone]||'#becddd';
+ rect(g,x,y,w,37,color,'#849cb0','5 4',5);
+ const gap=2,cw=(w-13-gap*(n-1))/n;
+ for(let i=0;i<n;i++){rect(g,x+6+i*(cw+gap),y+15,cw,15,'#ffffff','#93a4b4','2 2',2)}
+ text(g,x+6,y+12,label+'　台番号未照合','group-small');
+}
+function emptyColumn(x,y,h,n,zone,label){
+ const g=add(map,'g',{}),color=palette[zone]||'#becddd';
+ rect(g,x,y,40,h,color,'#849cb0','4 4',5);
+ text(g,x-1,y-8,label,'group-small');
+ const gap=2,ch=(h-12-gap*(n-1))/n;
+ for(let i=0;i<n;i++)rect(g,x+5,y+6+i*(ch+gap),30,ch,'#ffffff','#93a4b4','2 2',2);
+}
+function draw1(){
+ base();rect(map,25,60,1150,842,'#f5f7fa','#7893ad','none',14);
+ text(map,50,85,'1F　出入口・階段・台列の相対配置は公式図を参考。寸法は模式。','group-small');
+ // Official image positions: Blue A/B two parallel vertical banks at upper center.
+ groupFrame(494,93,192,365,'ブルー A・B','#d9efff','unknown');
+ verticalStrip('青A',514,145,294,true);
+ verticalStrip('青B',601,145,308,false);
+ text(map,532,472,'中央通路','room-label');
+ // Bottom-left Silver: four physical bands, the only zone with reported row order.
+ groupFrame(38,495,438,319,'シルバー｜現地申告4列','#e6edf3','verified');
+ drawStrip('銀1',50,532,410);
+ drawStrip('銀2',50,595,410);
+ drawStrip('銀3',50,658,410);
+ drawStrip('銀4',50,721,410);
+ // Center red is intentionally unnumbered pending source verification.
+ groupFrame(485,500,399,340,'レッド｜中央の台列','#f8dfdf','unknown');
+ emptyBench(498,538,371,14,'red','上側');
+ emptyBench(498,588,371,14,'red','中央①');
+ emptyBench(498,638,371,14,'red','中央②');
+ emptyBench(498,688,371,14,'red','下側①');
+ emptyBench(498,738,371,14,'red','下側②');
+ text(map,504,807,'赤の台番は下の一覧・取材根拠で参照','group-small');
+ // Source shows the Red-S 4-seat independent island on bottom left.
+ drawStrip('赤S',53,833,288);
+ // Green C/D upper and E/F lower, by official 1F block shape on right.
+ groupFrame(910,493,250,350,'グリーン｜右端','#e2f4db','unknown');
+ verticalStrip('緑C',935,548,120,false);
+ verticalStrip('緑D',1025,548,120,true);
+ verticalStrip('緑E',935,697,120,false);
+ verticalStrip('緑F',1025,697,120,true);
+ bgRoom(1090,172,76,63,'WC');
+ text(map,75,887,'銀側の出入口（模式）','group-small');
+ text(map,934,877,'右通路・2F階段（模式）','group-small');
+}
+function draw2(){
+ base();rect(map,25,60,1150,842,'#f5f7fa','#7893ad','none',14);
+ text(map,50,85,'2F　パープル左側・ゴールド中央〜右側。円卓の内部座席順は未確定。','group-small');
+ // Purple A/B is the distinctive L-shaped island at left on the official floor image.
+ groupFrame(37,210,285,465,'パープル｜左端L字','#ebdef8','unknown');
+ drawStrip('紫B',52,254,250);
+ drawStrip('紫A',52,321,250);
+ circleGroup('紫5台円卓',180,475,70,'purple','1013〜1017：席順未確定',5);
+ // Gold follows the main upper horizontal and right L-shaped service corridor.
+ groupFrame(342,137,815,736,'ゴールド｜中央・右側','#fff0c6','unknown');
+ emptyBench(369,214,315,12,'gold','左上横列');
+ emptyBench(715,214,418,17,'gold','右上横列');
+ emptyBench(710,264,422,17,'gold','右中段');
+ emptyColumn(381,287,210,10,'gold','左縦');
+ emptyBench(875,380,250,10,'gold','右側長列');
+ emptyBench(875,432,250,10,'gold','右側対向列');
+ circleGroup('4台円卓の一群',744,416,67,'gold','1005〜1008：位置対応未確定',4);
+ circleGroup('4台円卓の別群',570,683,67,'gold','1009〜1012：位置対応未確定',4);
+ circleGroup('金12台円卓',575,485,91,'gold','2001〜2012：席順未確定',12);
+ emptyBench(920,772,210,11,'gold','右下独立列');
+ emptyBench(600,819,260,13,'gold','最下部列');
+ bgRoom(1081,332,69,59,'WC');
+ bgRoom(389,755,78,62,'階段');
+ text(map,50,884,'入口・階段の位置は公式画像を参照。こちらは縮尺を保証しません。','group-small');
+}
+function chooseGroup(label){
+ var val=groupData(label),other=[];
+ if(label.indexOf('赤S')===0)other=[1001,1002,1003,1004];
+ if(label==='紫5台円卓')other=[1013,1014,1015,1016,1017];
+ if(label==='金12台円卓')other=Array.from({length:12},function(_,i){return 2001+i});
+ if(label==='4台円卓の一群')other=[1005,1006,1007,1008];
+ if(label==='4台円卓の別群')other=[1009,1010,1011,1012];
+ var names=(val.length?val.map(function(x){return x.number}):other);
+ $('detail').innerHTML='';
+ var h=document.createElement('h2');h.textContent=label;$('detail').append(h);
+ var p=document.createElement('p');p.className='note';p.textContent='所属台番：'+(names.length?names.join('・'):'未登録')+'。この表示から個別座席の向きや隣接関係は確定できません。';$('detail').append(p);
+ var chips=document.createElement('div');chips.className='chips';names.forEach(function(n){var b=document.createElement('button');b.className='seat-chip';b.textContent=n;b.onclick=function(){choose(n)};chips.appendChild(b)});$('detail').append(chips);
+}
+function choose(n){selected=Number(n);var e=entry(n);if(e.floor&&floor!==e.floor)floor=e.floor;renderFloor();syncGuide();
+ var box=$('detail');box.replaceChildren();var title=document.createElement('h2');title.textContent=e.number+'番'+(e.machine?'｜'+e.machine:'');box.append(title);
+ var fields=[
+ ['実績日',e.recorded_for_date||'記録なし'],['差枚',e.diff==null?'未取得':(e.diff>0?'+':'')+Number(e.diff).toLocaleString()+'枚'],['G数',e.games==null?'未取得':Number(e.games).toLocaleString()+'G'],['所属',e.floor?e.floor+'／'+(e.zone||'')+'／'+(e.corridor||'島未特定'):'階・島・座席未確認'],['座席確度',e.position_level==='on-site-row-order'?'現地申告の列順あり（座標未確定）':e.position_level==='group-only'?'色・島・円卓のみ。席順不明':'位置の登録なし']
+ ];fields.forEach(function(pair){var p=document.createElement('div');p.className='detail-line';var b=document.createElement('b');b.textContent=pair[0]+'：';p.append(b,document.createTextNode(pair[1]));box.append(p)});
+ var note=document.createElement('p');note.className='note';note.textContent=e.note||'この台番の個別位置根拠は未登録。';box.append(note);
+ if(e.source){var source=document.createElement('p');source.className='small';source.textContent='根拠：'+e.source;box.append(source)}
+ var ref=document.createElement('a');ref.href='https://github.com/mibu-33/kitasenju-sss-analytics/blob/main/data/areas.json';ref.target='_blank';ref.rel='noopener';ref.textContent='台番号の根拠を開く';box.append(ref);
+}
+function isVisible(e){
+ if(filter==='unknown')return e.position_level==='unmapped';
+ if(e.floor!==floor)return false;
+ if(filter==='field')return e.position_level==='on-site-row-order';
+ if(filter==='group')return e.position_level==='group-only';
+ return e.position_level!=='unmapped';
+}
+function renderList(){
+ var matched=seats.map(function(e){return entry(e.number)}).filter(isVisible).filter(function(e){return (!rangeOnly||(e.number>=rangeOnly[0]&&e.number<=rangeOnly[1]))&&(!query||String(e.number).includes(query)||String(e.machine||'').toLowerCase().includes(query.toLowerCase()))});
+ var groups=new Map();
+ matched.forEach(function(e){var key=e.position_level==='unmapped'?'位置未確認':(e.corridor||e.zone||'所属未確認');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)});
+ $('listcount').textContent=matched.length+'台';var root=$('groups');root.replaceChildren();
+ Array.from(groups.keys()).sort(function(a,b){return a.localeCompare(b,'ja')}).forEach(function(key){
+  var rows=groups.get(key).sort(function(a,b){return (a.order??999)-(b.order??999)||a.number-b.number});
+  var section=document.createElement('div');section.className='seat-card';
+  var h=document.createElement('h3');h.textContent=key+'｜'+rows.length+'台';section.append(h);
+  var chips=document.createElement('div');chips.className='chips';
+  rows.forEach(function(e){var b=document.createElement('button');b.className='seat-chip '+(e.position_level==='on-site-row-order'?'field':e.position_level==='unmapped'?'none':'guide')+(selected===e.number?' chip-selected':'');b.textContent=e.number;b.title=tooltip(e.number);b.onclick=function(){choose(e.number)};chips.append(b)});section.append(chips);root.append(section);
+ });
+ if(!groups.size){var p=document.createElement('p');p.className='note';p.textContent='条件に合う台がありません';root.append(p)}
+}
+function renderRanges(){
+ var root=$('unmapped-ranges');if(!root||!inv)return;root.replaceChildren();
+ var title=document.createElement('h3');title.textContent='位置未確定の台番号帯（要照合）';root.append(title);
+ var p=document.createElement('p');p.className='caption';p.textContent='連番でも実店舗の隣接を保証しません。1F/2Fの表示は台番帯による仮の階候補です。';root.append(p);
+ var chips=document.createElement('div');chips.className='chips';
+ (inv.unmapped_ranges||[]).forEach(function(x){
+  var btn=document.createElement('button');btn.className='seat-chip';btn.style.minWidth='100px';
+  btn.textContent=(x.start===x.end?String(x.start):x.start+'–'+x.end)+' ('+x.count+') '+(x.floor_hint||'階不明')+'候補';
+  btn.onclick=function(){rangeOnly=[x.start,x.end];filter='unknown';$('filter').value='unknown';query='';$('search').value='';renderList();$('groups').scrollIntoView({behavior:'smooth',block:'start'})};
+  chips.append(btn);
+ });root.append(chips);
+}
+function renderArrangements(){
+ var root=$('arrangements');if(!root)return;root.replaceChildren();
+ var list=reported.filter(function(x){return x.floor===floor}).sort(function(a,b){return b.date.localeCompare(a.date)});
+ if(!list.length){var p=document.createElement('p');p.className='note';p.textContent='この階の照合記録を取得できていません';root.append(p);return}
+ list.forEach(function(x){
+  var section=document.createElement('div');section.className='arrange-card';
+  var head=document.createElement('strong');head.textContent=x.date+'｜'+x.label;section.append(head);
+  var p=document.createElement('p');p.className='numbers';p.textContent=(x.machine_numbers||[]).join('・');section.append(p);
+  var note=document.createElement('p');note.className='caption';note.textContent=x.kind==='vertical'?'取材上の縦列報告／席順未確定':x.kind==='horizontal'?'取材上の横列報告／席順未確定':'取材上のまとまり／席順未確定';section.append(note);
+  if(x.source_url){var a=document.createElement('a');a.href=x.source_url;a.textContent='報告元';a.target='_blank';a.rel='noopener noreferrer';section.append(a)}
+  root.append(section);
+ });
+}
+function loadHistoryForDay(date){
+ if(!date||date===latestDate){dayDate=latestDate;renderFloor();updateDateNote();return}
+ if(byHistoricalDate&&byHistoricalDate.has(date)){dayDate=date;renderFloor();updateDateNote();return}
+ if(historyLoading){historyLoading.then(function(){loadHistoryForDay(date)});return}
+ $('update').textContent='過去の台別実績を読み込み中…';
+ historyLoading=fetch('data/records.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error('台別実績 HTTP '+r.status);return r.json()}).then(function(rows){
+  if(!Array.isArray(rows))throw Error('実績の形式が不正です');
+  byHistoricalDate=new Map();
+  rows.forEach(function(r){if(!r.date||!Number.isFinite(Number(r.number)))return;var map=byHistoricalDate.get(r.date);if(!map){map=new Map();byHistoricalDate.set(r.date,map)}map.set(Number(r.number),r)});
+ }).finally(function(){historyLoading=null});
+ historyLoading.then(function(){dayDate=date;renderFloor();updateDateNote()}).catch(function(e){$('update').textContent='過去実績の取得失敗：'+e.message+'。最新日のみ表示中。'});
+}
+function updateDateNote(){
+ $('update').textContent='表示実績：'+(dayDate||'未取得')+'｜座席の所属確認：237台／現地申告の列順：65台。'
+ +(dayDate!==latestDate?'※現在の位置台帳を過去日に適用した参考表示（当日の実位置を保証しません）。':'')
+ +' 位置未登録：'+(inv?.unmapped_on_latest_date??'—')+'台。';
+}
+function initHistorySelect(){
+ var sel=$('historyDate');if(!sel)return;sel.replaceChildren();
+ function addDate(x){var o=document.createElement('option');o.value=x;o.textContent=x+(x===latestDate?'（最新）':'');sel.append(o)}
+ addDate(latestDate);
+ sel.value=latestDate;
+ fetch('data/summary.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(s){
+  if(!Array.isArray(s))return;
+  var dates=[...new Set(s.filter(function(x){return x.date&&x.date<=latestDate}).map(function(x){return x.date}))].sort().reverse();
+  if(!dates.includes(latestDate))dates.unshift(latestDate);
+  sel.replaceChildren();dates.forEach(addDate);sel.value=dayDate||latestDate;
+ }).catch(function(){/* latest date remains available */});
+ sel.onchange=function(){loadHistoryForDay(this.value)};
+}
+function renderFloor(){
+ $('floor1').classList.toggle('active',floor==='1F');$('floor2').classList.toggle('active',floor==='2F');
+ if(floor==='1F')draw1();else draw2();renderList();renderArrangements();
+}
+function syncGuide(){
+ var images={
+ '1F':{url:'https://pbs.twimg.com/media/HKxWSCUacAAU62Q.jpg',post:'https://x.com/Kitasenjusss/status/2066121201462968359'},
+ '2F':{url:'https://pbs.twimg.com/media/HH9JSkFaQAAZhHq.jpg',post:'https://x.com/Kitasenjusss/status/2053440543062147221'}
+ };
+ var source=images[floor],img=$('official-image');
+ if(img&&img.src!==source.url){img.src=source.url;img.alt='ピーアーク北千住SSS公式 '+floor+' フロア図';}
+ $('official-image-link').href=source.post;$('official-post-link').href=source.post;
+ $('official-caption').textContent=floor+'｜店舗公式X掲載のフロア図（別時点の資料。2026年11月現在の全台配置は未検証）';
+ var fr=$('guide-frame');
+ try{if(fr&&fr.contentDocument){var b=fr.contentDocument.getElementById(floor==='1F'?'btn1':'btn2');if(b)b.click()}}catch(e){}
+}
+function setView(mode){
+ viewMode=mode;
+ ['cells','guide','compare'].forEach(function(k){$('mode-'+k).classList.toggle('active',mode===k)});
+ $('cell-layout').hidden=mode==='guide';$('guide-layout').hidden=mode==='cells';
+ if(mode!=='cells')syncGuide();
+}
+['cells','guide','compare'].forEach(function(k){$('mode-'+k).onclick=function(){setView(k)}});
+$('guide-frame').addEventListener('load',syncGuide);
+function setFloor(f){floor=f;selected=null;renderFloor();syncGuide();$('detail').innerHTML='<h2>'+f+' の台番号を選択</h2><p class="note">位置と根拠の違いを区別して表示しています。</p>'}
+$('floor1').onclick=function(){setFloor('1F')};$('floor2').onclick=function(){setFloor('2F')};
+$('search').oninput=function(){rangeOnly=null;query=this.value.trim();if(/^\d+$/.test(query)&&byNumber.has(Number(query))){choose(Number(query))}else renderList()};
+$('filter').onchange=function(){rangeOnly=null;filter=this.value;renderList()};
+$('showall').onclick=function(){rangeOnly=null;filter='unknown';$('filter').value='unknown';renderList();$('groups').scrollIntoView({behavior:'smooth',block:'start'})};
+$('heat').onchange=function(){heat=this.checked;renderFloor()};
+$('zoomin').onclick=function(){zoom=Math.min(2.4,zoom+.2);map.style.width=Math.round(100*zoom)+'%';map.style.minWidth=Math.round(860*zoom)+'px'};
+$('zoomout').onclick=function(){zoom=Math.max(.7,zoom-.2);map.style.width=Math.round(100*zoom)+'%';map.style.minWidth=Math.round(860*zoom)+'px'};
+$('reset').onclick=function(){zoom=1;map.style.width='100%';map.style.minWidth='860px';$('search').value='';query='';selected=null;rangeOnly=null;filter='all';$('filter').value='all';heat=false;$('heat').checked=false;renderFloor()};
+fetch('data/floor_inventory.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error('inventory HTTP '+r.status);return r.json()}).then(function(data){
+ inv=data;seats=Array.isArray(data.seats)?data.seats:[];byNumber=new Map(seats.map(function(e){return [Number(e.number),e]}));
+ latestDate=dayDate=data.data_date||'';$('total').textContent=data.store_advertised_seat_count||451;$('observed').textContent=data.observed_seat_count??'—';$('mapped').textContent=data.registered_layout_seat_count??'—';$('field').textContent=data.observed_row_order_count??'—';
+ $('update').textContent='実績基準日：'+(data.data_date||'未取得')+'｜位置確認237台のうち座席順まで確認したのは銀65台。'+(data.unmapped_on_latest_date??'—')+'台は最新の台別実績にあるが島の位置未登録。';
+ renderFloor();renderRanges();initHistorySelect();updateDateNote();
+ }).catch(function(err){$('update').textContent='台帳の読込に失敗：'+err.message+'。新しいデプロイが終わっていない可能性があります。';renderFloor()});
+fetch('data/placement_evidence.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(data){reported=data.reported_arrangements||[];renderArrangements()}).catch(function(){reported=[];renderArrangements()});
+})();
+</script>
+</body></html>
