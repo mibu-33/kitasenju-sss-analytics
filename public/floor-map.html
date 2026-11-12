@@ -76,7 +76,7 @@ legend{display:block;font-size:.8rem}
 </div>
 <div class="modebar"><button id="mode-cells" class="active">台番セル図</button><button id="mode-guide">店舗公式フロア図</button><button id="mode-compare">公式図とセル図を比較</button></div>
 <div class="toolbar">
-<button id="floor1" class="active">1F</button><button id="floor2">2F</button>
+<button id="floor1" class="active">1F</button><button id="floor2">2F</button><label>営業日 <select id="historyDate"><option value="">最新日を読み込み中</option></select></label>
 <label><input type="checkbox" id="heat"> 差枚ヒートマップ</label>
 <input id="search" type="search" inputmode="numeric" placeholder="台番号・機種を検索">
 <button id="zoomout" title="縮小">−</button><button id="zoomin" title="拡大">＋</button>
@@ -119,7 +119,7 @@ legend{display:block;font-size:.8rem}
 <script>
 (function(){
 'use strict';
-var NS='http://www.w3.org/2000/svg',map=document.getElementById('map'),inv=null,seats=[],byNumber=new Map(),floor='1F',heat=false,zoom=1,selected=null,query='',filter='all',reported=[],rangeOnly=null;
+var NS='http://www.w3.org/2000/svg',map=document.getElementById('map'),inv=null,seats=[],byNumber=new Map(),floor='1F',heat=false,zoom=1,selected=null,query='',filter='all',reported=[],rangeOnly=null,dayDate='',latestDate='',byHistoricalDate=null,historyLoading=null;
 var $=id=>document.getElementById(id),viewMode='cells';
 var palette={silver:'#abb9c9',blue:'#8dc6f8',green:'#9bd695',red:'#eda4a1',purple:'#c8a9ee',gold:'#efd58d'};
 function svg(tag,props,txt){var n=document.createElementNS(NS,tag);Object.keys(props||{}).forEach(function(k){n.setAttribute(k,props[k])});if(txt!==undefined)n.textContent=String(txt);return n}
@@ -127,7 +127,12 @@ function add(p,tag,props,txt){var n=svg(tag,props,txt);p.appendChild(n);return n
 function rect(p,x,y,w,h,fill,stroke,dash,r){return add(p,'rect',{x:x,y:y,width:w,height:h,rx:r||5,fill:fill,stroke:stroke||'#526980','stroke-width':1.5,'stroke-dasharray':dash||'none'})}
 function text(p,x,y,v,cls,color){return add(p,'text',{x:x,y:y,class:cls||'group-small',fill:color||'#23394e'},v)}
 function groupFrame(x,y,w,h,name,fill,tag){var g=add(map,'g',{});rect(g,x,y,w,h,fill,'#7890a8',tag==='verified'?'none':'5 5',10);text(g,x+12,y+24,name,'group-caption');return g}
-function entry(number){return byNumber.get(Number(number))||{number:Number(number),position_level:'unmapped'}}
+function entry(number){
+ var n=Number(number),base=byNumber.get(n)||{number:n,position_level:'unmapped'};
+ if(!dayDate||dayDate===latestDate)return base;
+ var dayRows=byHistoricalDate?.get(dayDate),observed=dayRows?.get(n);
+ return {...base,machine:observed?.machine||null,diff:observed?.diff??null,games:observed?.games??null,recorded_for_date:observed?dayDate:null};
+}
 function tooltip(n){var e=entry(n);return n+'番｜'+(e.machine||'機種不明')+'｜'+(e.corridor||e.zone||'位置未確認')+'｜'+(e.position_level||'未登録')}
 function color(e){if(!heat)return palette[e.zone]||'#bdc8d6';var d=Number(e.diff);if(e.diff==null||!Number.isFinite(d))return '#a9b8c9';if(d>=3000)return '#c3a8fb';if(d>=1000)return '#ffc270';if(d>=0)return '#92e0b3';if(d>=-1000)return '#f6b3ac';return '#f27784'}
 function drawSeat(p,n,x,y,w,h,forced){var e=entry(n),g=add(p,'g',{class:'cell '+(e.position_level==='on-site-row-order'?'field':'')+(selected===n?' selected':''),tabindex:'0',role:'button','aria-label':tooltip(n)});
@@ -267,7 +272,7 @@ function isVisible(e){
  return e.position_level!=='unmapped';
 }
 function renderList(){
- var matched=seats.filter(isVisible).filter(function(e){return (!rangeOnly||(e.number>=rangeOnly[0]&&e.number<=rangeOnly[1]))&&(!query||String(e.number).includes(query)||String(e.machine||'').toLowerCase().includes(query.toLowerCase()))});
+ var matched=seats.map(function(e){return entry(e.number)}).filter(isVisible).filter(function(e){return (!rangeOnly||(e.number>=rangeOnly[0]&&e.number<=rangeOnly[1]))&&(!query||String(e.number).includes(query)||String(e.machine||'').toLowerCase().includes(query.toLowerCase()))});
  var groups=new Map();
  matched.forEach(function(e){var key=e.position_level==='unmapped'?'位置未確認':(e.corridor||e.zone||'所属未確認');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)});
  $('listcount').textContent=matched.length+'台';var root=$('groups');root.replaceChildren();
@@ -305,6 +310,36 @@ function renderArrangements(){
   root.append(section);
  });
 }
+function loadHistoryForDay(date){
+ if(!date||date===latestDate){dayDate=latestDate;renderFloor();updateDateNote();return}
+ if(byHistoricalDate&&byHistoricalDate.has(date)){dayDate=date;renderFloor();updateDateNote();return}
+ if(historyLoading){historyLoading.then(function(){loadHistoryForDay(date)});return}
+ $('update').textContent='過去の台別実績を読み込み中…';
+ historyLoading=fetch('data/records.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error('台別実績 HTTP '+r.status);return r.json()}).then(function(rows){
+  if(!Array.isArray(rows))throw Error('実績の形式が不正です');
+  byHistoricalDate=new Map();
+  rows.forEach(function(r){if(!r.date||!Number.isFinite(Number(r.number)))return;var map=byHistoricalDate.get(r.date);if(!map){map=new Map();byHistoricalDate.set(r.date,map)}map.set(Number(r.number),r)});
+ }).finally(function(){historyLoading=null});
+ historyLoading.then(function(){dayDate=date;renderFloor();updateDateNote()}).catch(function(e){$('update').textContent='過去実績の取得失敗：'+e.message+'。最新日のみ表示中。'});
+}
+function updateDateNote(){
+ $('update').textContent='表示実績：'+(dayDate||'未取得')+'｜座席の所属確認：237台／現地申告の列順：65台。'
+ +(dayDate!==latestDate?'※現在の位置台帳を過去日に適用した参考表示（当日の実位置を保証しません）。':'')
+ +' 位置未登録：'+(inv?.unmapped_on_latest_date??'—')+'台。';
+}
+function initHistorySelect(){
+ var sel=$('historyDate');if(!sel)return;sel.replaceChildren();
+ function addDate(x){var o=document.createElement('option');o.value=x;o.textContent=x+(x===latestDate?'（最新）':'');sel.append(o)}
+ addDate(latestDate);
+ sel.value=latestDate;
+ fetch('data/summary.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(s){
+  if(!Array.isArray(s))return;
+  var dates=[...new Set(s.filter(function(x){return x.date&&x.date<=latestDate}).map(function(x){return x.date}))].sort().reverse();
+  if(!dates.includes(latestDate))dates.unshift(latestDate);
+  sel.replaceChildren();dates.forEach(addDate);sel.value=dayDate||latestDate;
+ }).catch(function(){/* latest date remains available */});
+ sel.onchange=function(){loadHistoryForDay(this.value)};
+}
 function renderFloor(){
  $('floor1').classList.toggle('active',floor==='1F');$('floor2').classList.toggle('active',floor==='2F');
  if(floor==='1F')draw1();else draw2();renderList();renderArrangements();
@@ -340,9 +375,9 @@ $('zoomout').onclick=function(){zoom=Math.max(.7,zoom-.2);map.style.width=Math.r
 $('reset').onclick=function(){zoom=1;map.style.width='100%';map.style.minWidth='860px';$('search').value='';query='';selected=null;rangeOnly=null;filter='all';$('filter').value='all';heat=false;$('heat').checked=false;renderFloor()};
 fetch('data/floor_inventory.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error('inventory HTTP '+r.status);return r.json()}).then(function(data){
  inv=data;seats=Array.isArray(data.seats)?data.seats:[];byNumber=new Map(seats.map(function(e){return [Number(e.number),e]}));
- $('total').textContent=data.store_advertised_seat_count||451;$('observed').textContent=data.observed_seat_count??'—';$('mapped').textContent=data.registered_layout_seat_count??'—';$('field').textContent=data.observed_row_order_count??'—';
+ latestDate=dayDate=data.data_date||'';$('total').textContent=data.store_advertised_seat_count||451;$('observed').textContent=data.observed_seat_count??'—';$('mapped').textContent=data.registered_layout_seat_count??'—';$('field').textContent=data.observed_row_order_count??'—';
  $('update').textContent='実績基準日：'+(data.data_date||'未取得')+'｜位置確認237台のうち座席順まで確認したのは銀65台。'+(data.unmapped_on_latest_date??'—')+'台は最新の台別実績にあるが島の位置未登録。';
- renderFloor();renderRanges();
+ renderFloor();renderRanges();initHistorySelect();updateDateNote();
  }).catch(function(err){$('update').textContent='台帳の読込に失敗：'+err.message+'。新しいデプロイが終わっていない可能性があります。';renderFloor()});
 fetch('data/placement_evidence.json?t='+Date.now()).then(function(r){if(!r.ok)throw Error(r.status);return r.json()}).then(function(data){reported=data.reported_arrangements||[];renderArrangements()}).catch(function(){reported=[];renderArrangements()});
 })();
