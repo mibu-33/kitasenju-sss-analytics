@@ -71,9 +71,10 @@
   ],
   "warning": "2026-11-12台帳：237台に色・所属が登録され、うち180台がグループ（列・円卓）まで判明。銀65台は現地申告の列順あり。その他の実際の隣接・向き・座標は未確認。古いガイドの幾何形状を現況確定としない。",
   "color_identified_seats": 237,
-  "color_only_secondary_seats": 63,
+  "color_only_secondary_seats": 50,
   "on_site_row_order_seats": 65,
   "group_membership_without_order": 115,
   "color_only_and_no_corridor": 57,
-  "map_geometry_status": "schematic: physical seat coordinates not verified; only silver rows have user-reported relative order"
+  "map_geometry_status": "schematic: physical seat coordinates not verified; only silver rows have user-reported relative order",
+  "secondary_color_seats_reclassified_to_field_order": 13
 }
