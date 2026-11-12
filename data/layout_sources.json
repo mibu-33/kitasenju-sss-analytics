@@ -1,7 +1,7 @@
 {
-  "updated_on": "2026-11-04",
+  "updated_on": "2026-11-12",
   "total_seats": 451,
-  "area_mapped_seats": 103,
+  "area_mapped_seats": 180,
   "corroborated_seats": 26,
   "user_image_only_seats": 77,
   "evidence": [
@@ -69,7 +69,11 @@
     "2F 金の正確な島区分（色だけを確認した36台＋新規7台のうち円卓位置未確認7台あり）",
     "すべての島内の物理的な連続順序"
   ],
-  "warning": "103台はフロア画像で色・ブロックまで確認。追加63台は取材記事で色のみ明記。現在位置、並び順および過去からの配置継続は未検証。",
-  "color_identified_seats": 173,
-  "color_only_secondary_seats": 63
+  "warning": "2026-11-12台帳：237台に色・所属が登録され、うち180台がグループ（列・円卓）まで判明。銀65台は現地申告の列順あり。その他の実際の隣接・向き・座標は未確認。古いガイドの幾何形状を現況確定としない。",
+  "color_identified_seats": 237,
+  "color_only_secondary_seats": 63,
+  "on_site_row_order_seats": 65,
+  "group_membership_without_order": 115,
+  "color_only_and_no_corridor": 57,
+  "map_geometry_status": "schematic: physical seat coordinates not verified; only silver rows have user-reported relative order"
 }
