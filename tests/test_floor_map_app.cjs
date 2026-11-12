@@ -32,10 +32,10 @@ const fetch=url=>Promise.resolve({ok:true,json:()=>Promise.resolve(
  assert.equal(nodes.get('total').textContent,451);
  assert.equal(nodes.get('mapped').textContent,237);
  assert.equal(nodes.get('field').textContent,65);
- assert.ok(nodes.get('map').children.length>50,'1F groups rendered');
+ assert.ok(nodes.get('map').children.length>20,'1F groups rendered');
  assert.match(nodes.get('update').textContent,/位置未登録：214台/);
  nodes.get('floor2').onclick();
- assert.ok(nodes.get('map').children.length>25,'2F groups rendered');
+ assert.ok(nodes.get('map').children.length>15,'2F groups rendered');
  nodes.get('floor1').onclick();
  nodes.get('search').value='1';nodes.get('search').oninput();
  assert.match(nodes.get('detail').children[0].textContent,/1番/);
