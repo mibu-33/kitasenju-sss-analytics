@@ -1141,5 +1141,14 @@
     "wins": 176,
     "count": 451,
     "source": "slo-navi-derived"
+  },
+  {
+    "date": "2026-11-12",
+    "avg_diff": 64.1,
+    "avg_games": 3165.3,
+    "win_rate": 36.36,
+    "wins": 164,
+    "count": 451,
+    "source": "slo-navi-derived"
   }
 ]
