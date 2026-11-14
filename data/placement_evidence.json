@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-11-04",
+  "as_of_date": "2026-11-14",
   "store": "ピーアーク北千住SSS",
   "total_seats": 451,
   "current_inventory_source": "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
@@ -483,6 +483,67 @@
       "provenance": "secondary-compiled-after-report",
       "physical_seat_order_verified": false,
       "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+    },
+    {
+      "id": "2026-11-06-silver-column",
+      "date": "2026-11-06",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・縦列①",
+      "machine_numbers": [
+        9,
+        28,
+        43,
+        59
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-summarized-2026-11-06-answer-check",
+      "confidence": "medium-reported-column-group-not-direct-physical-seat-map",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-06の取材答え合わせに列仕掛けとして掲載。色・同一縦列の関係を記録。個別座席の座標や隣接順は未確定。"
+    },
+    {
+      "id": "2026-11-06-red-column",
+      "date": "2026-11-06",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・縦列②",
+      "machine_numbers": [
+        118,
+        133,
+        148,
+        155,
+        170,
+        185,
+        198,
+        211,
+        226
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-summarized-2026-11-06-answer-check",
+      "confidence": "medium-reported-column-group-not-direct-physical-seat-map",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-06の取材答え合わせに列仕掛けとして掲載。色・同一縦列の関係を記録。個別座席の座標や隣接順は未確定。"
+    },
+    {
+      "id": "2026-11-06-gold-column",
+      "date": "2026-11-06",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・縦列③",
+      "machine_numbers": [
+        605,
+        619,
+        629
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-summarized-2026-11-06-answer-check",
+      "confidence": "medium-reported-column-group-not-direct-physical-seat-map",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-06の取材答え合わせに列仕掛けとして掲載。色・同一縦列の関係を記録。個別座席の座標や隣接順は未確定。"
     }
   ],
   "roundtable_groups": [
@@ -634,13 +695,12 @@
     "新台入替後の配置有効期間"
   ],
   "last_research_cycle": {
-    "date": "2026-11-05",
+    "date": "2026-11-14",
     "new_sources": [
-      "user-provided 2F on-site photo observed 2026-11-04",
-      "repository README previous machine-number inventory",
+      "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
       "https://www.p-world.co.jp/tokyo/kitasenjusss.htm"
     ],
-    "results": "Corrected 2F machine labels: 12-seat circle 東京喰種, 4-seat circle 1 からくりサーカス2, 4-seat circle 2 ヴァルヴレイヴ2. P-WORLD last updated 2026-11-04 and confirms 451 slots, no newly verified individual seat positions."
+    "results": "Added three reported 2026-11-06 vertical column groups (silver, red, gold). Existing gold 659-672 horizontal group corroborated by 2026-11-06 report, but no physical seat order established. No new verified official numbered floor map."
   },
   "floor_map_photo_observations": [
     {
