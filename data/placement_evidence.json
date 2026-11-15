@@ -134,7 +134,14 @@
       "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
       "provenance": "secondary-compiled-after-report",
       "physical_seat_order_verified": false,
-      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。",
+      "followup_column_identification": {
+        "date": "2026-11-11",
+        "label": "赤・メイン通路側4列目",
+        "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+        "confidence": "medium-repeated-same-number-group-with-explicit-column-index",
+        "seat_order_verified": false
+      }
     },
     {
       "id": "2026-09-12-gold-column",
@@ -151,7 +158,14 @@
       "source_url": "https://note.com/akb_sss_shisa/n/na70db37e6fda",
       "provenance": "secondary-compiled-after-report",
       "physical_seat_order_verified": false,
-      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。"
+      "notes": "取材結果に掲載された同一列・連番。列内の左右・正確な席順を証明するものではない。",
+      "followup_column_identification": {
+        "date": "2026-11-11",
+        "label": "金・トイレ階段側10列目",
+        "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+        "confidence": "medium-repeated-same-number-group-with-explicit-column-index",
+        "seat_order_verified": false
+      }
     },
     {
       "id": "2026-09-22-gold-stairs-4",
@@ -544,6 +558,93 @@
       "confidence": "medium-reported-column-group-not-direct-physical-seat-map",
       "physical_seat_order_verified": false,
       "notes": "2026-11-06の取材答え合わせに列仕掛けとして掲載。色・同一縦列の関係を記録。個別座席の座標や隣接順は未確定。"
+    },
+    {
+      "id": "2026-11-10-red-horizontal-141",
+      "date": "2026-11-10",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "horizontal",
+      "label": "赤・141〜151番の横列",
+      "machine_numbers": [
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-10取材答え合わせの明示的な横列/縦列記載。列内の座席順・座標・現在の設置を保証しない。"
+    },
+    {
+      "id": "2026-11-10-gold-horizontal-732",
+      "date": "2026-11-10",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "horizontal",
+      "label": "金・732〜741番の横列",
+      "machine_numbers": [
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        740,
+        741
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-10取材答え合わせの明示的な横列/縦列記載。列内の座席順・座標・現在の設置を保証しない。"
+    },
+    {
+      "id": "2026-11-10-silver-vertical-10",
+      "date": "2026-11-10",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・10/27/44の縦列",
+      "machine_numbers": [
+        10,
+        27,
+        44
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-10取材答え合わせの明示的な横列/縦列記載。列内の座席順・座標・現在の設置を保証しない。"
+    },
+    {
+      "id": "2026-11-10-gold-vertical-610",
+      "date": "2026-11-10",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・610/614/631の縦列",
+      "machine_numbers": [
+        610,
+        614,
+        631
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-10取材答え合わせの明示的な横列/縦列記載。列内の座席順・座標・現在の設置を保証しない。"
     }
   ],
   "roundtable_groups": [
@@ -695,12 +796,12 @@
     "新台入替後の配置有効期間"
   ],
   "last_research_cycle": {
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "new_sources": [
       "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
       "https://www.p-world.co.jp/tokyo/kitasenjusss.htm"
     ],
-    "results": "Added three reported 2026-11-06 vertical column groups (silver, red, gold). Existing gold 659-672 horizontal group corroborated by 2026-11-06 report, but no physical seat order established. No new verified official numbered floor map."
+    "results": "Added four 2026-11-10 explicitly reported row/column groups; corroborated 2026-09-12 red and gold groups with explicit 2026-11-11 column indices 4 and 10. P-WORLD updated 2026-11-14 and reports 451 machines but no complete numbered seating diagram. No seat coordinates inferred."
   },
   "floor_map_photo_observations": [
     {
