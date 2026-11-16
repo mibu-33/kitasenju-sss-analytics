@@ -129,7 +129,9 @@ function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
  if(labelPos){
   const label=document.createElementNS(NS,'text'),r=dayRow(n);
   const textVal=machine(r,n);
-  for(const [k,v] of Object.entries({x:x+w/2,y:labelPos==='top'?y-2:y+h+5.2,'text-anchor':'middle','font-size':Math.max(3.3,Math.min(4.4,w*.22)),fill:'#525a67'}))label.setAttribute(k,v);
+  const labelSize=Math.max(3.2,Math.min(4.4,w*.22));
+  for(const [k,v] of Object.entries({x:x+w/2,y:labelPos==='top'?y-2:y+h+5.2,'text-anchor':'middle','font-size':labelSize,fill:'#525a67'}))label.setAttribute(k,v);
+  if([...textVal].length*labelSize>w-1){label.setAttribute('textLength',Math.max(1,w-1));label.setAttribute('lengthAdjust','spacingAndGlyphs')}
   label.textContent=textVal;g.appendChild(label);
  }
  const title=document.createElementNS(NS,'title');const info=dayRow(n);title.textContent=n+'番 '+(info?.machine||'')+' '+(info?.diff??'');g.appendChild(title);
@@ -177,7 +179,8 @@ function drawVertical(b){
   box(labelX+.2,ypos+.2,labelW-.4,cellH-.35,'#fae8d7','#d6c6b8',.1,.17);
   emitSeat(n,numX,ypos+.2,numW-.3,cellH-.35,zone,null);
   const r=dayRow(n);
-  txt(labelX+labelW/2,ypos+cellH/2+1.6,machine(r,n),3.8,'#4e5260',550);
+  const label=machine(r,n);const node=txt(labelX+labelW/2,ypos+cellH/2+1.6,label,3.8,'#4e5260',550);
+  if([...label].length*3.8>labelW-1){node.setAttribute('textLength',Math.max(1,labelW-1));node.setAttribute('lengthAdjust','spacingAndGlyphs')}
  });
 }
 function drawMarkers(){
