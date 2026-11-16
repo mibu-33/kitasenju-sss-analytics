@@ -48,6 +48,8 @@ jobs:
         run: |
           node --check public/sss-unified-ui.js
           node tests/test_unified_ui.cjs
+      - name: Validate machine-name to number reconciliation
+        run: node tests/test_machine_labels.cjs
       - name: Validate fallback parser
         run: |
           python -m pip install -q pytest
