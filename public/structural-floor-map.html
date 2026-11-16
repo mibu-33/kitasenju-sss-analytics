@@ -22,7 +22,7 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 @media(max-width:950px){.workspace{grid-template-columns:1fr}.canvas-wrap{max-height:70vh}}
 </style></head><body>
 <header><h1>北千住SSS｜11月13日参考図から再構成した島図</h1>
-<nav><a href="index.html">全体分析</a><a href="nov13-map.html">元図と照合</a><a href="morning.html">朝の仕掛け</a><a href="https://mibu-33.github.io/jaran-mizumoto/" target="_blank" rel="noopener">ジャラン水元</a></nav></header>
+<nav><a href="index.html">全体分析</a><a href="nov13-map.html">元図と照合</a><a href="morning.html">朝の仕掛け</a></nav></header>
 <main><div class="sss-datebar" aria-label="表示日を切り替える"><button id="sss-prev" type="button" aria-label="前の営業日">‹</button><button id="sss-date-label" type="button" aria-label="日付を選択">—</button><button id="sss-next" type="button" aria-label="次の営業日">›</button><span id="sss-data-freshness" class="sss-freshness">データを確認中</span></div><section id="sss-kpis" class="sss-kpis" aria-label="当日実績サマリー"><div class="sss-kpi">総差枚<strong>—</strong></div><div class="sss-kpi">平均差枚<strong>—</strong></div><div class="sss-kpi">稼働台数<strong>—</strong></div><div class="sss-kpi">プラス台<strong>—</strong></div><div class="sss-kpi">平均G<strong>—</strong></div></section><div class="warning">
 画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。11/13参考図にある691番と最新実績台帳の601番は異なるため、601番に架空の位置は割り当てていません。島の向き・寸法は継続照合対象です。
 </div>
@@ -293,4 +293,4 @@ Promise.all([
  zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/687));apply();
 }).catch(e=>{$('status').textContent='島図データ読込失敗：'+e.message});
 })();
-</script><script src="sss-unified-ui.js"></script></body></html>
+</script><script src="sss-unified-ui.js"></script><script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script></body></html>
