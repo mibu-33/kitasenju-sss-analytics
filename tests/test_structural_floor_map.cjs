@@ -15,7 +15,10 @@ const doc={
  getElementById(id){if(!nodes.has(id))nodes.set(id,node('div',id));return nodes.get(id)},
  createElementNS(ns,k){return node(k)},createElement(k){return node(k)}
 };
-const fetch=async u=>({ok:true,json:async()=>u.includes('floor_inventory')?reg:[]});
+const previousDate='2026-11-14';
+const past=[{date:previousDate,number:612,machine:'過去テスト機種',diff:1234,games:4567}];
+const summaries=[{date:reg.data_date},{date:previousDate}];
+const fetch=async u=>({ok:true,json:async()=>u.includes('floor_inventory')?reg:u.includes('summary.json')?summaries:u.includes('records.json')?past:[]});
 async function tick(){await new Promise(r=>setImmediate(r));}
 (async()=>{
  vm.runInNewContext(m[1],{document:doc,fetch,console});
@@ -60,5 +63,14 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  assert.match(nodes.get('detail').children[0].textContent,/612番/);
  nodes.get('heat').onchange({target:{checked:true}});
  assert.equal(collect().length,451);
- console.log('PASS: 451 independent SVG cells, verified full seat coverage, 1F/2F, search, and heatmap');
+ // Historical dates must never fall back to the latest day's result when absent.
+ nodes.get('date').value=previousDate;await nodes.get('date').onchange();await tick();
+ nodes.get('query').value='87';nodes.get('find').onclick();
+ assert.ok(nodes.get('detail').children.some(x=>String(x.textContent).includes('差枚：未取得')),'no latest-day leakage on historical missing seat');
+ nodes.get('query').value='612';nodes.get('find').onclick();
+ assert.ok(nodes.get('detail').children.some(x=>String(x.textContent).includes('差枚：+1,234枚')),'historical result attached by seat and date');
+ nodes.get('scroll').clientWidth=340;nodes.get('fit').onclick();
+ assert.ok(parseInt(nodes.get('map').style.width,10)<=340,'fit-to-width works on a phone');
+ assert.equal(collect().length,451,'all cells remain after date and responsive zoom');
+ console.log('PASS: 451 cells, 1F/2F, search, date-isolated heatmap and mobile fit');
 })().catch(e=>{console.error(e);process.exitCode=1});
