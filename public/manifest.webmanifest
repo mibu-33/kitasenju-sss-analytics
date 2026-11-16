@@ -1,1 +1,10 @@
-{"name":"北千住SSS Analytics","short_name":"SSS分析","start_url":"./","display":"standalone","background_color":"#091222","theme_color":"#0d172b"}
+{
+  "name": "ピーアーク北千住SSS 島図・分析",
+  "short_name": "北千住SSS",
+  "start_url": "./floor-map.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a1423",
+  "theme_color": "#142840",
+  "description": "北千住SSSの島図・日別差枚・期間強弱・機種比較"
+}
