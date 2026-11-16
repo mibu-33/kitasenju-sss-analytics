@@ -64,3 +64,9 @@ main{max-width:1500px}
 .sss-bottom-nav a.selected{color:#fff;background:#315b82}
 @media(max-width:950px){.sss-datebar{top:50px}.sss-kpis{gap:4px}.sss-kpi{padding:7px 6px;font-size:9px}.sss-kpi strong{font-size:13px}.sss-modes{padding:10px}.sss-mode-head{min-width:100%}.sss-mode-buttons{min-width:0}.sss-modes .sss-mode{flex:1;min-width:57px;padding:7px 6px}.sss-freshness{display:none}.sss-datebar{min-width:215px;justify-content:center}.sss-analysis{padding:10px}header nav{gap:9px}}
 @media(max-width:520px){.sss-data-table{font-size:11px}.sss-data-table th,.sss-data-table td{padding:7px 7px}.sss-analysis-head h2{font-size:14px}.sss-bottom-nav a{font-size:11px}.sss-kpi strong{font-size:12px}.sss-mode-buttons{gap:3px}#sss-range{max-width:85px}}
+
+.sss-audit-panel{background:#142638;border:1px solid #40637a;border-radius:11px;margin:13px 0;padding:11px 13px}
+.sss-audit-panel summary{cursor:pointer;font-size:13px;font-weight:750}
+#sss-machine-audit-count{display:inline-block;margin-left:8px;font-size:11px;color:#a2e1c4}
+.sss-audit-panel .sss-audit-warning{color:#f6be80}
+.sss-audit-panel .sss-table-wrap{max-height:270px}
