@@ -11,7 +11,7 @@ button,input,select{font:inherit;background:#1d3652;color:#f1f6ff;border:1px sol
 button{cursor:pointer}button.active{background:#3c7599;border-color:#a4d3ff}
 input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px}
 .canvas-wrap{overflow:auto;max-height:81vh;border:1px solid #6381a0;border-radius:11px;background:#d8dfe9}
-#map{display:block;min-width:970px;width:100%;height:auto;user-select:none}
+#map{display:block;min-width:0;width:100%;height:auto;user-select:none}
 .s{cursor:pointer;outline:none}.s:hover .cell,.s:focus .cell{stroke:#d7293e;stroke-width:1.6}.s.selected .cell{stroke:#f21734;stroke-width:2}
 .s text{pointer-events:none}.light{fill:#edf4fa}.dark{fill:#263d51}
 .detail{background:#14273c;padding:14px;border:1px solid #3d5772;border-radius:11px;min-height:230px}
@@ -24,7 +24,7 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 <header><h1>北千住SSS｜11月13日参考図から再構成した島図</h1>
 <nav><a href="index.html">分析トップ</a><a href="nov13-map.html">元図と照合</a><a href="morning.html">朝の仕掛け</a></nav></header>
 <main><div class="warning">
-画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。再現精度は現地測量ではなく、台番号や列の向きは参考図との継続照合対象です。
+画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。11/13参考図にある691番と最新実績台帳の601番は異なるため、601番に架空の位置は割り当てていません。島の向き・寸法は継続照合対象です。
 </div>
 <div class="toolbar">
 <button id="all" class="active">全体</button><button id="first">1F</button><button id="second">2F</button>
@@ -108,6 +108,7 @@ function box(x,y,w,h,fill,stroke='#aab6c1',rx=2,sw=.75){return el('rect',{x,y,wi
 function txt(x,y,s,fs=5.7,fill='#3e4856',weight=600,anchor='middle'){return el('text',{x,y,'font-size':fs,fill,'font-weight':weight,'text-anchor':anchor},s)}
 function machine(row){if(!row?.machine)return '';const v=String(row.machine);const synonyms=[['マギアレコード','まどマギ'],['東京喰種','喰種'],['ヴァルヴレイヴ','ヴヴヴ'],['からくりサーカス','からくり'],['スマスロ',''],['モンスターハンター','モンハン'],['アイムジャグラー','アイム'],['ファンキージャグラー','ファンキー'],['ゴーゴージャグラー','ゴージャグ'],['沖ドキ','沖ドキ']];for(const [a,b] of synonyms)if(v.includes(a))return b;return [...v].slice(0,5).join('')}
 function current(){return daily.get(currentDate)||new Map()}
+function dayRow(n){const r=current().get(n);return r||(currentDate===latest?inventory.get(n):null)}
 function seatFill(id,zone){if(!heat)return '#526171';const r=current().get(id);if(r?.diff==null)return'#aebac7';const d=Number(r.diff);return d>=3000?'#c2a5ed':d>=1000?'#ffc36f':d>=0?'#90d6af':'#f3a2a7'}
 function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
  if(n==null)return;
@@ -121,12 +122,12 @@ function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
  for(const [k,v] of Object.entries({x:x+w/2,y:y+h/2+2,'text-anchor':'middle','font-size':Math.min(5.7,w*.35),'font-weight':750,fill:heat?'#233446':'#ffffff'}))number.setAttribute(k,v);
  number.textContent=String(n);g.appendChild(number);
  if(labelPos){
-  const label=document.createElementNS(NS,'text'),r=current().get(n)||inventory.get(n);
+  const label=document.createElementNS(NS,'text'),r=dayRow(n);
   const textVal=machine(r);
   for(const [k,v] of Object.entries({x:x+w/2,y:labelPos==='top'?y-2:y+h+5.2,'text-anchor':'middle','font-size':Math.max(3.3,Math.min(4.4,w*.22)),fill:'#525a67'}))label.setAttribute(k,v);
   label.textContent=textVal;g.appendChild(label);
  }
- const title=document.createElementNS(NS,'title');const info=current().get(n)||inventory.get(n);title.textContent=n+'番 '+(info?.machine||'')+' '+(info?.diff??'');g.appendChild(title);
+ const title=document.createElementNS(NS,'title');const info=dayRow(n);title.textContent=n+'番 '+(info?.machine||'')+' '+(info?.diff??'');g.appendChild(title);
  const callback=()=>choose(n,false);g.addEventListener('click',callback);g.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();callback()}});
 }
 function drawBand(b){
@@ -162,7 +163,7 @@ function drawVertical(b){
   const labelX=x+(numberSide==='left'?numW:0),labelW=width-numW;
   box(labelX+.2,ypos+.2,labelW-.4,cellH-.35,'#fae8d7','#d6c6b8',.1,.17);
   emitSeat(n,numX,ypos+.2,numW-.3,cellH-.35,zone,null);
-  const r=current().get(n)||inventory.get(n);
+  const r=dayRow(n);
   txt(labelX+labelW/2,ypos+cellH/2+1.6,machine(r),3.8,'#4e5260',550);
  });
 }
@@ -233,9 +234,10 @@ function choose(n,move=true){
   const target=markers.find(x=>x.n===n)||layout.find(b=>b.rows?.some(a=>a.includes(n))||b.arr?.includes(n));
   if(target&&floor!=='ALL'){floor='ALL';apply()}
  }
- const a=seats.get(n),r=current().get(n)||inventory.get(n),panel=$('detail');panel.replaceChildren();selected=n;apply();
+ const a=seats.get(n),r=dayRow(n),panel=$('detail');panel.replaceChildren();selected=n;apply();
  const h=document.createElement('h2');h.textContent=n+'番｜'+(r?.machine||'機種未取得');panel.append(h);
  [['対象',a?.zone||'島不明'],['営業日',currentDate],['差枚',r?.diff==null?'未取得':(r.diff>0?'+':'')+Number(r.diff).toLocaleString()+'枚'],['回転数',r?.games==null?'未取得':Number(r.games).toLocaleString()+'G'],['位置基準','11月13日掲載のフロア構造を基に再構築']].forEach(([k,v])=>{const p=document.createElement('p');p.textContent=k+'：'+v;panel.append(p)});
+ if(!a){const warn=document.createElement('p');warn.textContent='参考図にこの台番号の位置は未登録です。勝手に座標を割り当てていません。';panel.append(warn)}
  if(move&&a){viewport.scrollLeft=Math.max(0,(a.x+a.w/2)*zoom-viewport.clientWidth/2);viewport.scrollTop=Math.max(0,(a.y+a.h/2-(floor==='2F'?343:0))*zoom-viewport.clientHeight/2)}
 }
 async function loadHistory(){if(historyLoaded)return;const r=await fetch('data/records.json?t='+Date.now());if(!r.ok)throw Error('履歴HTTP '+r.status);const all=await r.json();all.forEach(x=>{if(!x.date)return;let day=daily.get(x.date);if(!day){day=new Map();daily.set(x.date,day)}day.set(Number(x.number),x)});historyLoaded=true}
@@ -246,8 +248,8 @@ function fillDates(summary){
 }
 function floorSet(f){floor=f;selected=null;apply();viewport.scrollTop=viewport.scrollLeft=0}
 $('all').onclick=()=>floorSet('ALL');$('first').onclick=()=>floorSet('1F');$('second').onclick=()=>floorSet('2F');
-$('less').onclick=()=>{zoom=Math.max(.65,zoom/1.2);apply()};$('more').onclick=()=>{zoom=Math.min(4,zoom*1.2);apply()};
-$('fit').onclick=()=>{zoom=Math.max(.65,Math.min(1.8,(viewport.clientWidth-20)/687));apply()};
+$('less').onclick=()=>{zoom=Math.max(.25,zoom/1.2);apply()};$('more').onclick=()=>{zoom=Math.min(4,zoom*1.2);apply()};
+$('fit').onclick=()=>{zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/687));apply()};
 $('find').onclick=()=>choose($('query').value);
 $('query').onkeydown=e=>{if(e.key==='Enter')choose($('query').value)};
 $('heat').onchange=e=>{heat=e.target.checked;apply()};
@@ -258,7 +260,7 @@ Promise.all([
  inventory=new Map(v.seats.map(x=>[Number(x.number),x]));latest=currentDate=v.data_date;
  daily.set(latest,new Map(v.seats.filter(x=>x.recorded_for_date===latest).map(x=>[Number(x.number),x])));
  fillDates(summary);
- zoom=Math.max(.7,Math.min(1.8,(viewport.clientWidth-20)/687));apply();
+ zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/687));apply();
 }).catch(e=>{$('status').textContent='島図データ読込失敗：'+e.message});
 })();
 </script></body></html>
