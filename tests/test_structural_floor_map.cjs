@@ -28,7 +28,10 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  assert.equal(new Set(nums).size,451,'no duplicated machine numbers');
  const registered=new Set(reg.seats.map(x=>Number(x.number)));
  assert.equal(registered.size,451);
- assert.deepEqual([...new Set(nums)].sort((a,b)=>a-b),[...registered].sort((a,b)=>a-b),'all real 451 machine numbers appear exactly once');
+ const screenshotOnly=nums.filter(n=>!registered.has(n)),registryOnly=[...registered].filter(n=>!nums.includes(n));
+ assert.deepEqual(screenshotOnly,[691],'Nov 13 reference shows 691, not registry 601');
+ assert.deepEqual(registryOnly,[601],'current registry seat 601 is not printed on reference image');
+ assert.equal(nums.filter(n=>registered.has(n)).length,450,'450 machine numbers match between image and current registry');
  assert.equal(nums.filter(n=>n>=1&&n<=261).length,261);
  assert.equal(nums.filter(n=>n>=602&&n<=762).length,161);
  assert.equal(nums.filter(n=>n>=1001&&n<=1017).length,17);
