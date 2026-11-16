@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101a2c"><title>トリエス｜構造再現 島図</title>
+<meta name="theme-color" content="#101a2c"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="sss-unified-ui.css"><title>トリエス｜構造再現 島図</title>
 <style>
 :root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#0a1423;color:#edf5ff}
 *{box-sizing:border-box}body{margin:0}header{padding:15px max(14px,calc((100% - 1350px)/2));background:#142840;border-bottom:1px solid #3d5874}
@@ -22,23 +22,23 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 @media(max-width:950px){.workspace{grid-template-columns:1fr}.canvas-wrap{max-height:70vh}}
 </style></head><body>
 <header><h1>北千住SSS｜11月13日参考図から再構成した島図</h1>
-<nav><a href="index.html">分析トップ</a><a href="nov13-map.html">元図と照合</a><a href="morning.html">朝の仕掛け</a></nav></header>
-<main><div class="warning">
+<nav><a href="index.html">全体分析</a><a href="nov13-map.html">元図と照合</a><a href="morning.html">朝の仕掛け</a><a href="https://mibu-33.github.io/jaran-mizumoto/" target="_blank" rel="noopener">ジャラン水元</a></nav></header>
+<main><div class="sss-datebar" aria-label="表示日を切り替える"><button id="sss-prev" type="button" aria-label="前の営業日">‹</button><button id="sss-date-label" type="button" aria-label="日付を選択">—</button><button id="sss-next" type="button" aria-label="次の営業日">›</button><span id="sss-data-freshness" class="sss-freshness">データを確認中</span></div><section id="sss-kpis" class="sss-kpis" aria-label="当日実績サマリー"><div class="sss-kpi">総差枚<strong>—</strong></div><div class="sss-kpi">平均差枚<strong>—</strong></div><div class="sss-kpi">稼働台数<strong>—</strong></div><div class="sss-kpi">プラス台<strong>—</strong></div><div class="sss-kpi">平均G<strong>—</strong></div></section><div class="warning">
 画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。11/13参考図にある691番と最新実績台帳の601番は異なるため、601番に架空の位置は割り当てていません。島の向き・寸法は継続照合対象です。
 </div>
-<div class="toolbar">
+<section class="sss-modes"><div class="sss-mode-head"><strong>差枚・強弱の表示</strong><span id="sss-mode-sub" class="small">当日の台別差枚</span></div><div class="sss-mode-buttons" role="group" aria-label="表示モード"><button class="sss-mode active" type="button" data-sss-mode="day">当日差枚</button><button class="sss-mode" type="button" data-sss-mode="range">期間強弱</button><button class="sss-mode" type="button" data-sss-mode="3">3の日</button><button class="sss-mode" type="button" data-sss-mode="6">6の日</button><button class="sss-mode" type="button" data-sss-mode="0">0の日</button></div><label>集計期間 <select id="sss-range"><option value="7">7日</option><option value="14">14日</option><option value="30" selected>30日</option><option value="60">60日</option><option value="90">90日</option><option value="180">180日</option><option value="365">365日</option><option value="0">全期間</option></select></label><div id="sss-rank-summary" class="sss-rank-summary small"></div></section><div class="toolbar">
 <button id="all" class="active">全体</button><button id="first">1F</button><button id="second">2F</button>
 <button id="less">縮小 −</button><button id="more">拡大 ＋</button><button id="fit">幅に合わせる</button>
 <label>台番号 <input id="query" type="search" inputmode="numeric" placeholder="例 612"></label><button id="find">検索</button>
 <label>営業日 <select id="date"><option>読み込み中</option></select></label>
-<label><input id="heat" type="checkbox"> 差枚ヒートマップ</label>
+<label class="sss-legacy-heat"><input id="heat" type="checkbox"> 差枚ヒートマップ</label><button id="sss-export" type="button">表示日のCSV</button>
 </div>
 <div class="workspace">
 <section><div class="canvas-wrap" id="scroll"><svg id="map" viewBox="0 0 687 678" role="img" aria-label="1Fと2Fの正確な台列順を重視した編集可能なセル式フロア図" xmlns="http://www.w3.org/2000/svg"></svg></div>
 <div class="legend"><span><i style="background:#c2a5ed"></i>+3000以上</span><span><i style="background:#ffc36f"></i>+1000以上</span><span><i style="background:#90d6af"></i>0以上</span><span><i style="background:#f3a2a7"></i>マイナス</span><span><i style="background:#b7c5d5"></i>実績なし</span></div>
 <p id="status" class="small">読み込み中…</p></section>
 <aside class="detail" id="detail"><h2>台番号をタップ</h2><p>元図の1台ごとの位置をSVGセルにしています。</p></aside>
-</div><p class="small">島・通路・各座席は編集可能なベクター図形。元図の画像を背景には使用していません。旧版と異なり、島は台の列構造から生成しています。出典：<a href="https://x.com/tousenbo_slo" target="_blank" rel="noopener noreferrer">@tousenbo_slo</a> 11/13掲載図（ユーザー提供）。</p></main>
+</div><section class="sss-analysis"><div class="sss-analysis-head"><h2>実績分析・お気に入り</h2><a href="index.html">さらに詳しい分析を開く</a></div><div class="sss-analysis-tabs" role="tablist"><button class="active" data-sss-tab="machines" type="button">機種比較</button><button data-sss-tab="areas" type="button">色エリア</button><button data-sss-tab="numbers" type="button">台番号</button><button data-sss-tab="favorites" type="button">お気に入り</button></div><div id="sss-analysis-results" aria-live="polite">データを読み込み中…</div></section><nav class="sss-bottom-nav" aria-label="アプリ内の画面"><a class="selected" href="floor-map.html">島図</a><a href="index.html">全体分析</a><a href="morning.html">仕掛け</a><a href="nov13-map.html">元図</a></nav><p class="small">島・通路・各座席は編集可能なベクター図形。元図の画像を背景には使用していません。旧版と異なり、島は台の列構造から生成しています。出典：<a href="https://x.com/tousenbo_slo" target="_blank" rel="noopener noreferrer">@tousenbo_slo</a> 11/13掲載図（ユーザー提供）。</p></main>
 <script>
 (()=>{
 'use strict';
@@ -227,6 +227,7 @@ function render(){
  for(const m of markers){if(floor==='1F'&&m.y>=343||floor==='2F'&&m.y<343)continue;drawMarkersOne(m)}
  if(selected&&seats.has(selected)){const p=seats.get(selected);el('circle',{cx:p.x+p.w/2,cy:p.y+p.h/2,r:10,stroke:'#ed1641','stroke-width':2.5,fill:'none','pointer-events':'none'})}
  $('status').textContent='表示済み：'+seats.size+'台セル｜営業日：'+currentDate+'｜島・通路をSVG再構成（画像の貼り付けなし）';
+ if(typeof window!=='undefined'&&window.sssUnifiedUI?.onRender)window.sssUnifiedUI.onRender();
 }
 function drawMarkersOne(m){emitSeat(m.n,m.x-10.3,m.y-5,20.6,10,m.zone,null)}
 function apply(){
@@ -245,6 +246,7 @@ function choose(n,move=true){
  const a=seats.get(n),r=dayRow(n),panel=$('detail');panel.replaceChildren();selected=n;apply();
  const h=document.createElement('h2');h.textContent=n+'番｜'+(r?.machine||'機種未取得');panel.append(h);
  [['対象',a?.zone||'島不明'],['営業日',currentDate],['差枚',r?.diff==null?'未取得':(r.diff>0?'+':'')+Number(r.diff).toLocaleString()+'枚'],['回転数',r?.games==null?'未取得':Number(r.games).toLocaleString()+'G'],['位置基準','11月13日掲載のフロア構造を基に再構築']].forEach(([k,v])=>{const p=document.createElement('p');p.textContent=k+'：'+v;panel.append(p)});
+ if(typeof window!=='undefined'&&window.sssUnifiedUI?.onSeat)window.sssUnifiedUI.onSeat(n,panel);
  if(!a){const warn=document.createElement('p');warn.textContent='参考図にこの台番号の位置は未登録です。勝手に座標を割り当てていません。';panel.append(warn)}
  if(move&&a){viewport.scrollLeft=Math.max(0,(a.x+a.w/2)*zoom-viewport.clientWidth/2);viewport.scrollTop=Math.max(0,(a.y+a.h/2-(floor==='2F'?343:0))*zoom-viewport.clientHeight/2)}
 }
@@ -261,6 +263,25 @@ $('fit').onclick=()=>{zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/6
 $('find').onclick=()=>choose($('query').value);
 $('query').onkeydown=e=>{if(e.key==='Enter')choose($('query').value)};
 $('heat').onchange=e=>{heat=e.target.checked;apply()};
+if(typeof window!=='undefined')window.sssFloorBridge={
+ getState:()=>({date:currentDate,latest,floor,selected,heat}),
+ getAvailableDates:()=>Array.from($('date').options||[]).map(o=>o.value).filter(Boolean),
+ getData:()=>({day:daily.get(currentDate)||new Map(),inventory,history:daily,layout,markers}),
+ getPlacements:()=>{
+  const out=new Map();
+  layout.forEach(b=>{for(const row of (b.rows||[b.arr||[]]))for(const n of row){if(n==null)continue;out.set(Number(n),{zone:b.opts?.zone||'red',island:b.id,floor:b.y>=343?'2F':'1F'})}});
+  markers.forEach(m=>out.set(Number(m.n),{zone:m.zone,island:'独立・円卓',floor:m.y>=343?'2F':'1F'}));
+  return out;
+ },
+ getDayRow:n=>dayRow(Number(n)),
+ getVisiblePositions:()=>seats,
+ getSelected:()=>selected,
+ ensureHistory:loadHistory,
+ setDate:async d=>{const input=$('date');if(!Array.from(input.options).some(o=>o.value===d))return false;input.value=d;await input.onchange();return true},
+ selectSeat:n=>choose(Number(n)),
+ apply:()=>apply(),
+ setFloor:floorSet
+};
 Promise.all([
  fetch('data/floor_inventory.json?t='+Date.now()).then(r=>r.json()),
  fetch('data/summary.json?t='+Date.now()).then(r=>r.json())
@@ -268,7 +289,8 @@ Promise.all([
  inventory=new Map(v.seats.map(x=>[Number(x.number),x]));latest=currentDate=v.data_date;
  daily.set(latest,new Map(v.seats.filter(x=>x.recorded_for_date===latest).map(x=>[Number(x.number),x])));
  fillDates(summary);
+ if(typeof window!=='undefined'&&window.sssUnifiedUI?.onReady)window.sssUnifiedUI.onReady();
  zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/687));apply();
 }).catch(e=>{$('status').textContent='島図データ読込失敗：'+e.message});
 })();
-</script></body></html>
+</script><script src="sss-unified-ui.js"></script></body></html>
