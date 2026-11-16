@@ -4,6 +4,8 @@ const m=html.match(/<script>([\s\S]*?)<\/script>/);assert(m,'map JS');
 new Function(m[1]);
 assert(!html.includes('<img'),'image must not be copied into the map');
 const reg=JSON.parse(fs.readFileSync('data/floor_inventory.json','utf8'));
+const ref=JSON.parse(fs.readFileSync('public/reference/nov13_machine_labels.json','utf8'));
+const globals={sssMachineLabels:require('../public/sss-machine-labels.js')};
 const nodes=new Map();
 function node(kind,id=''){return {kind,id,children:[],style:{},attrs:{},value:'',textContent:'',clientWidth:850,clientHeight:500,scrollLeft:0,scrollTop:0,
  classList:{toggle(){},add(){},remove(){}},
@@ -18,10 +20,10 @@ const doc={
 const previousDate='2026-11-14';
 const past=[{date:previousDate,number:612,machine:'過去テスト機種',diff:1234,games:4567}];
 const summaries=[{date:reg.data_date},{date:previousDate}];
-const fetch=async u=>({ok:true,json:async()=>u.includes('floor_inventory')?reg:u.includes('summary.json')?summaries:u.includes('records.json')?past:[]});
+const fetch=async u=>({ok:true,json:async()=>u.includes('floor_inventory')?reg:u.includes('summary.json')?summaries:u.includes('records.json')?past:u.includes('nov13_machine_labels')?ref:[]});
 async function tick(){await new Promise(r=>setImmediate(r));}
 (async()=>{
- vm.runInNewContext(m[1],{document:doc,fetch,console});
+ vm.runInNewContext(m[1],{document:doc,fetch,console,window:globals});
  await tick();await tick();
  const svg=nodes.get('map');
  let groups=svg.children.filter(x=>x.kind==='g'&&x.attrs.class?.startsWith('s'));
@@ -52,6 +54,22 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  assert.equal(nums.filter(n=>n>=602&&n<=762).length,161);
  assert.equal(nums.filter(n=>n>=1001&&n<=1017).length,17);
  assert.equal(nums.filter(n=>n>=2001&&n<=2012).length,12);
+ assert.equal(Object.keys(globals.sssFloorBridge.getReferenceLabels()).length,450);
+ const nameAt=n=>{
+  const group=nodes.get('map').children.find(x=>x.kind==='g'&&x.attrs['aria-label']===n+'番');
+  assert.ok(group,n+' visible');return group.children.filter(x=>x.kind==='text').map(x=>x.textContent).slice(1).join('');
+ };
+ assert.equal(nameAt(758),'アクセラ','758 is 一方通行, not generic とある');
+ assert.equal(nameAt(673),'からくり2');
+ assert.equal(nameAt(678),'からくり');
+ assert.equal(nameAt(623),'ヴヴヴ2');
+ assert.equal(nameAt(695),'ヴヴヴ');
+ assert.equal(nameAt(204),'マイVI');
+ assert.equal(nameAt(218),'マイV');
+ const seat692=svg.children.find(x=>x.kind==='g'&&x.attrs['aria-label']==='692番').children.find(x=>x.kind==='rect');
+ const seat691=svg.children.find(x=>x.kind==='g'&&x.attrs['aria-label']==='691番').children.find(x=>x.kind==='rect');
+ assert.ok(Number(seat691.attrs.x)-Number(seat692.attrs.x)>2*Number(seat691.attrs.width)-1,'preserve empty real slot between 692 and 691');
+
  assert.ok(svg.children.filter(x=>x.kind==='rect').length>35,'distinct island outlines and corridors');
  nodes.get('first').onclick();
  nums=collect();assert.equal(nums.length,265,'1F has 261+4 seats');
@@ -72,5 +90,9 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  nodes.get('scroll').clientWidth=340;nodes.get('fit').onclick();
  assert.ok(parseInt(nodes.get('map').style.width,10)<=340,'fit-to-width works on a phone');
  assert.equal(collect().length,451,'all cells remain after date and responsive zoom');
+ assert.equal(nameAt(612),'過去テスト機種','past machine name does not leak from latest day');
+ nodes.get('machineLabelMode').onchange({target:{value:'reference'}});
+ assert.equal(nameAt(612),'サンブレ','reference mode displays 11/13 snapshot independently of selected-day row');
+
  console.log('PASS: 451 cells, 1F/2F, search, date-isolated heatmap and mobile fit');
 })().catch(e=>{console.error(e);process.exitCode=1});
