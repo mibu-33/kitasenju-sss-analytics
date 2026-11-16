@@ -38,7 +38,7 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 <div class="legend"><span><i style="background:#c2a5ed"></i>+3000以上</span><span><i style="background:#ffc36f"></i>+1000以上</span><span><i style="background:#90d6af"></i>0以上</span><span><i style="background:#f3a2a7"></i>マイナス</span><span><i style="background:#b7c5d5"></i>実績なし</span></div>
 <p id="status" class="small">読み込み中…</p></section>
 <aside class="detail" id="detail"><h2>台番号をタップ</h2><p>元図の1台ごとの位置をSVGセルにしています。</p></aside>
-</div><section class="sss-analysis"><div class="sss-analysis-head"><h2>実績分析・お気に入り</h2><a href="index.html">さらに詳しい分析を開く</a></div><div class="sss-analysis-tabs" role="tablist"><button class="active" data-sss-tab="machines" type="button">機種比較</button><button data-sss-tab="areas" type="button">色エリア</button><button data-sss-tab="numbers" type="button">台番号</button><button data-sss-tab="favorites" type="button">お気に入り</button></div><div id="sss-analysis-results" aria-live="polite">データを読み込み中…</div></section><nav class="sss-bottom-nav" aria-label="アプリ内の画面"><a class="selected" href="floor-map.html">島図</a><a href="index.html">全体分析</a><a href="morning.html">仕掛け</a><a href="nov13-map.html">元図</a></nav><p class="small">島・通路・各座席は編集可能なベクター図形。元図の画像を背景には使用していません。旧版と異なり、島は台の列構造から生成しています。出典：<a href="https://x.com/tousenbo_slo" target="_blank" rel="noopener noreferrer">@tousenbo_slo</a> 11/13掲載図（ユーザー提供）。</p></main>
+</div><details class="sss-audit-panel"><summary>台番号と機種名の照合結果 <span id="sss-machine-audit-count">読み込み中</span></summary><p class="small">11/13の参考図の機種表記と、選択日の台別実績を番号ごとに比較します。入替があれば一致しないことがあります。ここでの一致は座席の物理座標まで保証しません。</p><div id="sss-machine-audit-result">照合データを準備中…</div></details><section class="sss-analysis"><div class="sss-analysis-head"><h2>実績分析・お気に入り</h2><a href="index.html">さらに詳しい分析を開く</a></div><div class="sss-analysis-tabs" role="tablist"><button class="active" data-sss-tab="machines" type="button">機種比較</button><button data-sss-tab="areas" type="button">色エリア</button><button data-sss-tab="numbers" type="button">台番号</button><button data-sss-tab="favorites" type="button">お気に入り</button></div><div id="sss-analysis-results" aria-live="polite">データを読み込み中…</div></section><nav class="sss-bottom-nav" aria-label="アプリ内の画面"><a class="selected" href="floor-map.html">島図</a><a href="index.html">全体分析</a><a href="morning.html">仕掛け</a><a href="nov13-map.html">元図</a></nav><p class="small">島・通路・各座席は編集可能なベクター図形。元図の画像を背景には使用していません。旧版と異なり、島は台の列構造から生成しています。出典：<a href="https://x.com/tousenbo_slo" target="_blank" rel="noopener noreferrer">@tousenbo_slo</a> 11/13掲載図（ユーザー提供）。</p></main>
 <script src="sss-machine-labels.js"></script>
 <script>
 (()=>{
@@ -293,6 +293,7 @@ if(typeof window!=='undefined')window.sssFloorBridge={
  getDayRow:n=>dayRow(Number(n)),
  getVisiblePositions:()=>seats,
  getSelected:()=>selected,
+ getReferenceLabels:()=>referenceLabels,
  ensureHistory:loadHistory,
  setDate:async d=>{const input=$('date');if(!Array.from(input.options).some(o=>o.value===d))return false;input.value=d;await input.onchange();return true},
  selectSeat:n=>choose(Number(n)),
