@@ -77,14 +77,14 @@ function insertLayout(){
  // 2F upper, with actual central walkway/gap.
  singles('金 上部左',38,355,275,U(602,613),{zone:'gold',labelBottom:true});
  singles('金 上部右',337,355,341,U(644,658),{zone:'gold',labelBottom:true});
- paired('金 上左対向',39,386,202,U(622,631),U(632,641).filter(n=>n<=635).concat(Array(6).fill(null)),{zone:'gold',labelTop:true}); 
+ paired('金 上左対向',39,386,202,U(622,614),U(623,631),{zone:'gold',labelTop:true,labelBottom:true}); 
  // 632–635 are printed in the left-lower row; use independent line, not fabricated neighboring slots.
  singles('金 左寄せ',18,427,91,[632,633,634,635],{zone:'gold',labelTop:true});
  // Small 636–643 face each other vertically; 4 rows of 2 columns.
  paired('金 小島左',84,462,91,[636,637,638,639],[643,642,641,640],{zone:'gold',orientation:'paired-columns',labelSides:true});
  // Right upper red/green etc.
- paired('金 上右対向',360,386,318,U(673,686),U(672,659),{zone:'gold',labelTop:true});
- paired('金 中右',337,426,146,U(697,688),U(696,691).concat(Array(4).fill(null)),{zone:'gold',labelTop:true});
+ paired('金 上右対向',360,386,318,U(672,659),U(673,686),{zone:'gold',labelTop:true,labelBottom:true});
+ paired('金 中右',337,426,151,[694,693,692,691,690,689,687,688],[695,696,697,698,699,700,null,null],{zone:'gold',labelTop:true,labelBottom:true});
  singles('金 長横列',290,475,344,U(715,701),{zone:'gold',labelTop:true});
  singles('金 短横列',291,537,114,U(720,716),{zone:'gold',labelTop:true});
  vertical('金 下右A',518,548,63,U(731,721),{zone:'gold',width:49,labelSide:'right',numberSide:'left'});
@@ -92,7 +92,8 @@ function insertLayout(){
  // 2F Purple L perimeter and internal islands.
  singles('紫 上列',15,560,231,U(753,762),{zone:'purple',labelBottom:true});
  vertical('紫 左列',16,598,47,U(752,751),{zone:'purple',width:45,labelSide:'right',numberSide:'left'});
- singles('紫 下列',39,648,206,U(750,742),{zone:'purple',labelTop:true});
+ singles('紫 下列',84,653,161,U(748,742),{zone:'purple',labelTop:true});
+ badge(750,46,638,'purple');badge(749,69,650,'purple');
  // source-numbered 4-seat and 5-seat mini-islands.
  for(const [n,x,y] of [[1009,306,380],[1010,327,380],[1012,306,412],[1011,327,412],
  [1005,213,502],[1006,256,502],[1008,213,524],[1007,256,524],
@@ -130,6 +131,11 @@ function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
 }
 function drawBand(b){
  const {x,y,w,rows,opts}=b,zone=opts.zone||'red',count=Math.max(...rows.map(r=>r.length)),col=w/count;
+ if(opts.orientation==='paired-columns'){
+  const colW=25,cellH=10;box(x-2,y-2,2*colW+5,4*cellH+5,'#fff','#b9c5d1',2,.7);
+  rows.forEach((col,ci)=>col.forEach((n,ri)=>emitSeat(n,x+ci*(colW+4),y+ri*cellH,colW,cellH-.6,zone,null)));
+  return;
+ }
  const rowH=opts.zone==='silver'?9.8:8.9,gap=1.25,header=opts.labelTop?5.8:0,footer=opts.labelBottom?6:0;
  const height=header+rows.length*rowH+(rows.length-1)*gap+footer+2;
  box(x-1.5,y-1,w+3,height+2,'#fff','#b9c5d1',2.3,.7);
