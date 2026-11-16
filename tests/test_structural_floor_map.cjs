@@ -24,6 +24,19 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  let groups=svg.children.filter(x=>x.kind==='g'&&x.attrs.class?.startsWith('s'));
  const collect=()=>nodes.get('map').children.filter(x=>x.kind==='g'&&x.attrs.class?.startsWith('s')).map(x=>Number(x.attrs['aria-label'].replace('番','')));
  let nums=collect();
+ // Measure how far each individual cell center is from the manually annotated
+ // reference-image center; these are approximate visual centers, not survey coordinates.
+ const anchors=new Map(JSON.parse(fs.readFileSync('public/reference/tousenbo_20261113_coords.json','utf8')).entries.map(x=>[x.number,x]));
+ const diagnostics=svg.children.filter(x=>x.kind==='g'&&x.attrs.class?.startsWith('s')).map(g=>{
+  const n=Number(g.attrs['aria-label'].replace('番','')),c=anchors.get(n);
+  const r=g.children.find(k=>k.kind==='rect');
+  const dx=Number(r.attrs.x)+Number(r.attrs.width)/2-c.x;
+  const dy=Number(r.attrs.y)+Number(r.attrs.height)/2-c.y;
+  return {n,group:c.group,dx:+dx.toFixed(1),dy:+dy.toFixed(1),dist:+Math.hypot(dx,dy).toFixed(1)};
+ }).sort((a,b)=>b.dist-a.dist);
+ const mean=diagnostics.reduce((sum,x)=>sum+x.dist,0)/diagnostics.length;
+ const p90=diagnostics[Math.floor(diagnostics.length*.1)].dist;
+ console.log('Reference image alignment / avg='+mean.toFixed(1)+'px / p90='+p90+'px / worst '+JSON.stringify(diagnostics.slice(0,16)));
  assert.equal(nums.length,451,'451 independent SVG machine cells');
  assert.equal(new Set(nums).size,451,'no duplicated machine numbers');
  const registered=new Set(reg.seats.map(x=>Number(x.number)));
