@@ -73,6 +73,7 @@ const context={window,document,localStorage,console,Date,Blob,URL,Number,Math,JS
  await window.sssUnifiedUI.setMode('3');
  assert.equal(window.sssUnifiedUI.getStats().rows.length,3,'only date ending in 3');
  assert.ok($('sss-analysis-results').innerHTML.includes('最低サンプル'));
+ $('sss-minsample').value='1';$('sss-minsample').onchange();
  tabs[1].onclick();assert.ok($('sss-table-body').innerHTML.includes('色エリア'));
  tabs[2].onclick();assert.ok($('sss-table-body').innerHTML.includes('台番号'));
  await $('sss-prev').onclick();
