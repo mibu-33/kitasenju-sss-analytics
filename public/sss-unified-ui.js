@@ -133,7 +133,35 @@ function analytics(){
  const el=$('sss-table-body');el.innerHTML=html;
  el.querySelectorAll('[data-sss-seat]').forEach(b=>b.onclick=()=>{bridge.selectSeat(Number(b.dataset.sssSeat));$('detail').scrollIntoView({behavior:'smooth',block:'nearest'})});
 }
-function update(){if(!S.ready)return;S.key=null;dateBar();kpis();paint();summary();analytics()}
+function auditMachineNumbers(){
+ const target=$('sss-machine-audit-result'),count=$('sss-machine-audit-count');
+ if(!target||!api())return;
+ const ref=api().getReferenceLabels?.()||{};
+ const numbers=Object.keys(ref);
+ if(!numbers.length){count.textContent='参照データ未取得';target.textContent='11/13参考図の機種名を読み込めませんでした。';return}
+ const daily=api().getData().day,shorten=window.sssMachineLabels?.shorten;
+ let equal=0,compared=0,missing=0;
+ const disagreements=[];
+ for(const key of numbers){
+  const n=Number(key),record=daily.get(n);
+  if(!record?.machine){missing++;continue}
+  compared++;
+  const actual=shorten?shorten(record.machine):record.machine;
+  if(actual===ref[key])equal++;
+  else disagreements.push({number:n,reference:ref[key],actual:actual,raw:record.machine});
+ }
+ disagreements.sort((a,b)=>a.number-b.number);
+ count.textContent='一致 '+equal+'/'+compared+'台';
+ count.style.color=disagreements.length?'#f6be80':'#a2e1c4';
+ let message='<p class="sss-hint">選択日 '+esc(date())+' ／ 参考図に機種名がある450台中、照合可能 '+compared+'台、一致 '+equal+'台、相違 '+disagreements.length+'台、当日データ不足 '+missing+'台。</p>';
+ message+='<p class="sss-hint">※11/13の図には691番の数字がありますが機種は未確認。実績台帳の601番は図上に位置を確認できないため、誤って同一視しません。</p>';
+ if(disagreements.length)message+=table(['台番号','11/13の表記','選択日の表記','実績の正式機種名'],disagreements.map(x=>
+  '<tr><td><button data-sss-seat="'+x.number+'">'+x.number+'</button></td><td>'+esc(x.reference)+'</td><td>'+esc(x.actual)+'</td><td>'+esc(x.raw)+'</td></tr>'));
+ else message+='<p class="sss-hint">照合した機種名に不一致は見つかりませんでした。島の座席位置まで実測で確認できたという意味ではありません。</p>';
+ target.innerHTML=message;
+ target.querySelectorAll('[data-sss-seat]').forEach(b=>b.onclick=()=>api().selectSeat(Number(b.dataset.sssSeat)));
+}
+function update(){if(!S.ready)return;S.key=null;dateBar();kpis();paint();summary();analytics();auditMachineNumbers()}
 async function setMode(m){
  if(!['day','range','3','6','0'].includes(m))return;
  S.mode=m;
