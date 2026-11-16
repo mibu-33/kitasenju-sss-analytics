@@ -106,7 +106,7 @@ insertLayout();
 function el(tag,props={},textValue){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(props))e.setAttribute(k,String(v));if(textValue!==undefined)e.textContent=String(textValue);map.appendChild(e);return e}
 function box(x,y,w,h,fill,stroke='#aab6c1',rx=2,sw=.75){return el('rect',{x,y,width:w,height:h,rx,fill,stroke,'stroke-width':sw})}
 function txt(x,y,s,fs=5.7,fill='#3e4856',weight=600,anchor='middle'){return el('text',{x,y,'font-size':fs,fill,'font-weight':weight,'text-anchor':anchor},s)}
-function machine(row){if(!row?.machine)return '';const v=String(row.machine);const synonyms=[['マギアレコード','まどマギ'],['東京喰種','喰種'],['ヴァルヴレイヴ','ヴヴヴ'],['からくりサーカス','からくり'],['スマスロ',''],['モンスターハンター','モンハン'],['アイムジャグラー','アイム'],['ファンキージャグラー','ファンキー'],['ゴーゴージャグラー','ゴージャグ'],['沖ドキ','沖ドキ']];for(const [a,b] of synonyms)if(v.includes(a))return b;return [...v].slice(0,5).join('')}
+function machine(row){if(!row?.machine)return '';const v=String(row.machine).replace(/^(スマスロ|パチスロ)[\s　]*/,'').replace(/^[LＬ][\s　_-]+/,'').trim();const synonyms=[['ソードアート・オンラインⅡ','SAO2'],['マギアレコード','まどマギ'],['東京喰種','喰種'],['ヴァルヴレイヴ','ヴヴヴ'],['からくりサーカス','からくり'],['スマスロ',''],['モンスターハンター','モンハン'],['アイムジャグラー','アイム'],['ファンキージャグラー','ファンキー'],['ゴーゴージャグラー','ゴージャグ'],['新鬼武者','新鬼'],['沖ドキ','沖ドキ']];for(const [a,b] of synonyms)if(v.includes(a))return b;return [...v].slice(0,5).join('')}
 function current(){return daily.get(currentDate)||new Map()}
 function dayRow(n){const r=current().get(n);return r||(currentDate===latest?inventory.get(n):null)}
 function seatFill(id,zone){if(!heat)return '#526171';const r=current().get(id);if(r?.diff==null)return'#aebac7';const d=Number(r.diff);return d>=3000?'#c2a5ed':d>=1000?'#ffc36f':d>=0?'#90d6af':'#f3a2a7'}
