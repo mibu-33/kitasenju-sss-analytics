@@ -46,7 +46,7 @@ const NS='http://www.w3.org/2000/svg',$=id=>document.getElementById(id),map=$('m
 let seats=new Map(),inventory=new Map(),daily=new Map(),currentDate='',latest='',floor='ALL',zoom=1,selected=null,heat=false,historyLoaded=false;
 const U=(a,b)=>{const out=[];for(let i=a,step=a<=b?1:-1;step>0?i<=b:i>=b;i+=step)out.push(i);return out};
 const layout=[],markers=[];
-const palette={red:'#d9dce0',blue:'#d1e8fb',green:'#d9ead8',silver:'#dee5ec',gold:'#eee1bf',purple:'#dfcde9'};
+const palette={red:'#e6e9ed',blue:'#d8eaff',green:'#e3f3df',silver:'#e1e6ec',gold:'#f7ebcd',purple:'#efddfa'};
 function island(id,x,y,w,rows,opts={}){layout.push({id,x,y,w,rows,opts})}
 function singles(id,x,y,w,arr,opts={}){island(id,x,y,w,[arr],opts)}
 function paired(id,x,y,w,top,bottom,opts={}){island(id,x,y,w,[top,bottom],opts)}
@@ -108,7 +108,7 @@ function box(x,y,w,h,fill,stroke='#aab6c1',rx=2,sw=.75){return el('rect',{x,y,wi
 function txt(x,y,s,fs=5.7,fill='#3e4856',weight=600,anchor='middle'){return el('text',{x,y,'font-size':fs,fill,'font-weight':weight,'text-anchor':anchor},s)}
 function machine(row){if(!row?.machine)return '';const v=String(row.machine);const synonyms=[['マギアレコード','まどマギ'],['東京喰種','喰種'],['ヴァルヴレイヴ','ヴヴヴ'],['からくりサーカス','からくり'],['スマスロ',''],['モンスターハンター','モンハン'],['アイムジャグラー','アイム'],['ファンキージャグラー','ファンキー'],['ゴーゴージャグラー','ゴージャグ'],['沖ドキ','沖ドキ']];for(const [a,b] of synonyms)if(v.includes(a))return b;return [...v].slice(0,5).join('')}
 function current(){return daily.get(currentDate)||new Map()}
-function seatFill(id,zone){if(!heat)return palette[zone]||'#d5dce6';const r=current().get(id);if(r?.diff==null)return'#bbc7d2';const d=Number(r.diff);return d>=3000?'#c2a5ed':d>=1000?'#ffc36f':d>=0?'#90d6af':'#f3a2a7'}
+function seatFill(id,zone){if(!heat)return '#526171';const r=current().get(id);if(r?.diff==null)return'#aebac7';const d=Number(r.diff);return d>=3000?'#c2a5ed':d>=1000?'#ffc36f':d>=0?'#90d6af':'#f3a2a7'}
 function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
  if(n==null)return;
  if(seats.has(n))return; // duplicate detection is covered by CI, never draw double cells.
@@ -118,7 +118,7 @@ function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
  for(const [k,v] of Object.entries({class:'cell',x,y,width:w,height:h,rx:.6,fill:seatFill(n,zone),stroke:'#fff','stroke-width':.4}))rec.setAttribute(k,v);
  g.appendChild(rec);
  const number=document.createElementNS(NS,'text');
- for(const [k,v] of Object.entries({x:x+w/2,y:y+h/2+2,'text-anchor':'middle','font-size':Math.min(5.7,w*.35),'font-weight':750,fill:'#192b3b'}))number.setAttribute(k,v);
+ for(const [k,v] of Object.entries({x:x+w/2,y:y+h/2+2,'text-anchor':'middle','font-size':Math.min(5.7,w*.35),'font-weight':750,fill:heat?'#233446':'#ffffff'}))number.setAttribute(k,v);
  number.textContent=String(n);g.appendChild(number);
  if(labelPos){
   const label=document.createElementNS(NS,'text'),r=current().get(n)||inventory.get(n);
@@ -136,9 +136,20 @@ function drawBand(b){
   rows.forEach((col,ci)=>col.forEach((n,ri)=>emitSeat(n,x+ci*(colW+4),y+ri*cellH,colW,cellH-.6,zone,null)));
   return;
  }
- const rowH=opts.zone==='silver'?9.8:8.9,gap=1.25,header=opts.labelTop?5.8:0,footer=opts.labelBottom?6:0;
- const height=header+rows.length*rowH+(rows.length-1)*gap+footer+2;
- box(x-1.5,y-1,w+3,height+2,'#fff','#b9c5d1',2.3,.7);
+ const rowH=opts.zone==='silver'?9.8:8.9,gap=1.15,header=opts.labelTop?7.0:0,footer=opts.labelBottom?7.1:0;
+ const height=header+rows.length*rowH+(rows.length-1)*gap+footer+1;
+ box(x-1.5,y-1,w+3,height+2,'#fff','#abb9c7',2,.7);
+ // Every island carries its own two-layer machine-name strips. The strips are
+ // separate SVG rectangles so the machine name and seat can be updated independently.
+ for(let ri=0;ri<rows.length;ri++){
+  const row=rows[ri];
+  for(let i=0;i<row.length;i++){
+   const n=row[i];if(n==null)continue;
+   const cx=x+i*col+.25,cw=col-.6;
+   if(ri===0&&opts.labelTop)box(cx,y,cw,header-.25,'#fff2dc','#d6d0c0',.3,.2);
+   if(ri===rows.length-1&&opts.labelBottom)box(cx,y+header+rows.length*rowH+(rows.length-1)*gap,cw,footer-.2,'#fff2dc','#d6d0c0',.3,.2);
+  }
+ }
  rows.forEach((row,ri)=>row.forEach((n,i)=>emitSeat(n,x+i*col+.25,y+header+ri*(rowH+gap),col-.6,rowH,zone,ri===0&&opts.labelTop?'top':ri===rows.length-1&&opts.labelBottom?'bottom':null)));
 }
 function drawVertical(b){
@@ -148,9 +159,11 @@ function drawVertical(b){
   const ypos=y+i*cellH;
   const numberSide=opts.numberSide||'left';
   const numW=width*.33,numX=x+(numberSide==='left'?0:width-numW);
+  const labelX=x+(numberSide==='left'?numW:0),labelW=width-numW;
+  box(labelX+.2,ypos+.2,labelW-.4,cellH-.35,'#fae8d7','#d6c6b8',.1,.17);
   emitSeat(n,numX,ypos+.2,numW-.3,cellH-.35,zone,null);
   const r=current().get(n)||inventory.get(n);
-  txt(x+(numberSide==='left'?numW+(width-numW)/2:(width-numW)/2),ypos+cellH/2+1.6,machine(r),3.8,'#5a6171',550);
+  txt(labelX+labelW/2,ypos+cellH/2+1.6,machine(r),3.8,'#4e5260',550);
  });
 }
 function drawMarkers(){
@@ -177,7 +190,19 @@ function base(){
  txt(543,210,'通路',5.8,'#b5bfcb');
  txt(325,247,'通路',5.8,'#b5bfcb');
  txt(323,422,'通路',5.8,'#b5bfcb');
- // Colored area badges mimic source placement only.
+ // The true cross and plus-shaped roundtables use contiguous center blocks,
+ // not a generic circle or a large rectangular island.
+ box(231,435,42,39,'#609bdf','#609bdf',1,.3);
+ txt(252,456,'絆',7.6,'white',800);
+ box(304,387,26,18,'#609bdf','#609bdf',1,.3);
+ txt(317,398,'からくり',4.8,'white',700);
+ box(216,507,38,12,'#609bdf','#609bdf',.7,.2);
+ txt(235,515,'鏡',5.5,'white',800);
+ box(108,614,60,9,'#609bdf','#609bdf',.4,.2);
+ txt(138,621,'SAO / e-D',5.8,'white',700);
+ // Record the free central walking lanes without drawing artificial benches.
+ box(83,445,95,18,'none','#9360c1',2,1.5).setAttribute('stroke-dasharray','5 4');
+  // Colored area badges mimic source placement only.
  box(615,123,15,58,'#0d94e4','#0d94e4',2);
  const blue=el('text',{x:623,y:151,fill:'#fff','font-size':9,'font-weight':800,'text-anchor':'middle',transform:'rotate(90 623 151)'},'ブルー');
  box(654,280,13,35,'#5ebc33','#5ebc33',2);
