@@ -1,1 +1,48 @@
-const fs=require('fs'),assert=require('assert');let h=fs.readFileSync('public/structural-floor-map.html','utf8');let j=h.match(/<script>([\s\S]*?)<\/script>/);assert(j);new Function(j[1]);assert(!h.includes('<img'));assert(h.includes('createElementNS'));assert(h.includes('drawBase()'));assert(h.includes('cell(c)'));assert(h.includes('差枚色'));let x=JSON.parse(fs.readFileSync('public/reference/tousenbo_20261113_coords.json','utf8'));assert.equal(x.entries.length,451);assert.equal(new Set(x.entries.map(x=>x.number)).size,451);console.log('PASS structural map is editable SVG with 451 independent machine coordinates, no original image in DOM');
+const fs=require('fs'),vm=require('vm'),assert=require('assert').strict;
+const html=fs.readFileSync('public/structural-floor-map.html','utf8');
+const m=html.match(/<script>([\s\S]*?)<\/script>/);assert(m,'map JS');
+new Function(m[1]);
+assert(!html.includes('<img'),'image must not be copied into the map');
+const reg=JSON.parse(fs.readFileSync('data/floor_inventory.json','utf8'));
+const nodes=new Map();
+function node(kind,id=''){return {kind,id,children:[],style:{},attrs:{},value:'',textContent:'',clientWidth:850,clientHeight:500,scrollLeft:0,scrollTop:0,
+ classList:{toggle(){},add(){},remove(){}},
+ setAttribute(k,v){this.attrs[k]=v},
+ appendChild(c){this.children.push(c);return c},append(...c){this.children.push(...c)},
+ replaceChildren(){this.children=[]},addEventListener(){},click(){this.onclick?.()},
+ }; }
+const doc={
+ getElementById(id){if(!nodes.has(id))nodes.set(id,node('div',id));return nodes.get(id)},
+ createElementNS(ns,k){return node(k)},createElement(k){return node(k)}
+};
+const fetch=async u=>({ok:true,json:async()=>u.includes('floor_inventory')?reg:[]});
+async function tick(){await new Promise(r=>setImmediate(r));}
+(async()=>{
+ vm.runInNewContext(m[1],{document:doc,fetch,console});
+ await tick();await tick();
+ const svg=nodes.get('map');
+ let groups=svg.children.filter(x=>x.kind==='g'&&x.attrs.class?.startsWith('s'));
+ const collect=()=>nodes.get('map').children.filter(x=>x.kind==='g'&&x.attrs.class?.startsWith('s')).map(x=>Number(x.attrs['aria-label'].replace('番','')));
+ let nums=collect();
+ assert.equal(nums.length,451,'451 independent SVG machine cells');
+ assert.equal(new Set(nums).size,451,'no duplicated machine numbers');
+ const registered=new Set(reg.seats.map(x=>Number(x.number)));
+ assert.equal(registered.size,451);
+ assert.deepEqual([...new Set(nums)].sort((a,b)=>a-b),[...registered].sort((a,b)=>a-b),'all real 451 machine numbers appear exactly once');
+ assert.equal(nums.filter(n=>n>=1&&n<=261).length,261);
+ assert.equal(nums.filter(n=>n>=602&&n<=762).length,161);
+ assert.equal(nums.filter(n=>n>=1001&&n<=1017).length,17);
+ assert.equal(nums.filter(n=>n>=2001&&n<=2012).length,12);
+ assert.ok(svg.children.filter(x=>x.kind==='rect').length>35,'distinct island outlines and corridors');
+ nodes.get('first').onclick();
+ nums=collect();assert.equal(nums.length,265,'1F has 261+4 seats');
+ nodes.get('second').onclick();
+ nums=collect();assert.equal(nums.length,186,'2F has 161+13+12 seats');
+ nodes.get('all').onclick();
+ nodes.get('query').value='612';
+ nodes.get('find').onclick();
+ assert.match(nodes.get('detail').children[0].textContent,/612番/);
+ nodes.get('heat').onchange({target:{checked:true}});
+ assert.equal(collect().length,451);
+ console.log('PASS: 451 independent SVG cells, verified full seat coverage, 1F/2F, search, and heatmap');
+})().catch(e=>{console.error(e);process.exitCode=1});
