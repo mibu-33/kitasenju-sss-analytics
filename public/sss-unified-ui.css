@@ -1,0 +1,66 @@
+/* Unified SSS interface, modeled on the shared interaction conventions of
+   Jaran Mizumoto and the Kameari heatmap. No machine/layout data is embedded. */
+html{scroll-behavior:smooth}
+header{position:sticky;top:0;z-index:55;backdrop-filter:blur(14px);background:rgba(17,31,51,.96)}
+header nav a{text-decoration:none;color:#bed8ef}
+header nav a:hover{color:#fff}
+body{padding-bottom:64px}
+main{max-width:1500px}
+.sss-datebar{position:sticky;top:55px;z-index:50;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px 12px;margin:-10px auto 11px;width:max-content;max-width:100%;background:#132b46;box-shadow:0 4px 22px #0004;border:1px solid #3c5978;border-radius:0 0 16px 16px}
+.sss-datebar button{border:1px solid #527298;background:#213f65;padding:5px 13px;min-height:37px;font-weight:800;box-shadow:none}
+#sss-date-label{min-width:110px;font-size:16px}
+.sss-freshness{font-size:11px;color:#a5bfd7;max-width:145px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sss-freshness.stale{color:#ffd596}
+.sss-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.sss-kpi{border-radius:11px;background:#14263c;border:1px solid #3c5776;padding:10px;color:#a9c0d9;font-weight:650;font-size:11px;min-width:0}
+.sss-kpi strong{font-size:clamp(13px,2vw,20px);line-height:1.5;font-variant-numeric:tabular-nums;font-weight:800;display:block;white-space:nowrap;color:#f4f8ff}
+.sss-kpi strong.positive{color:#6fddb4}.sss-kpi strong.negative{color:#ff9eae}
+.sss-modes{display:flex;flex-wrap:wrap;gap:9px;align-items:center;background:#14273d;border:1px solid #375671;border-radius:12px;margin:11px 0 12px;padding:12px}
+.sss-mode-head{display:flex;flex-direction:column;min-width:135px;gap:2px}.sss-mode-head strong{font-size:15px}.sss-mode-head span{font-size:11px}
+.sss-mode-buttons{display:flex;flex-wrap:wrap;gap:5px;flex:1;min-width:220px}
+.sss-modes .sss-mode{font-size:12px;min-height:33px;padding:6px 9px;border-radius:7px;background:#223c58}
+.sss-modes .sss-mode.active{background:#336e98;color:#fff;border-color:#83c3f2}
+.sss-modes label{font-size:12px;color:#d5e4f4;display:flex;align-items:center;gap:5px}
+#sss-range{padding:7px 8px;font-size:12px}
+.sss-rank-summary{width:100%;font-size:11px;color:#a7c7e1;min-height:15px}
+.sss-legacy-heat{display:none!important}
+#sss-export{font-size:12px;padding:7px 10px}
+.toolbar{gap:7px;margin-top:8px}
+.toolbar label{font-size:12px;color:#b5d0e7}
+.toolbar button{padding:8px 10px}
+.canvas-wrap{touch-action:pan-x pan-y;max-height:min(78vh,920px)}
+.sss-analysis{background:#12253b;border:1px solid #375574;border-radius:12px;padding:13px;margin-top:16px}
+.sss-analysis-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sss-analysis-head h2{font-size:16px;margin:0}
+.sss-analysis-head a{font-size:12px;text-decoration:none}
+.sss-analysis-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0 10px}
+.sss-analysis-tabs button{padding:8px 12px;font-size:12px}
+.sss-analysis-tabs button.active{background:#2c78a6;border-color:#7cbee8}
+.sss-analysis-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:9px 0 13px}
+.sss-analysis-controls label{font-size:12px;color:#c6d9e8}
+.sss-analysis-controls select{padding:5px 8px;font-size:12px}
+.sss-data-table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}
+.sss-data-table th,.sss-data-table td{padding:8px 10px;text-align:right;border-bottom:1px solid #334a63}
+.sss-data-table th:first-child,.sss-data-table td:first-child{text-align:left}
+.sss-data-table thead th{color:#a6bed4;position:sticky;top:0;background:#1b3149;font-weight:650}
+.sss-data-table tbody tr:hover{background:#223a52}
+.sss-data-table button{font-size:12px;border:0;background:transparent;padding:3px;color:#a9d5f9;font-weight:650}
+.sss-table-wrap{overflow:auto;max-height:380px;border:1px solid #334b65;border-radius:9px}
+.sss-hint{font-size:11px;color:#acc4df;line-height:1.6}
+.sss-chips{display:flex;flex-wrap:wrap;gap:6px}
+.sss-chip{padding:7px 9px;font-size:12px;background:#1b3552;border:1px solid #4c6d8d;border-radius:9px}
+.sss-leaders{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.sss-leader{font-size:11px;padding:5px 8px;border-radius:8px;background:#193c52;color:#cde9f9}
+.sss-detail-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.sss-detail-actions button{font-size:12px;padding:6px 9px}
+.sss-detail-note{color:#acbfd3;font-size:11px;margin:10px 0 4px}
+.sss-detail-history{width:100%;display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.sss-detail-bar{flex:1 0 12px;max-width:25px;min-width:11px;height:42px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.sss-detail-bar i{width:100%;display:block;min-height:2px;border-radius:2px}
+.sss-detail-bar small{font-size:8px;color:#98b3ce}
+.sss-mode-tag{font-size:10px;color:#b6cedf;margin-left:5px}
+.sss-bottom-nav{position:fixed;z-index:100;bottom:0;left:0;right:0;display:flex;gap:0;align-items:stretch;justify-content:space-around;background:rgba(17,31,49,.97);border-top:1px solid #395773;backdrop-filter:blur(18px);padding:5px max(8px,env(safe-area-inset-left)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-right));box-shadow:0 -4px 12px #0003}
+.sss-bottom-nav a{text-align:center;flex:1;min-width:0;padding:9px 5px;border-radius:9px;text-decoration:none;font-size:12px;font-weight:700;color:#bad2e6}
+.sss-bottom-nav a.selected{color:#fff;background:#315b82}
+@media(max-width:950px){.sss-datebar{top:50px}.sss-kpis{gap:4px}.sss-kpi{padding:7px 6px;font-size:9px}.sss-kpi strong{font-size:13px}.sss-modes{padding:10px}.sss-mode-head{min-width:100%}.sss-mode-buttons{min-width:0}.sss-modes .sss-mode{flex:1;min-width:57px;padding:7px 6px}.sss-freshness{display:none}.sss-datebar{min-width:215px;justify-content:center}.sss-analysis{padding:10px}header nav{gap:9px}}
+@media(max-width:520px){.sss-data-table{font-size:11px}.sss-data-table th,.sss-data-table td{padding:7px 7px}.sss-analysis-head h2{font-size:14px}.sss-bottom-nav a{font-size:11px}.sss-kpi strong{font-size:12px}.sss-mode-buttons{gap:3px}#sss-range{max-width:85px}}
