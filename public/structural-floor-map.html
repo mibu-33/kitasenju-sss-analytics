@@ -81,7 +81,7 @@ function insertLayout(){
  // 632–635 are printed in the left-lower row; use independent line, not fabricated neighboring slots.
  singles('金 左寄せ',18,427,91,[632,633,634,635],{zone:'gold',labelTop:true});
  // Small 636–643 face each other vertically; 4 rows of 2 columns.
- paired('金 小島左',84,462,91,[636,637,638,639],[643,642,641,640],{zone:'gold',orientation:'paired-columns',labelSides:true});
+ paired('金 小島左',111,462,91,[636,637,638,639],[643,642,641,640],{zone:'gold',orientation:'paired-columns',labelSides:true});
  // Right upper red/green etc.
  paired('金 上右対向',360,386,318,U(672,659),U(673,686),{zone:'gold',labelTop:true,labelBottom:true});
  paired('金 中右',340,426,178,[694,693,692,691,690,689,687,688],[695,696,697,698,699,700,null,null],{zone:'gold',labelTop:true,labelBottom:true});
@@ -133,8 +133,16 @@ function emitSeat(n,x,y,w,h,zone,labelPos,orientation='horizontal'){
 function drawBand(b){
  const {x,y,w,rows,opts}=b,zone=opts.zone||'red',count=Math.max(...rows.map(r=>r.length)),col=w/count;
  if(opts.orientation==='paired-columns'){
-  const colW=25,cellH=10;box(x-2,y-2,2*colW+5,4*cellH+5,'#fff','#b9c5d1',2,.7);
-  rows.forEach((col,ci)=>col.forEach((n,ri)=>emitSeat(n,x+ci*(colW+4),y+ri*cellH,colW,cellH-.6,zone,null)));
+  const colW=23,cellH=10,gap=4,labelW=24;
+  const rightX=x+2*colW+gap;
+  box(x-labelW-1,y-1,2*colW+gap+2*labelW+2,4*cellH+2,'#fff','#a8b6c5',2,.7);
+  for(let ri=0;ri<4;ri++){
+   box(x-labelW,y+ri*cellH,labelW-.5,cellH-.6,'#fff2dc','#d8cfba',.3,.2);
+   box(rightX,y+ri*cellH,labelW-.5,cellH-.6,'#fff2dc','#d8cfba',.3,.2);
+   txt(x-labelW/2,y+ri*cellH+6.6,'並び2',4.5,'#5d5a54',650);
+   txt(rightX+labelW/2,y+ri*cellH+6.6,'並び2',4.5,'#5d5a54',650);
+  }
+  rows.forEach((col,ci)=>col.forEach((n,ri)=>emitSeat(n,x+ci*(colW+gap),y+ri*cellH,colW,cellH-.6,zone,null)));
   return;
  }
  const rowH=opts.zone==='silver'?9.8:8.9,gap=1.15,header=opts.labelTop?7.0:0,footer=opts.labelBottom?7.1:0;
