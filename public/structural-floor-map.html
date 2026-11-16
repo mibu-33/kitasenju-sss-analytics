@@ -110,7 +110,7 @@ function txt(x,y,s,fs=5.7,fill='#3e4856',weight=600,anchor='middle'){return el('
 function machine(row,number){
  if(labelMode==='reference')return referenceLabels[Number(number)]||'';
  if(!row?.machine)return '';
- return window.sssMachineLabels?.shorten(row.machine)||[...String(row.machine)].slice(0,7).join('');
+ return (typeof window!=='undefined'?window.sssMachineLabels?.shorten(row.machine):null)||[...String(row.machine)].slice(0,7).join('');
 }
 function current(){return daily.get(currentDate)||new Map()}
 function dayRow(n){const r=current().get(n);return r||(currentDate===latest?inventory.get(n):null)}
@@ -254,7 +254,7 @@ function choose(n,move=true){
  const a=seats.get(n),r=dayRow(n),panel=$('detail');panel.replaceChildren();selected=n;apply();
  const h=document.createElement('h2');h.textContent=n+'番｜'+(r?.machine||'機種未取得');panel.append(h);
  [['対象',a?.zone||'島不明'],['営業日',currentDate],['11/13参考図の機種名',referenceLabels[n]||'図で未確認'],['差枚',r?.diff==null?'未取得':(r.diff>0?'+':'')+Number(r.diff).toLocaleString()+'枚'],['回転数',r?.games==null?'未取得':Number(r.games).toLocaleString()+'G'],['位置基準','11月13日掲載のフロア構造を基に再構築']].forEach(([k,v])=>{const p=document.createElement('p');p.textContent=k+'：'+v;panel.append(p)});
- if(r?.machine&&referenceLabels[n]&&window.sssMachineLabels?.shorten(r.machine)!==referenceLabels[n]){
+ if(r?.machine&&referenceLabels[n]&&typeof window!=='undefined'&&window.sssMachineLabels?.shorten(r.machine)!==referenceLabels[n]){
   const warning=document.createElement('p');
   warning.textContent='参考図の機種と選択日の実績が異なります。日付による入替か記録差を確認してください。';
   warning.style.color='#f0b66e';panel.append(warning);
