@@ -55,6 +55,12 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  assert.equal(nums.filter(n=>n>=1001&&n<=1017).length,17);
  assert.equal(nums.filter(n=>n>=2001&&n<=2012).length,12);
  assert.equal(Object.keys(globals.sssFloorBridge.getReferenceLabels()).length,450);
+ const centerTexts=()=>nodes.get('map').children.filter(x=>x.kind==='text').map(x=>x.textContent);
+ assert.ok(centerTexts().includes('喰種'),'2001-2012 center label');
+ assert.ok(centerTexts().includes('ヴヴヴ'),'1005-1008 center label');
+ assert.ok(centerTexts().includes('からくり2'),'1009-1012 center label');
+ for(const wrong of ['絆','鏡','SAO / e-D'])assert.ok(!centerTexts().includes(wrong),'remove old incorrect center label: '+wrong);
+
  const nameAt=n=>{
   const group=nodes.get('map').children.find(x=>x.kind==='g'&&x.attrs['aria-label']===n+'番');
   assert.ok(group,n+' visible');return group.children.filter(x=>x.kind==='text').map(x=>x.textContent).slice(1).join('');
@@ -93,6 +99,9 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  assert.equal(nameAt(612),'過去テスト機種','past machine name does not leak from latest day');
  nodes.get('machineLabelMode').onchange({target:{value:'reference'}});
  assert.equal(nameAt(612),'サンブレ','reference mode displays 11/13 snapshot independently of selected-day row');
+ for(const name of ['喰種','ヴヴヴ','からくり2','金カム','ガルパン','ダンバイン','e-D2','SAO'])
+  assert.ok(centerTexts().includes(name),'11/13 floor map references correct mini-island labels: '+name);
+
 
  console.log('PASS: 451 cells, 1F/2F, search, date-isolated heatmap and mobile fit');
 })().catch(e=>{console.error(e);process.exitCode=1});
