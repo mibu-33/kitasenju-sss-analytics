@@ -11,7 +11,7 @@ const labels=require('../public/sss-machine-labels.js');
 class FakeNode{
  constructor(tag='div',id=''){
   this.tag=tag;this.id=id;this.children=[];this.attrs={};this.style={};this.dataset={};this.checked=true;this.textContent='';this.innerHTML='';
-  this.classList={toggle(){}};
+  this.classList={toggle(){},add(){},remove(){}};
  }
  setAttribute(k,v){this.attrs[k]=String(v)}
  getAttribute(k){return this.attrs[k]}
