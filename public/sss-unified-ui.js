@@ -10,7 +10,7 @@ const fmt=v=>Number.isFinite(Number(v))?Math.round(Number(v)).toLocaleString('ja
 const signed=v=>v==null?'—':(Number(v)>0?'+':'')+fmt(v);
 const zones={red:'レッド',blue:'ブルー',green:'グリーン',silver:'シルバー',gold:'ゴールド',purple:'パープル'};
 const C={purple:'#7030a0',blue:'#4472c4',cyan:'#00b0f0',green:'#70ad47',lightgreen:'#c6efce',neutral:'#fff',lightred:'#f4cccc',red:'#c00000',unknown:'#b7c5d5'};
-const S={mode:'day',range:30,tab:'machines',min:5,ready:false,favs:new Set(),key:null,cache:null};
+const S={mode:'day',range:30,tab:'machines',min:5,ready:false,favs:new Set(),key:null,cache:null,machine:'',machineDate:'',machineNumbers:[],machineCursor:-1,deepLinked:false};
 try{const x=JSON.parse(localStorage.getItem('sss-favorites-v2')||'[]');if(Array.isArray(x))S.favs=new Set(x.map(Number).filter(Number.isInteger))}catch(_){}
 const api=()=>window.sssFloorBridge;
 const date=()=>api()?.getState().date||'';
@@ -55,6 +55,94 @@ function heatColor(value,mode){
  if(x>=3000)return C.purple;if(x>=1000)return C.blue;if(x>=300)return C.green;
  if(x>=0)return C.lightgreen;if(x<=-2000)return C.red;if(x<=-500)return C.lightred;return C.neutral;
 }
+function machineSelection(){
+ const select=$('sss-machine-filter');if(!select||!api())return;
+ const day=api().getData().day,dayKey=date()+'|'+day.size;
+ if(S.machineDate!==dayKey){
+  const groupsByMachine=new Map();
+  for(const row of day.values()){
+   if(!row?.machine||!Number.isInteger(Number(row.number)))continue;
+   const name=String(row.machine),list=groupsByMachine.get(name)||[];
+   list.push(Number(row.number));groupsByMachine.set(name,list);
+  }
+  S.machineDate=dayKey;
+  if(S.machine&&!groupsByMachine.has(S.machine)){S.machine='';S.machineCursor=-1}
+  select.replaceChildren();
+  const first=document.createElement('option');first.value='';first.textContent='全機種を表示';select.appendChild(first);
+  for(const [name,nums] of [...groupsByMachine].sort((a,b)=>a[0].localeCompare(b[0],'ja'))){
+   const option=document.createElement('option');option.value=name;
+   option.textContent=(window.sssMachineLabels?.shorten(name)||name)+' ('+nums.length+'台)';
+   option.title=name;
+   select.appendChild(option);
+  }
+  select.value=S.machine;
+ }
+ const list=[...day.values()].filter(r=>r?.machine===S.machine).map(r=>Number(r.number)).filter(Number.isInteger).sort((a,b)=>a-b);
+ S.machineNumbers=S.machine?list:[];
+ const visible=api().getVisiblePositions();
+ const matched=S.machineNumbers.filter(n=>visible.has(n)).length;
+ $('sss-machine-next').disabled=!S.machineNumbers.length;
+ const count=$('sss-machine-count');
+ if(count)count.textContent=S.machine?(S.machineNumbers.length+'台（この表示 '+matched+'台）'):(day.size?'機種を選ぶと台を強調':'この日付の機種データなし');
+}
+function stepMachine(){
+ if(!S.machineNumbers.length)return;
+ const selected=Number(api().getState().selected);
+ const current=S.machineNumbers.indexOf(selected);
+ const index=current<0?0:(current+1)%S.machineNumbers.length;
+ S.machineCursor=index;api().selectSeat(S.machineNumbers[index]);
+}
+function shareSeat(n,button){
+ if(typeof window==='undefined'||!window.location)return;
+ const link=new URL(window.location.href);
+ link.searchParams.set('date',date());link.searchParams.set('seat',String(n));
+ link.hash='';
+ const navigatorApi=window.navigator;
+ if(navigatorApi?.clipboard?.writeText){
+  navigatorApi.clipboard.writeText(link.toString()).then(()=>{button.textContent='リンクをコピーしました'}).catch(()=>{
+   button.textContent='コピーできません。下のURLを利用してください';
+   const url=document.createElement('p');url.textContent=link.toString();button.parentNode?.append(url);
+  });
+ }else{
+  button.textContent='このURLをコピーしてください';
+  const url=document.createElement('p');url.textContent=link.toString();button.parentNode?.append(url);
+ }
+}
+function restoreSharedSeat(){
+ if(S.deepLinked||typeof window==='undefined'||!window.location)return;
+ S.deepLinked=true;
+ const p=new URLSearchParams(window.location.search);
+ const number=Number(p.get('seat'));const d=p.get('date');
+ if(!Number.isInteger(number)||number<1||number>9999)return;
+ // onReady occurs before the first map render. Defer until the SVG seats exist.
+ Promise.resolve().then(async()=>{
+  if(/^\d{4}-\d{2}-\d{2}$/.test(d||'')&&allDates().includes(d)&&d!==date()){
+   try{await api().setDate(d)}catch(_){return}
+  }
+  api().selectSeat(number);
+ });
+}
+async function fetchSyncHealth(){
+ const el=$('sss-sync-text'),details=$('sss-sync-details'),panel=$('sss-sync-banner');
+ if(!el||!panel)return;
+ try{
+  const r=await fetch('data/status.json?t='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const d=await r.json();
+  const newest=d.newest_date||api()?.getState().latest||'不明';
+  const fallbackOk=d.fallback_status==='ok'&&Boolean(d.fallback_last_success);
+  const primaryOk=d.status==='ok';
+  panel.classList.toggle('sss-sync-warning',!primaryOk);
+  el.textContent='収集済み '+newest+' ／ '+(primaryOk?'通常取得に成功':fallbackOk?'主取得に制限・代替取得実績あり':'自動取得に問題あり');
+  if(details)details.textContent='主経路：'+(primaryOk?'成功':d.error||'失敗')+
+   ' ／ 代替経路：'+(fallbackOk?'成功（最終 '+d.fallback_last_success+'）':d.fallback_status||'未確認')+
+   ' ／ 収録日数：'+(d.indexed_days??'不明')+'。収集済みデータと最新営業日の実績を混同しないでください。';
+ }catch(err){
+  panel.classList.add('sss-sync-warning');
+  el.textContent='取得状況を確認できません（表示中のデータは保持）';
+  if(details)details.textContent=String(err);
+ }
+}
 function paint(){
  if(!api())return;
  const {numbers}=stats(),day=api().getData().day;
@@ -65,10 +153,12 @@ function paint(){
   const metric=numbers.get(n),entry=day.get(n);
   const value=S.mode==='day'?(entry?.diff??null):metric?.mean;
   const color=heatColor(value,S.mode);
+  const matched=!S.machine||entry?.machine===S.machine;
+  g.setAttribute('opacity',matched?'1':'.28');
   r.setAttribute('fill',color);
   r.setAttribute('fill-opacity',S.mode==='day'||(metric?.count||0)>=Math.min(3,S.min)?1:.55);
-  r.setAttribute('stroke',S.favs.has(n)?'#fbbf24':'#fff');
-  r.setAttribute('stroke-width',S.favs.has(n)?'1.2':'.4');
+  r.setAttribute('stroke',S.machine&&matched?'#42e5ff':S.favs.has(n)?'#fbbf24':'#fff');
+  r.setAttribute('stroke-width',S.machine&&matched?'1.8':S.favs.has(n)?'1.2':'.4');
   const label=g.querySelector('text');
   if(label)label.setAttribute('fill',[C.purple,C.blue,C.green,C.red].includes(color)?'#fff':'#233447');
   const title=g.querySelector('title');
@@ -161,7 +251,7 @@ function auditMachineNumbers(){
  target.innerHTML=message;
  target.querySelectorAll('[data-sss-seat]').forEach(b=>b.onclick=()=>api().selectSeat(Number(b.dataset.sssSeat)));
 }
-function update(){if(!S.ready)return;S.key=null;dateBar();kpis();paint();summary();analytics();auditMachineNumbers()}
+function update(){if(!S.ready)return;S.key=null;machineSelection();dateBar();kpis();paint();summary();analytics();auditMachineNumbers()}
 async function setMode(m){
  if(!['day','range','3','6','0'].includes(m))return;
  S.mode=m;
@@ -188,8 +278,9 @@ function seatDetails(n,panel){
  panel.querySelector('.sss-extra-detail')?.remove();
  const div=document.createElement('div');div.className='sss-extra-detail';
  div.innerHTML='<div class="sss-detail-actions"><button class="sss-star">'+(S.favs.has(n)?'★ お気に入り解除':'☆ お気に入り登録')+
- '</button><button class="sss-history">過去14日の推移</button></div><p class="sss-detail-note">設定確定を示すものではありません。</p><div class="sss-detail-slot sss-hint">履歴を開くと直近の差枚を表示します。</div>';
+ '</button><button class="sss-history">過去14日の推移</button><button class="sss-share">台のリンクをコピー</button></div><p class="sss-detail-note">設定確定を示すものではありません。</p><div class="sss-detail-slot sss-hint">履歴を開くと直近の差枚を表示します。</div>';
  panel.appendChild(div);
+ div.querySelector('.sss-share').onclick=()=>shareSeat(n,div.querySelector('.sss-share'));
  div.querySelector('.sss-star').onclick=()=>{
   if(S.favs.has(n))S.favs.delete(n);else S.favs.add(n);
   saveFavorites();paint();analytics();seatDetails(n,panel);
@@ -218,9 +309,15 @@ function onReady(){
   S.tab=b.dataset.sssTab;document.querySelectorAll('[data-sss-tab]').forEach(x=>x.classList.toggle('active',x===b));analytics();
  });
  $('sss-export').onclick=csv;
+ $('sss-machine-filter').onchange=()=>{
+  S.machine=$('sss-machine-filter').value;S.machineCursor=-1;machineSelection();paint();
+ };
+ $('sss-machine-next').onclick=stepMachine;
+ $('sss-sync-refresh').onclick=fetchSyncHealth;
+ fetchSyncHealth();
  $('sss-analysis-results').innerHTML='<div class="sss-analysis-controls"><label>最低サンプル <select id="sss-minsample"><option value="1">1台日</option><option value="3">3台日</option><option value="5" selected>5台日</option><option value="10">10台日</option><option value="20">20台日</option></select></label><span id="sss-analysis-context" class="sss-hint"></span></div><div id="sss-table-body"></div><p class="sss-hint">勝率＝稼働台日のうち差枚プラスの割合。強弱は選択日以前だけを集計。高設定の確定・設定予測を意味しません。</p>';
  $('sss-minsample').onchange=()=>{S.min=Number($('sss-minsample').value);update()};
- update();
+ update();restoreSharedSeat();
 }
 window.sssUnifiedUI={onReady,onRender:update,onSeat:seatDetails,setMode,getStats:stats};
 if(api()?.getState().latest)onReady();
