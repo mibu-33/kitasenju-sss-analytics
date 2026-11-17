@@ -63,39 +63,24 @@ function paint(){
  document.querySelectorAll('#map g.s').forEach(group=>{
   const n=Number((group.getAttribute('aria-label')||'').replace('番',''));
   const rect=group.querySelector('rect.cell');if(!rect)return;
-  // If the previous overlay still owns the fill, restore the real payout color.
-  // If the main heatmap has repainted it since then, do not restore stale data.
+  // Keep the actual difference-of-coins color visible. Restore the value if
+  // a previous version of the overlay had covered red/green with a rainbow fill.
   if(rect.getAttribute('fill')==='url(#sss-suika-gradient)'){
    for(const [attr,backup] of [['fill','data-suika-base-fill'],['fill-opacity','data-suika-base-opacity'],['stroke','data-suika-base-stroke'],['stroke-width','data-suika-base-stroke-width']]){
-    const original=rect.getAttribute(backup);
-    if(original!=null)rect.setAttribute(attr,original);
+    const val=rect.getAttribute(backup);
+    if(val!=null)rect.setAttribute(attr,val);
    }
   }
   if(!state.showRainbow||!found.mentioned.has(n))return;
-  // The rainbow must dominate visually even on negative-payout (red) seats.
-  // Keep the true payout in day records/details, not as the dominant cell color.
-  for(const [attr,backup] of [['fill','data-suika-base-fill'],['fill-opacity','data-suika-base-opacity'],['stroke','data-suika-base-stroke'],['stroke-width','data-suika-base-stroke-width']]){
-   rect.setAttribute(backup,rect.getAttribute(attr)??(attr==='fill-opacity'?'1':attr==='stroke-width'?'.4':'#fff'));
-  }
-  rect.setAttribute('fill','url(#sss-suika-gradient)');
-  rect.setAttribute('fill-opacity','1');
-  rect.setAttribute('stroke','#fff');
-  rect.setAttribute('stroke-width','1.1');
   const x=Number(rect.getAttribute('x')),y=Number(rect.getAttribute('y'));
   const w=Number(rect.getAttribute('width')),h=Number(rect.getAttribute('height'));
   if(![x,y,w,h].every(Number.isFinite))return;
-  const outline=document.createElementNS(NS,'rect');
-  for(const [k,v] of Object.entries({class:'sss-suika-rainbow-stroke',x:x-1.5,y:y-1.5,width:w+3,height:h+3,rx:1.8,fill:'none',stroke:'url(#sss-suika-gradient)','stroke-width':3.2}))outline.setAttribute(k,v);
-  group.appendChild(outline);
-  // A black/white outline around the number ensures it remains legible
-  // over all seven gradient colors without losing the seat identity.
-  const number=group.querySelector('text');
-  if(number){
-   number.setAttribute('fill','#182339');
-   number.setAttribute('paint-order','stroke');
-   number.setAttribute('stroke','#f6f8ff');
-   number.setAttribute('stroke-width','.8');
+  // Suika attribution is an outer gradient only, not an assertion of setting 6.
+  const border=document.createElementNS(NS,'rect');
+  for(const [key,value] of Object.entries({class:'sss-suika-rainbow-stroke',x:x-1.6,y:y-1.6,width:w+3.2,height:h+3.2,rx:1.6,fill:'none',stroke:'url(#sss-suika-gradient)','stroke-width':3.4})){
+   border.setAttribute(key,value);
   }
+  group.appendChild(border);
  });
 }
 function panel(){
