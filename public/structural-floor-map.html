@@ -27,18 +27,17 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。機種名は選択日の台別実績で表示し、11/13参考図にも切替可能。11/13参考図にある691番と最新実績台帳の601番は異なるため、601番に架空の位置は割り当てていません。島の向き・寸法は継続照合対象です。
 </div>
 <section class="sss-suika-panel" id="sss-suika-panel">
-<div class="sss-suika-head"><div><h2>🍉 スイカの🌈報告を島図に重ねる</h2><span class="sss-suika-tag">🌈 全台系の機種報告</span></div>
+<div class="sss-suika-head"><div><h2>🍉 スイカが言及した台を🌈表示</h2><span class="sss-suika-tag">🌈 全台・角・円卓・毎日機種</span></div>
 <a href="https://x.com/suicaa_melonn31" target="_blank" rel="noopener noreferrer">スイカの投稿を見る</a></div>
 <div class="sss-suika-controls">
-<label><input type="checkbox" id="sss-suika-show-rainbow" checked>🌈 全🌈機種を太枠で強調</label>
-<label><input type="checkbox" id="sss-suika-show-individual">🍉 個別掲載台を点で表示</label>
-<select id="sss-suika-report-date" aria-label="スイカが全虹を報告した日へ移動"><option value="">🌈報告日へ移動</option></select>
+<label><input type="checkbox" id="sss-suika-show-rainbow" checked>🌈 言及台をすべて虹枠で表示</label>
+<select id="sss-suika-report-date" aria-label="スイカが台番号や機種を掲載した日へ移動"><option value="">🍉掲載日へ移動</option></select>
 </div>
-<div class="sss-suika-legend"><span class="sss-suika-rainbow-indicator"></span>全🌈（機種単位の投稿） <span class="sss-suika-dot-indicator"></span>個別の台番号掲載（設定確定ではない）</div>
+<div class="sss-suika-legend"><span class="sss-suika-rainbow-indicator"></span>🌈 全🌈・角・円卓・毎日機種・その他の台番号掲載をまとめて強調／種別は台タップで確認</div>
 <p class="sss-suika-status" id="sss-suika-status">スイカの報告を照合中…</p>
 <div id="sss-suika-result-list" class="sss-suika-entry-list"></div>
 <p id="sss-suika-individual-summary" class="sss-suika-explainer"></p>
-<p class="sss-suika-explainer">虹枠は「スイカの全🌈報告に該当する機種の座席」。各台の設定6確定を表すものではありません。11/13配置図を使うため古い日や入替後は位置差に注意。</p>
+<p class="sss-suika-explainer">虹枠はスイカの投稿で言及された台を示す表示で、設定6確定を意味しません。全🌈の機種報告と台番号の個別掲載を含みます。11/13配置図のため過去日や入替後は位置差に注意。</p>
 </section><section class="sss-modes"><div class="sss-mode-head"><strong>差枚・強弱の表示</strong><span id="sss-mode-sub" class="small">当日の台別差枚</span></div><div class="sss-mode-buttons" role="group" aria-label="表示モード"><button class="sss-mode active" type="button" data-sss-mode="day">当日差枚</button><button class="sss-mode" type="button" data-sss-mode="range">期間強弱</button><button class="sss-mode" type="button" data-sss-mode="3">3の日</button><button class="sss-mode" type="button" data-sss-mode="6">6の日</button><button class="sss-mode" type="button" data-sss-mode="0">0の日</button></div><label>集計期間 <select id="sss-range"><option value="7">7日</option><option value="14">14日</option><option value="30" selected>30日</option><option value="60">60日</option><option value="90">90日</option><option value="180">180日</option><option value="365">365日</option><option value="0">全期間</option></select></label><div id="sss-rank-summary" class="sss-rank-summary small"></div></section><div class="toolbar">
 <button id="all" class="active">全体</button><button id="first">1F</button><button id="second">2F</button>
 <button id="less">縮小 −</button><button id="more">拡大 ＋</button><button id="fit">幅に合わせる</button>
