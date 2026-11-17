@@ -70,3 +70,18 @@ main{max-width:1500px}
 #sss-machine-audit-count{display:inline-block;margin-left:8px;font-size:11px;color:#a2e1c4}
 .sss-audit-panel .sss-audit-warning{color:#f6be80}
 .sss-audit-panel .sss-table-wrap{max-height:270px}
+
+/* Data provenance and navigation. Observed records remain separate from forecast. */
+.sss-sync-banner{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:3px 0 12px;padding:10px 13px;border:1px solid #395b75;border-radius:11px;background:#172d41;color:#d8eaf8;font-size:12px;line-height:1.5}
+.sss-sync-banner.sss-sync-warning{border-color:#ae8854;background:#302b2b}
+#sss-sync-text{font-weight:680;flex:1;min-width:210px}
+.sss-sync-banner button{font-size:11px;padding:5px 10px}
+.sss-sync-banner details{width:100%;font-size:11px;color:#c7d8e5}
+.sss-sync-banner details summary{cursor:pointer;color:#c5dafa}
+.sss-sync-banner details p{margin:6px 0 0;overflow-wrap:anywhere}
+.sss-machine-picker{min-width:0}
+#sss-machine-filter{max-width:min(66vw,240px);min-width:130px;text-overflow:ellipsis;font-size:12px}
+#sss-machine-next{font-size:12px;font-weight:700;padding:7px 10px}
+#sss-machine-next:disabled{opacity:.55;cursor:not-allowed}
+#sss-machine-count{font-size:11px;white-space:nowrap}
+@media(max-width:600px){.sss-sync-banner{padding:9px;font-size:11px}.sss-sync-banner button{font-size:11px}.sss-machine-picker{width:100%}#sss-machine-filter{max-width:calc(100vw - 155px);width:100%;min-width:0}.sss-detail-actions .sss-share{margin-top:2px}}
