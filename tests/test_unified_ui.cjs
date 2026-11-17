@@ -68,6 +68,7 @@ const context={window,document,localStorage,fetch,console,Date,Blob,URL,Number,M
  assert.match($('sss-kpis').innerHTML,/5,000枚/);
  assert.match($('sss-date-label').textContent,/11\/15/);
  assert.equal(seatGroups[0].rect.attrs.fill,'#00b0f0','daily +5000 blue/cyan');
+ assert.match($('sss-heatmap-legend').innerHTML,/\+10,000枚/,'daily legend matches actual color bins');
  assert.equal(window.sssUnifiedUI.getStats().rows.length,3);
  // Machine picker is filled from the selected date, without guessing from future inventory.
  const pick=$('sss-machine-filter');const options=pick.children.map(x=>x.value);
@@ -85,6 +86,7 @@ const context={window,document,localStorage,fetch,console,Date,Blob,URL,Number,M
  await window.sssUnifiedUI.setMode('range');
  assert.ok(ensureCalled>0,'history loaded lazily for range comparison');
  assert.equal(window.sssUnifiedUI.getStats().rows.length,9);
+ assert.match($('sss-heatmap-legend').innerHTML,/平均\+3,000枚/,'range legend switches to average thresholds');
  assert.match($('sss-mode-sub').textContent,/30日間/);
  await window.sssUnifiedUI.setMode('3');
  assert.equal(window.sssUnifiedUI.getStats().rows.length,3,'only date ending in 3');
