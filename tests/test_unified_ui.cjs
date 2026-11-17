@@ -8,7 +8,7 @@ const elements=new Map();
 function element(id=''){
  return {id,value:'',textContent:'',innerHTML:'',disabled:false,style:{},className:'',dataset:{},
    children:[],attrs:{},classList:{toggle(k,on){this[k]=on},add(){},remove(){}},
-   append(...x){this.children.push(...x)},appendChild(x){this.children.push(x)},
+   append(...x){this.children.push(...x)},appendChild(x){this.children.push(x)},replaceChildren(){this.children=[]}, 
    querySelector(){return element('nested')},querySelectorAll(){return[]},
    setAttribute(k,v){this.attrs[k]=v},getAttribute(k){return this.attrs[k]},
    scrollIntoView(){},focus(){},showPicker(){},click(){this.onclick?.()},remove(){}};
@@ -39,6 +39,7 @@ const bridge={
  getAvailableDates(){return dateOptions},
  getData(){return {day:history.get(selectedDate)||new Map(),history,inventory:toMap(data['2026-11-15'])}},
  getPlacements(){return new Map([[1,{zone:'red'}],[2,{zone:'gold'}],[3,{zone:'gold'}]])},
+ getVisiblePositions(){return new Map([[1,{}],[2,{}],[3,{}]])},
  async ensureHistory(){ensureCalled++;for(const [d,r] of Object.entries(data))history.set(d,toMap(r))},
  async setDate(d){selectedDate=d;window.sssUnifiedUI.onRender();return true},
  selectSeat(n){bridge.lastSelected=n}
@@ -57,7 +58,9 @@ const document={
 };
 const localStorage={getItem(){return null},setItem(){}};
 const window={sssFloorBridge:bridge};
-const context={window,document,localStorage,console,Date,Blob,URL,Number,Math,JSON,Intl,Set,Map};
+const syncStatus={status:'error',newest_date:'2026-11-15',error:'primary HTTP 403',fallback_status:'ok',fallback_last_success:'2026-11-15T14:00:00+09:00',indexed_days:132};
+const fetch=async()=>({ok:true,json:async()=>syncStatus});
+const context={window,document,localStorage,fetch,console,Date,Blob,URL,Number,Math,JSON,Intl,Set,Map};
 (async()=>{
  vm.runInNewContext(src,context);
  assert.ok(window.sssUnifiedUI,'UI plugin exposed');
@@ -66,6 +69,19 @@ const context={window,document,localStorage,console,Date,Blob,URL,Number,Math,JS
  assert.match($('sss-date-label').textContent,/11\/15/);
  assert.equal(seatGroups[0].rect.attrs.fill,'#00b0f0','daily +5000 blue/cyan');
  assert.equal(window.sssUnifiedUI.getStats().rows.length,3);
+ // Machine picker is filled from the selected date, without guessing from future inventory.
+ const pick=$('sss-machine-filter');const options=pick.children.map(x=>x.value);
+ assert.ok(options.includes('東京喰種')&&options.includes('モンキーターン'),'available machines listed');
+ pick.value='東京喰種';pick.onchange();
+ assert.equal(seatGroups[0].attrs.opacity,'.28','nonmatching seats are visually dimmed');
+ assert.equal(seatGroups[1].attrs.opacity,'1','matching seats retain full opacity');
+ assert.equal($('sss-machine-count').textContent,'2台（この表示 2台）');
+ $('sss-machine-next').onclick();assert.equal(bridge.lastSelected,2,'next-seat action jumps to the next matching machine');
+ pick.value='';pick.onchange();
+ assert.equal(seatGroups[0].attrs.opacity,'1','clearing a filter restores every seat');
+ await new Promise(r=>setImmediate(r));
+ assert.match($('sss-sync-text').textContent,/主取得に制限・代替取得実績あり/,'sync health surfaces the failure separately from fallback');
+ assert.match($('sss-sync-details').textContent,/primary HTTP 403/);
  await window.sssUnifiedUI.setMode('range');
  assert.ok(ensureCalled>0,'history loaded lazily for range comparison');
  assert.equal(window.sssUnifiedUI.getStats().rows.length,9);
