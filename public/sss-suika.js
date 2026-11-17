@@ -90,7 +90,7 @@ function panel(){
  }else{
   status.textContent=date()+'のスイカ掲載台は未登録（最終登録 '+(last||'不明')+'）。未確認の日に虹枠は付けません。';
  }
- const kinds={corner:'角チャレンジ',roundtable:'円卓チャレンジ',daily:'毎日機種'};
+ const kinds={corner:'角チャレンジ',roundtable:'円卓チャレンジ',daily:'毎日機種',half_machine:'1/2機種',third_machine:'1/3機種',three_run:'3連番',five_run:'5連番'};
  const items=[];
  for(const g of d.groups){
   items.push('<div class="sss-suika-result"><strong>🌈 全🌈 '+escapeHtml(g.label)+'</strong><small>'+
@@ -114,7 +114,7 @@ function panel(){
   bridge().selectSeat(Number(btn.dataset.suikaSeat));$('detail').scrollIntoView({behavior:'smooth',block:'nearest'});
  });
  const summary=$('sss-suika-individual-summary');
- if(summary)summary.textContent=individualCount?'個別掲載台も全🌈機種と同じ虹枠で表示。タップすると角・円卓・毎日機種などの言及種別が分かります。':'個別台番号の掲載はこの日の登録資料にはありません。';
+ if(summary)summary.textContent=individualCount?'個別掲載台も全🌈機種と同じ虹枠で表示。タップすると角・円卓・毎日・1/2・1/3・3連番・5連番などの言及種別が分かります。':'個別台番号の掲載はこの日の登録資料にはありません。';
 }
 function refresh(){
  if(!state.ready||!bridge())return;
@@ -127,7 +127,7 @@ function onSeat(n,detail){
  const entry=highlights().mentioned.get(Number(n));
  if(!entry)return;
  const section=document.createElement('div');section.className='sss-suika-seat-info';
- const kinds={corner:'角チャレンジ',roundtable:'円卓チャレンジ',daily:'毎日機種'};
+ const kinds={corner:'角チャレンジ',roundtable:'円卓チャレンジ',daily:'毎日機種',half_machine:'1/2機種',third_machine:'1/3機種',three_run:'3連番',five_run:'5連番'};
  section.innerHTML=(entry.all?'<strong>🌈 スイカの全🌈機種として掲載</strong><p>'+escapeHtml(entry.all.label)+'｜'+escapeHtml(date())+'（設定6確定とは別）</p>':'')+
  entry.kinds.map(k=>'<strong>🌈 '+escapeHtml(kinds[k]||k)+'で言及</strong><p>スイカがこの台番号を個別掲載した記録です。設定確定を示すものではありません。</p>').join('')+
  '<a href="https://x.com/suicaa_melonn31" target="_blank" rel="noopener noreferrer">スイカの投稿を確認</a>';
