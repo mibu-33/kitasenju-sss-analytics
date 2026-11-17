@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "as_of": "2026-11-17",
+  "store": "ピーアーク北千住SSS",
+  "attribution": "スイカのスロット屋🍉 @suicaa_melonn31",
+  "source_title": "11/17発信の11/1〜11/15 全🌈実績一覧、および11/3・14・15の個別台掲載",
+  "source_url": "https://www.sotwe.com/suicaa_melonn31",
+  "author_url": "https://x.com/suicaa_melonn31",
+  "disclaimer": "全🌈は投稿者による機種単位の報告であり、全台の設定6確定を意味しない。台単位の設定判明・翌日の投入を示さない。個別台掲載も確定設定とは別。島図の配置は11/13参照、過去日・新台入替時は誤差がありうる。",
+  "reports": [
+    {
+      "date": "2026-11-01",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "からくり",
+        "青ブタ"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-02",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "青ブタ"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-03",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "吉宗"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-04",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "東リベ"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-05",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "戦コレ6"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-06",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "化物語"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-07",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "化物語",
+        "防振り"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-08",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "かのかり"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-09",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "やじきた"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "リオ2"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-11",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "ゾンサガ",
+        "化物語"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-12",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "とんスキ"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-13",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "新鬼3"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-14",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "防振り"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-15",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "ゾンサガ"
+      ],
+      "explicit_seat_numbers": [
+        74,
+        75,
+        76,
+        77
+      ],
+      "source": "スイカ 11月全🌈結果まとめ",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    }
+  ],
+  "individually_reported": [
+    {
+      "date": "2026-11-14",
+      "source": "スイカの日別答え合わせ（個別台番号）",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "categories": [
+        {
+          "kind": "corner",
+          "numbers": [
+            53
+          ]
+        },
+        {
+          "kind": "roundtable",
+          "numbers": [
+            1004,
+            1006,
+            1009,
+            1017
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "source": "スイカの日別答え合わせ（個別台番号）",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "categories": [
+        {
+          "kind": "corner",
+          "numbers": [
+            52
+          ]
+        },
+        {
+          "kind": "roundtable",
+          "numbers": [
+            1003,
+            1005,
+            1010,
+            1014
+          ]
+        },
+        {
+          "kind": "daily",
+          "numbers": [
+            2,
+            23,
+            57,
+            134,
+            162,
+            612,
+            623,
+            643,
+            670,
+            674,
+            682,
+            705,
+            726,
+            2002
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "source": "スイカの日別答え合わせ（個別台番号）",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "categories": [
+        {
+          "kind": "corner",
+          "numbers": [
+            36
+          ]
+        },
+        {
+          "kind": "roundtable",
+          "numbers": [
+            1003,
+            1005,
+            1012,
+            1013
+          ]
+        }
+      ]
+    }
+  ]
+}
