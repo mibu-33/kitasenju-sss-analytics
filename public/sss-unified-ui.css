@@ -85,3 +85,12 @@ main{max-width:1500px}
 #sss-machine-next:disabled{opacity:.55;cursor:not-allowed}
 #sss-machine-count{font-size:11px;white-space:nowrap}
 @media(max-width:600px){.sss-sync-banner{padding:9px;font-size:11px}.sss-sync-banner button{font-size:11px}.sss-machine-picker{width:100%}#sss-machine-filter{max-width:calc(100vw - 155px);width:100%;min-width:0}.sss-detail-actions .sss-share{margin-top:2px}}
+
+/* Compact top-of-page information; keep the map reachable on phones. */
+.sss-map-source-note{margin:3px 0 10px;padding:7px 11px;border:1px solid #556779;border-radius:9px;background:#182c3c;color:#cbd9e7;font-size:11px}
+.sss-map-source-note summary{cursor:pointer;font-weight:650}
+.sss-map-source-note p{margin:7px 0 2px;color:#b9ccdd;line-height:1.7}
+.sss-suika-results{padding:7px 9px;border:1px solid #465e80;border-radius:9px;background:#162c45;margin-top:8px}
+.sss-suika-results summary{cursor:pointer;font-size:12px;font-weight:650;color:#deefff}
+.sss-suika-results[open] summary{margin-bottom:8px}
+@media(max-width:600px){.sss-suika-panel{margin:7px 0}.sss-map-source-note{padding:6px 9px}.sss-suika-panel .sss-suika-explainer{font-size:10px}}
