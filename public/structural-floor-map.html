@@ -112,6 +112,10 @@ function machine(row,number){
  if(!row?.machine)return '';
  return (typeof window!=='undefined'?window.sssMachineLabels?.shorten(row.machine):null)||[...String(row.machine)].slice(0,7).join('');
 }
+function commonMachine(numbers){
+ const labels=numbers.map(n=>machine(dayRow(n),n));
+ return labels.every(Boolean)&&new Set(labels).size===1?labels[0]:'';
+}
 function current(){return daily.get(currentDate)||new Map()}
 function dayRow(n){const r=current().get(n);return r||(currentDate===latest?inventory.get(n):null)}
 function seatFill(id,zone){if(!heat)return '#526171';const r=current().get(id);if(r?.diff==null)return'#aebac7';const d=Number(r.diff);return d>=3000?'#c2a5ed':d>=1000?'#ffc36f':d>=0?'#90d6af':'#f3a2a7'}
@@ -207,16 +211,21 @@ function base(){
  txt(543,210,'通路',5.8,'#b5bfcb');
  txt(325,247,'通路',5.8,'#b5bfcb');
  txt(323,422,'通路',5.8,'#b5bfcb');
- // The true cross and plus-shaped roundtables use contiguous center blocks,
- // not a generic circle or a large rectangular island.
- box(231,435,42,39,'#609bdf','#609bdf',1,.3);
- txt(252,456,'絆',7.6,'white',800);
- box(284,386,24,20,'#609bdf','#609bdf',1,.3);
- txt(296,398,'からくり',4.8,'white',700);
- box(216,507,38,12,'#609bdf','#609bdf',.7,.2);
- txt(235,515,'鏡',5.5,'white',800);
- box(108,614,60,9,'#609bdf','#609bdf',.4,.2);
- txt(138,621,'SAO / e-D',5.8,'white',700);
+ // Center labels are derived from the actual machine names for the displayed
+ // date (or 11/13 reference mode). Never show an old placeholder if the seats
+ // no longer all contain the same machine.
+ const gou=commonMachine(U(2001,2012));
+ if(gou){box(231,435,42,39,'#609bdf','#609bdf',1,.3);txt(252,456,gou,7.6,'white',800)}
+ const karakuri=commonMachine(U(1009,1012));
+ if(karakuri){box(284,386,24,20,'#609bdf','#609bdf',1,.3);txt(296,398,karakuri,4.3,'white',700)}
+ const vv=commonMachine(U(1005,1008));
+ if(vv){box(216,507,38,12,'#609bdf','#609bdf',.7,.2);txt(235,515,vv,5.5,'white',800)}
+ // 1013–1017 contain different machines: show names individually rather than
+ // the misleading combined "SAO / e-D" label.
+ for(const [n,x,y] of [[1013,111,582],[1014,134,582],[1015,158,582],[1017,111,620],[1016,134,620]]){
+  const label=machine(dayRow(n),n);
+  if(label){const t=txt(x,y,label,3.8,'#475b72',700);t.setAttribute('textLength',Math.min(21.5,Math.max(8,[...label].length*4)));t.setAttribute('lengthAdjust','spacingAndGlyphs')}
+ }
  // Record the free central walking lanes without drawing artificial benches.
  box(83,445,95,18,'none','#9360c1',2,1.5).setAttribute('stroke-dasharray','5 4');
   // Colored area badges mimic source placement only.
