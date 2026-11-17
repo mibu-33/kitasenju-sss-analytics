@@ -59,15 +59,16 @@ jobs:
           python -m pip install -q pytest
           python -m pytest -q tests/test_sync_fallback.py tests/test_area_evidence.py tests/test_roundtable.py
           node tests/test_color_areas.cjs
+      # Scheduled/manual runs collect source data; push events only validate and publish UI.
       - name: Sync without VPN
         continue-on-error: true # Source may return HTTP 403; still publish status and UI
-        if: ${{ vars.USE_WIREGUARD != 'true' }}
+        if: ${{ github.event_name != 'push' && vars.USE_WIREGUARD != 'true' }}
         env:
           SYNC_DAYS: '7'
           REQUEST_INTERVAL: '2.5'
         run: python scripts/sync.py
       - name: Sync via WireGuard (fail closed)
-        if: ${{ vars.USE_WIREGUARD == 'true' }}
+        if: ${{ github.event_name != 'push' && vars.USE_WIREGUARD == 'true' }}
         env:
           WG_CONFIG_B64: ${{ secrets.WG_CONFIG_B64 }}
           SYNC_DAYS: '7'
@@ -77,24 +78,24 @@ jobs:
           sudo apt-get install -y wireguard-tools iptables
           bash scripts/vpn_fetch.sh
       - name: Try SloNavi public seat data if robots allow
-        if: always()
+        if: ${{ success() && github.event_name != 'push' }}
         continue-on-error: true
         env:
           FALLBACK_DAYS_PER_RUN: '12'
           FALLBACK_REQUEST_INTERVAL: '3'
         run: python scripts/sync_fallback.py
       - name: Collect daily roundtable answer-check labels (robots-aware)
-        if: always()
+        if: ${{ success() && github.event_name != 'push' }}
         continue-on-error: true
         run: python scripts/sync_roundtable.py
       - name: Import authorized exports (even when direct fetch returned 403)
-        if: always()
+        if: ${{ success() && github.event_name != 'push' }}
         run: python scripts/import_batch.py
       - name: Build floor inventory with verified geometry labels
-        if: always()
+        if: ${{ success() && github.event_name != 'push' }}
         run: python scripts/build_floor_inventory.py
       - name: Commit collected data and failure state
-        if: always()
+        if: ${{ success() && github.event_name != 'push' }}
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -104,17 +105,17 @@ jobs:
             git push
           fi
       - name: Assemble static site
-        if: always()
+        if: success()
         run: |
           mkdir -p site
           cp -r public/. site/
           cp -r data site/data
       - uses: actions/configure-pages@v5
-        if: always()
+        if: success()
       - uses: actions/upload-pages-artifact@v3
-        if: always()
+        if: success()
         with:
           path: site
       - uses: actions/deploy-pages@v4
         id: deployment
-        if: always() && github.ref == 'refs/heads/main'
+        if: success() && github.ref == 'refs/heads/main'
