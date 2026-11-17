@@ -65,13 +65,13 @@ async function tick(){await new Promise(r=>setImmediate(r));}
   const group=nodes.get('map').children.find(x=>x.kind==='g'&&x.attrs['aria-label']===n+'番');
   assert.ok(group,n+' visible');return group.children.filter(x=>x.kind==='text').map(x=>x.textContent).slice(1).join('');
  };
- assert.equal(nameAt(758),'アクセラ','758 is 一方通行, not generic とある');
- assert.equal(nameAt(673),'からくり2');
- assert.equal(nameAt(678),'からくり');
- assert.equal(nameAt(623),'ヴヴヴ2');
- assert.equal(nameAt(695),'ヴヴヴ');
- assert.equal(nameAt(204),'マイVI');
- assert.equal(nameAt(218),'マイV');
+ assert.equal(nameAt(758),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===758).machine),'758 must match dated source, not a fixed former machine assignment');
+ assert.equal(nameAt(673),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===673).machine),'673 must match dated source, not a fixed former machine assignment');
+ assert.equal(nameAt(678),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===678).machine),'678 must match dated source, not a fixed former machine assignment');
+ assert.equal(nameAt(623),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===623).machine),'623 must match dated source, not a fixed former machine assignment');
+ assert.equal(nameAt(695),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===695).machine),'695 must match dated source, not a fixed former machine assignment');
+ assert.equal(nameAt(204),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===204).machine),'204 must match dated source, not a fixed former machine assignment');
+ assert.equal(nameAt(218),globals.sssMachineLabels.shorten(reg.seats.find(x=>x.number===218).machine),'218 must match dated source, not a fixed former machine assignment');
  const seat692=svg.children.find(x=>x.kind==='g'&&x.attrs['aria-label']==='692番').children.find(x=>x.kind==='rect');
  const seat691=svg.children.find(x=>x.kind==='g'&&x.attrs['aria-label']==='691番').children.find(x=>x.kind==='rect');
  assert.ok(Number(seat691.attrs.x)-Number(seat692.attrs.x)>2*Number(seat691.attrs.width)-1,'preserve empty real slot between 692 and 691');
@@ -99,6 +99,7 @@ async function tick(){await new Promise(r=>setImmediate(r));}
  assert.equal(nameAt(612),'過去テスト機種','past machine name does not leak from latest day');
  nodes.get('machineLabelMode').onchange({target:{value:'reference'}});
  assert.equal(nameAt(612),'サンブレ','reference mode displays 11/13 snapshot independently of selected-day row');
+ assert.equal(nameAt(218),'マイV','reference mode restores 11/13 reference even if latest day has changed');
  for(const name of ['喰種','ヴヴヴ','からくり2','金カム','ガルパン','ダンバイン','e-D2','SAO'])
   assert.ok(centerTexts().includes(name),'11/13 floor map references correct mini-island labels: '+name);
 
