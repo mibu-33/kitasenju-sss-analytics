@@ -31,17 +31,18 @@ class FakeNode{
 }
 const nodes=new Map();
 const $=id=>{if(!nodes.has(id))nodes.set(id,new FakeNode('div',id));return nodes.get(id)};
-const map=$('map'),groups=[74,75,76,77,1005].map((n,i)=>{
+const map=$('map'),groups=[74,75,76,77,1005,707].map((n,i)=>{
  const group=new FakeNode('g');group.setAttribute('aria-label',n+'番');
- const seat=new FakeNode('rect');seat.setAttribute('class','cell');seat.setAttribute('x',String(i*30+15));seat.setAttribute('y','100');seat.setAttribute('width','23');seat.setAttribute('height','10');group.appendChild(seat);map.appendChild(group);return group;
+ const seat=new FakeNode('rect');seat.setAttribute('class','cell');seat.setAttribute('x',String(i*30+15));seat.setAttribute('y','100');seat.setAttribute('width','23');seat.setAttribute('height','10');seat.setAttribute('fill',n===707?'#c00000':'#b7c5d5');seat.setAttribute('fill-opacity','1');seat.setAttribute('stroke','#fff');seat.setAttribute('stroke-width','.4');group.appendChild(seat);map.appendChild(group);return group;
 });
 let activeDate='2026-11-15';
 const sourceDay=new Map([74,75,76,77].map(n=>[n,{number:n,machine:'ゾンビランドサガ'}]));
 sourceDay.set(1005,{number:1005,machine:'革命機ヴァルヴレイヴ'});
+sourceDay.set(707,{number:707,machine:'革命機ヴァルヴレイヴ',diff:-3250,games:5000});
 const api={
  getState(){return {date:activeDate}},
  getData(){return {day:activeDate==='2026-11-15'?sourceDay:new Map()}},
- getVisiblePositions(){return new Map(groups.map((g,i)=>[[74,75,76,77,1005][i],g]))},
+ getVisiblePositions(){return new Map(groups.map((g,i)=>[[74,75,76,77,1005,707][i],g]))},
  selectSeat(n){api.selected=n},
  setDate(d){activeDate=d;window.sssSuika.onRender();return Promise.resolve(true)}
 };
@@ -62,13 +63,20 @@ function count(cls){return groups.flatMap(g=>g.children).filter(x=>x.attrs.class
  assert.ok(mentioned.has(703)&&mentioned.get(703).kinds.includes('five_run')&&mentioned.get(703).kinds.includes('third_machine'),'703 preserves two separate published reasons');
  assert.ok(mentioned.has(244)&&mentioned.get(244).kinds.includes('three_run'),'244 from three-seat report');
  assert.ok(mentioned.has(73)&&mentioned.get(73).kinds.includes('five_run'),'73 from five-seat report');
- assert.equal(count('sss-suika-rainbow-stroke'),5,'four 11/15 Zombieland seats plus individually cited 1005 get identical rainbow borders');
+ assert.ok(mentioned.has(707),'707 included through 703–707 five-seat run');
+ assert.ok(mentioned.get(707).kinds.includes('five_run')&&mentioned.get(707).kinds.includes('third_machine'),'707 preserves both Suika citation categories');
+ const seat707=groups.at(-1).querySelector('rect.cell');
+ assert.equal(seat707.getAttribute('fill'),'url(#sss-suika-gradient)','707 is rainbow-filled rather than red even if reported loss');
+ assert.ok(Number(groups.at(-1).children.find(x=>x.attrs.class==='sss-suika-rainbow-stroke').attrs['stroke-width'])>=3,'707 has conspicuous thick rainbow border');
+ assert.equal(count('sss-suika-rainbow-stroke'),6,'four 11/15 Zombieland seats plus cited 1005 and negative 707 have rainbow borders');
  assert.equal(count('sss-suika-single-marker'),0,'no separate marker style remains');
  assert.match($('sss-suika-status').textContent,/46台/);
  $('sss-suika-show-rainbow').checked=false;$('sss-suika-show-rainbow').onchange();
  assert.equal(count('sss-suika-rainbow-stroke'),0,'single rainbow toggle hides all mentioned seats');
+ assert.equal(seat707.getAttribute('fill'),'#c00000','turning off rainbow restores 707 actual negative-payout red color');
  $('sss-suika-show-rainbow').checked=true;$('sss-suika-show-rainbow').onchange();
- assert.equal(count('sss-suika-rainbow-stroke'),5,'single rainbow toggle restores full and individual reports');
+ assert.equal(count('sss-suika-rainbow-stroke'),6,'single rainbow toggle restores full and individual reports');
+ assert.equal(seat707.getAttribute('fill'),'url(#sss-suika-gradient)','707 rainbow returns when toggled back on');
  activeDate='2026-11-14';window.sssSuika.onRender();
  assert.equal(count('sss-suika-rainbow-stroke'),0,'offscreen individual mentions have no false seats');
  assert.ok(window.sssSuika.highlights().mentioned.has(53),'11/14 corner is included even without daily records');
