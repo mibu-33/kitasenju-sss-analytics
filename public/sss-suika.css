@@ -1,0 +1,29 @@
+
+/* Suika's dated third-party rainbow reports: separate from payout heatmap. */
+.sss-suika-panel{border:1px solid #6c5789;background:#18253c;border-radius:14px;padding:12px 13px;margin:12px 0 15px}
+.sss-suika-head{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:start;gap:8px}
+.sss-suika-head h2{font-size:16px;margin:0 0 4px}
+.sss-suika-head a{color:#b9d9fa;font-size:12px}
+.sss-suika-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.sss-suika-controls label{display:flex;gap:6px;align-items:center;font-size:12px;color:#ecf2fa;cursor:pointer}
+.sss-suika-controls input{accent-color:#ca9eec;width:16px;height:16px}
+.sss-suika-controls select,.sss-suika-controls button{font-size:12px;padding:7px 9px}
+.sss-suika-tag{display:inline-flex;align-items:center;border-radius:50px;padding:4px 9px;background:linear-gradient(105deg,#e7a5cc,#8abce8,#92dcc1);color:#10233a;font-size:11px;font-weight:900}
+.sss-suika-status{font-size:12px;color:#d7e3f6;line-height:1.5;margin:8px 0}
+.sss-suika-status.warning{color:#f9d6a5;background:transparent;border:0;padding:0}
+.sss-suika-entry-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.sss-suika-result{padding:9px 11px;min-width:140px;display:flex;flex-direction:column;gap:3px;border-radius:9px;background:#1c3853;border:1px solid #53789c}
+.sss-suika-result strong{font-size:13px}
+.sss-suika-result small{font-size:10px;color:#b8d4e9}
+.sss-suika-chip{border-radius:8px;padding:6px 9px;background:#293f60;color:#f1f8ff;border:1px solid #5880a4;font-size:12px}
+.sss-suika-chip:hover{background:#426c90}
+.sss-suika-explainer{font-size:11px;color:#b6c6df;line-height:1.6;margin:8px 0 0}
+.sss-suika-legend{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:11px;color:#dbe4f4}
+.sss-suika-rainbow-indicator{display:inline-block;width:19px;height:13px;border:3px solid transparent;border-radius:3px;background:linear-gradient(#12243c,#12243c) padding-box,linear-gradient(105deg,#ff4d65,#ffce4d,#3bde92,#4bbfff,#be6ff5) border-box}
+.sss-suika-dot-indicator{display:inline-block;width:10px;height:10px;border-radius:100%;background:#ffd45a;border:1px solid #ff8f24}
+#map .sss-suika-rainbow-stroke{pointer-events:none;filter:drop-shadow(0 0 1.5px #ffe0a9);animation:sss-suika-shine 2.8s ease-in-out infinite alternate}
+#map .sss-suika-single-marker{pointer-events:none;filter:drop-shadow(0 0 1px #8c4008)}
+@keyframes sss-suika-shine{0%{stroke-opacity:.76}100%{stroke-opacity:1}}
+.sss-suika-seat-info{margin-top:12px;padding:10px;border:1px solid #705fa3;background:#202c4a;border-radius:9px;font-size:12px}
+.sss-suika-seat-info a{color:#bedbff}
+@media(max-width:650px){.sss-suika-panel{padding:10px}.sss-suika-controls{gap:6px}.sss-suika-result{min-width:110px;flex:1}.sss-suika-controls label{font-size:11px}}
