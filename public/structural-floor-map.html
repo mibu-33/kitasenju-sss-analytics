@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101a2c"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="sss-unified-ui.css"><title>トリエス｜構造再現 島図</title>
+<meta name="theme-color" content="#101a2c"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="sss-unified-ui.css"><link rel="stylesheet" href="sss-suika.css"><title>トリエス｜構造再現 島図</title>
 <style>
 :root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#0a1423;color:#edf5ff}
 *{box-sizing:border-box}body{margin:0}header{padding:15px max(14px,calc((100% - 1350px)/2));background:#142840;border-bottom:1px solid #3d5874}
@@ -26,7 +26,20 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 <main><div class="sss-datebar" aria-label="表示日を切り替える"><button id="sss-prev" type="button" aria-label="前の営業日">‹</button><button id="sss-date-label" type="button" aria-label="日付を選択">—</button><button id="sss-next" type="button" aria-label="次の営業日">›</button><span id="sss-data-freshness" class="sss-freshness">データを確認中</span></div><section id="sss-kpis" class="sss-kpis" aria-label="当日実績サマリー"><div class="sss-kpi">総差枚<strong>—</strong></div><div class="sss-kpi">平均差枚<strong>—</strong></div><div class="sss-kpi">稼働台数<strong>—</strong></div><div class="sss-kpi">プラス台<strong>—</strong></div><div class="sss-kpi">平均G<strong>—</strong></div></section><div class="warning">
 画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。機種名は選択日の台別実績で表示し、11/13参考図にも切替可能。11/13参考図にある691番と最新実績台帳の601番は異なるため、601番に架空の位置は割り当てていません。島の向き・寸法は継続照合対象です。
 </div>
-<section class="sss-modes"><div class="sss-mode-head"><strong>差枚・強弱の表示</strong><span id="sss-mode-sub" class="small">当日の台別差枚</span></div><div class="sss-mode-buttons" role="group" aria-label="表示モード"><button class="sss-mode active" type="button" data-sss-mode="day">当日差枚</button><button class="sss-mode" type="button" data-sss-mode="range">期間強弱</button><button class="sss-mode" type="button" data-sss-mode="3">3の日</button><button class="sss-mode" type="button" data-sss-mode="6">6の日</button><button class="sss-mode" type="button" data-sss-mode="0">0の日</button></div><label>集計期間 <select id="sss-range"><option value="7">7日</option><option value="14">14日</option><option value="30" selected>30日</option><option value="60">60日</option><option value="90">90日</option><option value="180">180日</option><option value="365">365日</option><option value="0">全期間</option></select></label><div id="sss-rank-summary" class="sss-rank-summary small"></div></section><div class="toolbar">
+<section class="sss-suika-panel" id="sss-suika-panel">
+<div class="sss-suika-head"><div><h2>🍉 スイカの🌈報告を島図に重ねる</h2><span class="sss-suika-tag">🌈 全台系の機種報告</span></div>
+<a href="https://x.com/suicaa_melonn31" target="_blank" rel="noopener noreferrer">スイカの投稿を見る</a></div>
+<div class="sss-suika-controls">
+<label><input type="checkbox" id="sss-suika-show-rainbow" checked>🌈 全🌈機種を太枠で強調</label>
+<label><input type="checkbox" id="sss-suika-show-individual">🍉 個別掲載台を点で表示</label>
+<select id="sss-suika-report-date" aria-label="スイカが全虹を報告した日へ移動"><option value="">🌈報告日へ移動</option></select>
+</div>
+<div class="sss-suika-legend"><span class="sss-suika-rainbow-indicator"></span>全🌈（機種単位の投稿） <span class="sss-suika-dot-indicator"></span>個別の台番号掲載（設定確定ではない）</div>
+<p class="sss-suika-status" id="sss-suika-status">スイカの報告を照合中…</p>
+<div id="sss-suika-result-list" class="sss-suika-entry-list"></div>
+<p id="sss-suika-individual-summary" class="sss-suika-explainer"></p>
+<p class="sss-suika-explainer">虹枠は「スイカの全🌈報告に該当する機種の座席」。各台の設定6確定を表すものではありません。11/13配置図を使うため古い日や入替後は位置差に注意。</p>
+</section><section class="sss-modes"><div class="sss-mode-head"><strong>差枚・強弱の表示</strong><span id="sss-mode-sub" class="small">当日の台別差枚</span></div><div class="sss-mode-buttons" role="group" aria-label="表示モード"><button class="sss-mode active" type="button" data-sss-mode="day">当日差枚</button><button class="sss-mode" type="button" data-sss-mode="range">期間強弱</button><button class="sss-mode" type="button" data-sss-mode="3">3の日</button><button class="sss-mode" type="button" data-sss-mode="6">6の日</button><button class="sss-mode" type="button" data-sss-mode="0">0の日</button></div><label>集計期間 <select id="sss-range"><option value="7">7日</option><option value="14">14日</option><option value="30" selected>30日</option><option value="60">60日</option><option value="90">90日</option><option value="180">180日</option><option value="365">365日</option><option value="0">全期間</option></select></label><div id="sss-rank-summary" class="sss-rank-summary small"></div></section><div class="toolbar">
 <button id="all" class="active">全体</button><button id="first">1F</button><button id="second">2F</button>
 <button id="less">縮小 −</button><button id="more">拡大 ＋</button><button id="fit">幅に合わせる</button>
 <label>台番号 <input id="query" type="search" inputmode="numeric" placeholder="例 612"></label><button id="find">検索</button>
@@ -245,6 +258,7 @@ function render(){
  if(selected&&seats.has(selected)){const p=seats.get(selected);el('circle',{cx:p.x+p.w/2,cy:p.y+p.h/2,r:10,stroke:'#ed1641','stroke-width':2.5,fill:'none','pointer-events':'none'})}
  $('status').textContent='表示済み：'+seats.size+'台セル｜営業日：'+currentDate+'｜機種名：'+(labelMode==='reference'?'11/13参考図':'選択日の台別実績')+'｜島・通路はSVG（画像貼付なし）';
  if(typeof window!=='undefined'&&window.sssUnifiedUI?.onRender)window.sssUnifiedUI.onRender();
+ if(typeof window!=='undefined'&&window.sssSuika?.onRender)window.sssSuika.onRender();
 }
 function drawMarkersOne(m){emitSeat(m.n,m.x-10.3,m.y-5,20.6,10,m.zone,null)}
 function apply(){
@@ -272,6 +286,7 @@ function choose(n,move=true){
   const refNote=document.createElement('p');refNote.textContent='地図上の機種名は11/13時点の参考図表記です。差枚・G数は選択日の実績です。';panel.append(refNote);
  }
  if(typeof window!=='undefined'&&window.sssUnifiedUI?.onSeat)window.sssUnifiedUI.onSeat(n,panel);
+ if(typeof window!=='undefined'&&window.sssSuika?.onSeat)window.sssSuika.onSeat(n,panel);
  if(!a){const warn=document.createElement('p');warn.textContent='参考図にこの台番号の位置は未登録です。勝手に座標を割り当てていません。';panel.append(warn)}
  if(move&&a){viewport.scrollLeft=Math.max(0,(a.x+a.w/2)*zoom-viewport.clientWidth/2);viewport.scrollTop=Math.max(0,(a.y+a.h/2-(floor==='2F'?343:0))*zoom-viewport.clientHeight/2)}
 }
@@ -322,4 +337,4 @@ Promise.all([
  zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/687));apply();
 }).catch(e=>{$('status').textContent='島図データ読込失敗：'+e.message});
 })();
-</script><script src="sss-unified-ui.js"></script><script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script></body></html>
+</script><script src="sss-unified-ui.js"></script><script src="sss-suika.js"></script><script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script></body></html>
