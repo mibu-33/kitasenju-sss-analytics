@@ -165,6 +165,20 @@ function paint(){
   if(title)title.textContent=n+'番｜'+(entry?.machine||api().getData().inventory.get(n)?.machine||'不明')+'｜'+signed(value)+'枚'+(S.mode==='day'?'':'／'+(metric?.count||0)+'台日');
  });
 }
+function renderLegend(){
+ const target=$('sss-heatmap-legend');if(!target)return;
+ const day=S.mode==='day';
+ const items=day?[
+  [C.purple,'+10,000枚〜'],[C.blue,'+7,000枚〜'],[C.cyan,'+5,000枚〜'],
+  [C.green,'+3,000枚〜'],[C.lightgreen,'+1,000枚〜'],[C.neutral,'±999枚以内'],
+  [C.lightred,'−1,000枚〜'],[C.red,'−3,000枚以下'],[C.unknown,'未取得']
+ ]:[
+  [C.purple,'平均+3,000枚〜'],[C.blue,'平均+1,000枚〜'],[C.green,'平均+300枚〜'],
+  [C.lightgreen,'平均0枚〜'],[C.neutral,'−499〜−1枚'],[C.lightred,'平均−500枚〜'],
+  [C.red,'平均−2,000枚以下'],[C.unknown,'データ不足']
+ ];
+ target.innerHTML=items.map(([color,label])=>'<span><i style="background:'+color+'"></i>'+label+'</span>').join('');
+}
 function kpis(){
  const target=$('sss-kpis');if(!target||!api())return;
  const raw=[...api().getData().day.values()].filter(r=>r?.diff!=null);
@@ -251,7 +265,7 @@ function auditMachineNumbers(){
  target.innerHTML=message;
  target.querySelectorAll('[data-sss-seat]').forEach(b=>b.onclick=()=>api().selectSeat(Number(b.dataset.sssSeat)));
 }
-function update(){if(!S.ready)return;S.key=null;machineSelection();dateBar();kpis();paint();summary();analytics();auditMachineNumbers()}
+function update(){if(!S.ready)return;S.key=null;machineSelection();dateBar();kpis();paint();renderLegend();summary();analytics();auditMachineNumbers()}
 async function setMode(m){
  if(!['day','range','3','6','0'].includes(m))return;
  S.mode=m;
