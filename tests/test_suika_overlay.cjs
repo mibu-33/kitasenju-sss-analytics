@@ -54,13 +54,17 @@ function count(cls){return groups.flatMap(g=>g.children).filter(x=>x.attrs.class
  vm.runInNewContext(src,{window,document,fetch,Map,Set,Number,Object,Math,Date,Array,console});
  await new Promise(r=>setImmediate(r));
  const mentioned=window.sssSuika.highlights().mentioned;
- assert.equal(mentioned.size,23,'Nov 15 report has four full-rainbow plus 19 individually named seats');
+ assert.equal(mentioned.size,46,'Nov 15 reports contain 46 unique cited numbers across full rainbow, single seats, 1/2, 1/3 and runs');
  assert.ok(mentioned.has(1005)&&mentioned.get(1005).kinds.includes('roundtable'),'1005 has roundtable source metadata');
  assert.ok(mentioned.has(52)&&mentioned.get(52).kinds.includes('corner'),'52 from corner challenge');
  assert.ok(mentioned.has(612)&&mentioned.get(612).kinds.includes('daily'),'612 from daily individual report');
+ assert.ok(mentioned.has(178)&&mentioned.get(178).kinds.includes('half_machine'),'178 from 1/2 machine report');
+ assert.ok(mentioned.has(703)&&mentioned.get(703).kinds.includes('five_run')&&mentioned.get(703).kinds.includes('third_machine'),'703 preserves two separate published reasons');
+ assert.ok(mentioned.has(244)&&mentioned.get(244).kinds.includes('three_run'),'244 from three-seat report');
+ assert.ok(mentioned.has(73)&&mentioned.get(73).kinds.includes('five_run'),'73 from five-seat report');
  assert.equal(count('sss-suika-rainbow-stroke'),5,'four 11/15 Zombieland seats plus individually cited 1005 get identical rainbow borders');
  assert.equal(count('sss-suika-single-marker'),0,'no separate marker style remains');
- assert.match($('sss-suika-status').textContent,/23台/);
+ assert.match($('sss-suika-status').textContent,/46台/);
  $('sss-suika-show-rainbow').checked=false;$('sss-suika-show-rainbow').onchange();
  assert.equal(count('sss-suika-rainbow-stroke'),0,'single rainbow toggle hides all mentioned seats');
  $('sss-suika-show-rainbow').checked=true;$('sss-suika-show-rainbow').onchange();
@@ -75,5 +79,5 @@ function count(cls){return groups.flatMap(g=>g.children).filter(x=>x.attrs.class
  assert.match($('sss-suika-status').textContent,/未登録/);
  $('sss-suika-report-date').value='2026-11-15';$('sss-suika-report-date').onchange();
  assert.equal(activeDate,'2026-11-15','published-date selector opens recorded date');
- console.log('PASS Suika all-mentions rainbow: full machines plus corner, roundtable, daily, 23 Nov 15 mentions, toggle, category provenance, date clearing');
+ console.log('PASS Suika all-mentions rainbow: full machines plus corner, roundtable, daily, 1/2, 1/3 and runs; 46 unique Nov 15 mentions, toggle, category provenance, date clearing');
 })().catch(e=>{console.error(e);process.exitCode=1});
