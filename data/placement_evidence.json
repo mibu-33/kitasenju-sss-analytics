@@ -645,6 +645,93 @@
       "confidence": "medium-reported-column-membership",
       "physical_seat_order_verified": false,
       "notes": "2026-11-10取材答え合わせの明示的な横列/縦列記載。列内の座席順・座標・現在の設置を保証しない。"
+    },
+    {
+      "id": "2026-11-16-silver-main-2",
+      "date": "2026-11-16",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・メイン通路側2列目",
+      "machine_numbers": [
+        17,
+        20,
+        51,
+        54
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership-only",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-16の取材答え合わせに列として明記。列内の席順・座標は未確定。連番は個別座席順の証明ではない。"
+    },
+    {
+      "id": "2026-11-16-gold-stairs-12",
+      "date": "2026-11-16",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・トイレ階段側12列目",
+      "machine_numbers": [
+        647,
+        670,
+        675
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership-only",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-16の取材答え合わせに列として明記。列内の席順・座標は未確定。連番は個別座席順の証明ではない。"
+    },
+    {
+      "id": "2026-11-16-red-horizontal-152",
+      "date": "2026-11-16",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "horizontal",
+      "label": "赤・152〜162番の横列",
+      "machine_numbers": [
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership-only",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-16の取材答え合わせに列として明記。列内の席順・座標は未確定。連番は個別座席順の証明ではない。"
+    },
+    {
+      "id": "2026-11-16-red-counter-7-conflict",
+      "date": "2026-11-16",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・カウンター側7列目（既存9列目報告と同一台番号群、位置表現不一致）",
+      "machine_numbers": [
+        117,
+        134,
+        147,
+        156,
+        169,
+        186,
+        197,
+        212,
+        225
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-column-membership-low-position-label-conflicting",
+      "physical_seat_order_verified": false,
+      "notes": "2026-09-06に同じ番号群をメイン通路側9列目と報告。起点・方向・レイアウト変更が不明なため両方の記録を保存し、位置番号を確定しない。"
     }
   ],
   "roundtable_groups": [
