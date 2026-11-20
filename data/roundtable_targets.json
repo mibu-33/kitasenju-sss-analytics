@@ -1,12 +1,12 @@
 {
-  "window_start": "2026-08-21",
-  "window_end": "2026-11-18",
+  "window_start": "2026-08-22",
+  "window_end": "2026-11-19",
   "label_definition": "third-party roundtable challenge answer checks; not confirmed settings",
   "collection_status": {
     "2026-08": "parsed 29 days",
     "2026-09": "parsed 29 days",
     "2026-10": "parsed 31 days",
-    "2026-11": "parsed 11 days"
+    "2026-11": "parsed 13 days"
   },
   "sources": [
     "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4",
@@ -15,18 +15,6 @@
     "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
   ],
   "days": [
-    {
-      "date": "2026-08-21",
-      "targets": {
-        "カバネリ": 1004,
-        "ヴヴヴ": 1005,
-        "からくり2": 1012,
-        "紫バラ": 1017
-      },
-      "complete": true,
-      "classification": "third-party answer check, not verified settings",
-      "source_url": "https://note.com/akb_sss_shisa/n/n3e70ef2c7bb4"
-    },
     {
       "date": "2026-08-22",
       "targets": {
@@ -971,147 +959,171 @@
       "complete": true,
       "classification": "third-party answer check, not verified settings",
       "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
+    },
+    {
+      "date": "2026-11-18",
+      "targets": {
+        "カバネリ": 1003,
+        "ヴヴヴ": 1008,
+        "からくり2": 1010,
+        "紫バラ": 1017
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
+    },
+    {
+      "date": "2026-11-19",
+      "targets": {
+        "カバネリ": 1004,
+        "ヴヴヴ": 1006,
+        "からくり2": 1011,
+        "紫バラ": 1016
+      },
+      "complete": true,
+      "classification": "third-party answer check, not verified settings",
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7"
     }
   ],
   "metrics": {
     "カバネリ": {
-      "n": 80,
+      "n": 81,
       "counts": {
         "1001": 18,
         "1002": 14,
-        "1003": 17,
+        "1003": 18,
         "1004": 31
       },
       "adjacent_pairs": 75,
       "repeat_pairs": 13,
       "repeat_rate_pct": 17.33,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-21",
-      "last": "2026-11-15",
+      "first": "2026-08-22",
+      "last": "2026-11-19",
       "walkforward": {
         "baseline": {
-          "n": 66,
-          "hit": 16.5,
+          "n": 67,
+          "hit": 16.75,
           "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
-          "n": 66,
+          "n": 67,
           "hit": 16,
-          "accuracy_pct": 24.24,
-          "log_loss": 1.3834
+          "accuracy_pct": 23.88,
+          "log_loss": 1.3835
         },
         "recent14": {
-          "n": 66,
+          "n": 67,
           "hit": 20,
-          "accuracy_pct": 30.3,
-          "log_loss": 1.4091
+          "accuracy_pct": 29.85,
+          "log_loss": 1.4075
         }
       }
     },
     "ヴヴヴ": {
-      "n": 78,
+      "n": 79,
       "counts": {
-        "1005": 22,
-        "1006": 25,
+        "1005": 21,
+        "1006": 26,
         "1007": 13,
-        "1008": 18
+        "1008": 19
       },
       "adjacent_pairs": 71,
       "repeat_pairs": 10,
       "repeat_rate_pct": 14.08,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-21",
-      "last": "2026-11-15",
+      "first": "2026-08-22",
+      "last": "2026-11-19",
       "walkforward": {
         "baseline": {
-          "n": 64,
-          "hit": 16.0,
+          "n": 65,
+          "hit": 16.25,
           "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
-          "n": 64,
+          "n": 65,
           "hit": 21,
-          "accuracy_pct": 32.81,
-          "log_loss": 1.3601
+          "accuracy_pct": 32.31,
+          "log_loss": 1.3605
         },
         "recent14": {
-          "n": 64,
+          "n": 65,
           "hit": 12,
-          "accuracy_pct": 18.75,
-          "log_loss": 1.4608
+          "accuracy_pct": 18.46,
+          "log_loss": 1.4504
         }
       }
     },
     "からくり2": {
-      "n": 80,
+      "n": 81,
       "counts": {
         "1009": 21,
-        "1010": 26,
-        "1011": 15,
-        "1012": 18
+        "1010": 27,
+        "1011": 16,
+        "1012": 17
       },
       "adjacent_pairs": 75,
-      "repeat_pairs": 19,
-      "repeat_rate_pct": 25.33,
+      "repeat_pairs": 18,
+      "repeat_rate_pct": 24.0,
       "random_repeat_pct": 25.0,
-      "first": "2026-08-21",
-      "last": "2026-11-15",
+      "first": "2026-08-22",
+      "last": "2026-11-19",
       "walkforward": {
         "baseline": {
-          "n": 66,
-          "hit": 16.5,
+          "n": 67,
+          "hit": 16.75,
           "accuracy_pct": 25.0,
           "log_loss": 1.3863
         },
         "avoid_last": {
-          "n": 66,
+          "n": 67,
           "hit": 23,
-          "accuracy_pct": 34.85,
-          "log_loss": 1.3977
+          "accuracy_pct": 34.33,
+          "log_loss": 1.3905
         },
         "recent14": {
-          "n": 66,
-          "hit": 19,
-          "accuracy_pct": 28.79,
-          "log_loss": 1.4575
+          "n": 67,
+          "hit": 20,
+          "accuracy_pct": 29.85,
+          "log_loss": 1.4542
         }
       }
     },
     "紫バラ": {
-      "n": 79,
+      "n": 80,
       "counts": {
         "1013": 7,
         "1014": 18,
         "1015": 13,
-        "1016": 25,
+        "1016": 26,
         "1017": 16
       },
       "adjacent_pairs": 73,
       "repeat_pairs": 11,
       "repeat_rate_pct": 15.07,
       "random_repeat_pct": 20.0,
-      "first": "2026-08-21",
-      "last": "2026-11-15",
+      "first": "2026-08-22",
+      "last": "2026-11-19",
       "walkforward": {
         "baseline": {
-          "n": 65,
-          "hit": 12.999999999999986,
+          "n": 66,
+          "hit": 13.199999999999985,
           "accuracy_pct": 20.0,
           "log_loss": 1.6094
         },
         "avoid_last": {
-          "n": 65,
+          "n": 66,
           "hit": 8,
-          "accuracy_pct": 12.31,
-          "log_loss": 1.6074
+          "accuracy_pct": 12.12,
+          "log_loss": 1.6003
         },
         "recent14": {
-          "n": 65,
-          "hit": 13,
-          "accuracy_pct": 20.0,
-          "log_loss": 1.6432
+          "n": 66,
+          "hit": 14,
+          "accuracy_pct": 21.21,
+          "log_loss": 1.6393
         }
       }
     }
