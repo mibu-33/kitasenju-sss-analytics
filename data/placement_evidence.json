@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-11-14",
+  "as_of_date": "2026-11-22",
   "store": "ピーアーク北千住SSS",
   "total_seats": 451,
   "current_inventory_source": "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
@@ -732,6 +732,65 @@
       "confidence": "medium-column-membership-low-position-label-conflicting",
       "physical_seat_order_verified": false,
       "notes": "2026-09-06に同じ番号群をメイン通路側9列目と報告。起点・方向・レイアウト変更が不明なため両方の記録を保存し、位置番号を確定しない。"
+    },
+    {
+      "id": "2026-11-20-silver-vertical-11-26-45",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀エリア・縦列（列番号未掲載）",
+      "machine_numbers": [
+        11,
+        26,
+        45
+      ],
+      "date": "2026-11-20",
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-20の取材答え合わせに明示された縦列・横列。報告の列所属のみ確認。列内の物理的席順・座標・現行の恒久配置は未確定。"
+    },
+    {
+      "id": "2026-11-20-gold-horizontal-636-639",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "horizontal",
+      "label": "金エリア・横列 636〜639",
+      "machine_numbers": [
+        636,
+        637,
+        638,
+        639
+      ],
+      "date": "2026-11-20",
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-20の取材答え合わせに明示された縦列・横列。報告の列所属のみ確認。列内の物理的席順・座標・現行の恒久配置は未確定。"
+    },
+    {
+      "id": "2026-11-20-purple-horizontal-742-748",
+      "floor": "2F",
+      "zone": "purple",
+      "kind": "horizontal",
+      "label": "紫エリア・横列 742〜748（既存紫Aの部分列）",
+      "machine_numbers": [
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748
+      ],
+      "date": "2026-11-20",
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "2026-11-20の取材答え合わせに明示された縦列・横列。報告の列所属のみ確認。列内の物理的席順・座標・現行の恒久配置は未確定。"
     }
   ],
   "roundtable_groups": [
@@ -883,12 +942,12 @@
     "新台入替後の配置有効期間"
   ],
   "last_research_cycle": {
-    "date": "2026-11-15",
+    "date": "2026-11-22",
     "new_sources": [
       "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
       "https://www.p-world.co.jp/tokyo/kitasenjusss.htm"
     ],
-    "results": "Added four 2026-11-10 explicitly reported row/column groups; corroborated 2026-09-12 red and gold groups with explicit 2026-11-11 column indices 4 and 10. P-WORLD updated 2026-11-14 and reports 451 machines but no complete numbered seating diagram. No seat coordinates inferred."
+    "results": "Added three explicitly labeled 2026-11-20 reported rows/columns. 2026-11-21 result not yet published in source. P-WORLD updated 2026-11-21 and lists 451 seats; no complete numbered seating diagram. No physical seat order inferred."
   },
   "floor_map_photo_observations": [
     {
