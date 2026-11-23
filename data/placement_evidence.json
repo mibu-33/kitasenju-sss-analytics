@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-11-22",
+  "as_of_date": "2026-11-23",
   "store": "ピーアーク北千住SSS",
   "total_seats": 451,
   "current_inventory_source": "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
@@ -791,6 +791,97 @@
       "confidence": "medium-reported-column-membership",
       "physical_seat_order_verified": false,
       "notes": "2026-11-20の取材答え合わせに明示された縦列・横列。報告の列所属のみ確認。列内の物理的席順・座標・現行の恒久配置は未確定。"
+    },
+    {
+      "id": "2026-11-21-gold-horizontal-673-686",
+      "date": "2026-11-21",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "horizontal",
+      "label": "金・横列（673〜686）",
+      "machine_numbers": [
+        673,
+        674,
+        675,
+        676,
+        677,
+        678,
+        679,
+        680,
+        681,
+        682,
+        683,
+        684,
+        685,
+        686
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "11/21取材答え合わせに明示された列所属のみ採用。列内の席順・物理座標・向きは未確認。"
+    },
+    {
+      "id": "2026-11-21-silver-vertical-5-32-39-63",
+      "date": "2026-11-21",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・縦列①（列位置未記載）",
+      "machine_numbers": [
+        5,
+        32,
+        39,
+        63
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "11/21取材答え合わせに明示された列所属のみ採用。列内の席順・物理座標・向きは未確認。"
+    },
+    {
+      "id": "2026-11-21-red-vertical-115-223",
+      "date": "2026-11-21",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・縦列②（列位置未記載）",
+      "machine_numbers": [
+        115,
+        136,
+        145,
+        158,
+        167,
+        188,
+        195,
+        214,
+        223
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "11/21取材答え合わせに明示された列所属のみ採用。列内の席順・物理座標・向きは未確認。"
+    },
+    {
+      "id": "2026-11-21-gold-vertical-604-632",
+      "date": "2026-11-21",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・縦列③（列位置未記載）",
+      "machine_numbers": [
+        604,
+        620,
+        625,
+        632
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership",
+      "physical_seat_order_verified": false,
+      "notes": "11/21取材答え合わせに明示された列所属のみ採用。列内の席順・物理座標・向きは未確認。"
     }
   ],
   "roundtable_groups": [
@@ -942,12 +1033,13 @@
     "新台入替後の配置有効期間"
   ],
   "last_research_cycle": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "new_sources": [
       "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
-      "https://www.p-world.co.jp/tokyo/kitasenjusss.htm"
+      "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
+      "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=182355"
     ],
-    "results": "Added three explicitly labeled 2026-11-20 reported rows/columns. 2026-11-21 result not yet published in source. P-WORLD updated 2026-11-21 and lists 451 seats; no complete numbered seating diagram. No physical seat order inferred."
+    "results": "Added four explicitly labeled 2026-11-21 reported horizontal/vertical groups (secondary report, medium confidence). 2026-11-22 answer-check not yet posted. P-WORLD updated 2026-11-23 and lists 451 machines. 2026-11-22 island-diagram posts found but image seat positions not independently validated. No individual seat order inferred."
   },
   "floor_map_photo_observations": [
     {
