@@ -118,7 +118,7 @@ def complete_daily_records():
         dates[day][number] = {"number": number, "machine": machine, "diff": diff,
                               "games": games, "A": int(games >= 2000 and diff >= 1000)}
     # Exclude source scraping gaps, which are indistinguishable from non-targets.
-    days = {d: entries for d, entries in dates.items() if len(entries) >= 400 and d <= TEST_END}
+    days = {d: entries for d, entries in dates.items() if len(entries) >= 400 and d <= datetime.now(timezone(timedelta(hours=9))).date().isoformat()}
     return dict(sorted(days.items()))
 
 
@@ -300,8 +300,8 @@ def eval_roundtable():
     test_days=set()
     for obs in days:
         d=obs["date"]
-        if d > TEST_END:
-            continue
+        # After the locked holdout, newly observed days can refresh the
+        # prediction-state history, but never alter the pre-Oct fitted weights.
         for group, candidates in GROUPS.items():
             seat=obs.get("targets",{}).get(group)
             if seat not in candidates:
@@ -390,6 +390,7 @@ def main():
         "locked_test":True,
         "rules":[
          "No October or November labels are used to fit weights or choose hyperparameters.",
+         "After November 25, new past-day observations only refresh forecast features; fitted coefficients and Oct-Nov test scores remain frozen.",
          "Walk-forward feature states may include earlier observed test dates, but never the target date or a later date.",
          "Machine identities on test dates are taken from the previous complete date, not that day's outcomes.",
          "Model outputs are historical associations; source mentions and high settings are NOT ground truth.",
