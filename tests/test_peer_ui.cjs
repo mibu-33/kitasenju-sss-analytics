@@ -43,7 +43,7 @@ class Element{
  find(selector){
   if(selector.startsWith('#'))return registry.get(selector.slice(1))||null;
   if(selector.startsWith('.')){const cls=selector.slice(1);return [this,...this.children].find(x=>x.classes.has(cls))||null}
-  return null;
+  return this.walk().find(x=>x.tagName.toLowerCase()===selector)||null;
  }
  querySelector(selector){if(selector.startsWith('.'))return this.walk().find(x=>x.classes.has(selector.slice(1)))||null;return this.find(selector)}
  walk(){return [this,...this.children.flatMap(x=>x.walk())]}
