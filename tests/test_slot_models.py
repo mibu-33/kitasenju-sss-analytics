@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from scripts import train_slot_models as m
+from scripts import train_slot_models_v2 as m
 
 ROOT = Path(__file__).resolve().parents[1]
 report = json.loads((ROOT / "public/model_results.json").read_text(encoding="utf-8"))
@@ -20,7 +20,19 @@ assert report["seat_proxy"]["test"]["days"] >= 30
 assert report["seat_proxy"]["training"]["samples"] >= 10000
 assert report["seat_proxy"]["test"]["seat_predictions"] >= 10000
 assert report["roundtable"]["model"]["features"] == m.ROUND_FEATURES
-assert report["seat_proxy"]["model"]["features"] == m.SEAT_FEATURES
+assert report["schema"] == 2
+assert report["seat_proxy"]["model"]["features"] in (m.SEAT_FEATURES, m.SEAT_FEATURES_V1)
+assert report["seat_proxy"]["training"]["validation"]["training_through"] == "2026-08-31"
+assert report["seat_proxy"]["training"]["validation"]["period"] == "2026-09-01 to 2026-09-30"
+assert report["roundtable"]["training"]["validation"]["training_through"] == "2026-09-18"
+assert report["roundtable"]["training"]["validation"]["period"] == "2026-09-19 to 2026-09-30"
+assert report["seat_proxy"]["model"]["blend_v2"] in m.CHOSEN_ALPHAS
+assert report["roundtable"]["model"]["uniform_shrinkage_model_weight"] in m.CHOSEN_ALPHAS
+assert report["split"]["model_selection_dates"] == "September 2026 only; never October or November"
+assert report["seat_proxy"]["test"]["previous_v1_model"]["log_loss"] > 0
+assert report["roundtable"]["test"]["previous_v1_model_log_loss"] > 0
+assert len(report["seat_proxy"]["training"]["validation"]["candidates"]) == len(m.CHOSEN_ALPHAS)
+assert len(report["roundtable"]["training"]["validation"]["candidates"]) == len(m.CHOSEN_ALPHAS)
 assert report["roundtable"]["test"]["group_predictions"] >= 100
 assert 0 <= report["roundtable"]["test"]["top1_hit_rate_pct"] <= 100
 assert 0 <= report["seat_proxy"]["test"]["top10_precision_pct"] <= 100
