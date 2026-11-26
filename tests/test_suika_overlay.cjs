@@ -21,6 +21,11 @@ assert.equal(n25.categories.find(x=>x.kind==='two_run').numbers.length,28);
 const source25=new Set([...n25.categories.flatMap(x=>x.numbers),70,71,72,73]);
 assert.equal(source25.size,45,'45 unique Nov25 cited machines across 4 groups, with overlap deduplicated');
 assert.equal(data.coverage.all_rainbow_machine_reports.through,'2026-11-25');
+const inventory=JSON.parse(fs.readFileSync('data/floor_inventory.json','utf8'));
+const worldSeats=inventory.seats.filter(x=>[70,71,72,73].includes(Number(x.number)));
+assert.equal(worldSeats.length,4,'2026-11-25 inventory contains all four cited World Dai Star seats');
+assert.ok(worldSeats.every(x=>x.machine==='ワールドダイスター'),'all four Nov25 cited seats really match World Dai Star in same-day data');
+assert.ok(worldSeats.some(x=>x.diff<0),'a negative payout never removes a Suika source citation');
 const labels=require('../public/sss-machine-labels.js');
 class FakeNode{
  constructor(tag='div',id=''){
