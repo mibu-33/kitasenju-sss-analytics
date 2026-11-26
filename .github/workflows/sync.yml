@@ -8,6 +8,7 @@ on:
     branches: [main]
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -120,6 +121,24 @@ jobs:
         if: success()
         with:
           path: site
+      - name: Confirm GitHub Pages artifact is indexed
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # GitHub artifact metadata can lag behind the successful upload step.
+          # A fresh run avoids the duplicate-artifact issue seen on job reruns.
+          for attempt in {1..15}; do
+            count="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length' 2>/dev/null || echo 0)"
+            if [ "$count" = "1" ]; then
+              echo "Pages artifact indexed; deployment can begin."
+              exit 0
+            fi
+            echo "Pages artifact metadata not ready (attempt ${attempt}, count=${count})"
+            sleep 4
+          done
+          echo "The uploaded Pages artifact could not be uniquely identified." >&2
+          exit 1
       - uses: actions/deploy-pages@v4
         id: deployment
         if: success() && github.ref == 'refs/heads/main'
