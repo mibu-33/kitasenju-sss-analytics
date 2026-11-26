@@ -216,8 +216,10 @@ def train_and_test_seat_proxy():
   if x is None:continue
   candidate={"number":n,"machine":row["machine"],"x":x}
   p=weighted_prob(candidate,base,extended,alpha)
+  p_baseline=old.binary_probability(base,x[:V1_DIM])
   predictions.append({"number":n,"machine":row["machine"],
     "A_proxy_probability":old.r(p,5),
+    "baseline_A_proxy_probability":old.r(p_baseline,5),
     "prior_day_diff":int(row["diff"]),"prior_day_games":int(row["games"])})
  predictions.sort(key=lambda z:(-z["A_proxy_probability"],z["number"]))
  machines=defaultdict(list)
@@ -228,6 +230,17 @@ def train_and_test_seat_proxy():
    "numbers":[x["number"] for x in rows]}
     for name,rows in machines.items() if len(rows)>=2]
  machine_ranks.sort(key=lambda z:(-z["average_A_proxy_probability"],-z["expected_A_seats"],z["machine"]))
+ legacy_predictions=sorted(predictions,key=lambda z:(-z["baseline_A_proxy_probability"],z["number"]))
+ legacy_machines=[{"machine":name,"seat_count":len(rows),
+   "expected_A_seats":old.r(sum(x["baseline_A_proxy_probability"] for x in rows),3),
+   "average_A_proxy_probability":old.r(sum(x["baseline_A_proxy_probability"] for x in rows)/len(rows),5),
+   "numbers":[x["number"] for x in sorted(rows,key=lambda x:(-x["baseline_A_proxy_probability"],x["number"]))]}
+    for name,rows in machines.items() if len(rows)>=2]
+ legacy_machines.sort(key=lambda x:(-x["average_A_proxy_probability"],-x["expected_A_seats"],x["machine"]))
+ legacy_top20=[{"number":x["number"],"machine":x["machine"],
+   "A_proxy_probability":x["baseline_A_proxy_probability"],
+   "prior_day_diff":x["prior_day_diff"],"prior_day_games":x["prior_day_games"]}
+    for x in legacy_predictions[:20]]
  return {
   "target":"A proxy: same day diff >= +1000 coins AND games >= 2000, NOT setting 6",
   "model":{"type":"September-selected frozen V1+V2 probability blend" if alpha>0 else "September-validated baseline logistic",
@@ -242,7 +255,9 @@ def train_and_test_seat_proxy():
     "validation":validation},
   "test":after,
   "forecast":{"target_date":target_date,"input_last_complete_day":latest,
-    "seat_top20":predictions[:20],"machine_top15":machine_ranks[:15]}
+    "seat_top20":predictions[:20],"machine_top15":machine_ranks[:15],
+    "seat_top20_baseline":legacy_top20,
+    "machine_top15_baseline":legacy_machines[:15]}
  }
 
 
