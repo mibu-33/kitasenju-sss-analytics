@@ -1,12 +1,12 @@
 {
-  "version": 2,
-  "as_of": "2026-11-17",
+  "version": 3,
+  "as_of": "2026-11-26",
   "store": "ピーアーク北千住SSS",
   "attribution": "スイカのスロット屋🍉 @suicaa_melonn31",
   "source_title": "11/17発信の11/1〜11/15 全🌈実績一覧、および11/3・14・15の個別台掲載",
   "source_url": "https://www.sotwe.com/suicaa_melonn31",
   "author_url": "https://x.com/suicaa_melonn31",
-  "disclaimer": "虹枠はスイカが対象として個別台番号や全🌈機種を掲載した記録。全台・角・円卓・毎日・1/2機種・1/3機種・3連番・5連番等を含み、各台が設定6確定という意味ではない。機種名から台番号を推定するのは日付別実績がある場合のみ。島図の位置は11/13参照。",
+  "disclaimer": "🌈はスイカ本人が全🌈機種または角・円卓・毎日機種・連番等として言及した記録であり設定6確定を意味しない。16〜24日の全🌈機種は本人の月間一覧から確認。個別台番号は投稿本文で確認できた日のみ反映。未確認の日の角・円卓等は想像で登録しない。座席位置は11/13参照。",
   "reports": [
     {
       "date": "2026-11-01",
@@ -165,9 +165,152 @@
       ],
       "source": "スイカ 11月全🌈結果まとめ",
       "source_url": "https://www.sotwe.com/suicaa_melonn31"
+    },
+    {
+      "date": "2026-11-16",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "ライズ"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-17",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "レビュスタ"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-18",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "かぐや"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-19",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "七つま"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "化物語"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-21",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "からくり",
+        "からくり2",
+        "攻殻",
+        "防振り"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-22",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "とある2"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-23",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "獣王",
+        "かのかり"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-24",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "パリピ",
+        "マイV",
+        "マイVI"
+      ],
+      "explicit_seat_numbers": [],
+      "source": "スイカ本人の11/26時点・11月全🌈結果一覧",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人による全🌈掲載機種。機種全体が実際の設定6という確証ではない。"
+    },
+    {
+      "date": "2026-11-25",
+      "kind": "all-rainbow-machine-report",
+      "machine_labels": [
+        "ワタスタ"
+      ],
+      "explicit_seat_numbers": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "source": "スイカ本人の11/25トリエス日別結果投稿",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "『全🌈機種 70–73 ダイスター』の明示。個別台番号は別カテゴリで記録する。"
     }
   ],
   "individually_reported": [
+    {
+      "date": "2026-11-03",
+      "source": "スイカの日別答え合わせ（個別台番号）",
+      "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "categories": [
+        {
+          "kind": "corner",
+          "numbers": [
+            36
+          ]
+        },
+        {
+          "kind": "roundtable",
+          "numbers": [
+            1003,
+            1005,
+            1012,
+            1013
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-11-14",
       "source": "スイカの日別答え合わせ（個別台番号）",
@@ -290,26 +433,97 @@
       "source_note": "2026/11/17確認の11/15結果投稿。本文に台番号を列挙した仕掛け区分のみ。結果投稿と宣伝・予測の機種言及は区別。"
     },
     {
-      "date": "2026-11-03",
-      "source": "スイカの日別答え合わせ（個別台番号）",
+      "date": "2026-11-25",
+      "source": "スイカ本人 11/25トリエス結果（1/4角・円卓・毎日機種・全🌈・連番）",
       "source_url": "https://www.sotwe.com/suicaa_melonn31",
+      "source_note": "本人の11/25結果投稿に番号が列挙された箇所のみ。『全🌈』や『連番』は投稿者の分類であり設定6確定ではない。全🌈の70–73番はreports[]へ格納。",
       "categories": [
         {
           "kind": "corner",
           "numbers": [
-            36
+            53
           ]
         },
         {
           "kind": "roundtable",
           "numbers": [
-            1003,
-            1005,
+            1004,
+            1008,
             1012,
-            1013
+            1014
+          ]
+        },
+        {
+          "kind": "daily",
+          "numbers": [
+            8,
+            25,
+            46,
+            132,
+            156,
+            607,
+            623,
+            642,
+            665,
+            677,
+            678,
+            706,
+            730,
+            2009
+          ]
+        },
+        {
+          "kind": "two_run",
+          "numbers": [
+            53,
+            54,
+            80,
+            81,
+            182,
+            183,
+            229,
+            230,
+            254,
+            255,
+            622,
+            623,
+            633,
+            634,
+            655,
+            656,
+            677,
+            678,
+            686,
+            687,
+            705,
+            706,
+            717,
+            718,
+            751,
+            752,
+            2008,
+            2009
           ]
         }
       ]
     }
-  ]
+  ],
+  "coverage": {
+    "all_rainbow_machine_reports": {
+      "through": "2026-11-25",
+      "source": "本人の集計および11/25結果"
+    },
+    "individually_numbered_reports": {
+      "fully_transcribed_dates": [
+        "2026-11-15",
+        "2026-11-25"
+      ],
+      "partly_transcribed_dates": [
+        "2026-11-03",
+        "2026-11-14"
+      ],
+      "remaining_dates": "未確認の個別台番号は推測せず空欄"
+    },
+    "validation": "投稿で言及された台と設定6確定台は別概念"
+  }
 }
