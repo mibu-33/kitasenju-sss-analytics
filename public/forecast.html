@@ -33,7 +33,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #b6a6ff;outline-offset:2p
 <header><div><small>P-ARK KITASENJU SSS</small><h1>予想ランキング</h1></div><nav><a href="floor-map.html">島図</a><a href="forecast.html" aria-current="page">予想</a><a href="index.html">分析</a></nav></header>
 <main>
 <div class="top"><div><div class="fine">TRAIN THROUGH SEPT 30 · HOLDOUT OCT–NOV</div><div class="headline">過去データで学習、未来を検証</div><div class="stamp" id="trainline">モデルを読み込み中…</div></div><div class="fine" id="modeldate"></div></div>
-<div class="warning">このランキングは「設定6の確率」ではありません。円卓は第三者が掲載した対象番号の予測、機種・台番号は差枚+1,000枚以上かつ2,000G以上の <b>A判定</b> 予測です。10・11月の結果は重み学習に使っていません。</div>
+<div class="warning">このランキングは「設定6の確率」ではありません。円卓は第三者が掲載した対象番号の予測、機種・台番号は差枚+1,000枚以上かつ2,000G以上の <b>A判定</b> 予測です。10・11月の結果は重み学習や改良案の選択に使っていません。改良案の選択は9月中の時系列検証に限定し、設定6確定の予測ではありません。</div>
 <div id="status" role="status">訓練済みモデルを取得中…</div>
 <div class="card-grid">
 <div class="metric"><span>円卓 10–11月 TOP1的中</span><strong id="round-metric">—</strong><small id="round-base">比較基準 —</small></div>
@@ -94,12 +94,14 @@ function testMetrics(){
  const c=result.roundtable.test,s=result.seat_proxy.test;
  set('forecast-title','固定テスト：10月・11月の答え合わせ');
  set('forecast-note','平均値であり、特定日の設定が確認できたわけではありません。差枚モデルの比較相手は当日の無作為10台抽出の期待A率です。');
+ const roundOld=c.previous_v1_model_log_loss,seatOld=s.previous_v1_model||{};
  const rows=[
   ['円卓・TOP1',' '+c.top1_hits+' / '+c.group_predictions+' ＝ '+c.top1_hit_rate_pct+'%','4台なら25%、紫バラは20%'],
   ['円卓・TOP2',' '+c.top2_hits+' / '+c.group_predictions+' ＝ '+c.top2_hit_rate_pct+'%','4台なら50%、紫バラは40%'],
-  ['円卓・対数損失',c.mean_log_loss,c.uniform_mean_log_loss+'（一様確率）'],
-  ['A予測・TOP10',' '+s.top10_successes+' / '+s.top10_predictions+' ＝ '+s.top10_precision_pct+'%',s.random_ranking_expected_top10_precision_pct+'%（無作為）'],
-  ['A予測・対数損失',s.log_loss,s.constant_train_rate_baseline_log_loss+'（訓練率固定）'],
+  ['円卓・対数損失',c.mean_log_loss,roundOld+'（旧モデル）／ '+c.uniform_mean_log_loss+'（一様）'],
+  ['A予測・TOP10',' '+s.top10_successes+' / '+s.top10_predictions+' ＝ '+s.top10_precision_pct+'%',(seatOld.top10_precision_pct??'—')+'%（旧モデル）／ '+s.random_ranking_expected_top10_precision_pct+'%（無作為）'],
+  ['A予測・対数損失',s.log_loss,(seatOld.log_loss??'—')+'（旧モデル）／ '+s.constant_train_rate_baseline_log_loss+'（訓練率固定）'],
+  ['A予測・Brierスコア',s.brier,(seatOld.brier??'—')+'（旧モデル）'],
   ['A予測・全体出現率',s.A_rate_pct+'%','対象は設定6判定ではない'],
  ];
  const table='<div class="tablewrap"><table class="mini-table"><thead><tr><th>指標</th><th>モデル実績</th><th>比較・注意</th></tr></thead><tbody>'+
@@ -127,8 +129,10 @@ fetch('model_results.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)t
  set('seat-base','無作為 '+s.random_ranking_expected_top10_precision_pct+'%');
  set('train-metric',commas(d.seat_proxy.training.samples)+'台日');
  set('train-base','訓練 '+d.seat_proxy.training.days+'日 ／ テスト '+s.days+'日');
- set('model-method','円卓：過去の対象番号頻度、前回対象、隣接、直近7回、最後の掲載からの間隔を用いた正則化ソフトマックス。座席：前日差枚・G数、機種別と台番別の過去A判定率、最近の成績、暦情報を使った正則化ロジスティック回帰。どちらも9月30日までに学習した重みを固定し、10〜11月で検証しています。');
- set('status','検証済み：円卓 '+c.group_predictions+'予測 ／ 台別 '+commas(s.seat_predictions)+'予測。10〜11月の正解でモデルの重みを更新していません。');
+ const weight=Math.round((d.seat_proxy.model.blend_v2||0)*100);
+ const roundWeight=Math.round((d.roundtable.model.uniform_shrinkage_model_weight??1)*100);
+ set('model-method','円卓：9月19〜30日の検証で確率を一様予想へ縮小する割合を決定（モデル重み '+roundWeight+'%）。台別：従来の機種・台番号の長期傾向に加えて直近3〜14日、機種別直近7営業日の動き、機種変更、5・9・0の日などを比較。9月1〜30日の検証だけで、新特徴量モデルの採用比率を '+weight+'% に決定。10〜11月は一切調整せず評価したため、旧モデル比較をテスト詳細に残しています。学習は9月30日まで、設定6を推定するものではありません。');
+ set('status','改良候補は9月以前だけで選択：台別のV2比率 '+Math.round((d.seat_proxy.model.blend_v2||0)*100)+'%、円卓のモデル重み '+Math.round((d.roundtable.model.uniform_shrinkage_model_weight??1)*100)+'%。10〜11月は円卓 '+c.group_predictions+'予測／台別 '+commas(s.seat_predictions)+'予測で検証。');
  render();
 }).catch(err=>{$('rank-list').innerHTML='<div class="empty">結果ファイルがありません。公開ワークフローの学習処理を確認してください。</div>';set('status','読み込み失敗：'+err.message)});
 })();
