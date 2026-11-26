@@ -54,6 +54,10 @@ jobs:
         run: |
           node --check public/sss-suika.js
           node tests/test_suika_overlay.cjs
+      - name: Validate unified Mizumoto/Kameari-style UI shell
+        run: |
+          node --check public/sss-peer-ui.js
+          node tests/test_peer_ui.cjs
       - name: Validate fallback parser
         run: |
           python -m pip install -q pytest
