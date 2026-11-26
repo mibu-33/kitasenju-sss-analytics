@@ -27,12 +27,14 @@ assert report["seat_proxy"]["training"]["validation"]["period"] == "2026-09-01 t
 assert report["roundtable"]["training"]["validation"]["training_through"] == "2026-09-18"
 assert report["roundtable"]["training"]["validation"]["period"] == "2026-09-19 to 2026-09-30"
 assert report["seat_proxy"]["model"]["blend_v2"] in m.CHOSEN_ALPHAS
-assert report["roundtable"]["model"]["uniform_shrinkage_model_weight"] in m.CHOSEN_ALPHAS
+assert report["roundtable"]["model"]["uniform_shrinkage_model_weight"] in m.ROUND_ALPHAS
+assert report["roundtable"]["model"]["uniform_shrinkage_model_weight"] > 0, "A published ranking may not have all candidates tied"
 assert report["split"]["model_selection_dates"] == "September 2026 only; never October or November"
 assert report["seat_proxy"]["test"]["previous_v1_model"]["log_loss"] > 0
 assert report["roundtable"]["test"]["previous_v1_model_log_loss"] > 0
 assert len(report["seat_proxy"]["training"]["validation"]["candidates"]) == len(m.CHOSEN_ALPHAS)
-assert len(report["roundtable"]["training"]["validation"]["candidates"]) == len(m.CHOSEN_ALPHAS)
+assert len(report["roundtable"]["training"]["validation"]["candidates"]) == len(m.ROUND_ALPHAS)
+assert "selection_reason" in report["roundtable"]["training"]["validation"]
 assert report["roundtable"]["test"]["group_predictions"] >= 100
 assert 0 <= report["roundtable"]["test"]["top1_hit_rate_pct"] <= 100
 assert 0 <= report["seat_proxy"]["test"]["top10_precision_pct"] <= 100
