@@ -41,6 +41,15 @@ assert 0 <= report["seat_proxy"]["test"]["top10_precision_pct"] <= 100
 assert report["seat_proxy"]["test"]["top10_predictions"] > 100
 assert len(report["roundtable"]["forecast"]["best_per_group"]) == 4
 assert len(report["seat_proxy"]["forecast"]["seat_top20"]) == 20
+assert len(report["seat_proxy"]["forecast"]["seat_top20_baseline"]) == 20
+assert len(report["seat_proxy"]["forecast"]["machine_top15_baseline"]) >= 8
+assert len({x["number"] for x in report["seat_proxy"]["forecast"]["seat_top20_baseline"]}) == 20
+assert len({x["number"] for x in report["seat_proxy"]["forecast"]["seat_top20"]}) == 20
+assert all(x["number"] > 0 for x in report["seat_proxy"]["forecast"]["seat_top20"])
+page = (ROOT / "public/forecast.html").read_text(encoding="utf-8")
+assert 'data-model="v1"' in page and 'data-model="v2"' in page
+assert "previous_v1_model" in page
+
 assert report["roundtable"]["test"]["days"] <= len([d for d in m.read("roundtable_targets.json")["days"] if "2026-10-01" <= d["date"] <= "2026-11-25"])
 assert all("2026-10" not in x and "2026-11" not in x for x in ["2026-09-30"])
 assert all(k in m.GROUPS[choice["group"]] for choice in report["roundtable"]["forecast"]["best_per_group"] for k in [choice["number"]])
