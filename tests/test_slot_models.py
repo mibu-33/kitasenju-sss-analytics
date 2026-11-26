@@ -39,6 +39,6 @@ latest = datetime.fromisoformat(report["seat_proxy"]["forecast"]["input_last_com
 assert forecast > latest
 # The source's last date matters. A missing daily answer-check must not silently
 # become a synthetic loss for a supposedly 'setting 6' model.
-assert "NOT setting 6" in report["roundtable"]["target"]
+assert "not confirmed settings" in report["roundtable"]["target"]
 assert "NOT setting 6" in report["seat_proxy"]["target"]
 print("PASS split locking, candidate probability sums, report schema, no setting-6 claim")
