@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101a2c"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="sss-unified-ui.css"><link rel="stylesheet" href="sss-suika.css"><title>トリエス｜構造再現 島図</title>
+<meta name="theme-color" content="#070a0f"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="sss-unified-ui.css"><link rel="stylesheet" href="sss-suika.css"><title>トリエス 北千住SSS｜スロット島図</title>
 <style>
 :root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#0a1423;color:#edf5ff}
 *{box-sizing:border-box}body{margin:0}header{padding:15px max(14px,calc((100% - 1350px)/2));background:#142840;border-bottom:1px solid #3d5874}
@@ -20,9 +20,12 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 .legend{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0;color:#d9e7f5;font-size:.76rem}
 .legend i{display:inline-block;width:12px;height:12px;margin-right:4px;vertical-align:middle;border-radius:2px}
 @media(max-width:950px){.workspace{grid-template-columns:1fr}.canvas-wrap{max-height:70vh}}
-</style></head><body>
-<header><h1>北千住SSS｜11月13日参考図から再構成した島図</h1>
-<nav><a href="index.html">全体分析</a><a href="nov13-map.html">元図と照合</a><a href="morning.html">朝の仕掛け</a></nav></header>
+</style><link rel="stylesheet" href="sss-peer-ui.css"></head><body>
+<header class="sss-peer-header">
+<div class="sss-peer-brand"><span class="sss-peer-eyebrow">P-ARK KITASENJU SSS</span><h1>スロット島図</h1></div>
+<nav aria-label="画面切替"><a href="floor-map.html" class="current">島図</a><a href="index.html">全体分析</a><a href="morning.html">仕掛け</a></nav>
+<button id="sss-theme-toggle" type="button" class="sss-peer-theme" aria-label="配色を切り替える">ライト</button>
+</header>
 <main><div class="sss-datebar" aria-label="表示日を切り替える"><button id="sss-prev" type="button" aria-label="前の営業日">‹</button><button id="sss-date-label" type="button" aria-label="日付を選択">—</button><button id="sss-next" type="button" aria-label="次の営業日">›</button><span id="sss-data-freshness" class="sss-freshness">データを確認中</span></div><section id="sss-kpis" class="sss-kpis" aria-label="当日実績サマリー"><div class="sss-kpi">総差枚<strong>—</strong></div><div class="sss-kpi">平均差枚<strong>—</strong></div><div class="sss-kpi">稼働台数<strong>—</strong></div><div class="sss-kpi">プラス台<strong>—</strong></div><div class="sss-kpi">平均G<strong>—</strong></div></section><details class="sss-map-source-note"><summary>島図の配置・出典について</summary><p>画像ではなく、参考図の島を「対向2列／単列／縦列／円卓／独立島」として1本ずつ描画したSVGです。島と通路の形は11/13のユーザー提供図を参考にしています。各台のセルは独立しており、タップ・日別差枚表示が可能。機種名は選択日の台別実績で表示し、11/13参考図にも切替可能。11/13参考図にある691番と最新実績台帳の601番は異なるため、601番に架空の位置は割り当てていません。島の向き・寸法は継続照合対象です。</p></details>
 <div class="sss-sync-banner" id="sss-sync-banner" role="status" aria-live="polite"><span id="sss-sync-text">データ取得状況を確認中…</span><button id="sss-sync-refresh" type="button">状態を更新</button><details><summary>取得元の詳細</summary><p id="sss-sync-details"></p></details></div>
 <section class="sss-suika-panel" id="sss-suika-panel">
@@ -47,7 +50,7 @@ input[type=search]{width:100px}.workspace{display:grid;grid-template-columns:min
 <label class="sss-legacy-heat"><input id="heat" type="checkbox"> 差枚ヒートマップ</label><button id="sss-export" type="button">表示日のCSV</button>
 </div>
 <div class="workspace">
-<section><div class="canvas-wrap" id="scroll"><svg id="map" viewBox="0 0 687 678" role="img" aria-label="1Fと2Fの正確な台列順を重視した編集可能なセル式フロア図" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<section><div class="canvas-wrap" id="scroll" aria-label="島図。ドラッグ移動、拡大縮小操作ができます"><svg id="map" viewBox="0 0 687 678" role="img" aria-label="1Fと2Fの正確な台列順を重視した編集可能なセル式フロア図" xmlns="http://www.w3.org/2000/svg"></svg></div>
 <div class="legend" id="sss-heatmap-legend"><span><i style="background:#7030a0"></i>+10,000枚〜</span><span><i style="background:#4472c4"></i>+7,000枚〜</span><span><i style="background:#00b0f0"></i>+5,000枚〜</span><span><i style="background:#70ad47"></i>+3,000枚〜</span><span><i style="background:#c6efce"></i>+1,000枚〜</span><span><i style="background:#fff"></i>±999枚以内</span><span><i style="background:#f4cccc"></i>−1,000枚〜</span><span><i style="background:#c00000"></i>−3,000枚以下</span><span><i style="background:#b7c5d5"></i>実績なし</span></div>
 <p id="status" class="small">読み込み中…</p></section>
 <aside class="detail" id="detail"><h2>台番号をタップ</h2><p>元図の1台ごとの位置をSVGセルにしています。</p></aside>
@@ -259,6 +262,7 @@ function render(){
  $('status').textContent='表示済み：'+seats.size+'台セル｜営業日：'+currentDate+'｜機種名：'+(labelMode==='reference'?'11/13参考図':'選択日の台別実績')+'｜島・通路はSVG（画像貼付なし）';
  if(typeof window!=='undefined'&&window.sssUnifiedUI?.onRender)window.sssUnifiedUI.onRender();
  if(typeof window!=='undefined'&&window.sssSuika?.onRender)window.sssSuika.onRender();
+ if(typeof window!=='undefined'&&window.sssPeerUI?.onRender)window.sssPeerUI.onRender();
 }
 function drawMarkersOne(m){emitSeat(m.n,m.x-10.3,m.y-5,20.6,10,m.zone,null)}
 function apply(){
@@ -267,6 +271,17 @@ function apply(){
  map.style.width=Math.round(687*zoom)+'px';map.style.height=Math.round(h*zoom)+'px';
  $('all').classList.toggle('active',floor==='ALL');$('first').classList.toggle('active',floor==='1F');$('second').classList.toggle('active',floor==='2F');
  render();
+}
+function zoomTo(next,cx,cy){
+ const old=zoom, desired=Number(next);
+ if(!Number.isFinite(desired)||desired<=0)return zoom;
+ zoom=Math.max(.25,Math.min(4,desired));
+ const x=Number.isFinite(cx)?cx:viewport.clientWidth/2,y=Number.isFinite(cy)?cy:viewport.clientHeight/2;
+ const left=viewport.scrollLeft,top=viewport.scrollTop;
+ apply();
+ viewport.scrollLeft=Math.max(0,(left+x)*(zoom/old)-x);
+ viewport.scrollTop=Math.max(0,(top+y)*(zoom/old)-y);
+ return zoom;
 }
 function choose(n,move=true){
  n=Number(n);if(!Number.isInteger(n))return;
@@ -287,6 +302,7 @@ function choose(n,move=true){
  }
  if(typeof window!=='undefined'&&window.sssUnifiedUI?.onSeat)window.sssUnifiedUI.onSeat(n,panel);
  if(typeof window!=='undefined'&&window.sssSuika?.onSeat)window.sssSuika.onSeat(n,panel);
+ if(typeof window!=='undefined'&&window.sssPeerUI?.onSeat)window.sssPeerUI.onSeat(n,panel);
  if(!a){const warn=document.createElement('p');warn.textContent='参考図にこの台番号の位置は未登録です。勝手に座標を割り当てていません。';panel.append(warn)}
  if(move&&a){viewport.scrollLeft=Math.max(0,(a.x+a.w/2)*zoom-viewport.clientWidth/2);viewport.scrollTop=Math.max(0,(a.y+a.h/2-(floor==='2F'?343:0))*zoom-viewport.clientHeight/2)}
 }
@@ -317,6 +333,8 @@ if(typeof window!=='undefined')window.sssFloorBridge={
  getDayRow:n=>dayRow(Number(n)),
  getVisiblePositions:()=>seats,
  getSelected:()=>selected,
+ getZoom:()=>zoom,
+ setZoom:(value,x,y)=>zoomTo(value,x,y),
  getReferenceLabels:()=>referenceLabels,
  ensureHistory:loadHistory,
  setDate:async d=>{const input=$('date');if(!Array.from(input.options).some(o=>o.value===d))return false;input.value=d;await input.onchange();return true},
@@ -337,4 +355,4 @@ Promise.all([
  zoom=Math.max(.25,Math.min(2.0,(viewport.clientWidth-20)/687));apply();
 }).catch(e=>{$('status').textContent='島図データ読込失敗：'+e.message});
 })();
-</script><script src="sss-unified-ui.js"></script><script src="sss-suika.js"></script><script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script></body></html>
+</script><script src="sss-unified-ui.js"></script><script src="sss-suika.js"></script><script src="sss-peer-ui.js"></script><script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script></body></html>
