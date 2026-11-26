@@ -38,6 +38,7 @@ SEAT_FEATURES=SEAT_FEATURES_V1+[
  "previous_machine_size_scaled",
 ]
 ROUND_FEATURES=old.ROUND_FEATURES
+GROUPS=old.GROUPS
 CHOSEN_ALPHAS=[0.0,0.25,0.5,0.75,1.0]
 # A uniform probability vector has no ranking and must never be a
 # candidate for a published "best machine number" prediction.
