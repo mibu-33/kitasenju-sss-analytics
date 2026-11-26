@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d16"><title>トリエス｜学習・予想ランキング</title>
+<link rel="manifest" href="manifest.webmanifest"><style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;--bg:#080d16;--card:#111a29;--line:#293b50;--muted:#9db0c8;--accent:#a394ff;color:#eff4fb;background:var(--bg)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -160px,#1b273d,transparent 480px) #080d16;min-height:100vh}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#0c1421e8;border-bottom:1px solid #29384b;padding:12px max(12px,calc((100% - 1250px)/2));position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+header h1{font-size:18px;margin:2px 0 0}header small{font-size:9px;color:#9baeca;letter-spacing:.16em;font-weight:800}
+header nav{display:flex;gap:5px}header a{border:1px solid #35465c;padding:8px 10px;border-radius:9px;color:#d9e9fb;text-decoration:none;font-size:11px;font-weight:750}
+header a[aria-current]{background:#493c93;color:#fff;border-color:#8b7fe4}
+main{max-width:1250px;margin:auto;padding:13px 12px 48px}
+h2{font-size:15px;margin:0 0 8px}p{line-height:1.65}.muted{color:var(--muted)}.fine{font-size:11px;color:var(--muted)}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 0 12px}
+.headline{font-size:22px;letter-spacing:-.035em;font-weight:870;margin:3px 0}.stamp{font-size:12px;color:#b8cbe0;font-variant-numeric:tabular-nums}
+.panel{border:1px solid var(--line);background:#121b2b;border-radius:13px;padding:13px;box-shadow:0 5px 15px #0002;margin-bottom:10px}
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:11px 0}
+.metric{border:1px solid #304158;background:#111c2e;border-radius:12px;padding:10px 12px;min-width:0}.metric span{font-size:10px;color:var(--muted)}.metric strong{display:block;font-size:clamp(15px,2.8vw,25px);margin-top:6px;font-variant-numeric:tabular-nums;letter-spacing:-.03em}.metric small{display:block;color:#b0c3d8;font-size:9px;line-height:1.4;margin-top:2px}
+.tabbar{display:flex;gap:5px;padding:5px;background:#0f1928;border:1px solid #30445a;border-radius:12px;overflow:auto;margin:10px 0}
+.tabbar button{flex:1;border:0;background:transparent;color:#c8d8ed;padding:10px 8px;border-radius:8px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.tabbar button.active{background:#4c408e;color:#fff;box-shadow:0 1px 4px #0004}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,295px),1fr));gap:8px}
+.item{display:flex;align-items:center;gap:11px;background:#131f30;border:1px solid #30445b;border-radius:11px;padding:12px;min-width:0}
+.num{background:#2a3a58;border-radius:9px;color:#e9f2ff;font-weight:900;min-width:38px;height:39px;display:flex;align-items:center;justify-content:center;font-size:17px;font-variant-numeric:tabular-nums}
+.num.first{background:#51469f}.body{min-width:0;flex:1}.body strong{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.body small{display:block;color:#9ab1ca;font-size:10px;margin-top:4px}
+.score{font-size:19px;font-weight:890;color:#a0e2d4;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.score small{display:block;font-size:9px;color:#9cb4d1;font-weight:600}
+.pill{display:inline-block;border-radius:20px;background:#253d56;color:#d9eafa;font-size:10px;padding:4px 8px;margin:2px 4px 2px 0}
+.mini-table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:11px}.mini-table th,.mini-table td{padding:8px;border-bottom:1px solid #2e4357;text-align:right;font-variant-numeric:tabular-nums}.mini-table th:first-child,.mini-table td:first-child{text-align:left}.mini-table th{font-weight:700;color:#aac4e1}
+.tablewrap{overflow-x:auto}a{color:#b5caff}.explain{font-size:12px;color:#cbdbef}.warning{border-left:3px solid #edbc70;padding:9px 12px;background:#29251e;border-radius:0 8px 8px 0;font-size:11px;line-height:1.65;color:#f4e1c4}
+#status{font-size:11px;color:#a9c6e8;margin:5px 0 9px}.empty{padding:30px;text-align:center;color:#aebed1}
+button:focus-visible,a:focus-visible{outline:2px solid #b6a6ff;outline-offset:2px}
+@media(max-width:600px){header{padding:9px}header h1{font-size:15px}header a{font-size:10px;padding:7px}main{padding:9px 7px}.panel{padding:10px}.headline{font-size:19px}.card-grid{gap:4px}.metric{padding:8px 6px}.metric strong{font-size:17px}.metric span{font-size:9px}.list{grid-template-columns:1fr}.tabbar button{font-size:11px;padding:9px 6px}}
+</style></head><body>
+<header><div><small>P-ARK KITASENJU SSS</small><h1>予想ランキング</h1></div><nav><a href="floor-map.html">島図</a><a href="forecast.html" aria-current="page">予想</a><a href="index.html">分析</a></nav></header>
+<main>
+<div class="top"><div><div class="fine">TRAIN THROUGH SEPT 30 · HOLDOUT OCT–NOV</div><div class="headline">過去データで学習、未来を検証</div><div class="stamp" id="trainline">モデルを読み込み中…</div></div><div class="fine" id="modeldate"></div></div>
+<div class="warning">このランキングは「設定6の確率」ではありません。円卓は第三者が掲載した対象番号の予測、機種・台番号は差枚+1,000枚以上かつ2,000G以上の <b>A判定</b> 予測です。10・11月の結果は重み学習に使っていません。</div>
+<div id="status" role="status">訓練済みモデルを取得中…</div>
+<div class="card-grid">
+<div class="metric"><span>円卓 10–11月 TOP1的中</span><strong id="round-metric">—</strong><small id="round-base">比較基準 —</small></div>
+<div class="metric"><span>台番号 10–11月 TOP10のA率</span><strong id="seat-metric">—</strong><small id="seat-base">無作為抽出 —</small></div>
+<div class="metric"><span>学習・テスト件数</span><strong id="train-metric">—</strong><small id="train-base">—</small></div>
+</div>
+<div class="tabbar" role="tablist" aria-label="ランキング種別">
+<button type="button" data-rank="round" class="active" role="tab" aria-selected="true">円卓4グループ</button>
+<button type="button" data-rank="machine" role="tab" aria-selected="false">機種 TOP15</button>
+<button type="button" data-rank="seat" role="tab" aria-selected="false">台番号 TOP20</button>
+<button type="button" data-rank="tests" role="tab" aria-selected="false">テスト詳細</button>
+</div>
+<section class="panel" id="forecast-panel"><h2 id="forecast-title">円卓の次回対象予想</h2><p id="forecast-note" class="fine">予測の根拠と過去の検証を表示します。</p><div id="rank-list" class="list"><div class="empty">読み込み中…</div></div></section>
+<section class="panel"><h2>学習方法と注意点</h2><div id="model-method" class="explain"></div><details><summary class="fine" style="cursor:pointer;padding:8px 0">検証方法の詳細</summary><p class="fine">訓練期間は最大9月30日。10月1日〜11月25日の結果を、モデル重みの推定やハイパーパラメータ選択に使いません。日ごとの検証では、その日にまだ起きていない結果を入力しません。前日までの実績・ローテは、その日の予測時点で既知の情報として利用します。</p><p class="fine">機種の変更は前営業日の機種を使用。実際の営業日に入替があった場合は予想と異なる可能性があります。円卓データは掲載欠損日があり、学習サンプルが少ないため的中率の不確実性が大きいです。</p></details></section>
+</main>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const clean=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=n=>(100*Number(n)).toFixed(1)+'%';
+const fixed=n=>Number(n).toFixed(1);
+const commas=n=>Number(n).toLocaleString('ja-JP');
+const set=(id,v)=>{const el=$(id);if(el)el.textContent=v};
+let result=null,tab='round';
+function item(rank,name,subtitle,value,label,number){
+ return '<article class="item"><div class="num '+(rank===1?'first':'')+'">'+rank+'</div><div class="body"><strong>'+clean(name)+'</strong><small>'+clean(subtitle)+'</small></div><div class="score">'+clean(value)+'<small>'+clean(label)+'</small></div></article>';
+}
+function round(){
+ const r=result.roundtable,groups=r.forecast.best_per_group;
+ set('forecast-title','円卓・各グループの1位予想');
+ set('forecast-note','直近の掲載履歴を入力し、9月以前に学習した固定モデルで予測。数値は「次に掲載される番号」の相対確率です。設定6の確率ではありません。');
+ $('rank-list').innerHTML=groups.map((p,i)=>{
+  const hist=r.test.by_group[p.group];
+  const rate=hist?'過去テスト '+hist.top1_hits+'/'+hist.tests+' 回的中':'テストなし';
+  return item(i+1,p.group+'・'+p.number+'番',
+   '直前の掲載 '+(p.previous_report_number??'不明')+'番 ｜ 学習対象の過去掲載 '+p.historical_reports+'回 ｜ '+rate,
+   pct(p.score_probability),'一様予想 '+pct(p.random_baseline_probability),p.number);
+ }).join('');
+}
+function machines(){
+ const data=result.seat_proxy;
+ set('forecast-title','機種ランキング TOP15');
+ set('forecast-note','同機種の座席ごとのA判定確率を平均した順位。設置2台以上を対象。機種の設定配分や全🌈確定を示すものではありません。');
+ $('rank-list').innerHTML=data.forecast.machine_top15.map((p,i)=>item(i+1,p.machine,
+ '前回実績に基づく '+p.seat_count+'台 ｜ 期待A台数 '+fixed(p.expected_A_seats)+' ｜ 台番号 '+p.numbers.slice(0,8).join('・')+(p.numbers.length>8?'…':''),
+ pct(p.average_A_proxy_probability),'A判定代理指標')).join('');
+}
+function seats(){
+ const data=result.seat_proxy;
+ set('forecast-title','台番号ランキング TOP20');
+ set('forecast-note','前営業日までの履歴だけを使い、各台がA判定になる確率を推定。高設定の確率ではありません。');
+ $('rank-list').innerHTML=data.forecast.seat_top20.map((p,i)=>item(i+1,p.number+'番｜'+p.machine,
+ '前日差枚 '+(p.prior_day_diff>=0?'+':'')+commas(p.prior_day_diff)+'枚 ／ '+commas(p.prior_day_games)+'G',
+ pct(p.A_proxy_probability),'A判定代理指標')).join('');
+}
+function testMetrics(){
+ const c=result.roundtable.test,s=result.seat_proxy.test;
+ set('forecast-title','固定テスト：10月・11月の答え合わせ');
+ set('forecast-note','平均値であり、特定日の設定が確認できたわけではありません。差枚モデルの比較相手は当日の無作為10台抽出の期待A率です。');
+ const rows=[
+  ['円卓・TOP1',' '+c.top1_hits+' / '+c.group_predictions+' ＝ '+c.top1_hit_rate_pct+'%','4台なら25%、紫バラは20%'],
+  ['円卓・TOP2',' '+c.top2_hits+' / '+c.group_predictions+' ＝ '+c.top2_hit_rate_pct+'%','4台なら50%、紫バラは40%'],
+  ['円卓・対数損失',c.mean_log_loss,c.uniform_mean_log_loss+'（一様確率）'],
+  ['A予測・TOP10',' '+s.top10_successes+' / '+s.top10_predictions+' ＝ '+s.top10_precision_pct+'%',s.random_ranking_expected_top10_precision_pct+'%（無作為）'],
+  ['A予測・対数損失',s.log_loss,s.constant_train_rate_baseline_log_loss+'（訓練率固定）'],
+  ['A予測・全体出現率',s.A_rate_pct+'%','対象は設定6判定ではない'],
+ ];
+ const table='<div class="tablewrap"><table class="mini-table"><thead><tr><th>指標</th><th>モデル実績</th><th>比較・注意</th></tr></thead><tbody>'+
+ rows.map(r=>'<tr><td>'+r.map(clean).join('</td><td>')+'</td></tr>').join('')+'</tbody></table></div>';
+ const g=Object.entries(c.by_group).map(([name,p])=>'<tr><td>'+clean(name)+'</td><td>'+p.top1_hits+'/'+p.tests+'</td><td>'+p.top1_hit_rate_pct+'%</td><td>'+p.uniform_hit_rate_pct+'%</td></tr>').join('');
+ $('rank-list').innerHTML='<div style="grid-column:1/-1">'+table+'<h2 style="margin:16px 0 7px">円卓の内訳</h2><div class="tablewrap"><table class="mini-table"><thead><tr><th>グループ</th><th>的中</th><th>TOP1率</th><th>無作為</th></tr></thead><tbody>'+g+'</tbody></table></div></div>';
+}
+function render(){
+ if(!result)return;
+ document.querySelectorAll('[data-rank]').forEach(b=>{
+  const selected=b.dataset.rank===tab;b.classList.toggle('active',selected);b.setAttribute('aria-selected',selected?'true':'false');
+ });
+ if(tab==='machine')machines();else if(tab==='seat')seats();else if(tab==='tests')testMetrics();else round();
+}
+document.querySelectorAll('[data-rank]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.rank;render()}));
+fetch('model_results.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
+ if(!d?.roundtable?.test||!d?.seat_proxy?.test)throw Error('モデル出力形式が不正');
+ result=d;
+ const c=d.roundtable.test,s=d.seat_proxy.test;
+ set('trainline','学習 ～'+d.split.train_through+' ／ テスト '+d.split.test_from+'〜'+d.split.test_through);
+ set('modeldate','予想対象 '+d.seat_proxy.forecast.target_date+' · 最終実績 '+d.seat_proxy.forecast.input_last_complete_day);
+ set('round-metric',c.top1_hit_rate_pct+'%');
+ set('round-base','対象4台は25%、紫バラ5台は20%');
+ set('seat-metric',s.top10_precision_pct+'%');
+ set('seat-base','無作為 '+s.random_ranking_expected_top10_precision_pct+'%');
+ set('train-metric',commas(d.seat_proxy.training.samples)+'台日');
+ set('train-base','訓練 '+d.seat_proxy.training.days+'日 ／ テスト '+s.days+'日');
+ set('model-method','円卓：過去の対象番号頻度、前回対象、隣接、直近7回、最後の掲載からの間隔を用いた正則化ソフトマックス。座席：前日差枚・G数、機種別と台番別の過去A判定率、最近の成績、暦情報を使った正則化ロジスティック回帰。どちらも9月30日までに学習した重みを固定し、10〜11月で検証しています。');
+ set('status','検証済み：円卓 '+c.group_predictions+'予測 ／ 台別 '+commas(s.seat_predictions)+'予測。10〜11月の正解でモデルの重みを更新していません。');
+ render();
+}).catch(err=>{$('rank-list').innerHTML='<div class="empty">結果ファイルがありません。公開ワークフローの学習処理を確認してください。</div>';set('status','読み込み失敗：'+err.message)});
+})();
+</script></body></html>
