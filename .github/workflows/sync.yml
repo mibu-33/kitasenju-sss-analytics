@@ -131,7 +131,8 @@ jobs:
           for attempt in {1..15}; do
             count="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length' 2>/dev/null || echo 0)"
             if [ "$count" = "1" ]; then
-              echo "Pages artifact indexed; deployment can begin."
+              echo "Pages artifact indexed; allow GitHub Actions API replicas to converge before deploy."
+              sleep 20
               exit 0
             fi
             echo "Pages artifact metadata not ready (attempt ${attempt}, count=${count})"
