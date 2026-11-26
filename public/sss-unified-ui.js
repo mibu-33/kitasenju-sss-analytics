@@ -177,7 +177,8 @@ function renderLegend(){
   [C.lightgreen,'平均0枚〜'],[C.neutral,'−499〜−1枚'],[C.lightred,'平均−500枚〜'],
   [C.red,'平均−2,000枚以下'],[C.unknown,'データ不足']
  ];
- target.innerHTML=items.map(([color,label])=>'<span><i style="background:'+color+'"></i>'+label+'</span>').join('');
+ const whiteText=new Set([C.purple,C.blue,C.cyan,C.green,C.red]);
+ target.innerHTML=items.map(([color,label])=>'<span class="sss-legend-chip" style="background:'+color+';color:'+(whiteText.has(color)?'#fff':'#243244')+'">'+label+'</span>').join('');
 }
 function kpis(){
  const target=$('sss-kpis');if(!target||!api())return;
@@ -316,7 +317,7 @@ function onReady(){
  if(S.ready||!api()?.getState().latest)return;S.ready=true;
  $('sss-prev').onclick=()=>{const a=allDates(),i=a.indexOf(date());if(i>0)api().setDate(a[i-1])};
  $('sss-next').onclick=()=>{const a=allDates(),i=a.indexOf(date());if(i>=0&&i<a.length-1)api().setDate(a[i+1])};
- $('sss-date-label').onclick=()=>{try{$('date').showPicker()}catch(_){$('date').focus()}};
+ $('sss-date-label').onclick=()=>{if(window.sssPeerUI?.toggleDatePopover)window.sssPeerUI.toggleDatePopover();else{try{$('date').showPicker()}catch(_){$('date').focus()}}};
  $('sss-range').onchange=()=>{S.range=Number($('sss-range').value);S.key=null;setMode(S.mode)};
  document.querySelectorAll('[data-sss-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.sssMode));
  document.querySelectorAll('[data-sss-tab]').forEach(b=>b.onclick=()=>{
