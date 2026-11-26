@@ -109,6 +109,11 @@ jobs:
             git commit -m 'data: refresh published observations'
             git push
           fi
+      - name: Train on pre-October and evaluate locked October-November holdout
+        if: success()
+        run: |
+          python scripts/train_slot_models.py
+          python tests/test_slot_models.py
       - name: Assemble static site
         if: success()
         run: |
