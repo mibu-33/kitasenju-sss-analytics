@@ -17,6 +17,10 @@ h2{font-size:15px;margin:0 0 8px}p{line-height:1.65}.muted{color:var(--muted)}.f
 .tabbar{display:flex;gap:5px;padding:5px;background:#0f1928;border:1px solid #30445a;border-radius:12px;overflow:auto;margin:10px 0}
 .tabbar button{flex:1;border:0;background:transparent;color:#c8d8ed;padding:10px 8px;border-radius:8px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
 .tabbar button.active{background:#4c408e;color:#fff;box-shadow:0 1px 4px #0004}
+.model-choice{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;margin:7px 0 10px;color:var(--muted)}
+.model-choice[hidden]{display:none}
+.model-choice button{background:#1d2d43;color:#d9e9f7;border:1px solid #3b526a;border-radius:8px;padding:7px 10px;font-size:11px;cursor:pointer}
+.model-choice button.active{background:#4d3f92;color:#fff;border-color:#a495ff}
 .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,295px),1fr));gap:8px}
 .item{display:flex;align-items:center;gap:11px;background:#131f30;border:1px solid #30445b;border-radius:11px;padding:12px;min-width:0}
 .num{background:#2a3a58;border-radius:9px;color:#e9f2ff;font-weight:900;min-width:38px;height:39px;display:flex;align-items:center;justify-content:center;font-size:17px;font-variant-numeric:tabular-nums}
@@ -46,6 +50,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #b6a6ff;outline-offset:2p
 <button type="button" data-rank="seat" role="tab" aria-selected="false">台番号 TOP20</button>
 <button type="button" data-rank="tests" role="tab" aria-selected="false">テスト詳細</button>
 </div>
+<div class="model-choice" id="model-choice" hidden><span>表示するモデル：</span><button type="button" data-model="v2" class="active">改良版（9月検証で選択）</button><button type="button" data-model="v1">旧モデル（比較用）</button></div>
 <section class="panel" id="forecast-panel"><h2 id="forecast-title">円卓の次回対象予想</h2><p id="forecast-note" class="fine">予測の根拠と過去の検証を表示します。</p><div id="rank-list" class="list"><div class="empty">読み込み中…</div></div></section>
 <section class="panel"><h2>学習方法と注意点</h2><div id="model-method" class="explain"></div><details><summary class="fine" style="cursor:pointer;padding:8px 0">検証方法の詳細</summary><p class="fine">訓練期間は最大9月30日。10月1日〜11月25日の結果を、モデル重みの推定やハイパーパラメータ選択に使いません。日ごとの検証では、その日にまだ起きていない結果を入力しません。前日までの実績・ローテは、その日の予測時点で既知の情報として利用します。</p><p class="fine">機種の変更は前営業日の機種を使用。実際の営業日に入替があった場合は予想と異なる可能性があります。円卓データは掲載欠損日があり、学習サンプルが少ないため的中率の不確実性が大きいです。</p></details></section>
 </main>
@@ -58,7 +63,7 @@ const pct=n=>(100*Number(n)).toFixed(1)+'%';
 const fixed=n=>Number(n).toFixed(1);
 const commas=n=>Number(n).toLocaleString('ja-JP');
 const set=(id,v)=>{const el=$(id);if(el)el.textContent=v};
-let result=null,tab='round';
+let result=null,tab='round',modelVersion='v2';
 function item(rank,name,subtitle,value,label,number){
  return '<article class="item"><div class="num '+(rank===1?'first':'')+'">'+rank+'</div><div class="body"><strong>'+clean(name)+'</strong><small>'+clean(subtitle)+'</small></div><div class="score">'+clean(value)+'<small>'+clean(label)+'</small></div></article>';
 }
@@ -76,17 +81,19 @@ function round(){
 }
 function machines(){
  const data=result.seat_proxy;
- set('forecast-title','機種ランキング TOP15');
- set('forecast-note','同機種の座席ごとのA判定確率を平均した順位。設置2台以上を対象。機種の設定配分や全🌈確定を示すものではありません。');
- $('rank-list').innerHTML=data.forecast.machine_top15.map((p,i)=>item(i+1,p.machine,
+ const items=modelVersion==='v1'?(data.forecast.machine_top15_baseline||data.forecast.machine_top15):data.forecast.machine_top15;
+ set('forecast-title','機種ランキング TOP15（'+(modelVersion==='v1'?'旧':'改良')+'モデル）');
+ set('forecast-note','同機種の座席ごとのA判定確率を平均した順位。改良版は確率誤差の改善を重視し、旧版は比較用に残しています。設置2台以上。全🌈・設定6確定の予測ではありません。');
+ $('rank-list').innerHTML=items.map((p,i)=>item(i+1,p.machine,
  '前回実績に基づく '+p.seat_count+'台 ｜ 期待A台数 '+fixed(p.expected_A_seats)+' ｜ 台番号 '+p.numbers.slice(0,8).join('・')+(p.numbers.length>8?'…':''),
  pct(p.average_A_proxy_probability),'A判定代理指標')).join('');
 }
 function seats(){
  const data=result.seat_proxy;
- set('forecast-title','台番号ランキング TOP20');
- set('forecast-note','前営業日までの履歴だけを使い、各台がA判定になる確率を推定。高設定の確率ではありません。');
- $('rank-list').innerHTML=data.forecast.seat_top20.map((p,i)=>item(i+1,p.number+'番｜'+p.machine,
+ const items=modelVersion==='v1'?(data.forecast.seat_top20_baseline||data.forecast.seat_top20):data.forecast.seat_top20;
+ set('forecast-title','台番号ランキング TOP20（'+(modelVersion==='v1'?'旧':'改良')+'モデル）');
+ set('forecast-note','前営業日までの履歴だけを使いA判定を推定。改良版は確率誤差を改善した一方、10・11月のTOP10的中率は旧版を下回りました。両方を比較できます。高設定の確率ではありません。');
+ $('rank-list').innerHTML=items.map((p,i)=>item(i+1,p.number+'番｜'+p.machine,
  '前日差枚 '+(p.prior_day_diff>=0?'+':'')+commas(p.prior_day_diff)+'枚 ／ '+commas(p.prior_day_games)+'G',
  pct(p.A_proxy_probability),'A判定代理指標')).join('');
 }
@@ -114,9 +121,12 @@ function render(){
  document.querySelectorAll('[data-rank]').forEach(b=>{
   const selected=b.dataset.rank===tab;b.classList.toggle('active',selected);b.setAttribute('aria-selected',selected?'true':'false');
  });
+ $('model-choice').hidden=!(tab==='machine'||tab==='seat');
+ document.querySelectorAll('[data-model]').forEach(b=>b.classList.toggle('active',b.dataset.model===modelVersion));
  if(tab==='machine')machines();else if(tab==='seat')seats();else if(tab==='tests')testMetrics();else round();
 }
 document.querySelectorAll('[data-rank]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.rank;render()}));
+document.querySelectorAll('[data-model]').forEach(b=>b.addEventListener('click',()=>{modelVersion=b.dataset.model;render()}));
 fetch('model_results.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
  if(!d?.roundtable?.test||!d?.seat_proxy?.test)throw Error('モデル出力形式が不正');
  result=d;
