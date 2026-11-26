@@ -198,7 +198,8 @@ def train_and_test_seat_proxy():
  after["previous_v1_model"]={"log_loss":before["log_loss"],"brier":before["brier"],
     "top10_precision_pct":before["top10_precision_pct"],"top10_successes":before["top10_successes"]}
  base_p=base["train_A_rate"]
- n,hits=after["seat_predictions"],round(n*after["A_rate_pct"]/100)
+ n=after["seat_predictions"]
+ hits=sum(row["y"] for rows in held.values() for row in rows)
  after["constant_train_rate_baseline_log_loss"]=old.r(
    -(hits*math.log(base_p)+(n-hits)*math.log(1-base_p))/n,5)
  latest=max(days)
