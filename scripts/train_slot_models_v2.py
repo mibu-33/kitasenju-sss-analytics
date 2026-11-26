@@ -39,6 +39,10 @@ SEAT_FEATURES=SEAT_FEATURES_V1+[
 ]
 ROUND_FEATURES=old.ROUND_FEATURES
 CHOSEN_ALPHAS=[0.0,0.25,0.5,0.75,1.0]
+# A uniform probability vector has no ranking and must never be a
+# candidate for a published "best machine number" prediction.
+ROUND_ALPHAS=[0.25,0.5,0.75,1.0]
+read=old.read
 V1_DIM=len(SEAT_FEATURES_V1)
 assert V1_DIM == 9
 
@@ -262,7 +266,7 @@ def round_internal_selection(observations):
  if len(pretrain)<45 or len(validation)<25:raise RuntimeError("Too few August-September roundtable events")
  w=old.train_softmax_group(pretrain)
  scores=[]
- for blend in CHOSEN_ALPHAS:
+ for blend in ROUND_ALPHAS:
   loss=0
   hits=0
   for xrows,correct in validation:
@@ -273,14 +277,23 @@ def round_internal_selection(observations):
   scores.append({"blend_model":blend,"log_loss":old.r(loss/len(validation),5),
                  "top1_hit_rate_pct":old.r(100*hits/len(validation),2)})
  best=min(scores,key=lambda x:(x["log_loss"],x["blend_model"]))
- # Uniform fallback if validation score is indistinguishable from uniform.
- uniform=scores[0]
- chosen=best if best["log_loss"]<uniform["log_loss"]-.001 else uniform
+ uniform_logloss=sum(math.log(len(xs)) for xs,_ in validation)/len(validation)
+ # A model worse than uniform on a tiny September sample has no evidence
+ # for added calibration; retain the established pre-October model instead.
+ # Never choose weight=0: the resulting deterministic tie-break would make
+ # every first candidate "rank #1" despite identical probabilities.
+ if best["log_loss"] >= uniform_logloss-.001:
+  chosen=next(row for row in scores if row["blend_model"]==1.0)
+  reason="Conservative original-model fallback: September calibration has no demonstrated advantage over uniform"
+ else:
+  chosen=best
+  reason="Nondegenerate shrinkage selected using September log loss only"
  return chosen["blend_model"],{
   "period":"2026-09-19 to 2026-09-30","training_through":"2026-09-18",
-  "metric_for_selection":"September log loss, uniform shrinkage",
+  "metric_for_selection":"September log loss; uniform is benchmark only, not an admissible ranking",
   "chosen_model_weight":chosen["blend_model"],"candidates":scores,
-  "validation_events":len(validation),
+  "uniform_baseline_log_loss":old.r(uniform_logloss,5),
+  "selection_reason":reason,"validation_events":len(validation),
  }
 
 
