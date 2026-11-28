@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of_date": "2026-11-23",
+  "as_of_date": "2026-11-28",
   "store": "ピーアーク北千住SSS",
   "total_seats": 451,
   "current_inventory_source": "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
@@ -882,6 +882,67 @@
       "confidence": "medium-reported-column-membership",
       "physical_seat_order_verified": false,
       "notes": "11/21取材答え合わせに明示された列所属のみ採用。列内の席順・物理座標・向きは未確認。"
+    },
+    {
+      "id": "2026-11-26-silver-entrance-3",
+      "date": "2026-11-26",
+      "floor": "1F",
+      "zone": "silver",
+      "kind": "vertical",
+      "label": "銀・出入口側3列目",
+      "machine_numbers": [
+        3,
+        34,
+        37,
+        65
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership-only",
+      "physical_seat_order_verified": false,
+      "notes": "11/26答え合わせの明示的な列起点・番号。個別座席座標・向きは未確定。"
+    },
+    {
+      "id": "2026-11-26-red-counter-8",
+      "date": "2026-11-26",
+      "floor": "1F",
+      "zone": "red",
+      "kind": "vertical",
+      "label": "赤・カウンター側8列目",
+      "machine_numbers": [
+        118,
+        133,
+        148,
+        155,
+        170,
+        185,
+        198,
+        211,
+        226
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership-only",
+      "physical_seat_order_verified": false,
+      "notes": "11/26答え合わせの明示的な列起点・番号。11/06の同一台番号群に位置表記を追加。個別座席座標・向きは未確定。"
+    },
+    {
+      "id": "2026-11-26-gold-stairs-7",
+      "date": "2026-11-26",
+      "floor": "2F",
+      "zone": "gold",
+      "kind": "vertical",
+      "label": "金・トイレ・階段側7列目",
+      "machine_numbers": [
+        652,
+        665,
+        680
+      ],
+      "source_url": "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
+      "provenance": "secondary-compiled-after-report",
+      "confidence": "medium-reported-column-membership-only",
+      "physical_seat_order_verified": false,
+      "notes": "11/26答え合わせの明示的な列起点・番号。個別座席座標・向きは未確定。"
     }
   ],
   "roundtable_groups": [
@@ -1033,13 +1094,12 @@
     "新台入替後の配置有効期間"
   ],
   "last_research_cycle": {
-    "date": "2026-11-23",
+    "date": "2026-11-28",
     "new_sources": [
       "https://note.com/akb_sss_shisa/n/n41e9c59526b7",
-      "https://www.p-world.co.jp/tokyo/kitasenjusss.htm",
-      "https://triplex777.com/detail/index.php?id=1102&mode=kotei_on&tid=182355"
+      "https://www.p-world.co.jp/tokyo/kitasenjusss.htm"
     ],
-    "results": "Added four explicitly labeled 2026-11-21 reported horizontal/vertical groups (secondary report, medium confidence). 2026-11-22 answer-check not yet posted. P-WORLD updated 2026-11-23 and lists 451 machines. 2026-11-22 island-diagram posts found but image seat positions not independently validated. No individual seat order inferred."
+    "results": "Added 11/26 silver entrance column 3, red counter column 8 (same membership as 11/06), and gold toilet/stairs column 7. Red horizontal 141–151 already recorded. P-WORLD 11/28 lists 451. No individual seat coordinates inferred."
   },
   "floor_map_photo_observations": [
     {
